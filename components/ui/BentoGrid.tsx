@@ -1,14 +1,7 @@
 'use client'
 import { cn } from "@/utils/cn";
 import { GlobeDemo } from "../GlobeGrid";
-import { BackgroundGradientAnimation } from "./GradientBg";
-import VCard from "./VCard";
-
-import animationData from '@/data/confetti.json';
-import { useState } from "react";
-import MagicButton from "./MagicButton";
-import { FaDownload } from "react-icons/fa";
-import { myInfo } from '@/data';
+import Contact from "./Contact";
 
 export const BentoGrid = ({
   className,
@@ -51,31 +44,6 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const [downloaded, setDownloaded] = useState(false);
-  const  handelDownloaded = () =>{
-    setDownloaded(true)
-    const vcardString = `
-    BEGIN:VCARD
-    VERSION:2.1
-    N:${myInfo.lastName};${myInfo.firstName}
-    FN:${myInfo.firstName} ${myInfo.lastName}
-    ORG:${myInfo.company}
-    TEL:${myInfo.phone}
-    EMAIL:${myInfo.email}
-    URL:${myInfo.website}
-    X-SOCIALPROFILE:${myInfo.instagram}
-    END:VCARD
-    `;
-    
-    const vcfBlob = new Blob([vcardString], { type: 'text/vcard' });
-    const vcfUrl = URL.createObjectURL(vcfBlob);
-
-    const anchor = document.createElement('a');
-    anchor.href = vcfUrl;
-    anchor.download = 'MyInfo.vcf';
-    anchor.click();
-    
-  }
   return (
     <div
       className={cn(
@@ -88,7 +56,7 @@ export const BentoGridItem = ({
           "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
       }}
     >
-      <div className={`${id===6 && 'flex justify-center'} h-full`}>
+      <div className={`${id!==6 && 'flex justify-center'} h-full`}>
         <div className="w-full h-full absolute">
             {img && (
                 <img
@@ -112,9 +80,7 @@ export const BentoGridItem = ({
         
         <div>
             {id===6 && (
-            <BackgroundGradientAnimation>
-                <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
-            </BackgroundGradientAnimation>            
+            <Contact title = {title} description = {description}/> 
         )}
         
         </div>
@@ -166,21 +132,7 @@ export const BentoGridItem = ({
               </div>
             </div>
           )}
-          {id ===6 && (
-            <div className= 'mt-5 relative'>
-                <div className={`absolute -bottom-5 right-0 ${downloaded ? "block" : "block"
-                  }`}>
-            
-                
-                </div>
-                <MagicButton title={downloaded ? "My Contact" : "Downloaded"}
-                  icon={<FaDownload/>} 
-                  position='right' 
-                  handleClick={() => handelDownloaded()} 
-                  otherClasses=" !bg-[#161A31] 	"
-                />
-            </div>
-          )}
+
         </div>
       </div>
     </div>

@@ -221,7 +221,7 @@ export const navItems = [
 export const myInfo = {
   firstName: 'Mikhail',
   lastName: 'Ajaj',
-  company: 'Ajaj Handyman Services',
+  company: 'Mikhail Ajaj CS',
   phone: '+1416-474-5749',
   email: 'mikhailajaj@gmail.com',
   website: 'https://mikhailajaj.github.io/',
