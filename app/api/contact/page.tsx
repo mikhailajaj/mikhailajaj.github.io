@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { myInfo } from '@/data';
 
-const page = () => {
+const ContactDownload = () => {
   const [count, setCount] = useState(10);
   
   useEffect(() => {
@@ -50,4 +50,4 @@ END:VCARD`;
   )
 }
 
-export default page
+export default ContactDownload
