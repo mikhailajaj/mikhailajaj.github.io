@@ -1,5 +1,10 @@
+import { image } from "framer-motion/client";
+
+import { FaReact, FaNodeJs, FaAws, FaGithub } from 'react-icons/fa';
+import { SiDotnet, SiMongodb, SiRedis,SiSwift ,SiTailwindcss } from 'react-icons/si';
+  
 export const navItems = [
-    { name: "About", link: "#about" },
+    { name: "About", link: "#about"},
     { name: "Projects", link: "#projects" },
     { name: "Testimonials", link: "#testimonials" },
     { name: "Approach", link: "#approach" },
@@ -7,103 +12,19 @@ export const navItems = [
     { name: "Contact", link: "#contact" },
   ];
   
-  export const gridItems = [
-    {
-      id: 1,
-      title: "I prioritize client collaboration, fostering open communication ",
-      description: "",
-      className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-      imgClassName: "w-full h-full",
-      titleClassName: "justify-end",
-      img: "/b1.svg",
-      spareImg: "",
-    },
-    {
-      id: 2,
-      title: "I'm very flexible with time zone communications",
-      description: "",
-      className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-      imgClassName: "",
-      titleClassName: "justify-start",
-      img: "",
-      spareImg: "",
-    },
-    {
-      id: 3,
-      title: "My tech stack",
-      description: "I constantly try to improve",
-      className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-      imgClassName: "",
-      titleClassName: "justify-center",
-      img: "",
-      spareImg: "",
-    },
-    {
-      id: 4,
-      title: "Tech enthusiast with a passion for development.",
-      description: "",
-      className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-      imgClassName: "",
-      titleClassName: "justify-start",
-      img: "/grid.svg",
-      spareImg: "/b4.svg",
-    },
-  
-    {
-      id: 5,
-      title: "Currently building a JS Animation library",
-      description: "The Inside Scoop",
-      className: "md:col-span-3 md:row-span-2",
-      imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
-      titleClassName: "justify-center md:justify-start lg:justify-center",
-      img: "/b5.svg",
-      spareImg: "/grid.svg",
-    },
-    {
-      id: 6,
-      title: "Do you want to start a project together?",
-      description: "",
-      className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-      imgClassName: "",
-      titleClassName: "justify-center md:max-w-full max-w-60 text-center",
-      img: "",
-      spareImg: "",
-    },
-  ];
+ 
   
   export const projects = [
+   
     {
       id: 1,
-      title: "3D Solar System Planets to Explore",
-      des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-      img: "/p1.svg",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-      link: "/ui.earth.com",
-    },
-    {
-      id: 2,
-      title: "Yoom - Video Conferencing App",
-      des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-      img: "/p2.svg",
-      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-      link: "/ui.yoom.com",
-    },
-    {
-      id: 3,
-      title: "AI Image SaaS - Canva Application",
-      des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-      img: "/p3.svg",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-      link: "/ui.aiimg.com",
-    },
-    {
-      id: 4,
-      title: "Animated Apple Iphone 3D Website",
-      des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-      img: "/p4.svg",
-      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-      link: "/ui.apple.com",
-    },
+      title: "Secret Santa",
+      des: "Modernize your holiday gift exchanges with an innovative app that simplifies event organization, from automated name drawing to gift preferences and event management.",
+      img: "/p1.png",
+      iconLists: [FaReact, SiDotnet, SiMongodb, SiRedis, FaAws, FaGithub, SiSwift, SiTailwindcss],
+      link: "https://github.com/mikhailajaj/SecretSanta",
+    }
+   
   ];
   
   export const testimonials = [
@@ -227,3 +148,124 @@ export const myInfo = {
   website: 'https://mikhailajaj.github.io/',
   instagram: 'https://www.instagram.com/mikhailajaj/'
 };
+
+export const qoutes = [{
+  qoutesID : 1,
+  qouteStr : "each step is one step closer to success",
+  language : "en",
+},
+{
+  qoutesID : 2,
+  qouteStr : "There are many ways to solve a problem, but only one way to find it",
+  language : "en",
+},
+{
+  qoutesID : 3,
+  qouteStr : "The process of building a product is not a linear process",
+  language : "en",
+},
+{
+  qoutesID : 4,
+  qouteStr : "“The best way to predict the future is to invent it.” - Alan Kay",
+  language : "en",
+},
+{
+  qoutesID : 5,
+  qouteStr : "“Simplicity is the soul of efficiency.” - Austin Freeman",
+  language : "en",
+},
+{
+  qoutesID : 6,
+  qouteStr : "“A good plan today is better than a perfect plan tomorrow.” - George S. Patton",
+  language : "en",
+},
+{
+  qoutesID : 7,
+  qouteStr : "Measure twice, cut once.",
+  language : "en",
+},
+{
+  qoutesID : 8,
+  qouteStr : "种树最佳时间是二十年前，其次是现在。",
+  translation : "The best time to plant a tree was 20 years ago. The second-best time is now.",
+  language: "cn"
+},
+{
+  qoutesID : 9,
+  qouteStr : "“Perfection is not attainable, but if we chase perfection, we can catch excellence.” - Vince Lombardi",
+  language : "en",
+},
+{
+  qoutesID : 10,
+  qouteStr : "“The only way to do great work is to love what you do.” - Steve Jobs",
+  language : "en",
+},
+{
+  qoutesID : 11,
+  qouteStr : "“Wer im Glashaus sitzt, sollte nicht mit Steinen werfen.”",
+  translation : "He who sits in a glass house should not throw stones.",
+  language : "de",
+},
+{
+  qoutesID : 12,
+  qouteStr : "“Un pessimiste voit la difficulté dans chaque opportunité, un optimiste voit l'opportunité dans chaque difficulté.” - Winston Churchill",
+  Translation: "A pessimist sees the difficulty in every opportunity, an optimist sees the opportunity in every difficulty.",
+  language : "fr",
+},
+{
+  qoutesID : 13,
+  qouteStr : "“La vida es aquello que te pasa mientras estás ocupado haciendo otros planes.” - John Lennon",
+  Translation: "Life is what happens to you while you’re busy making other plans.",
+  language : "es",
+},
+{
+  qoutesID : 14,
+  qouteStr : "“纸上得来终觉浅，绝知此事要躬行。” - 陆游",
+  Translation: "Knowledge from books is superficial; to understand it thoroughly, you must practice it.",
+  language : "cn",
+},
+{
+  qoutesID : 4,
+  qouteStr : "“The best way to predict the future is to invent it.” - Alan Kay"
+},
+{
+  qoutesID : 4,
+  qouteStr : "“The best way to predict the future is to invent it.” - Alan Kay"
+},
+{
+  qoutesID : 4,
+  qouteStr : "“The best way to predict the future is to invent it.” - Alan Kay"
+},
+{
+  qoutesID : 4,
+  qouteStr : "“The best way to predict the future is to invent it.” - Alan Kay"
+},
+{
+  qoutesID : 4,
+  qouteStr : "“The best way to predict the future is to invent it.” - Alan Kay"
+},
+{
+  qoutesID : 4,
+  qouteStr : "“The best way to predict the future is to invent it.” - Alan Kay"
+},
+{
+  qoutesID : 4,
+  qouteStr : "“The best way to predict the future is to invent it.” - Alan Kay"
+},
+{
+  qoutesID : 4,
+  qouteStr : "“The best way to predict the future is to invent it.” - Alan Kay"
+},
+{
+  qoutesID : 4,
+  qouteStr : "“The best way to predict the future is to invent it.” - Alan Kay"
+},
+{
+  qoutesID : 4,
+  qouteStr : "“The best way to predict the future is to invent it.” - Alan Kay"
+},
+{
+  qoutesID : 4,
+  qouteStr : "“The best way to predict the future is to invent it.” - Alan Kay"
+},
+]

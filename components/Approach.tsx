@@ -2,7 +2,6 @@
 import React from "react";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { CanvasRevealEffect } from "@/components/ui/CanvasRevealEffect";
 import { FaRegHandPeace, FaRegThumbsUp } from "react-icons/fa";
 import MagicButton from "./ui/MagicButton";
 
@@ -12,23 +11,12 @@ const Approach = () => {
         <h1 className="heading">
             My <span className="text-purple">Approach</span>
         </h1>
-        <div className="my-20 flex flex-col lg:flex-row items-center justify-center bg-white dark:bg-black w-full gap-4 mx-auto px-8">
+        <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4 mx-auto px-8">
             <Card title="Sheetal is Nisha" icon={<FaRegThumbsUp className="w-[40px] h-[40px]" />}  desc="descr">
-            <CanvasRevealEffect
-                animationSpeed={5.1}
-                containerClassName="bg-emerald-900"
-            />
+
             </Card>
             <Card title="Nisha is Munni" icon={<FaRegHandPeace className="w-[40px] h-[40px]" />}  desc="descr">
-            <CanvasRevealEffect
-                animationSpeed={3}
-                containerClassName="bg-black"
-                colors={[
-                [236, 72, 153],
-                [232, 121, 249],
-                ]}
-                dotSize={2}
-            />
+
             {/* Radial gradient for the cute fade */}
             <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" />
             </Card>
@@ -36,11 +24,6 @@ const Approach = () => {
             title="Munni is Aditi" 
             icon={<AceternityIcon />} 
             desc="Hi there">
-            <CanvasRevealEffect
-                animationSpeed={3}
-                containerClassName="bg-sky-600"
-                colors={[[125, 211, 252]]}
-            />
             </Card>
         </div>
     </section>

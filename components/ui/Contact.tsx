@@ -2,8 +2,7 @@
 import React, { useState } from 'react'
 import MagicButton from './MagicButton'
 import { FaDownload } from 'react-icons/fa'
-import { myInfo } from '@/data'
-import { BackgroundGradientAnimation } from "./GradientBg";
+import { myInfo } from '@/data/index'
 const Contact = (props: { title: string|React.ReactNode, description: string|React.ReactNode, titleClassName?: string, descriptionClassName?: string|React.ReactNode}) => {
   const [downloaded, setDownloaded] = useState(false);
 
@@ -33,35 +32,15 @@ END:VCARD`;
     }, 3000)
   }
   return (
-    <div className="h-fit">
-      <BackgroundGradientAnimation className='w-full ' />
-      <div className=' flex flex-col items-center justify-center content-center '>
-        <div className={`z-50 m-5`} >
-          <div className="transition duration-200 text-3xl font-bold relative md:h-full px-5 p-5">
-            {props.title}
-          </div>
-          <div>
-            {props.description}
-          </div>
-          <div className='ml-5'>
-          <h2>Mikhail Ajaj</h2>
-          <p><strong>Company:</strong> Mikhail CS</p>
-          <p><strong>Phone:</strong> <a href="tel:+14164745749">+1(416)-474-5749</a></p>
-          <p><strong>Email:</strong> <a href="mailto:mikhailajaj@gmail.ccom">Mikhailajaj@gmail.com</a></p>
-          <p><strong>Website:</strong> <a href="https://mikhailajaj.github.io/" target="_blank">https://mikhailajaj.github.io/</a></p>
-          <p><strong>Instagram:</strong> <a href="https://www.instagram.com/mikhailajaj/" target="_blank">https://www.instagram.com/mikhailajaj/</a></p>
-          </div>
-          <div className="m-5 flex justify-center content-center">
+
+          <div className="h-fit flex justify-center content-center ">
             <MagicButton title={downloaded ? "Downloaded" : "My Contact"}
               icon={<FaDownload />}
               position='right'
               handleClick={handelDownloaded}
+             
             />
           </div>
-        </div>
-      </div>
-
-    </div>
 
   )
 }
