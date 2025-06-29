@@ -2,45 +2,76 @@ import { image } from "framer-motion/client";
 
 import { FaReact, FaNodeJs, FaAws, FaGithub } from 'react-icons/fa';
 import { SiDotnet, SiMongodb, SiRedis,SiSwift ,SiTailwindcss } from 'react-icons/si';
+
+// Import enhanced project data
+import { enhancedProjects } from './projects-enhanced';
+import { legacyProjects } from './legacy-projects';
+import { testimonials as enhancedTestimonials, legacyTestimonials } from './testimonials';
   
 export const navItems = [
     { name: "About", link: "#about"},
+    { name: "Skills", link: "#skills" },
     { name: "Projects", link: "#projects" },
+    { 
+      name: "Services", 
+      link: "/services",
+      dropdown: [
+        { 
+          name: "All Services", 
+          link: "/services",
+          description: "Complete overview of all services offered"
+        },
+        { 
+          name: "Full-Stack Development", 
+          link: "/services/full-stack",
+          description: "End-to-end web and mobile application development"
+        },
+        { 
+          name: "Cloud Architecture", 
+          link: "/services/cloud",
+          description: "Scalable cloud infrastructure and DevOps solutions"
+        },
+        { 
+          name: "Data Analytics", 
+          link: "/services/data",
+          description: "Data engineering and business intelligence solutions"
+        },
+        { 
+          name: "UX/UI Design", 
+          link: "/services/ux-ui",
+          description: "User experience design and interface optimization"
+        },
+        { 
+          name: "Technical Consulting", 
+          link: "/services/consulting",
+          description: "Strategic technology consulting and architecture review"
+        }
+      ]
+    },
+    { name: "Blog", link: "/blog" },
     { name: "Testimonials", link: "#testimonials" },
-    { name: "Approach", link: "#approach" },
-    { name: "Experiance", link: "#experiance" },
+    { name: "Experience", link: "#experience" },
     { name: "Contact", link: "#contact" },
   ];
-  
+
  
   
-  export const projects = [
-   
-    {
-      id: 1,
-      title: "Secret Santa",
-      des: "Modernize your holiday gift exchanges with an innovative app that simplifies event organization, from automated name drawing to gift preferences and event management.",
-      img: "/p1.png",
-      iconLists: [FaReact, SiDotnet, SiMongodb, SiRedis, FaAws, FaGithub, SiSwift, SiTailwindcss],
-      link: "https://github.com/mikhailajaj/SecretSanta",
-    }
-   
-  ];
+  // Export enhanced projects for new components
+export { enhancedProjects };
+
+// Export legacy format for backward compatibility
+export const projects = legacyProjects;
   
-  export const testimonials = [
-    {
-      quote:
-        "to be continued",
-      name: "Mikhail Ajaj",
-      title: "Humble programmer",
-    },
-    
-  ];
+  // Export enhanced testimonials for new components
+export { enhancedTestimonials };
+
+// Export legacy format for backward compatibility
+export const testimonials = legacyTestimonials;
   
   export const companies = [
     {
       id: 1,
-      name: "",
+      name: "Tech Innovations",
       img: "/cloud.svg",
       nameImg: "/cloudName.svg",
     },
@@ -176,50 +207,5 @@ export const qoutes = [{
   qoutesID : 14,
   qouteStr : "“纸上得来终觉浅，绝知此事要躬行。” - 陆游",
   Translation: "Knowledge from books is superficial; to understand it thoroughly, you must practice it.",
-  language : "cn",
-},
-{
-  qoutesID : 4,
-  qouteStr : "“The best way to predict the future is to invent it.” - Alan Kay"
-},
-{
-  qoutesID : 4,
-  qouteStr : "“The best way to predict the future is to invent it.” - Alan Kay"
-},
-{
-  qoutesID : 4,
-  qouteStr : "“The best way to predict the future is to invent it.” - Alan Kay"
-},
-{
-  qoutesID : 4,
-  qouteStr : "“The best way to predict the future is to invent it.” - Alan Kay"
-},
-{
-  qoutesID : 4,
-  qouteStr : "“The best way to predict the future is to invent it.” - Alan Kay"
-},
-{
-  qoutesID : 4,
-  qouteStr : "“The best way to predict the future is to invent it.” - Alan Kay"
-},
-{
-  qoutesID : 4,
-  qouteStr : "“The best way to predict the future is to invent it.” - Alan Kay"
-},
-{
-  qoutesID : 4,
-  qouteStr : "“The best way to predict the future is to invent it.” - Alan Kay"
-},
-{
-  qoutesID : 4,
-  qouteStr : "“The best way to predict the future is to invent it.” - Alan Kay"
-},
-{
-  qoutesID : 4,
-  qouteStr : "“The best way to predict the future is to invent it.” - Alan Kay"
-},
-{
-  qoutesID : 4,
-  qouteStr : "“The best way to predict the future is to invent it.” - Alan Kay"
-},
-]
+  language : "cn"
+}];

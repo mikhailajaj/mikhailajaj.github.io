@@ -5,3 +5,344 @@
 .heading {
     @apply text-4xl font-bold m-10;
 }
+
+/* Scroll-Driven Animations for Portfolio */
+
+/* 1. Progress Bar Animation */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+  transform-origin: left;
+  animation: scroll-progress linear;
+  animation-timeline: scroll(root);
+  z-index: 1000;
+}
+
+@keyframes scroll-progress {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+/* 2. Fade In on Scroll */
+.fade-in-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fade-in-up linear;
+  animation-timeline: view();
+  animation-range: entry 0% entry 50%;
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 3. Scale on Scroll */
+.scale-in-scroll {
+  transform: scale(0.8);
+  opacity: 0;
+  animation: scale-in linear;
+  animation-timeline: view();
+  animation-range: entry 0% entry 60%;
+}
+
+@keyframes scale-in {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* 4. Slide from Left */
+.slide-left-scroll {
+  transform: translateX(-100px);
+  opacity: 0;
+  animation: slide-from-left linear;
+  animation-timeline: view();
+  animation-range: entry 0% entry 70%;
+}
+
+@keyframes slide-from-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* 5. Slide from Right */
+.slide-right-scroll {
+  transform: translateX(100px);
+  opacity: 0;
+  animation: slide-from-right linear;
+  animation-timeline: view();
+  animation-range: entry 0% entry 70%;
+}
+
+@keyframes slide-from-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* 6. Rotate on Scroll */
+.rotate-scroll {
+  transform: rotate(-10deg);
+  opacity: 0;
+  animation: rotate-in linear;
+  animation-timeline: view();
+  animation-range: entry 0% entry 50%;
+}
+
+@keyframes rotate-in {
+  0% {
+    transform: rotate(-10deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* 7. Parallax Effect */
+.parallax-slow {
+  animation: parallax-slow linear;
+  animation-timeline: scroll(root);
+}
+
+@keyframes parallax-slow {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
+
+.parallax-fast {
+  animation: parallax-fast linear;
+  animation-timeline: scroll(root);
+}
+
+@keyframes parallax-fast {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
+
+/* 8. Text Reveal Animation */
+.text-reveal {
+  background: linear-gradient(90deg, transparent 0%, transparent 50%, #3b82f6 50%, #8b5cf6 100%);
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: text-reveal linear;
+  animation-timeline: view();
+  animation-range: entry 0% entry 80%;
+}
+
+@keyframes text-reveal {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: 0% 0;
+  }
+}
+
+/* 9. Stagger Animation for Lists */
+.stagger-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: stagger-fade-in linear;
+  animation-timeline: view();
+  animation-range: entry 0% entry 40%;
+}
+
+.stagger-item:nth-child(1) { animation-delay: 0.1s; }
+.stagger-item:nth-child(2) { animation-delay: 0.2s; }
+.stagger-item:nth-child(3) { animation-delay: 0.3s; }
+.stagger-item:nth-child(4) { animation-delay: 0.4s; }
+.stagger-item:nth-child(5) { animation-delay: 0.5s; }
+.stagger-item:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes stagger-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 10. Image Zoom on Scroll */
+.image-zoom-scroll {
+  overflow: hidden;
+}
+
+.image-zoom-scroll img {
+  transform: scale(1.2);
+  animation: image-zoom-out linear;
+  animation-timeline: view();
+  animation-range: entry 0% exit 100%;
+}
+
+@keyframes image-zoom-out {
+  0% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* 11. Border Draw Animation */
+.border-draw {
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.border-draw::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6);
+  background-size: 300% 300%;
+  border-radius: inherit;
+  z-index: -1;
+  animation: border-draw-animation linear;
+  animation-timeline: view();
+  animation-range: entry 0% entry 100%;
+}
+
+@keyframes border-draw-animation {
+  0% {
+    background-position: 0% 50%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    background-position: 100% 50%;
+    opacity: 1;
+  }
+}
+
+/* 12. Typewriter Effect on Scroll */
+.typewriter-scroll {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #3b82f6;
+  animation: typewriter linear, blink 1s infinite;
+  animation-timeline: view(), auto;
+  animation-range: entry 0% entry 100%;
+}
+
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0%, 50% {
+    border-color: transparent;
+  }
+  51%, 100% {
+    border-color: #3b82f6;
+  }
+}
+
+/* Fallback for browsers that don't support scroll-driven animations */
+@supports not (animation-timeline: scroll()) {
+  .scroll-progress,
+  .fade-in-scroll,
+  .scale-in-scroll,
+  .slide-left-scroll,
+  .slide-right-scroll,
+  .rotate-scroll,
+  .parallax-slow,
+  .parallax-fast,
+  .text-reveal,
+  .stagger-item,
+  .image-zoom-scroll img,
+  .border-draw::before,
+  .typewriter-scroll {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  
+  /* Use Intersection Observer fallback for these browsers */
+  .scroll-animation-fallback {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+  }
+  
+  .scroll-animation-fallback.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Accessibility: Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-progress,
+  .fade-in-scroll,
+  .scale-in-scroll,
+  .slide-left-scroll,
+  .slide-right-scroll,
+  .rotate-scroll,
+  .parallax-slow,
+  .parallax-fast,
+  .text-reveal,
+  .stagger-item,
+  .image-zoom-scroll img,
+  .border-draw::before,
+  .typewriter-scroll {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

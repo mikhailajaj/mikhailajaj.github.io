@@ -1,9 +1,10 @@
 "use client";
 import React from "react";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { FaRegHandPeace, FaRegThumbsUp } from "react-icons/fa";
 import MagicButton from "./ui/MagicButton";
+import { MotionDiv } from "@/lib/motion-utils";
 
 const Approach = () => {
   return (
@@ -55,13 +56,13 @@ const Card = ({
 
       <AnimatePresence>
         {(hovered || clicked) && (
-          <motion.div
+          <MotionDiv
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="h-full w-full absolute inset-0"
           >
             {children}
-          </motion.div>
+          </MotionDiv>
         )}
       </AnimatePresence>
 

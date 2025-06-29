@@ -1,5 +1,6 @@
 'use client'
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import Contact from "./Contact";
 
 export const BentoGrid = ({
@@ -55,21 +56,25 @@ export const BentoGridItem = ({
        
         <div className="w-full h-full absolute">
             {img && (
-                <img
+                <Image
                 src={img}
-                alt={img}
+                alt={img || "Grid item image"}
+                fill
                 className={cn("object-cover object-center"
                     ,imgClassName
                 )}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
             )}
           </div>
           <div className={`absolute right-0 -bottom-5 ${id===5 && 'w-full opacity-80'} `}>
           {spareImg && (
-              <img
+              <Image
               src={spareImg}
-              alt={spareImg}
-              className={"object-cover object-center w-full h-full"}
+              alt={spareImg || "Spare image"}
+              fill
+              className={"object-cover object-center"}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
           )}
           </div>

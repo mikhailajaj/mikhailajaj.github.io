@@ -1,0 +1,646 @@
+---
+title: "Modern Data Engineering Pipelines: From Raw Data to Business Intelligence"
+description: "Learn how to build robust, scalable data engineering pipelines using modern tools and best practices for data ingestion, processing, and analytics."
+date: "2024-01-05"
+author: "Mikhail Ajaj"
+category: "Data Engineering"
+tags: ["Data Engineering", "ETL", "Apache Airflow", "Python", "Data Pipeline", "Analytics"]
+featured: false
+image: "/blog/data-pipeline.svg"
+excerpt: "Discover how to design and implement modern data engineering pipelines that transform raw data into actionable business insights."
+---
+
+# Modern Data Engineering Pipelines
+
+Data engineering has evolved significantly in recent years, with new tools and methodologies enabling more efficient and scalable data processing. This guide covers the essential components of modern data engineering pipelines and best practices for implementation.
+
+## Pipeline Architecture Overview
+
+A modern data engineering pipeline typically consists of several key components:
+
+1. **Data Ingestion** - Collecting data from various sources
+2. **Data Processing** - Cleaning, transforming, and enriching data
+3. **Data Storage** - Storing processed data for analytics
+4. **Data Orchestration** - Managing pipeline workflows
+5. **Data Quality** - Ensuring data accuracy and completeness
+6. **Monitoring & Alerting** - Tracking pipeline health and performance
+
+## Data Ingestion Strategies
+
+### 1. Batch Processing
+
+For large volumes of data that don't require real-time processing:
+
+```python
+# Example: Daily batch ingestion with Apache Airflow
+from airflow import DAG
+from airflow.operators.python_operator import PythonOperator
+from airflow.operators.bash_operator import BashOperator
+from datetime import datetime, timedelta
+import pandas as pd
+import boto3
+
+default_args = {
+    'owner': 'data-team',
+    'depends_on_past': False,
+    'start_date': datetime(2024, 1, 1),
+    'email_on_failure': True,
+    'email_on_retry': False,
+    'retries': 2,
+    'retry_delay': timedelta(minutes=5)
+}
+
+dag = DAG(
+    'daily_sales_ingestion',
+    default_args=default_args,
+    description='Daily sales data ingestion pipeline',
+    schedule_interval='0 2 * * *',  # Run at 2 AM daily
+    catchup=False
+)
+
+def extract_sales_data(**context):
+    """Extract sales data from source systems"""
+    execution_date = context['execution_date']
+    
+    # Connect to source database
+    import psycopg2
+    conn = psycopg2.connect(
+        host=os.environ['DB_HOST'],
+        database=os.environ['DB_NAME'],
+        user=os.environ['DB_USER'],
+        password=os.environ['DB_PASSWORD']
+    )
+    
+    # Extract data for the execution date
+    query = """
+    SELECT 
+        order_id,
+        customer_id,
+        product_id,
+        quantity,
+        price,
+        order_date,
+        created_at
+    FROM sales_orders 
+    WHERE DATE(created_at) = %s
+    """
+    
+    df = pd.read_sql(query, conn, params=[execution_date.date()])
+    
+    # Save to staging area
+    staging_path = f"s3://data-lake/staging/sales/{execution_date.strftime('%Y/%m/%d')}/sales_data.parquet"
+    df.to_parquet(staging_path)
+    
+    return staging_path
+
+def transform_sales_data(**context):
+    """Transform and clean sales data"""
+    staging_path = context['task_instance'].xcom_pull(task_ids='extract_sales_data')
+    
+    # Load data from staging
+    df = pd.read_parquet(staging_path)
+    
+    # Data cleaning and transformation
+    df = df.dropna()  # Remove null values
+    df['total_amount'] = df['quantity'] * df['price']
+    df['order_date'] = pd.to_datetime(df['order_date'])
+    
+    # Add derived columns
+    df['year'] = df['order_date'].dt.year
+    df['month'] = df['order_date'].dt.month
+    df['day'] = df['order_date'].dt.day
+    df['weekday'] = df['order_date'].dt.day_name()
+    
+    # Data validation
+    assert df['total_amount'].min() >= 0, "Negative amounts found"
+    assert df['quantity'].min() > 0, "Invalid quantities found"
+    
+    # Save transformed data
+    output_path = f"s3://data-lake/processed/sales/{context['execution_date'].strftime('%Y/%m/%d')}/sales_data.parquet"
+    df.to_parquet(output_path, partition_cols=['year', 'month'])
+    
+    return output_path
+
+# Define tasks
+extract_task = PythonOperator(
+    task_id='extract_sales_data',
+    python_callable=extract_sales_data,
+    dag=dag
+)
+
+transform_task = PythonOperator(
+    task_id='transform_sales_data',
+    python_callable=transform_sales_data,
+    dag=dag
+)
+
+# Data quality checks
+quality_check = BashOperator(
+    task_id='data_quality_check',
+    bash_command='python /opt/airflow/scripts/data_quality_check.py {{ ds }}',
+    dag=dag
+)
+
+# Set task dependencies
+extract_task >> transform_task >> quality_check
+```
+
+### 2. Stream Processing
+
+For real-time data processing requirements:
+
+```python
+# Example: Real-time stream processing with Apache Kafka and Python
+from kafka import KafkaConsumer, KafkaProducer
+import json
+import logging
+from datetime import datetime
+import pandas as pd
+
+class StreamProcessor:
+    def __init__(self, input_topic, output_topic, bootstrap_servers):
+        self.input_topic = input_topic
+        self.output_topic = output_topic
+        
+        self.consumer = KafkaConsumer(
+            input_topic,
+            bootstrap_servers=bootstrap_servers,
+            value_deserializer=lambda x: json.loads(x.decode('utf-8')),
+            group_id='stream_processor_group',
+            enable_auto_commit=True,
+            auto_offset_reset='latest'
+        )
+        
+        self.producer = KafkaProducer(
+            bootstrap_servers=bootstrap_servers,
+            value_serializer=lambda x: json.dumps(x).encode('utf-8')
+        )
+        
+        self.logger = logging.getLogger(__name__)
+    
+    def process_message(self, message):
+        """Process individual message"""
+        try:
+            # Extract data
+            data = message.value
+            
+            # Data validation
+            required_fields = ['user_id', 'event_type', 'timestamp']
+            if not all(field in data for field in required_fields):
+                raise ValueError(f"Missing required fields: {required_fields}")
+            
+            # Data enrichment
+            enriched_data = {
+                **data,
+                'processed_at': datetime.utcnow().isoformat(),
+                'processing_version': '1.0'
+            }
+            
+            # Business logic
+            if data['event_type'] == 'purchase':
+                enriched_data['category'] = self.categorize_purchase(data)
+                enriched_data['risk_score'] = self.calculate_risk_score(data)
+            
+            # Send to output topic
+            self.producer.send(self.output_topic, enriched_data)
+            
+            return enriched_data
+            
+        except Exception as e:
+            self.logger.error(f"Error processing message: {e}")
+            # Send to dead letter queue
+            self.producer.send(f"{self.output_topic}_dlq", {
+                'original_message': message.value,
+                'error': str(e),
+                'timestamp': datetime.utcnow().isoformat()
+            })
+    
+    def categorize_purchase(self, data):
+        """Categorize purchase based on amount and product"""
+        amount = data.get('amount', 0)
+        if amount > 1000:
+            return 'high_value'
+        elif amount > 100:
+            return 'medium_value'
+        else:
+            return 'low_value'
+    
+    def calculate_risk_score(self, data):
+        """Calculate fraud risk score"""
+        # Simplified risk calculation
+        base_score = 0
+        
+        # Check amount
+        amount = data.get('amount', 0)
+        if amount > 5000:
+            base_score += 30
+        elif amount > 1000:
+            base_score += 10
+        
+        # Check time of day
+        hour = datetime.fromisoformat(data['timestamp']).hour
+        if hour < 6 or hour > 22:
+            base_score += 20
+        
+        return min(base_score, 100)
+    
+    def run(self):
+        """Start processing messages"""
+        self.logger.info(f"Starting stream processor for topic: {self.input_topic}")
+        
+        try:
+            for message in self.consumer:
+                self.process_message(message)
+        except KeyboardInterrupt:
+            self.logger.info("Stopping stream processor")
+        finally:
+            self.consumer.close()
+            self.producer.close()
+
+# Usage
+if __name__ == "__main__":
+    processor = StreamProcessor(
+        input_topic='user_events',
+        output_topic='processed_events',
+        bootstrap_servers=['localhost:9092']
+    )
+    processor.run()
+```
+
+## Data Transformation and Processing
+
+### 1. ETL with Apache Spark
+
+For large-scale data processing:
+
+```python
+# Example: Spark ETL job for customer analytics
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import *
+from pyspark.sql.types import *
+import logging
+
+class CustomerAnalyticsETL:
+    def __init__(self, app_name="CustomerAnalytics"):
+        self.spark = SparkSession.builder \
+            .appName(app_name) \
+            .config("spark.sql.adaptive.enabled", "true") \
+            .config("spark.sql.adaptive.coalescePartitions.enabled", "true") \
+            .getOrCreate()
+        
+        self.logger = logging.getLogger(__name__)
+    
+    def extract_data(self, date_str):
+        """Extract data from various sources"""
+        # Customer data
+        customers_df = self.spark.read \
+            .option("header", "true") \
+            .option("inferSchema", "true") \
+            .csv(f"s3://data-lake/raw/customers/{date_str}/")
+        
+        # Orders data
+        orders_df = self.spark.read \
+            .option("header", "true") \
+            .option("inferSchema", "true") \
+            .csv(f"s3://data-lake/raw/orders/{date_str}/")
+        
+        # Products data
+        products_df = self.spark.read \
+            .option("header", "true") \
+            .option("inferSchema", "true") \
+            .csv(f"s3://data-lake/raw/products/{date_str}/")
+        
+        return customers_df, orders_df, products_df
+    
+    def transform_data(self, customers_df, orders_df, products_df):
+        """Transform and aggregate data"""
+        
+        # Clean customer data
+        customers_clean = customers_df \
+            .filter(col("customer_id").isNotNull()) \
+            .filter(col("email").rlike(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$')) \
+            .withColumn("registration_date", to_date(col("registration_date"), "yyyy-MM-dd"))
+        
+        # Clean and enrich orders data
+        orders_clean = orders_df \
+            .filter(col("order_id").isNotNull()) \
+            .filter(col("customer_id").isNotNull()) \
+            .filter(col("order_amount") > 0) \
+            .withColumn("order_date", to_date(col("order_date"), "yyyy-MM-dd")) \
+            .withColumn("order_year", year(col("order_date"))) \
+            .withColumn("order_month", month(col("order_date"))) \
+            .withColumn("order_quarter", quarter(col("order_date")))
+        
+        # Join orders with products
+        order_details = orders_clean.join(
+            products_df.select("product_id", "category", "subcategory"),
+            "product_id",
+            "left"
+        )
+        
+        # Calculate customer metrics
+        customer_metrics = order_details.groupBy("customer_id") \
+            .agg(
+                count("order_id").alias("total_orders"),
+                sum("order_amount").alias("total_spent"),
+                avg("order_amount").alias("avg_order_value"),
+                max("order_date").alias("last_order_date"),
+                min("order_date").alias("first_order_date"),
+                countDistinct("category").alias("categories_purchased"),
+                collect_set("category").alias("preferred_categories")
+            )
+        
+        # Calculate customer lifetime value
+        customer_metrics = customer_metrics \
+            .withColumn("days_as_customer", 
+                       datediff(col("last_order_date"), col("first_order_date"))) \
+            .withColumn("customer_lifetime_value",
+                       when(col("days_as_customer") > 0,
+                            col("total_spent") / col("days_as_customer") * 365)
+                       .otherwise(col("total_spent")))
+        
+        # Customer segmentation
+        customer_segments = customer_metrics \
+            .withColumn("segment",
+                       when((col("total_spent") > 1000) & (col("total_orders") > 10), "VIP")
+                       .when((col("total_spent") > 500) & (col("total_orders") > 5), "Premium")
+                       .when(col("total_orders") > 1, "Regular")
+                       .otherwise("New"))
+        
+        # Join with customer details
+        final_df = customers_clean.join(customer_segments, "customer_id", "left") \
+            .fillna({
+                "total_orders": 0,
+                "total_spent": 0.0,
+                "segment": "New"
+            })
+        
+        return final_df
+    
+    def load_data(self, df, output_path):
+        """Load transformed data to destination"""
+        df.write \
+            .mode("overwrite") \
+            .partitionBy("segment", "order_year", "order_month") \
+            .parquet(output_path)
+        
+        # Also save as Delta table for ACID transactions
+        df.write \
+            .format("delta") \
+            .mode("overwrite") \
+            .option("overwriteSchema", "true") \
+            .save(f"{output_path}_delta")
+    
+    def run_etl(self, date_str):
+        """Run the complete ETL process"""
+        try:
+            self.logger.info(f"Starting ETL process for date: {date_str}")
+            
+            # Extract
+            customers_df, orders_df, products_df = self.extract_data(date_str)
+            
+            # Transform
+            final_df = self.transform_data(customers_df, orders_df, products_df)
+            
+            # Data quality checks
+            self.validate_data(final_df)
+            
+            # Load
+            output_path = f"s3://data-lake/processed/customer_analytics/{date_str}"
+            self.load_data(final_df, output_path)
+            
+            self.logger.info(f"ETL process completed successfully for date: {date_str}")
+            
+        except Exception as e:
+            self.logger.error(f"ETL process failed: {e}")
+            raise
+        finally:
+            self.spark.stop()
+    
+    def validate_data(self, df):
+        """Perform data quality checks"""
+        # Check for null customer IDs
+        null_customers = df.filter(col("customer_id").isNull()).count()
+        if null_customers > 0:
+            raise ValueError(f"Found {null_customers} records with null customer_id")
+        
+        # Check for negative values
+        negative_spent = df.filter(col("total_spent") < 0).count()
+        if negative_spent > 0:
+            raise ValueError(f"Found {negative_spent} records with negative total_spent")
+        
+        # Check data freshness
+        max_date = df.agg(max("last_order_date")).collect()[0][0]
+        if max_date is None:
+            raise ValueError("No order dates found in the data")
+        
+        self.logger.info("Data quality checks passed")
+
+# Usage
+if __name__ == "__main__":
+    etl = CustomerAnalyticsETL()
+    etl.run_etl("2024-01-15")
+```
+
+## Data Quality and Monitoring
+
+### 1. Data Quality Framework
+
+```python
+# Data quality monitoring framework
+import pandas as pd
+from typing import Dict, List, Any
+from dataclasses import dataclass
+from enum import Enum
+
+class QualityCheckType(Enum):
+    COMPLETENESS = "completeness"
+    UNIQUENESS = "uniqueness"
+    VALIDITY = "validity"
+    CONSISTENCY = "consistency"
+    ACCURACY = "accuracy"
+
+@dataclass
+class QualityCheck:
+    name: str
+    check_type: QualityCheckType
+    column: str
+    threshold: float
+    description: str
+
+@dataclass
+class QualityResult:
+    check_name: str
+    passed: bool
+    score: float
+    threshold: float
+    message: str
+
+class DataQualityMonitor:
+    def __init__(self):
+        self.checks: List[QualityCheck] = []
+    
+    def add_check(self, check: QualityCheck):
+        """Add a quality check"""
+        self.checks.append(check)
+    
+    def check_completeness(self, df: pd.DataFrame, column: str, threshold: float) -> QualityResult:
+        """Check data completeness (non-null percentage)"""
+        non_null_count = df[column].notna().sum()
+        total_count = len(df)
+        completeness_score = (non_null_count / total_count) * 100 if total_count > 0 else 0
+        
+        passed = completeness_score >= threshold
+        message = f"Completeness: {completeness_score:.2f}% (threshold: {threshold}%)"
+        
+        return QualityResult(
+            check_name=f"completeness_{column}",
+            passed=passed,
+            score=completeness_score,
+            threshold=threshold,
+            message=message
+        )
+    
+    def check_uniqueness(self, df: pd.DataFrame, column: str, threshold: float) -> QualityResult:
+        """Check data uniqueness (unique values percentage)"""
+        unique_count = df[column].nunique()
+        total_count = len(df)
+        uniqueness_score = (unique_count / total_count) * 100 if total_count > 0 else 0
+        
+        passed = uniqueness_score >= threshold
+        message = f"Uniqueness: {uniqueness_score:.2f}% (threshold: {threshold}%)"
+        
+        return QualityResult(
+            check_name=f"uniqueness_{column}",
+            passed=passed,
+            score=uniqueness_score,
+            threshold=threshold,
+            message=message
+        )
+    
+    def check_validity(self, df: pd.DataFrame, column: str, threshold: float, 
+                      validation_func=None) -> QualityResult:
+        """Check data validity using custom validation function"""
+        if validation_func is None:
+            # Default validation for numeric columns
+            valid_count = df[column].apply(lambda x: pd.notna(x) and isinstance(x, (int, float))).sum()
+        else:
+            valid_count = df[column].apply(validation_func).sum()
+        
+        total_count = len(df)
+        validity_score = (valid_count / total_count) * 100 if total_count > 0 else 0
+        
+        passed = validity_score >= threshold
+        message = f"Validity: {validity_score:.2f}% (threshold: {threshold}%)"
+        
+        return QualityResult(
+            check_name=f"validity_{column}",
+            passed=passed,
+            score=validity_score,
+            threshold=threshold,
+            message=message
+        )
+    
+    def run_checks(self, df: pd.DataFrame) -> List[QualityResult]:
+        """Run all configured quality checks"""
+        results = []
+        
+        for check in self.checks:
+            if check.check_type == QualityCheckType.COMPLETENESS:
+                result = self.check_completeness(df, check.column, check.threshold)
+            elif check.check_type == QualityCheckType.UNIQUENESS:
+                result = self.check_uniqueness(df, check.column, check.threshold)
+            elif check.check_type == QualityCheckType.VALIDITY:
+                result = self.check_validity(df, check.column, check.threshold)
+            else:
+                continue
+            
+            results.append(result)
+        
+        return results
+    
+    def generate_report(self, results: List[QualityResult]) -> Dict[str, Any]:
+        """Generate quality report"""
+        total_checks = len(results)
+        passed_checks = sum(1 for r in results if r.passed)
+        
+        report = {
+            "timestamp": pd.Timestamp.now().isoformat(),
+            "total_checks": total_checks,
+            "passed_checks": passed_checks,
+            "failed_checks": total_checks - passed_checks,
+            "success_rate": (passed_checks / total_checks) * 100 if total_checks > 0 else 0,
+            "details": [
+                {
+                    "check_name": r.check_name,
+                    "passed": r.passed,
+                    "score": r.score,
+                    "threshold": r.threshold,
+                    "message": r.message
+                }
+                for r in results
+            ]
+        }
+        
+        return report
+
+# Usage example
+def validate_email(email):
+    """Custom email validation function"""
+    import re
+    pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+    return bool(re.match(pattern, str(email)))
+
+# Set up quality monitoring
+monitor = DataQualityMonitor()
+
+# Add quality checks
+monitor.add_check(QualityCheck(
+    name="customer_id_completeness",
+    check_type=QualityCheckType.COMPLETENESS,
+    column="customer_id",
+    threshold=100.0,
+    description="Customer ID should be present for all records"
+))
+
+monitor.add_check(QualityCheck(
+    name="customer_id_uniqueness",
+    check_type=QualityCheckType.UNIQUENESS,
+    column="customer_id",
+    threshold=100.0,
+    description="Customer ID should be unique"
+))
+
+monitor.add_check(QualityCheck(
+    name="email_validity",
+    check_type=QualityCheckType.VALIDITY,
+    column="email",
+    threshold=95.0,
+    description="Email addresses should be valid"
+))
+
+# Run quality checks
+# df = pd.read_csv("customer_data.csv")
+# results = monitor.run_checks(df)
+# report = monitor.generate_report(results)
+# print(json.dumps(report, indent=2))
+```
+
+## Conclusion
+
+Modern data engineering pipelines require careful consideration of multiple factors:
+
+1. **Scalability** - Design for growing data volumes and complexity
+2. **Reliability** - Implement proper error handling and monitoring
+3. **Data Quality** - Ensure data accuracy and completeness
+4. **Performance** - Optimize for processing speed and resource usage
+5. **Maintainability** - Write clean, documented, and testable code
+
+Key technologies and practices:
+- **Apache Airflow** for workflow orchestration
+- **Apache Spark** for large-scale data processing
+- **Apache Kafka** for real-time streaming
+- **Data quality monitoring** for ensuring data reliability
+- **Infrastructure as Code** for reproducible deployments
+
+By following these patterns and best practices, you can build robust data engineering pipelines that deliver reliable, high-quality data for analytics and machine learning applications.
