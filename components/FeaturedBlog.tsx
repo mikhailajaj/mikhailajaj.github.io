@@ -1,9 +1,9 @@
 "use client";
-import React from 'react';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { FaArrowRight, FaCalendar, FaClock, FaTag } from 'react-icons/fa';
-import { BlogPost } from '@/lib/blog';
+import React from "react";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { FaArrowRight, FaCalendar, FaClock, FaTag } from "react-icons/fa";
+import { BlogPost } from "@/lib/blog";
 
 interface FeaturedBlogProps {
   posts: BlogPost[];
@@ -26,11 +26,12 @@ const FeaturedBlog: React.FC<FeaturedBlogProps> = ({ posts }) => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            Latest <span className="text-blue-600 dark:text-blue-400">Insights</span>
+            Latest{" "}
+            <span className="text-blue-600 dark:text-blue-400">Insights</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
-            Technical articles, tutorials, and deep dives into modern development practices, 
-            cloud architecture, and data engineering.
+            Technical articles, tutorials, and deep dives into modern
+            development practices, cloud architecture, and data engineering.
           </p>
           <Link
             href="/blog"
@@ -67,19 +68,17 @@ const FeaturedBlog: React.FC<FeaturedBlogProps> = ({ posts }) => {
                       <div className="text-4xl font-bold mb-2">
                         {post.title.charAt(0)}
                       </div>
-                      <div className="text-sm opacity-80">
-                        {post.category}
-                      </div>
+                      <div className="text-sm opacity-80">{post.category}</div>
                     </div>
                   )}
-                  
+
                   {/* Category Badge */}
                   <div className="absolute top-4 left-4">
                     <span className="bg-black/50 text-white px-3 py-1 rounded-full text-sm">
                       {post.category}
                     </span>
                   </div>
-                  
+
                   {/* Featured Badge */}
                   {post.featured && (
                     <div className="absolute top-4 right-4">
@@ -96,10 +95,10 @@ const FeaturedBlog: React.FC<FeaturedBlogProps> = ({ posts }) => {
                   <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400 mb-3">
                     <div className="flex items-center">
                       <FaCalendar className="mr-1" />
-                      {new Date(post.date).toLocaleDateString('en-US', {
-                        month: 'short',
-                        day: 'numeric',
-                        year: 'numeric'
+                      {new Date(post.date).toLocaleDateString("en-US", {
+                        month: "short",
+                        day: "numeric",
+                        year: "numeric",
                       })}
                     </div>
                     <div className="flex items-center">
@@ -142,7 +141,9 @@ const FeaturedBlog: React.FC<FeaturedBlogProps> = ({ posts }) => {
                       By {post.author}
                     </span>
                     <div className="flex items-center text-blue-600 dark:text-blue-400 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors">
-                      <span className="text-sm font-medium mr-2">Read More</span>
+                      <span className="text-sm font-medium mr-2">
+                        Read More
+                      </span>
                       <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>

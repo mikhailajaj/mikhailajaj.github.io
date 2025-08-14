@@ -1,0 +1,391 @@
+/**
+ * Domain Theming CSS
+ * 
+ * Global CSS for domain-aware theming throughout the portfolio.
+ * Provides base styles and utilities for domain-specific components.
+ * 
+ * @fileoverview Domain theming CSS utilities and base styles
+ */
+
+/* Domain CSS Custom Properties Base */
+:root {
+  /* Default domain (full-stack) */
+  --domain-primary: #1e40af;
+  --domain-primary-rgb: 30, 64, 175;
+  --domain-primary-50: rgba(30, 64, 175, 0.05);
+  --domain-primary-100: rgba(30, 64, 175, 0.1);
+  --domain-primary-200: rgba(30, 64, 175, 0.2);
+  --domain-primary-300: rgba(30, 64, 175, 0.3);
+  --domain-primary-400: rgba(30, 64, 175, 0.4);
+  --domain-primary-500: #1e40af;
+  --domain-primary-600: #1d4ed8;
+  --domain-primary-700: #1e3a8a;
+  --domain-primary-800: #1e3a8a;
+  --domain-primary-900: #1e3a8a;
+  
+  /* Semantic variations */
+  --domain-background: rgba(30, 64, 175, 0.05);
+  --domain-foreground: #1e40af;
+  --domain-muted: rgba(30, 64, 175, 0.1);
+  --domain-accent: #3b82f6;
+  --domain-border: rgba(30, 64, 175, 0.2);
+  
+  /* Interactive states */
+  --domain-hover: #1d4ed8;
+  --domain-focus: rgba(30, 64, 175, 0.3);
+  --domain-active: #1e3a8a;
+  
+  /* Domain metadata */
+  --domain-name: "Full-Stack Development";
+  --domain-short-name: "Full-Stack";
+  --domain-icon: "💻";
+}
+
+/* Domain-specific body classes */
+body.domain-full-stack {
+  --domain-primary: #1e40af;
+  --domain-primary-rgb: 30, 64, 175;
+}
+
+body.domain-cloud-engineering {
+  --domain-primary: #0369a1;
+  --domain-primary-rgb: 3, 105, 161;
+}
+
+body.domain-data-analytics {
+  --domain-primary: #059669;
+  --domain-primary-rgb: 5, 150, 105;
+}
+
+body.domain-ux-ui-design {
+  --domain-primary: #7c3aed;
+  --domain-primary-rgb: 124, 58, 237;
+}
+
+body.domain-technical-consulting {
+  --domain-primary: #ea580c;
+  --domain-primary-rgb: 234, 88, 12;
+}
+
+/* Domain variant utilities */
+.domain-variant-primary {
+  background-color: var(--domain-primary);
+  color: white;
+  border-color: var(--domain-primary);
+}
+
+.domain-variant-secondary {
+  background-color: var(--domain-primary-100);
+  color: var(--domain-primary);
+  border-color: var(--domain-primary-200);
+}
+
+.domain-variant-accent {
+  background-color: var(--domain-accent);
+  color: white;
+  border-color: var(--domain-accent);
+}
+
+.domain-variant-muted {
+  background-color: var(--domain-primary-50);
+  color: var(--domain-primary-700);
+  border-color: var(--domain-primary-100);
+}
+
+.domain-variant-outline {
+  background-color: transparent;
+  color: var(--domain-primary);
+  border-color: var(--domain-primary);
+}
+
+.domain-variant-ghost {
+  background-color: transparent;
+  color: var(--domain-primary);
+  border-color: transparent;
+}
+
+/* Domain intensity modifiers */
+.domain-intensity-light {
+  opacity: 0.7;
+}
+
+.domain-intensity-medium {
+  opacity: 0.85;
+}
+
+.domain-intensity-normal {
+  opacity: 1;
+}
+
+.domain-intensity-dark {
+  filter: brightness(0.9);
+}
+
+/* Interactive state utilities */
+.domain-hover:hover {
+  background-color: var(--domain-hover);
+  border-color: var(--domain-hover);
+}
+
+.domain-focus:focus,
+.domain-focus:focus-visible {
+  outline: 2px solid var(--domain-focus);
+  outline-offset: 2px;
+}
+
+.domain-active:active {
+  background-color: var(--domain-active);
+  border-color: var(--domain-active);
+}
+
+/* Domain-specific component utilities */
+.domain-text {
+  color: var(--domain-primary);
+}
+
+.domain-bg {
+  background-color: var(--domain-background);
+}
+
+.domain-border {
+  border-color: var(--domain-border);
+}
+
+.domain-shadow {
+  box-shadow: 0 4px 6px -1px rgba(var(--domain-primary-rgb), 0.25),
+              0 2px 4px -1px rgba(var(--domain-primary-rgb), 0.06);
+}
+
+.domain-shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(var(--domain-primary-rgb), 0.25),
+              0 4px 6px -2px rgba(var(--domain-primary-rgb), 0.05);
+}
+
+/* Domain gradient utilities */
+.domain-gradient {
+  background: linear-gradient(135deg, 
+    var(--domain-primary), 
+    rgba(var(--domain-primary-rgb), 0.8)
+  );
+}
+
+.domain-gradient-to-r {
+  background: linear-gradient(to right, 
+    var(--domain-primary), 
+    var(--domain-accent)
+  );
+}
+
+.domain-gradient-to-b {
+  background: linear-gradient(to bottom, 
+    var(--domain-primary), 
+    var(--domain-accent)
+  );
+}
+
+/* Domain-specific animations */
+@keyframes domain-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.domain-pulse {
+  animation: domain-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes domain-bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.domain-bounce {
+  animation: domain-bounce 1s infinite;
+}
+
+/* Domain-specific button enhancements */
+.btn-domain {
+  background-color: var(--domain-primary);
+  color: white;
+  border: 1px solid var(--domain-primary);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-domain:hover {
+  background-color: var(--domain-hover);
+  border-color: var(--domain-hover);
+  box-shadow: var(--domain-shadow);
+}
+
+.btn-domain:focus {
+  outline: 2px solid var(--domain-focus);
+  outline-offset: 2px;
+}
+
+.btn-domain:active {
+  background-color: var(--domain-active);
+  border-color: var(--domain-active);
+}
+
+.btn-domain-outline {
+  background-color: transparent;
+  color: var(--domain-primary);
+  border: 1px solid var(--domain-primary);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-domain-outline:hover {
+  background-color: var(--domain-primary);
+  color: white;
+}
+
+/* Domain-specific card styles */
+.card-domain {
+  border: 1px solid var(--domain-border);
+  background-color: var(--domain-background);
+}
+
+.card-domain-header {
+  background-color: var(--domain-primary-100);
+  border-bottom: 1px solid var(--domain-border);
+}
+
+.card-domain-accent {
+  border-left: 4px solid var(--domain-primary);
+}
+
+/* Domain-specific navigation styles */
+.nav-domain-item {
+  color: var(--domain-primary);
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-domain-item:hover {
+  background-color: var(--domain-primary-100);
+  color: var(--domain-primary-700);
+}
+
+.nav-domain-item.active {
+  background-color: var(--domain-primary);
+  color: white;
+}
+
+/* Domain-specific form styles */
+.form-domain input:focus,
+.form-domain textarea:focus,
+.form-domain select:focus {
+  border-color: var(--domain-primary);
+  outline: 2px solid var(--domain-focus);
+  outline-offset: 2px;
+}
+
+.form-domain label {
+  color: var(--domain-primary-700);
+}
+
+/* Domain-specific badge styles */
+.badge-domain {
+  background-color: var(--domain-primary);
+  color: white;
+}
+
+.badge-domain-outline {
+  background-color: transparent;
+  color: var(--domain-primary);
+  border: 1px solid var(--domain-primary);
+}
+
+.badge-domain-soft {
+  background-color: var(--domain-primary-100);
+  color: var(--domain-primary-700);
+}
+
+/* Domain-specific progress styles */
+.progress-domain {
+  background-color: var(--domain-primary-100);
+}
+
+.progress-domain-bar {
+  background-color: var(--domain-primary);
+}
+
+/* Domain-specific alert styles */
+.alert-domain {
+  background-color: var(--domain-primary-50);
+  border: 1px solid var(--domain-primary-200);
+  color: var(--domain-primary-700);
+}
+
+.alert-domain-icon {
+  color: var(--domain-primary);
+}
+
+/* Responsive domain utilities */
+@media (max-width: 768px) {
+  .domain-shadow {
+    box-shadow: 0 2px 4px -1px rgba(var(--domain-primary-rgb), 0.2);
+  }
+  
+  .domain-shadow-lg {
+    box-shadow: 0 4px 6px -1px rgba(var(--domain-primary-rgb), 0.2);
+  }
+}
+
+/* Dark mode domain adjustments */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --domain-background: rgba(var(--domain-primary-rgb), 0.1);
+    --domain-muted: rgba(var(--domain-primary-rgb), 0.15);
+    --domain-border: rgba(var(--domain-primary-rgb), 0.3);
+  }
+  
+  .domain-variant-secondary {
+    background-color: var(--domain-primary-200);
+    color: var(--domain-primary-900);
+  }
+  
+  .domain-variant-muted {
+    background-color: var(--domain-primary-100);
+    color: var(--domain-primary-800);
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --domain-border: var(--domain-primary);
+    --domain-focus: var(--domain-primary);
+  }
+  
+  .domain-variant-outline {
+    border-width: 2px;
+  }
+  
+  .domain-focus:focus,
+  .domain-focus:focus-visible {
+    outline-width: 3px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .domain-pulse,
+  .domain-bounce {
+    animation: none;
+  }
+  
+  .btn-domain,
+  .btn-domain-outline,
+  .nav-domain-item {
+    transition: none;
+  }
+}

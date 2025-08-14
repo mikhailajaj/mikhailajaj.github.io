@@ -1,0 +1,270 @@
+{
+  "components": {
+    "manualVersion": "2.1.0",
+    "lastUpdated": "2024-12-19",
+    "totalComponents": 229,
+    "description": "Comprehensive component documentation for the Mikhail Ajaj Portfolio with pattern classifications and API references",
+    "categories": {
+      "ui": {
+        "title": "UI Components",
+        "description": "Reusable UI components following atomic design principles",
+        "path": "components/ui/",
+        "components": {
+          "Button": {
+            "file": "components/ui/button.tsx",
+            "description": "Versatile button component with multiple variants and sizes",
+            "props": {
+              "variant": "default | destructive | outline | secondary | ghost | link",
+              "size": "default | sm | lg | icon",
+              "asChild": "boolean - Render as child component",
+              "className": "string - Additional CSS classes"
+            },
+            "usage": "Primary interactive element with consistent styling",
+            "dependencies": ["@radix-ui/react-slot", "class-variance-authority"],
+            "status": "stable",
+            "accessibility": "Full keyboard navigation and ARIA support",
+            "examples": {
+              "basic": "<Button>Click me</Button>",
+              "variant": "<Button variant=\"outline\">Outline Button</Button>",
+              "size": "<Button size=\"lg\">Large Button</Button>"
+            }
+          },
+          "Card": {
+            "file": "components/ui/card.tsx",
+            "description": "Compound card component with header, content, and footer sections",
+            "props": {
+              "className": "string - Additional CSS classes"
+            },
+            "subComponents": ["CardHeader", "CardTitle", "CardDescription", "CardContent", "CardFooter"],
+            "usage": "Content containers with consistent styling and spacing",
+            "status": "stable",
+            "accessibility": "Semantic HTML structure with proper heading hierarchy",
+            "examples": {
+              "basic": "<Card><CardHeader><CardTitle>Title</CardTitle></CardHeader><CardContent>Content</CardContent></Card>"
+            }
+          },
+          "BentoGrid": {
+            "file": "components/ui/BentoGrid.tsx",
+            "description": "Responsive grid layout inspired by Bento box design pattern",
+            "props": {
+              "className": "string - Additional CSS classes",
+              "children": "React.ReactNode - Grid items"
+            },
+            "usage": "Masonry-style grid layout for showcasing content",
+            "status": "stable",
+            "features": ["Responsive design", "Masonry layout", "Flexible grid items"],
+            "recentChanges": "Enhanced with better responsive breakpoints"
+          },
+          "AccessibleButton": {
+            "file": "components/ui/AccessibleButton.tsx",
+            "description": "Enhanced button with comprehensive accessibility features",
+            "props": {
+              "ariaLabel": "string - Accessible label",
+              "variant": "primary | secondary | outline",
+              "size": "sm | md | lg",
+              "loading": "boolean - Loading state",
+              "disabled": "boolean - Disabled state"
+            },
+            "usage": "Buttons requiring enhanced accessibility compliance",
+            "status": "stable",
+            "accessibility": "WCAG 2.1 AA compliant with screen reader support"
+          },
+          "InteractiveMagicButton": {
+            "file": "components/ui/InteractiveMagicButton.tsx",
+            "description": "Animated button with magical hover effects and interactions",
+            "props": {
+              "title": "string - Button text",
+              "icon": "React.ReactNode - Icon element",
+              "position": "left | right - Icon position",
+              "handleClick": "function - Click handler",
+              "otherClasses": "string - Additional classes"
+            },
+            "usage": "Call-to-action buttons with enhanced visual appeal",
+            "status": "stable",
+            "dependencies": ["framer-motion"],
+            "recentChanges": "Renamed from EnhancedMagicButton for clarity"
+          }
+        }
+      },
+      "domainSpecific": {
+        "title": "Domain-Specific Components",
+        "description": "Components tailored for specific business domains",
+        "path": "components/domain-specific/",
+        "components": {
+          "FullStackHero": {
+            "file": "components/domain-specific/full-stack/FullStackHero.tsx",
+            "description": "Hero section showcasing full-stack development expertise",
+            "domain": "full-stack",
+            "theme": "Blue spectrum (#3B82F6)",
+            "features": ["Achievement metrics", "Technology showcase", "Project highlights"],
+            "status": "stable",
+            "usage": "Landing page for full-stack development domain"
+          },
+          "CloudHero": {
+            "file": "components/domain-specific/cloud/CloudHero.tsx",
+            "description": "Hero section for cloud engineering domain",
+            "domain": "cloud-engineering",
+            "theme": "Teal spectrum (#06B6D4)",
+            "status": "stable"
+          },
+          "DataHero": {
+            "file": "components/domain-specific/data/DataHero.tsx",
+            "description": "Hero section for data analytics domain",
+            "domain": "data-analytics",
+            "theme": "Purple spectrum (#8B5CF6)",
+            "status": "stable"
+          },
+          "UXUIHero": {
+            "file": "components/domain-specific/ux-ui/UXUIHero.tsx",
+            "description": "Hero section for UX/UI design domain",
+            "domain": "ux-ui-design",
+            "theme": "Pink spectrum (#EC4899)",
+            "status": "stable"
+          },
+          "ConsultingHero": {
+            "file": "components/domain-specific/consulting/ConsultingHero.tsx",
+            "description": "Hero section for technical consulting domain",
+            "domain": "technical-consulting",
+            "theme": "Green spectrum (#10B981)",
+            "status": "stable"
+          }
+        }
+      },
+      "features": {
+        "title": "Feature Components",
+        "description": "Feature-specific components organized by business functionality",
+        "path": "components/features/",
+        "components": {
+          "ConsolidatedHero": {
+            "file": "components/features/homepage/ConsolidatedHero.tsx",
+            "description": "Unified hero section with impact metrics, domain showcase, and CTA",
+            "props": {
+              "className": "string - Additional CSS classes"
+            },
+            "features": [
+              "Animated impact metrics",
+              "Domain showcase cards",
+              "Progressive disclosure",
+              "Call-to-action integration"
+            ],
+            "usage": "Main homepage hero section",
+            "status": "stable",
+            "dependencies": ["framer-motion", "react-icons"],
+            "performance": "Optimized with Suspense and lazy loading"
+          },
+          "BusinessImpactHero": {
+            "file": "components/features/homepage/BusinessImpactHero.tsx",
+            "description": "Hero component highlighting business impact and metrics",
+            "usage": "Showcase quantifiable business achievements",
+            "status": "stable"
+          },
+          "DomainShowcase": {
+            "file": "components/features/homepage/DomainShowcase.tsx",
+            "description": "Interactive showcase of all five expertise domains",
+            "usage": "Homepage section highlighting domain expertise",
+            "status": "stable"
+          }
+        }
+      },
+      "3d": {
+        "title": "3D Components",
+        "description": "Three.js and React Three Fiber components for 3D visualizations",
+        "path": "components/3d/",
+        "components": {
+          "Camera3D": {
+            "file": "components/3d/core/Camera3D.tsx",
+            "description": "3D camera setup component",
+            "usage": "Base camera configuration for 3D scenes",
+            "status": "experimental",
+            "dependencies": ["@react-three/fiber", "three"]
+          },
+          "CloudArchitecture": {
+            "file": "components/3d/visualizations/CloudArchitecture.tsx",
+            "description": "3D visualization of cloud architecture",
+            "usage": "Interactive cloud infrastructure visualization",
+            "status": "experimental"
+          }
+        }
+      },
+      "accessibility": {
+        "title": "Accessibility Components",
+        "description": "Components focused on accessibility and inclusive design",
+        "path": "components/accessibility/",
+        "components": {
+          "AccessibilityToolbar": {
+            "file": "components/ui/AccessibilityToolbar.tsx",
+            "description": "Comprehensive accessibility toolbar with multiple features",
+            "features": [
+              "Font size adjustment",
+              "High contrast mode",
+              "Focus indicators",
+              "Screen reader announcements",
+              "Keyboard navigation help"
+            ],
+            "usage": "Site-wide accessibility enhancement",
+            "status": "stable",
+            "compliance": "WCAG 2.1 AA"
+          }
+        }
+      },
+      "admin": {
+        "title": "Admin Components",
+        "description": "Administrative dashboard and monitoring components",
+        "path": "components/admin/",
+        "components": {
+          "ErrorAnalyticsDashboard": {
+            "file": "components/admin/ErrorAnalyticsDashboard.tsx",
+            "description": "Comprehensive error analytics and monitoring dashboard",
+            "features": [
+              "Real-time error tracking",
+              "Error trend analysis",
+              "Automated insights",
+              "Performance impact assessment"
+            ],
+            "usage": "Admin dashboard for error monitoring",
+            "status": "stable",
+            "route": "/admin/error-analytics"
+          }
+        }
+      }
+    },
+    "patterns": {
+      "namingConventions": {
+        "interactive": "Components with user interaction and animations (e.g., InteractiveMagicButton)",
+        "animated": "Components with motion and visual effects (e.g., AnimatedBentoGrid)",
+        "domain": "Components with domain-specific functionality (e.g., DomainCard)",
+        "multi": "Components with multiple steps or states (e.g., MultiStepContactForm)",
+        "sally": "Components with AI-powered optimizations (e.g., SallyCognitiveOptimizer)"
+      },
+      "organizationPrinciples": [
+        "Feature-first organization over technical grouping",
+        "Atomic design hierarchy (atoms → molecules → organisms)",
+        "Domain-driven separation for business logic",
+        "Shared components for cross-cutting concerns"
+      ]
+    },
+    "recentChanges": {
+      "enhancedNamespaceRemoval": {
+        "date": "2024-12-19",
+        "description": "Renamed 13 components from 'Enhanced*' to meaningful names",
+        "changes": [
+          "EnhancedBentoGrid → AnimatedBentoGrid",
+          "EnhancedMagicButton → InteractiveMagicButton",
+          "EnhancedThemeButton → DomainThemeButton",
+          "EnhancedContactForm → MultiStepContactForm"
+        ],
+        "status": "completed"
+      }
+    },
+    "buildStatus": {
+      "totalComponents": 229,
+      "stableComponents": 180,
+      "experimentalComponents": 25,
+      "deprecatedComponents": 0,
+      "knownIssues": [
+        "Some component tag mismatches in ui-showcase",
+        "Import path updates needed in service pages"
+      ]
+    }
+  }
+}

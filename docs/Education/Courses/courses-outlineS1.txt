@@ -1,0 +1,805 @@
+PROG10004
+Programming Principles	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 84.0
+Credit Value: 4.0
+Credit Value Notes: N/A
+Effective: Fall 2025
+Prerequisites: N/A
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: N/A
+Program(s): Hon Bach CompSci - Mobile Comp, Hons Bach of Computer Science
+Program Coordinator(s): Magdin Stoica, El Sayed Mahmoud
+Course Leader or Contact: Shalini Singh Jaspal
+Version: 20250902_00
+Status: Approved (APPR)
+
+Section I Notes: N/A
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+Students acquire the foundation for future programming courses by being immersed in the science of developing computer programs using an intuitive and productive hands-on approach. Students build progressively complex object-oriented applications that are relevant in today's multi-faceted software development environment using problem solving and basic algorithm development skills. Students participate in interactive lectures, presentations and demonstrations as well as numerous hands-on labs exploring fundamental programming principles and learning to apply them using an industry-standard object-oriented programming language.
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+This is the first of four required core computer science courses that focus on computer programming, problem solving and algorithm development. It serves as a foundation for both the core-computer science and the mobile computing course streams. The course focuses on the mastery of programming principles. It is applicable to any modern programming language and is independent of runtime and development platform. Prior knowledge of computer programming is beneficial but not required. In subsequent courses students will develop increasingly complex data-driven, interactive applications using a variety of modern programming languages and integrated development environments using advanced data structures and algorithms.
+
+Hons Bach of Computer Science	Program Coordinator(s): El Sayed Mahmoud
+This course is the first of four required core computer science courses that focus on computer programming, problem solving and algorithm development. It serves as a foundation for both the core-computer science and the program specializations. The course focuses on the mastery of programming principles. It is applicable to any modern programming language and is independent of the runtime and development platform. In subsequent courses students will develop increasingly complex data-driven, interactive applications using a variety of modern programming languages and integrated development environments using advanced data structures and algorithms.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of this course, students will have demonstrated the ability to independently create complete, robust object-oriented programs using fundamental programming principles, algorithms and problem solving techniques.
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Define the main components of a computer program and how a program is executed by a computer.
+Identify the steps required to develop a computer program, the states of the program throughout the development process and the role of the computer scientist at each stage.
+Create robust computer programs conceptualized as systems of related, collaborating objects using fundamental programming principles and modern programming methodologies.
+Characterize programming principles and paradigms and their use in different types of applications.
+Determine the fundamental structural elements, their relationships and the execution control flow techniques used in small to medium real-world object-oriented programs.
+Solve real-world problems using fundamental algorithms implemented in interactive, object-oriented applications developed using an industry-grade integrated development environment.
+Use version control to track and manage versions of source code in local and remote repositories.
+Organize information into fundamental data structures employed in modern real-world programs.
+Employ fundamental persistence mechanisms in the building of data-driven programs.
+Verify the correctness and completeness of increasingly complex computer programs using debugging techniques and integrated development environments.
+Describe the design and operation of object-oriented programs using visual modelling techniques and an industry-grade modelling tool.
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	Quizzes (4 @ 2.5%)	10.0%
+ 	Assignments (2 @ 5%, 2 @ 10%)	30.0%
+ 	Midterm Exam	25.0%
+ 	Final Exam	35.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+To pass the course, students must achieve a 50% weighted average across the exams and at least 50% overall in the course.
+
+Students must submit/complete all assignments, in-class activities and projects by the scheduled due date and write all tests on the specified date/time. Exceptions will only be made under extraordinary circumstances. 
+
+Refer to the School of Applied Computing's Academic Procedures for Evaluations for more details regarding missed work: Procedures for Evaluations
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Challenge Exam
+Notes:  
+Interview
+Notes:  PLAR consists of both a Challenge Exam AND Interview.
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s):
+Course material costs can be found through the Sheridan Bookstore
+ 	Type	Description
+Required	Textbook	Foundations of Python Programming, Miller B., Ranum D., Elkner J., Downey A. B., Meyers C., Resnick P., Runestone Academy, 2018, Interactive eText available at https://runestone.academy/runestone/static/fopp/index.html
+Optional	Textbook	Learning Python, Lutz, M., O'Reilly Media, 5th ed., ISBN 9781449355739, 2013
+Optional	Textbook	Code Complete, McConnell, S., Microsoft Press, 2nd edition, ISBN 9780735619678, 2004
+
+Applicable student group(s): Honours Bachelor of Computer Science (Mobile Computing), Honours Bachelor of Computer Science (All Specializations)
+Course Details:
+Module 1: Foundations of Programming
+
+Describe What Computer Programs are, the Process of Creating a Computer Program and the States of Design Time and Runtime
+Characteristics, Evolution and Types of Programming Languages. Contrast Between Interpreted and Complied Programming Languages.
+Python Programming Language Fundamentals: Python Interpreter, Python Implementations, Language Basics, Working with Modules
+Basic Interactive Programs. Statement Execution. Input and Output.
+Debugging Computer Programs Using an Integrated Development Environment
+Module 2: Basic Problem Solving
+
+Dividing a Problem into Discrete Steps and Describe the Solution Using Comments that form Pseudocode
+Problem Solving Using Variables, Assignments, Operators and Expressions
+Problem Solving Using Variables Logical Expressions, Logical and Comparison Operators and Conditional Expressions
+Problem Solving Using Arithmetic Expressions and Arithmetic Operators and Bitwis Operators. Number Representations, Floating Point Numbers, Binary Representation of Numbers.
+Problem Solving Using Strings
+Using Branches to Solve Problems that Involve Decision Making
+Using Loops to Solve Problems that Involve Repeating Steps
+Module 3: Building Program Structure
+
+Determining the Objects that Make Up Program Using Simple Analysis of the Program Specification
+Defining Classes that Represent the Objects of the Program. Define and use Fundamental Class Relationships: Class Dependencies, Associations and Generalizations
+Defining Class Object Characteristics Using Field Variables and Constructors
+Defining Class Functional Capabilities Using Methods. Use Method Parameters. Use Return Values. Calling Methods. Accessor and Mutator Methods.
+Describing Detailed Class Definitions and Relationships Using UML Class Diagrams Created Using Visual Paradigm
+Describing Detailed Program Flow and Object Interaction Using UML Sequence Diagrams (Created Using Visual Paradigm if Time Permits). Use UML Fragments to Describe Branches and Loops.
+Correspondence Between Diagrams and Code for Class Diagrams and Sequence Diagrams
+Module 4: Creating Interactive Programs
+
+Creating Object-Oriented Programs with Diverse Program Execution (Flow) Using
+Conditional Selection
+Definite (Counted) Loops
+Indefinite (Conditional) Loops
+Developing Interactive Applications Individually: Using Distributed Version Control Systems (GIT Connected to Cloud Platforms Such as Bitbucket), to Track Versions of Code in Local and Remote Repositories
+Creating Robust Programs Using Exception Handling
+Verifying the Program Flow Interactively Using an IDE Debugger. Adding Breakpoints. Stepping Through Code. Inspecting Variable Values Using Windows. Verifying Assumptions.
+Creating Interactive and Visual Programs Using Graphics (E.G. Turtles)
+Modify Existing Programs Through Refactoring: Remaining Variables, Encapsulating Code into Methods
+Defensive Programming Using Asserts to Program Assumptions
+Module 5: Collections
+
+Organizing Data into Collections of Variables. Identifying Characteristics of Collections.
+Ordered Collections. Accessing Elements Using Index. Splicing, Concatenation and Repetition
+Describing Collections as One to Many Relationships Between Classes in UML Class Diagrams
+Mutable and Immutable Collections
+Homogeneous and Heterogeneous Collections
+Working with Python Collections:
+Lists (Dynamic Arrays)
+Strings (as Collection of Characters)
+Tuples: Tuple Assignment, Tuple Packing and Unpacking
+Dictionaries (as Time Permits)
+Module 6: Data Persistence
+
+Working with Text Files, Reading, Writing. Text and Binary Representation of Data.
+Handling Exceptions Related to Data Persistence.
+Resource Management Using "Try-Except-Finally", "Try-Finally" and the "With" Statement.
+Encoding Data Using Text Formats (E.G. CSV, JSON As Time Permits).
+Programming Data-Driven Applications Using Basic Text File I/O (E.G. CSV and JSON Files as Time Permits).
+Module 7: Inheritance
+
+The IS-A Relationship and Its Representation In UML.
+Extending Existing Classes Through Inheritance as a Mechanism of Code Reuse
+Generalization of Related Concrete Classes into a Base Class
+Writing Reusable Code Using Base Classes
+Redefining Methods in Derived Classes
+Using Collections of Objects Derived from a Common Base Class
+Note: The Topics Within Each Module are Grouped Thematically and are not Meant to Suggest a Time Sequence. At the Beginning of the Course, the Professor Will Identify the Class-By-Class Arrangement of Topics and the Timing of Evaluation Components Via a Course Plan.
+
+SYST10082
+Operating Systems Fundamentals	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 42.0
+Credit Value: 3.0
+Credit Value Notes: N/A
+Effective: Fall 2025
+Prerequisites: N/A
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: N/A
+Program(s): Hon Bach CompSci - Mobile Comp
+Program Coordinator(s): Magdin Stoica
+Course Leader or Contact: Cristina Ribeiro
+Version: 20250902_00
+Status: Approved (APPR)
+
+Section I Notes: N/A
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+In this introductory course, students learn about operating system structure and concepts, specifically basic UNIX utilities, file systems, shell environments, shell and other scripting languages, operating system security, and standard text editors. The topics introduced in this course via interactive lecture are reinforced via hands-on exercises and labs in Linux/Unix and where appropriate, a MS Windows environment. Students spend the majority of their hands-on work at the Command Line Interface (CLI) with a Linux shell with a reference to MS Windows where appropriate. Students also investigate a GUI environment to work with a file manager and also write scripts to automate tasks.
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+This course is the first of a sequence of courses pertaining to the operating systems and hardware layers of a computer system. The emphasis of this course is on the interface of a shell to manipulate the kernel to efficiently manage resources.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of this course, students will have demonstrated the ability to create and effectively manage files and directories, view and manage processes, display memory contents and investigate input/output devices.
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Describe the purpose of an operating system.
+Characterize the design and components of operating systems.
+Use operating system commands to manage files and directories.
+Assess methods by which file systems structure disk space and directories.
+Evaluate processes, the process tree and signals.
+Implement simple multithreaded programs.
+Design and implement simple shell programs.
+Explain operating utilities and their function.
+Customize an operating systems user space.
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	Assignments (2 @ 10%)	20.0%
+ 	Labs (2 @ 10%)	20.0%
+ 	Midterm Exam	25.0%
+ 	Final Exam	35.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+To pass the course, students must achieve a 50% weighted average across the exams and at least 50% overall in the course.
+
+Students must submit/complete all assignments, in-class activities and projects by the scheduled due date and write all tests on the specified date/time. Exceptions will only be made under extraordinary circumstances. 
+
+Refer to the School of Applied Computing's Academic Procedures for Evaluations for more details regarding missed work: Procedures for Evaluations
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Challenge Exam
+Notes:  
+Interview
+Notes:  PLAR consists of both a Challenge Exam AND Interview.
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s):
+Course material costs can be found through the Sheridan Bookstore
+ 	Type	Description
+Required	Textbook	Operating System Concepts, Silberschatz, A., Baer Galvin, P., Gagne, G., John Wiley & Sons, Inc., 10th Edition, ISBN 9781118063330
+Optional	Textbook	UNIX The Textbook, Syed Mansoor Sarwar, Robert M. Koretsky, Chapman and Hall/CRC, 3rd Edition, ISBN 9781482233582, 2017
+
+Applicable student group(s): Honours Bachelor of Computer Science - Mobile Computing
+Course Details:
+Module 1: Modern Operating Systems Functions and Operation
+
+History of Operating Systems
+Networked, Client-Server, Distributed, Single-User and Mobile Systems
+Open-Source Systems
+Components of Operating Systems
+Module 2: Operating Systems Principles
+
+Structuring Methods (Monolithic, Layered, Modular, Micro-Kernels)
+Abstractions, Processes, Threads and Resources
+Device Organization
+Kernel and User Mode
+Module 3: File and Directory Management
+
+The Hierarchical Structure of a Disk
+ASCII and NON-ASCII Files
+Directory Terminology: HOME, CURRENT, PARENT, ROOT
+Absolute Path and Relative Path
+Working with Files and Directories Using a CLI Shell (I.e. Creating, Copying, Displaying Contents, Renaming and Deleting)
+Manipulating Files and Redirection: Cat, Paste, Join, Cut
+Discussion of Several File Systems
+Comparison of Linux and MS File Systems
+Data Blocks, Clusters, Inodes and Directory Structures
+File Attributes - Permissions, Umask, Linked Files
+Module 4: Editors and Regular Expressions
+
+Using Unix Editors (E.G. Vim, Pico, Etc.)
+Introduction to Regex
+POSIX Regex
+Using Grep (Egrep)
+Module 5: Writing Shell Scripts
+
+Writing and Executing Shell Scripts (Bash)
+Using Variables
+Basic Input (Read) and Output (Echo)
+Decision Constructs, Looping Constructs, Arithmetic Expressions
+Executing Shell Commands and Structured Programming
+Module 6: Processes and Threads
+
+User Processes, System Processes, Daemon Processes
+Signals and Killing Processes
+Multithreading & Thread Synchronization
+Creating Simple Multithreaded Programs Using the Python Programming Language
+Asynchronous Programming with the Async/Await Pattern in Python
+Module 7: Environments Variables and Aliases
+
+Establishing Env Variables
+Displaying Contents
+Local Variables
+Global Variables
+Module 8: System Configuration Files and Customizing Your Environment
+
+Unix/Linux Config Files and Location
+Some Basic Linux Files and Directories
+Customizing Your Environment
+Note: The Topics Within Each Module are Grouped Semantically and are Not Meant to Suggest a Time Sequence. A Course Plan Must Be Provided by the Professor Identifying the Class-by-Class Arrangement of Topics.
+
+
+MATH10025
+Mathematics for Computing	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 42.0
+Credit Value: 3.0
+Credit Value Notes: N/A
+Effective: Fall 2025
+Prerequisites: N/A
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: N/A
+Program(s): Hon Bach CompSci - Mobile Comp, Hons Bach of Computer Science
+Program Coordinator(s): Magdin Stoica, El Sayed Mahmoud
+Course Leader or Contact: Tarek El Salti
+Version: 20250902_00
+Status: Approved (APPR)
+
+Section I Notes: N/A
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+Students learn the mathematical foundations of computer science. Similar to learning another language, students focus on language syntax, semantics, and logic as they pertain to discrete mathematics. Lectures, hands-on exercises, and assignment experiences enable students to study the principles of computing through the rigor of mathematics and logical reasoning.
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+The purpose of this course is to lay the mathematical foundations required for success in core computer science courses (e.g., architecture, operating systems, programming, software design and development), and other program streams such as mobile application development, and principles of networks.
+
+Hons Bach of Computer Science	Program Coordinator(s): El Sayed Mahmoud
+This required core course lays the mathematical foundations for success in later core computer science courses (e.g., architecture, operating systems, programming, software design and development) and related courses in specializations: data analytics, game engineering and cloud computing.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of this course, students will have demonstrated the ability to solve mathematical and computing problems based on the principles and theories of discrete mathematics.
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Apply the rules and concepts of the binary, octal, decimal, and hexadecimal number systems.
+Construct mathematical arguments using logical connectives and quantifiers.
+Verify the correctness of mathematical arguments using symbolic logic and truth tables.
+Represent Boolean functions in applied computing as minimized combinatorial circuits.
+Explain the mathematical principles of functions and set theory.
+Evaluate the properties of trees and graphs to solve problems in computer science.
+Describe properties of functions on discrete and continuous domains.
+Construct simple proofs using the principles of mathematical induction.
+Evaluate the properties of algorithms in solving problems in computer science.
+Use computer software to assist in solving mathematical problems (e.g., simplify logical statements, create truth tables, and plot functions).
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	Quizzes (6 @ 2.5% each)	15.0%
+ 	Assignments (2 @ 7.5% each)	15.0%
+ 	Midterm Exam	30.0%
+ 	Final Exam	40.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+To pass the course, students must achieve a 50% weighted average across the exams and at least 50% overall in the course.
+
+Students must submit/complete all assignments, in-class activities and projects by the scheduled due date and write all tests on the specified date/time. Exceptions will only be made under extraordinary circumstances. 
+
+Refer to the School of Applied Computing's Academic Procedures for Evaluations for more details regarding missed work: Procedures for Evaluations
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Challenge Exam
+Notes:  A Challenge Exam is required for PLAR.
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s):
+Course material costs can be found through the Sheridan Bookstore
+ 	Type	Description
+Required	Textbook	Discrete Mathematics and Its Applications, Rosen, H. K., McGraw Hill, 8th edition, ISBN 9781260091991, 2018
+
+Applicable student group(s): Honours Bachelor of Computer Science (Mobile Computing), Honours Bachelor of Computer Science (All Specializations)
+Course Details:
+Module 1: Number Systems and Representations
+
+Fundamental Properties of Binary, Decimal, Octal, and Hexadecimal Number Systems
+Conversions Between Number Systems
+Arithmetic Operations in Various Bases
+Rational Numbers in Various Bases
+Number Systems, Representations, and Potential Mathematical Errors
+Module 2: Mathematical Logic
+
+Propositional Logic
+Predicates and Quantifiers
+Creating and Interpreting Compound Logic Statements
+Simplifying Compound Logic Statements
+Tautologies and Equivalences
+Introduction to Mathematical Reasoning and Proofs
+Circuits from Boolean Functions (K-maps for Minimization)
+Module 3: Induction and Recursion
+
+Mathematical Induction
+Strong Induction and Well-Ordering (As Time Permits)
+Module 4: Set and Functions
+
+Sets, Set Operations
+Functions
+Module 5: Fundamentals of Algorithms
+
+Algorithms
+The Growth of Functions (As Time Permits)
+Complexity of Algorithms (As Time Permits)
+Module 6: Graphs
+
+Graphs and Their Representations     
+Applications of Graphs 
+Graph Isomorphism (As Time Permits)
+Shortest Paths Problems (As Time Permits)
+Module 7: Trees
+
+Trees and Their Representations
+Applications of Trees
+Tree Traversal (As Time Permits
+Spanning Trees (As Time Permits)
+ 
+
+TELE10025
+Edge to Core: Network Foundations	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 42.0
+Credit Value: 3.0
+Credit Value Notes: N/A
+Effective: Fall 2025
+Prerequisites: N/A
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: N/A
+Program(s): Hon Bach CompSci - Mobile Comp, Hons Bach of Computer Science
+Program Coordinator(s): Magdin Stoica, El Sayed Mahmoud
+Course Leader or Contact: John Wang
+Version: 20250902_00
+Status: Approved (APPR)
+
+Section I Notes: N/A
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+Students learn the architecture, the defining technologies and the standards that comprise the edge and packet core of an internetwork. By bringing together technical and protocol components with the benefit of historical and regulatory insights, students understand how the network parts contribute to the evolving communication system. Through interactive lectures, assigned readings and practical exercises students learn the universal technical and non-technical elements that comprise a modern communication network and how these integrated elements will influence the networks of tomorrow.
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+This is a foundational course in the communications technology related stream in the program and it presents an integrated overview of the suite of technologies, protocols and standards that make up a modern converged network. This introductory level course provides a solid framework of understanding into networks as a context for later courses.
+
+Hons Bach of Computer Science	Program Coordinator(s): El Sayed Mahmoud
+This required core course is foundational in the computer science program and essential to its related specializations: Network Engineering and Cloud Computing. The course presents an integrated overview of the suite of technologies, protocols and standards that make up a modern converged network. This introductory level course provides a solid framework for understanding computer networks as a context for later core and specialization courses.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of the course, students will have demonstrated an ability to describe the key technical and non-technical elements of a communication network as well as the key protocols, standards and regulations that integrate the system.
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Assess networks by their various standards based, technical and regulatory classifications.
+Describe the fundamentals of bandwidth and electromagnetic signals, analog and digital, along with modulation schemes and encoding algorithms.
+Evaluate transmission media - copper, glass and ether - and characterize each according to standard transmission line criteria.
+Describe analog and digital signals, encoding, multiplexing and compression techniques.
+Summarize communication channels, network and switching modes and how the PSTN differs from the Internet.
+Explain the OSI reference model and the architecture of "end to end" systems.
+Characterize layer 2 (LAN) networks - wired and wireless - and the role of MAC layer switching.
+Summarize the network characteristics of the Internet.
+Differentiate between licensed and unlicensed wireless communications paradigms.
+Describe the characteristics of next generation networks.
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	Quizzes (5 @ 3%)	15.0%
+ 	Assignments (3 @ 8.33%)	25.0%
+ 	Midterm Exam	25.0%
+ 	Final Exam	35.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+To pass the course, students must achieve a 50% weighted average across the exams and at least 50% overall in the course.
+
+Students must submit/complete all assignments, in-class activities and projects by the scheduled due date and write all tests on the specified date/time. Exceptions will only be made under extraordinary circumstances. 
+
+Refer to the School of Applied Computing's Academic Procedures for Evaluations for more details regarding missed work: Procedures for Evaluations
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Challenge Exam
+Notes:  A Challenge Exam is required for PLAR.
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s):
+Course material costs can be found through the Sheridan Bookstore
+ 	Type	Description
+Required	Textbook	Data Communications and Networking with TCP/IP Protocol Suite, Forouzan, B., McGraw Hill, 6th Edition, ISBN 9780078022098, 2022
+
+Applicable student group(s): Honours Bachelor of Computer Science - Mobile Computing; Honours Bachelor of Computer Science
+Course Details:
+Module 1: Overview of the Course
+
+The Evolution of Telecommunications
+Data and Voice Standards Groups
+Regulatory Issues
+Module 2: Network Types
+
+Topology, Point-to-Point and Multi-Point, CS and PS Switching
+PSTN vs. Data Network and Characteristics of Each
+Client-Server and Peer-to-Peer Communication
+Circuits, Channels, Lines and Trunks
+Analog and Digital Transmission
+Codecs and Modems
+Multiplexing and Compression
+Module 3: Transmission Media
+
+Twisted Pair, Coax
+The Electromagnetic Spectrum and its Allocation
+Microwave, Satellite, Wireless
+Fibre Optics
+Module 4: Data Networking Basics - The Network Layer Models
+
+The OSI and the Internet Model (TCP/IP) Layer
+Protocol Stack in Operating Systems
+Frame Encapsulation
+Module 5: Overview of Local Area Networking
+
+IEEE 802 Protocols, LLC and MAC
+Basic Access Method (CSMA/CD)
+Wireless and Wired LANs and Equipment
+Module 6: The Internet & its History
+
+Functions of Network Layer
+IP Addressing
+Introduction to Subnet and CIDR
+DHCP Functions
+Routing and Routers
+Internet Service Providers and Peering
+Module 7: Functions of Transport Layer
+
+UDP and TCP
+Connectionless and Connection-Oriented Services
+Port Numbers: Source/Destination
+Module 8: Overview of TCP/IP Application Layer Protocols
+
+(e.g. HTTP, mail, SNMP)
+Domain Name Service (DNS) Architecture
+Module 9: Converged Networks
+
+Virtual Private Network (VPN)
+Public and Private Cloud
+Security Issues
+Streaming
+Note: The topics within each module are grouped thematically and are not meant to suggest a time sequence. A course plan must be provided by the professor identifying the class-by-class arrangement of topics.
+ 
+
+
+
+ENGL17889GD
+Composition and Rhetoric	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 42.0
+Credit Value: 3.0
+Credit Value Notes: N/A
+Effective: Fall 2025
+Prerequisites: N/A
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: N/A
+Program(s): Degree Breadth
+Program Coordinator(s): Alexander Hollenberg
+Course Leader or Contact: Julie Warkentin
+Version: 20250902_00
+Status: Approved (APPR)
+
+Section I Notes: New course code 2007/08. Previously COMM17889GD
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+This course is offered in 2 formats:
+
+· 14-week format for students enrolled in synchronous programs, which could include in-person, hybrid of in-person and online, or fully online
+
+· 7-week compressed format for Sheridan Online asynchronous programs
+
+To see an Evaluation Plan for Sheridan Online students, please refer to your unique Topical Outline under Section III: Topical Outline of this document.
+
+Composition & Rhetoric is an advanced-level English course which focuses on the art of argument and persuasion. Students explore the function and strategies of argument through reading, writing and oral presentations. In this course, students examine different theoretical models for organizing arguments and presenting evidence, employ primary and secondary sources in research, and construct their own arguments.
+
+Program Context
+
+ 	
+Degree Breadth	Program Coordinator(s): Alexander Hollenberg
+Composition and Rhetoric supports the development of analysis, evaluation and the use of logic as required in other academic and professional areas. This course is a required first semester course in all applied degrees at Sheridan.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of this course, students will have demonstrated the ability to critique arguments through various theoretical models and methods of research.
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Analyze argumentative essays and articles.
+Produce detailed critical responses to texts, both written and oral.
+Evaluate evidence presented in various arguments.
+Integrate primary and secondary sources in the construction of clear, organized research essays and presentations.
+Formulate original and informed ideas about a selection of topics and contemporary issues.
+Design arguments based on theoretical models.
+Collaborate with group members using effective interpersonal communication techniques.
+Use proper styles of documentation.
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: ONLINE
+ 	Rhetorical Analysis #1	15.0%
+ 	Rhetorical Analysis #2	15.0%
+ 	Exam	30.0%
+ 	Collaborative Research Project	25.0%
+ 	Collaborative Research Proposal	15.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+TEST AND ASSIGNMENT PROTOCOL
+ 
+To encourage behaviours that will help students to be successful in the workplace and to ensure that students receive credit for their individual work, the following rules apply to every course offered within the Faculty of Humanities and Social Sciences.
+ 
+1.  Students are responsible for staying abreast of test dates and times, as well as due dates and any special instructions for submitting assignments and projects as supplied to the class by the professor.
+
+2.  Students must write all tests at the specified times. Missed tests, in-class activities, assignments and presentations are awarded a mark of zero.  If an extension or make-up opportunity is approved by the professor as outlined below, the mark of zero may be revised by subsequent performance.  The penalty for late submission of written assignments is a loss of 10% per day for up to five business days (excluding weekends and statutory holidays), after which, a grade of zero is assigned. Business days include any day that the college is open for business, whether the student has scheduled classes that day or not.
+
+3.  Students, who miss a test or in-class activity or assignment or fail to submit an assignment on time due to exceptional circumstances, are required to notify their professor in advance of the class whenever possible.  A make-up test may be supplied for students who provide an acceptable explanation of their absence and/or acceptable documentation explaining their absence (e.g., a medical certificate). All make-up tests are to be written at a time and place specified by the professor upon the student's return. Alternately, students may be given an opportunity to earn the associated marks by having a subsequent test count for the additional marks. Exceptional circumstances may result in a modification of due dates for assignments.
+
+4.  Unless otherwise specified, assignments and projects must be submitted at the beginning of class.
+
+5.  Students must complete every assignment as an individual effort unless, the professor specifies otherwise.
+
+6.  Inappropriate use of Artificial Intelligence and Digital Technology (as defined in the Academic Integrity Policy) is not permitted in any course in FHASS. Faculty may provide explicit guidelines on the use of Generative AI, digital technology, and machine writing tools in all courses within FHASS. Where no course-specific guidelines are provided, any use of Generative AI is strictly prohibited. Students are responsible for understanding expectations for every evaluation. 
+
+7.  Since there may be instances of grade appeal or questions regarding the timely completion of assignments and/or extent of individual effort, etc., students are strongly advised to keep, and make available to their professor, if requested, a copy of all assignments and working notes until the course grade has been finalized.
+
+8.  There will be no resubmission of work unless this has been previously agreed to or suggested by the professor.
+
+9.  Students must submit all assignments in courses with practical lab and field components in order to pass the course.
+
+
+
+Evaluation Plan: IN-CLASS
+ 	Rhetorical Analysis #1	15.0%
+ 	Rhetorical Analysis #2	15.0%
+ 	Exam	30.0%
+ 	Collaborative Research Project	25.0%
+ 	Collaborative Research Proposal	15.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+TEST AND ASSIGNMENT PROTOCOL
+
+To encourage behaviours that will help students to be successful in the workplace and to ensure that students receive credit for their individual work, the following rules apply to every course offered within the Faculty of Humanities and Social Sciences.
+
+1.  Students are responsible for staying abreast of test dates and times, as well as due dates and any special instructions for submitting assignments and projects as supplied to the class by the professor.
+
+2.  Students must write all tests at the specified times. Missed tests, in-class activities, assignments and presentations are awarded a mark of zero.  If an extension or make-up opportunity is approved by the professor as outlined below, the mark of zero may be revised by subsequent performance.  The penalty for late submission of written assignments is a loss of 10% per day for up to five business days (excluding weekends and statutory holidays), after which, a grade of zero is assigned. Business days include any day that the college is open for business, whether the student has scheduled classes that day or not.
+
+3.  Students, who miss a test or in-class activity or assignment or fail to submit an assignment on time due to exceptional circumstances, are required to notify their professor in advance of the class whenever possible.  A make-up test may be supplied for students who provide an acceptable explanation of their absence and/or acceptable documentation explaining their absence (e.g., a medical certificate). All make-up tests are to be written at a time and place specified by the professor upon the student's return. Alternately, students may be given an opportunity to earn the associated marks by having a subsequent test count for the additional marks. Exceptional circumstances may result in a modification of due dates for assignments.
+
+4.  Unless otherwise specified, assignments and projects must be submitted at the beginning of class.
+
+5.  Students must complete every assignment as an individual effort unless, the professor specifies otherwise.
+
+6.  Since there may be instances of grade appeal or questions regarding the timely completion of assignments and/or extent of individual effort, etc., students are strongly advised to keep, and make available to their professor, if requested, a copy of all assignments and working notes until the course grade has been finalized.
+
+7.  There will be no re-submission of work unless this has been previously agreed to or suggested by the professor.
+
+8.  Students must submit all assignments in courses with practical lab and field components in order to pass the course.
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Degree Breadth
+This Degree Breadth course relates to the following field of study as specified by the Ministry of Colleges and Universities.
+
+Level 1000, Humanities
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Challenge Exam
+Notes:  
+Other
+Notes:  Research Essay - Students must successfully complete all elements of the PLAR to be considered for credit.
+ 
+

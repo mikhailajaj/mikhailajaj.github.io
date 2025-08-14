@@ -1,6 +1,10 @@
-import { Domain } from './project';
+import { Domain } from "./project";
 
-export type BlogCategory = 'technical' | 'insights' | 'tutorials' | 'case-studies';
+export type BlogCategory =
+  | "technical"
+  | "insights"
+  | "tutorials"
+  | "case-studies";
 
 export interface BlogAuthor {
   name: string;
@@ -58,6 +62,6 @@ export interface BlogFilter {
 }
 
 export interface BlogSortOptions {
-  field: 'publishedAt' | 'updatedAt' | 'title' | 'readingTime';
-  direction: 'asc' | 'desc';
+  field: "publishedAt" | "updatedAt" | "title" | "readingTime";
+  direction: "asc" | "desc";
 }

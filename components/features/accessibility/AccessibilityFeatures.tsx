@@ -1,8 +1,13 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FaAccessibleIcon, FaAdjust, FaTextHeight, FaKeyboard } from 'react-icons/fa';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  FaAccessibleIcon,
+  FaAdjust,
+  FaTextHeight,
+  FaKeyboard,
+} from "react-icons/fa";
 
 export function AccessibilityFeatures() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,32 +23,32 @@ export function AccessibilityFeatures() {
   useEffect(() => {
     // Apply high contrast mode
     if (highContrast) {
-      document.documentElement.classList.add('high-contrast');
+      document.documentElement.classList.add("high-contrast");
     } else {
-      document.documentElement.classList.remove('high-contrast');
+      document.documentElement.classList.remove("high-contrast");
     }
   }, [highContrast]);
 
   useEffect(() => {
     // Keyboard navigation focus indicators
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Tab') {
+      if (e.key === "Tab") {
         setKeyboardNavigation(true);
-        document.documentElement.classList.add('keyboard-navigation');
+        document.documentElement.classList.add("keyboard-navigation");
       }
     };
 
     const handleMouseDown = () => {
       setKeyboardNavigation(false);
-      document.documentElement.classList.remove('keyboard-navigation');
+      document.documentElement.classList.remove("keyboard-navigation");
     };
 
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
+    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("mousedown", handleMouseDown);
 
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
+      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("mousedown", handleMouseDown);
     };
   }, []);
 
@@ -115,14 +120,24 @@ export function AccessibilityFeatures() {
                   onChange={(e) => setHighContrast(e.target.checked)}
                   className="sr-only"
                 />
-                <div className={`w-5 h-5 border-2 rounded flex items-center justify-center ${
-                  highContrast 
-                    ? 'bg-blue-600 border-blue-600' 
-                    : 'border-gray-300 dark:border-gray-600'
-                }`}>
+                <div
+                  className={`w-5 h-5 border-2 rounded flex items-center justify-center ${
+                    highContrast
+                      ? "bg-blue-600 border-blue-600"
+                      : "border-gray-300 dark:border-gray-600"
+                  }`}
+                >
                   {highContrast && (
-                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    <svg
+                      className="w-3 h-3 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   )}
                 </div>
@@ -138,7 +153,8 @@ export function AccessibilityFeatures() {
               <div className="flex items-center space-x-2">
                 <FaKeyboard className="text-gray-600 dark:text-gray-400" />
                 <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                  Keyboard Navigation: {keyboardNavigation ? 'Active' : 'Inactive'}
+                  Keyboard Navigation:{" "}
+                  {keyboardNavigation ? "Active" : "Inactive"}
                 </span>
               </div>
               <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
@@ -152,8 +168,11 @@ export function AccessibilityFeatures() {
                 setFontSize(100);
                 setHighContrast(false);
                 setKeyboardNavigation(false);
-                document.documentElement.style.fontSize = '100%';
-                document.documentElement.classList.remove('high-contrast', 'keyboard-navigation');
+                document.documentElement.style.fontSize = "100%";
+                document.documentElement.classList.remove(
+                  "high-contrast",
+                  "keyboard-navigation",
+                );
               }}
               className="w-full px-4 py-2 bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 rounded hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors text-sm font-medium"
             >
@@ -167,7 +186,11 @@ export function AccessibilityFeatures() {
               aria-label="Close accessibility panel"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                <path
+                  fillRule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
               </svg>
             </button>
           </motion.div>

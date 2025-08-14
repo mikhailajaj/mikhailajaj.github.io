@@ -1,0 +1,379 @@
+{
+  "utilities": {
+    "manualVersion": "2.1.0",
+    "lastUpdated": "2024-12-19",
+    "hooks": {
+      "location": "hooks/",
+      "custom": {
+        "useScrollAnimation": {
+          "file": "hooks/useScrollAnimation.ts",
+          "description": "Hook for scroll-triggered animations with Intersection Observer",
+          "returns": {
+            "ref": "RefObject - Element reference for observation",
+            "isVisible": "boolean - Whether element is in viewport"
+          },
+          "usage": "Trigger animations when elements enter viewport",
+          "dependencies": ["Intersection Observer API"]
+        },
+        "useProgressiveLoading": {
+          "file": "hooks/useProgressiveLoading.ts",
+          "description": "Progressive loading hook for performance optimization",
+          "features": ["Lazy loading", "Priority loading", "Error handling"]
+        },
+        "useUserPreferences": {
+          "file": "hooks/useUserPreferences.ts",
+          "description": "User preference management (theme, accessibility, etc.)",
+          "features": ["Local storage persistence", "System preference detection"]
+        }
+      },
+      "navigation": {
+        "location": "hooks/navigation/",
+        "hooks": {
+          "useNavigation": {
+            "file": "hooks/navigation/useNavigation.ts",
+            "description": "Navigation state management and routing utilities",
+            "features": ["Route tracking", "Navigation history", "Domain awareness"]
+          },
+          "useKeyboardNavigation": {
+            "file": "hooks/navigation/useKeyboardNavigation.ts",
+            "description": "Keyboard navigation support for accessibility",
+            "features": ["Arrow key navigation", "Tab management", "Focus trapping"]
+          },
+          "useHydrationSafe": {
+            "file": "hooks/navigation/useHydrationSafe.ts",
+            "description": "Hydration-safe state management",
+            "purpose": "Prevent hydration mismatches in SSR"
+          },
+          "useMemoizedNavigation": {
+            "file": "hooks/navigation/useMemoizedNavigation.tsx",
+            "description": "Memoized navigation items for performance",
+            "features": ["Navigation item caching", "Performance optimization"]
+          }
+        },
+        "hydration": {
+          "location": "lib/utils/hydration.tsx",
+          "utilities": {
+            "useIsHydrated": {
+              "description": "Hook to detect when component has hydrated",
+              "returns": "boolean - Whether client-side hydration is complete",
+              "usage": "Prevent SSR/CSR mismatches in theme-aware components",
+              "example": "const isHydrated = useIsHydrated();"
+            },
+            "useSafePathname": {
+              "description": "Hydration-safe pathname checking for navigation",
+              "returns": "{ isActiveLink: function, isHydrated: boolean }",
+              "usage": "Safe pathname comparison in navigation components"
+            },
+            "HydrationSafe": {
+              "description": "Component wrapper to prevent hydration mismatches",
+              "props": ["children", "fallback"],
+              "usage": "Wrap client-only components"
+            },
+            "ClientOnly": {
+              "description": "Render children only after hydration",
+              "usage": "Client-side only rendering"
+            }
+          }
+        }
+      }
+    },
+    "libraries": {
+      "location": "lib/",
+      "core": {
+        "utils.ts": {
+          "description": "Core utility functions and helpers",
+          "functions": [
+            "cn() - Tailwind class name merging",
+            "formatDate() - Date formatting utilities",
+            "slugify() - URL slug generation",
+            "debounce() - Function debouncing"
+          ]
+        },
+        "animations.ts": {
+          "description": "Framer Motion animation presets and utilities",
+          "exports": [
+            "fadeAnimations - Fade in/out presets",
+            "slideAnimations - Slide transitions",
+            "staggerConfig - Staggered animation timing",
+            "scrollAnimations - Scroll-triggered animations",
+            "hoverAnimations - Hover effect presets"
+          ],
+          "usage": "Consistent animations across components"
+        },
+        "theme.ts": {
+          "description": "Theme system utilities and configuration",
+          "features": ["Domain theming", "Color palette management", "CSS variable generation"]
+        }
+      },
+      "specialized": {
+        "fonts": {
+          "location": "lib/fonts/",
+          "files": {
+            "progressiveFontLoader.ts": {
+              "description": "Progressive font loading with fallback strategies",
+              "features": ["Google Fonts integration", "System font fallbacks", "Loading state management"],
+              "recentChanges": "Renamed from enhancedFontLoader.ts, fixed React hooks usage",
+              "exports": [
+                "interFont - Primary font configuration",
+                "createFontStrategy() - Font loading strategy",
+                "useFontLoading() - Font loading hook"
+              ]
+            },
+            "fontConfig.ts": "Font configuration and fallback definitions",
+            "fontLoader.ts": "Core font loading service",
+            "fontErrorHandler.ts": "Font loading error handling"
+          }
+        },
+        "contexts": {
+          "location": "lib/contexts/",
+          "providers": {
+            "DomainThemeContext": {
+              "file": "lib/contexts/DomainThemeContext.tsx",
+              "description": "Domain-specific theming context",
+              "features": ["Domain color schemes", "Theme persistence", "System preference detection"]
+            },
+            "ProjectContext": {
+              "file": "lib/contexts/ProjectContext.tsx",
+              "description": "Project data context for filtering and search",
+              "features": ["Project filtering", "Search functionality", "Category management"]
+            }
+          }
+        },
+        "services": {
+          "location": "lib/services/",
+          "services": {
+            "performance.ts": "Performance monitoring and analytics",
+            "errorReporting.ts": "Error tracking and reporting",
+            "TextToSpeechService.ts": "Accessibility text-to-speech",
+            "DataService.ts": "Data fetching and caching utilities"
+          }
+        },
+        "monitoring": {
+          "location": "lib/monitoring/",
+          "services": {
+            "ErrorTracking.ts": {
+              "description": "Advanced error tracking with analytics and insights",
+              "features": [
+                "Error trend analysis",
+                "Performance impact tracking",
+                "Automated insight generation",
+                "Business impact assessment",
+                "Real-time error monitoring",
+                "Pattern detection"
+              ],
+              "exports": [
+                "errorTracking - Singleton service instance",
+                "ErrorAnalytics - Analytics interface",
+                "ErrorTrend - Trend data interface", 
+                "ErrorInsight - Insight interface"
+              ],
+              "integration": [
+                "Error reporting service",
+                "Performance monitoring",
+                "Domain-aware tracking",
+                "Real-time alerts"
+              ],
+              "status": "implemented",
+              "lastUpdated": "2024-12-19"
+            },
+            "PerformanceMonitor.ts": "Core Web Vitals and performance tracking",
+            "AccessibilityTracker.ts": "WCAG compliance monitoring"
+          }
+        }
+      }
+    },
+    "typeDefinitions": {
+      "location": "types/",
+      "files": {
+        "project.ts": "Project and case study type definitions",
+        "three-fiber.d.ts": "Three.js and React Three Fiber type extensions"
+      },
+      "purpose": "Centralized TypeScript type definitions"
+    },
+    "analytics": {
+      "location": "lib/analytics/",
+      "modules": {
+        "GoogleAnalytics.ts": "Google Analytics 4 integration",
+        "ContentMetrics.ts": "Content engagement tracking",
+        "ConversionTracking.ts": "Goal and conversion tracking",
+        "UserBehavior.ts": "User interaction analytics",
+        "EngagementAnalytics.ts": "Page engagement metrics"
+      },
+      "features": ["Privacy-compliant tracking", "Custom event tracking", "Performance metrics"]
+    },
+    "accessibility": {
+      "utilities": "lib/utils/accessibility.ts",
+      "features": [
+        "Focus management",
+        "Screen reader utilities",
+        "Keyboard navigation helpers",
+        "Color contrast validation",
+        "ARIA attribute helpers"
+      ],
+      "compliance": "WCAG 2.1 AA standards"
+    },
+    "performance": {
+      "monitoring": "lib/monitoring/PerformanceMonitor.ts",
+      "optimization": "lib/performance.ts",
+      "features": [
+        "Core Web Vitals tracking",
+        "Bundle size monitoring",
+        "Image optimization",
+        "Code splitting utilities"
+      ]
+    },
+    "bestPractices": {
+      "themeAdaptation": [
+        "Use semantic CSS variables (text-foreground, bg-background)",
+        "Add dark: variants for dark mode support",
+        "Implement hydration-safe conditional rendering",
+        "Test both light and dark themes",
+        "Ensure consistent theming across components"
+      ],
+      "hydrationSafety": [
+        "Always use useIsHydrated for theme-dependent rendering",
+        "Provide SSR-safe fallback classes without dark: variants",
+        "Test server-side rendering output",
+        "Avoid client-only CSS computations during SSR"
+      ],
+      "reactPatterns": [
+        "Always call hooks at component top level",
+        "Use unique keys for list items across contexts",
+        "Implement proper error boundaries",
+        "Follow React Hook rules consistently"
+      ],
+      "errorHandling": [
+        "Initialize error tracking and reporting on app startup",
+        "Use error boundaries to isolate component failures",
+        "Implement graceful degradation for non-critical errors",
+        "Provide meaningful error messages to users",
+        "Log errors with sufficient context for debugging",
+        "Monitor error trends and patterns regularly",
+        "Set up alerts for critical error thresholds",
+        "Document error resolution procedures"
+      ]
+    },
+    "testing": {
+      "errorTracking": {
+        "location": "__tests__/error-tracking/",
+        "description": "Comprehensive test suite for error tracking system",
+        "coverage": [
+          "Service initialization and configuration",
+          "Error tracking and analytics generation",
+          "Trend analysis and filtering",
+          "Insight generation and alerts",
+          "Error resolution workflows",
+          "Impact analysis calculations",
+          "Data export and management",
+          "Integration with error reporting"
+        ],
+        "runCommand": "npm test -- __tests__/error-tracking/"
+      }
+    },
+    "locationAwareMoonTheme": {
+      "location": "lib/services/",
+      "description": "Revolutionary location-aware moon theme system with real-time weather integration",
+      "services": {
+        "weatherService": {
+          "file": "lib/services/weatherService.ts",
+          "description": "Real-time weather data integration with privacy-first location detection",
+          "features": [
+            "OpenWeatherMap API integration with free tier support",
+            "Privacy-first geolocation with graceful fallbacks",
+            "IP-based location fallback for denied permissions",
+            "30-minute intelligent caching system",
+            "Weather-based moon visibility calculations",
+            "Support for 13+ weather conditions with visual effects",
+            "Automatic day/night detection based on timezone"
+          ],
+          "methods": {
+            "getUserLocation": "Get user location with privacy respect",
+            "getWeatherData": "Fetch current weather with caching",
+            "calculateMoonVisibility": "Calculate moon visibility based on weather",
+            "getWeatherEffects": "Get visual effects configuration for weather",
+            "isNightTime": "Determine if it's night at user's location"
+          },
+          "privacy": "Requests permission, falls back to IP location, no data storage",
+          "performance": "Cached responses, 10s timeout, graceful degradation"
+        },
+        "moonService": {
+          "file": "lib/services/moonService.ts",
+          "description": "Accurate moon phase calculation and positioning system",
+          "features": [
+            "Real-time moon phase calculations",
+            "Moon position and visibility tracking",
+            "Lunar distance and angular diameter calculations",
+            "Rise/set time predictions",
+            "Next full/new moon predictions",
+            "8 distinct moon phases with names",
+            "Astronomical accuracy with simplified algorithms"
+          ],
+          "methods": {
+            "getCurrentMoonData": "Get current moon phase and illumination",
+            "getMoonPosition": "Calculate moon position for location",
+            "getMoonVisibilityScore": "Combined visibility score with weather",
+            "getPhaseName": "Human-readable moon phase names"
+          },
+          "accuracy": "Simplified astronomical calculations suitable for visual effects",
+          "performance": "Pure calculations, no API calls, instant results"
+        }
+      },
+      "integration": {
+        "philosophy": "Combines real-world data with artistic beauty",
+        "privacy": "User consent required, multiple fallback options",
+        "performance": "Optimized for 60fps with intelligent caching",
+        "accessibility": "Respects prefers-reduced-motion and user preferences"
+      },
+      "status": "Phase 1 Complete - Foundation Services Implemented",
+      "nextPhases": [
+        "Phase 2: Moon rendering and weather effects",
+        "Phase 3: Advanced atmospheric effects and user controls"
+      ]
+    },
+    "adminDashboard": {
+      "location": "app/admin/",
+      "description": "Complete admin dashboard system for portfolio management",
+      "components": {
+        "ErrorAnalyticsDashboard": {
+          "file": "components/admin/ErrorAnalyticsDashboard.tsx",
+          "description": "Comprehensive error analytics dashboard component",
+          "features": [
+            "Real-time error monitoring with auto-refresh",
+            "Interactive error management with resolution",
+            "Visual analytics with charts and metrics",
+            "Automated insights and recommendations",
+            "Data export functionality",
+            "Mobile-responsive design"
+          ],
+          "props": "No props required - self-contained component",
+          "usage": "Used in /admin/error-analytics page",
+          "dependencies": [
+            "Error tracking service",
+            "Error reporting service",
+            "React Icons",
+            "Tailwind CSS"
+          ],
+          "status": "implemented"
+        }
+      },
+      "pages": {
+        "adminHome": "/admin - Main dashboard with overview",
+        "errorAnalytics": "/admin/error-analytics - Error tracking dashboard",
+        "performance": "/admin/performance - Performance monitoring",
+        "settings": "/admin/settings - System configuration",
+        "security": "/admin/security - Security monitoring"
+      },
+      "access": {
+        "development": "Full access during development",
+        "production": "Requires authentication (not implemented)",
+        "security": "Admin routes should be protected in production"
+      },
+      "integration": {
+        "errorTracking": "Fully integrated with error tracking system",
+        "performance": "Connected to performance monitoring",
+        "theming": "Supports dark/light mode",
+        "responsive": "Mobile-optimized layout"
+      }
+    }
+  }
+}

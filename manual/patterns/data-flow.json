@@ -1,0 +1,245 @@
+{
+  "dataFlow": {
+    "lastUpdated": "2024-12-19",
+    "version": "1.0.0",
+    "overview": "Comprehensive data flow documentation for the portfolio application",
+    "dataArchitecture": {
+      "staticData": {
+        "description": "Build-time data that doesn't change during runtime",
+        "sources": {
+          "projectData": {
+            "file": "data/project-case-studies.ts",
+            "structure": "Array of ProjectCaseStudy objects",
+            "usage": ["Homepage featured projects", "Domain-specific filtering", "Project detail pages"],
+            "schema": {
+              "id": "string - Unique identifier",
+              "title": "string - Project title", 
+              "description": "string - Brief description",
+              "technologies": "string[] - Tech stack",
+              "domain": "Domain - Associated domain",
+              "featured": "boolean - Featured status",
+              "caseStudy": "CaseStudy - Detailed information"
+            }
+          },
+          "testimonials": {
+            "file": "data/testimonials.ts",
+            "structure": "Array of Testimonial objects",
+            "usage": ["Homepage testimonials", "Service pages", "Social proof"],
+            "features": ["Video testimonials", "Rating system", "Category filtering"]
+          },
+          "domainConfigs": {
+            "file": "lib/constants/domains.ts",
+            "structure": "Domain configuration objects",
+            "usage": ["Navigation", "Theming", "Routing", "Content organization"],
+            "integration": "Linked with theme system and navigation"
+          },
+          "blogContent": {
+            "location": "content/blog/",
+            "format": "MDX files with frontmatter",
+            "processing": "Next.js MDX integration with syntax highlighting",
+            "features": ["Table of contents", "Reading time", "Syntax highlighting"]
+          }
+        },
+        "optimization": {
+          "buildTime": "Data processed during build for optimal performance",
+          "staticGeneration": "Pre-rendered pages with static data",
+          "caching": "Automatic Next.js caching for static resources"
+        }
+      },
+      "dynamicData": {
+        "description": "Runtime data that can change based on user interactions",
+        "sources": {
+          "userPreferences": {
+            "storage": "localStorage with fallback to defaults",
+            "structure": {
+              "theme": "'light' | 'dark' | 'system'",
+              "reducedMotion": "boolean",
+              "highContrast": "boolean", 
+              "fontSize": "'small' | 'medium' | 'large'",
+              "language": "string"
+            },
+            "persistence": "Automatic sync with localStorage",
+            "validation": "Runtime validation with fallbacks"
+          },
+          "themeState": {
+            "management": "React Context with optimized updates",
+            "computation": "Dynamic CSS variable generation",
+            "domains": "Domain-specific color schemes",
+            "persistence": "User preference integration"
+          },
+          "performanceMetrics": {
+            "collection": "Real-time performance monitoring",
+            "storage": "Session-based with optional persistence",
+            "reporting": "Aggregated metrics and alerts"
+          }
+        }
+      },
+      "apiIntegration": {
+        "description": "External data sources and API integrations",
+        "endpoints": {
+          "contact": {
+            "route": "app/api/contact/",
+            "method": "POST",
+            "purpose": "Contact form submissions",
+            "validation": "Zod schema validation",
+            "errorHandling": "Comprehensive error responses"
+          },
+          "projects": {
+            "route": "app/api/projects/",
+            "method": "GET",
+            "purpose": "Project data with filtering",
+            "caching": "Static generation with ISR",
+            "optimization": "Minimal data transfer"
+          }
+        }
+      }
+    },
+    "stateManagement": {
+      "globalState": {
+        "description": "Application-wide state managed through React Context",
+        "contexts": {
+          "DomainThemeContext": {
+            "file": "lib/contexts/DomainThemeContext.tsx",
+            "state": ["Current domain", "Theme colors", "CSS variables"],
+            "actions": ["setDomain", "updateTheme", "resetTheme"],
+            "optimization": "Memoized selectors and split contexts"
+          },
+          "UserPreferencesContext": {
+            "hook": "useUserPreferences",
+            "state": ["Theme preference", "Accessibility settings", "Language"],
+            "actions": ["updatePreferences", "resetPreferences"],
+            "persistence": "localStorage with error handling"
+          },
+          "PerformanceContext": {
+            "service": "PerformanceMonitor",
+            "state": ["Metrics", "Alerts", "Session data"],
+            "actions": ["startMonitoring", "recordMetric", "generateReport"],
+            "optimization": "Batched updates and memory management"
+          }
+        }
+      },
+      "localState": {
+        "description": "Component-specific state for UI interactions",
+        "patterns": {
+          "formState": {
+            "pattern": "Controlled components with validation",
+            "implementation": "react-hook-form with Zod validation",
+            "errorHandling": "Field-level and form-level validation"
+          },
+          "animationState": {
+            "pattern": "Animation triggers and visibility",
+            "implementation": "useScrollAnimation hook with IntersectionObserver",
+            "optimization": "Passive event listeners and RAF"
+          },
+          "navigationState": {
+            "pattern": "Mobile menu, focus management",
+            "implementation": "Local state with accessibility considerations",
+            "features": ["Focus trapping", "Keyboard navigation", "Screen reader support"]
+          }
+        }
+      },
+      "derivedState": {
+        "description": "State computed from other state values",
+        "examples": {
+          "themeColors": {
+            "source": "Domain + theme mode",
+            "computation": "CSS variable generation",
+            "caching": "Memoized with dependency tracking"
+          },
+          "responsiveBreakpoints": {
+            "source": "Window size + device detection",
+            "computation": "Breakpoint matching",
+            "optimization": "Throttled updates"
+          },
+          "accessibilityState": {
+            "source": "User preferences + system preferences",
+            "computation": "Effective accessibility settings",
+            "fallbacks": "Graceful degradation"
+          }
+        }
+      }
+    },
+    "dataFlow": {
+      "userInteraction": {
+        "description": "Flow from user action to state update",
+        "steps": [
+          "1. User interaction (click, keyboard, etc.)",
+          "2. Event handler in component",
+          "3. Action dispatch to context or local state",
+          "4. State update with validation",
+          "5. Re-render with new state",
+          "6. Side effects (persistence, analytics, etc.)"
+        ],
+        "examples": {
+          "themeChange": {
+            "trigger": "Theme button click",
+            "flow": "Button → Context action → State update → CSS variables → Re-render",
+            "sideEffects": ["localStorage update", "Analytics event", "Accessibility announcement"]
+          },
+          "domainNavigation": {
+            "trigger": "Domain link click",
+            "flow": "Link → Router → Domain context → Theme update → Component re-render",
+            "sideEffects": ["URL update", "Theme transition", "Performance tracking"]
+          }
+        }
+      },
+      "dataLoading": {
+        "description": "Flow from data request to UI update",
+        "patterns": {
+          "staticData": {
+            "flow": "Build time → Static generation → Cached response → Component render",
+            "optimization": "Pre-computed at build time"
+          },
+          "dynamicData": {
+            "flow": "Component mount → Data fetch → Loading state → Data state → Render",
+            "errorHandling": "Error boundaries and fallback UI"
+          },
+          "userPreferences": {
+            "flow": "Component mount → localStorage read → Validation → State hydration → Render",
+            "fallbacks": "Default values for missing or invalid data"
+          }
+        }
+      },
+      "performanceOptimization": {
+        "description": "Data flow optimizations for performance",
+        "techniques": {
+          "memoization": {
+            "implementation": "React.memo, useMemo, useCallback",
+            "usage": "Expensive computations and stable references",
+            "monitoring": "Performance profiler integration"
+          },
+          "lazyLoading": {
+            "implementation": "React.lazy and Suspense",
+            "usage": "Route-based and component-based code splitting",
+            "fallbacks": "Loading skeletons and error boundaries"
+          },
+          "contextOptimization": {
+            "implementation": "Split contexts and memoized selectors",
+            "usage": "Prevent unnecessary re-renders",
+            "monitoring": "React DevTools profiler"
+          }
+        }
+      }
+    },
+    "errorHandling": {
+      "description": "Error handling throughout the data flow",
+      "strategies": {
+        "errorBoundaries": {
+          "implementation": "React error boundaries at multiple levels",
+          "recovery": "Fallback UI and error reporting",
+          "logging": "Error tracking service integration"
+        },
+        "dataValidation": {
+          "implementation": "Zod schemas for runtime validation",
+          "fallbacks": "Default values and graceful degradation",
+          "userFeedback": "Clear error messages and recovery options"
+        },
+        "networkErrors": {
+          "implementation": "Retry logic and offline handling",
+          "fallbacks": "Cached data and offline indicators",
+          "recovery": "Automatic retry and manual refresh options"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "coreFramework": {
+    "lastUpdated": "2024-12-19",
+    "description": "Core technologies and frameworks forming the architectural foundation",
+    "technologies": {
+      "TECH_NEXTJS_CORE": {
+        "name": "Next.js",
+        "version": "15.4.1",
+        "category": "React Framework",
+        "trustScore": 10,
+        "context7ID": "/vercel/next.js",
+        "description": "The React Framework for production with built-in optimizations",
+        "benefits": [
+          "Automatic code splitting by route segments",
+          "Static generation with generateStaticParams",
+          "Server-side rendering with React Server Components",
+          "Built-in performance optimizations",
+          "File-based routing system",
+          "Image optimization with next/image",
+          "Font optimization with next/font",
+          "SEO optimization with metadata API"
+        ],
+        "builtInFeatures": {
+          "appRouter": {
+            "description": "Next.js 13+ App Router with layouts and nested routing",
+            "benefits": ["Nested layouts", "Loading states", "Error boundaries", "Parallel routes"],
+            "usage": "File-based routing in app/ directory"
+          },
+          "staticGeneration": {
+            "description": "Static Site Generation with generateStaticParams",
+            "benefits": ["Build-time pre-rendering", "CDN caching", "Improved performance"],
+            "implementation": "export async function generateStaticParams()",
+            "currentUsage": "Used in app/projects/[id]/page.tsx for project detail pages"
+          },
+          "serverComponents": {
+            "description": "React Server Components for server-side rendering",
+            "benefits": ["Zero client-side JavaScript", "Direct database access", "Improved performance"],
+            "usage": "Default for components in app/ directory"
+          },
+          "imageOptimization": {
+            "description": "Automatic image optimization with next/image",
+            "benefits": ["WebP conversion", "Lazy loading", "Responsive images", "CLS prevention"],
+            "currentUsage": "Used throughout portfolio for optimized image delivery"
+          }
+        },
+        "performanceImpact": {
+          "bundleSize": "Framework overhead ~45KB gzipped",
+          "renderingTime": "Optimized with static generation",
+          "cacheStrategy": "Automatic caching with ISR support"
+        },
+        "configurationComplexity": "Low - Convention over configuration",
+        "currentImplementation": {
+          "files": ["next.config.mjs", "app/layout.tsx", "app/page.tsx"],
+          "features": ["App Router", "Static exports", "Image optimization", "Font optimization"],
+          "customizations": ["Static export configuration", "Experimental features"]
+        },
+        "migrationPath": "Stable - no migration needed",
+        "documentation": "https://nextjs.org/docs",
+        "context7Source": "Retrieved latest patterns for static generation and App Router optimization"
+      },
+      "TECH_REACT_CORE": {
+        "name": "React",
+        "version": "18.x",
+        "category": "UI Library",
+        "trustScore": 10,
+        "context7ID": "/reactjs/react.dev",
+        "description": "JavaScript library for building user interfaces with component-based architecture",
+        "benefits": [
+          "Component-based architecture",
+          "Virtual DOM for performance",
+          "Hooks for state management",
+          "Server Components support",
+          "Concurrent features",
+          "Extensive ecosystem",
+          "Strong TypeScript support",
+          "Developer tools and debugging"
+        ],
+        "builtInFeatures": {
+          "hooks": {
+            "description": "Built-in hooks for state and lifecycle management",
+            "benefits": ["Functional components", "Reusable logic", "Better performance"],
+            "currentUsage": ["useState", "useEffect", "useCallback", "useMemo", "useRef"]
+          },
+          "serverComponents": {
+            "description": "React Server Components for server-side rendering",
+            "benefits": ["Zero client bundle impact", "Direct data access", "Streaming"],
+            "usage": "Default in Next.js App Router"
+          },
+          "suspense": {
+            "description": "Suspense for data fetching and code splitting",
+            "benefits": ["Loading states", "Error boundaries", "Progressive loading"],
+            "currentUsage": "Used with lazy loading components"
+          },
+          "concurrent": {
+            "description": "Concurrent features for better user experience",
+            "benefits": ["Non-blocking rendering", "Priority-based updates", "Smooth interactions"],
+            "usage": "Automatic with React 18"
+          }
+        },
+        "performanceImpact": {
+          "bundleSize": "~42KB gzipped (react + react-dom)",
+          "renderingTime": "Optimized with concurrent features",
+          "memoryUsage": "Efficient with virtual DOM"
+        },
+        "configurationComplexity": "Low - Works out of the box with Next.js",
+        "currentImplementation": {
+          "patterns": ["Functional components", "Custom hooks", "Context API", "Server Components"],
+          "features": ["Hooks", "Suspense", "Error boundaries", "Concurrent rendering"],
+          "customHooks": ["useScrollAnimation", "useUserPreferences", "useNavigation"]
+        },
+        "migrationPath": "Stable - React 18 features fully adopted",
+        "documentation": "https://react.dev",
+        "context7Source": "Retrieved latest patterns for hooks and server components"
+      },
+      "TECH_TYPESCRIPT_CORE": {
+        "name": "TypeScript",
+        "version": "5.x",
+        "category": "Language",
+        "trustScore": 10,
+        "context7ID": "/microsoft/typescript",
+        "description": "Typed superset of JavaScript for better development experience",
+        "benefits": [
+          "Static type checking",
+          "Enhanced IDE support",
+          "Better refactoring capabilities",
+          "Improved code documentation",
+          "Catch errors at compile time",
+          "Better team collaboration",
+          "Excellent Next.js integration",
+          "Strong ecosystem support"
+        ],
+        "builtInFeatures": {
+          "typeInference": {
+            "description": "Automatic type inference for better developer experience",
+            "benefits": ["Less boilerplate", "Smart autocomplete", "Error detection"],
+            "usage": "Automatic inference in most cases"
+          },
+          "strictMode": {
+            "description": "Strict type checking for better code quality",
+            "benefits": ["Catch more errors", "Better null safety", "Improved reliability"],
+            "currentUsage": "Enabled in tsconfig.json"
+          },
+          "generics": {
+            "description": "Generic types for reusable components",
+            "benefits": ["Type-safe reusability", "Better API design", "Flexible interfaces"],
+            "currentUsage": "Used in utility functions and component props"
+          },
+          "moduleResolution": {
+            "description": "Advanced module resolution with path mapping",
+            "benefits": ["Clean imports", "Better organization", "IDE support"],
+            "currentUsage": "@ path mapping for src directory"
+          }
+        },
+        "performanceImpact": {
+          "bundleSize": "Zero runtime overhead",
+          "buildTime": "Minimal impact with incremental compilation",
+          "developmentTime": "Faster development with better tooling"
+        },
+        "configurationComplexity": "Medium - Requires tsconfig.json setup",
+        "currentImplementation": {
+          "config": "tsconfig.json with strict mode",
+          "features": ["Strict type checking", "Path mapping", "JSX support"],
+          "patterns": ["Interface definitions", "Type guards", "Generic utilities"],
+          "schemas": ["Project types", "API interfaces", "Component props"]
+        },
+        "migrationPath": "Stable - TypeScript 5.x features adopted",
+        "documentation": "https://www.typescriptlang.org/docs",
+        "context7Source": "Standard TypeScript patterns for React applications"
+      }
+    },
+    "decisionMatrix": {
+      "addNewFramework": {
+        "criteria": [
+          "Does existing tech stack solve the problem?",
+          "Bundle size impact < 10KB gzipped",
+          "Performance improvement > 20%",
+          "Maintenance overhead acceptable",
+          "Team expertise available",
+          "Long-term support guaranteed"
+        ],
+        "process": [
+          "1. Check core-technologies.json for existing solutions",
+          "2. Use Context7 to research alternatives",
+          "3. Analyze performance impact",
+          "4. Discuss findings with team",
+          "5. Document decision rationale",
+          "6. Update framework documentation"
+        ]
+      }
+    },
+    "performanceGuidelines": {
+      "bundleSizeLimit": "Total framework overhead < 100KB gzipped",
+      "renderingTimeTarget": "First Contentful Paint < 1.5s",
+      "configurationComplexity": "Prefer convention over configuration",
+      "maintenanceOverhead": "Minimize number of dependencies"
+    },
+    "architecturalPrinciples": {
+      "consistency": "Use existing patterns before introducing new ones",
+      "performance": "Prioritize user experience over developer convenience",
+      "maintainability": "Choose stable, well-documented technologies",
+      "scalability": "Select technologies that grow with the project"
+    }
+  }
+}

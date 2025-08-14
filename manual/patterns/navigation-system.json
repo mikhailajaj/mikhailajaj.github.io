@@ -1,0 +1,284 @@
+{
+  "navigationSystem": {
+    "lastUpdated": "2024-12-19",
+    "version": "1.0.0",
+    "overview": "Comprehensive navigation system documentation for domain-aware routing and accessibility",
+    "navigationPatterns": {
+      "domainAwareNavigation": {
+        "pattern": "Domain-Aware Navigation",
+        "description": "Navigation system that adapts to the current domain context",
+        "implementation": {
+          "component": "components/ui/navigation/DomainAwareNavigation.tsx",
+          "features": [
+            "Dynamic theming based on current domain",
+            "Context-sensitive navigation items",
+            "Accessibility-first design",
+            "Mobile-responsive behavior"
+          ],
+          "domainIntegration": {
+            "themeAdaptation": "Navigation colors and styling adapt to domain theme",
+            "contextualItems": "Navigation items relevant to current domain are highlighted",
+            "breadcrumbs": "Domain-aware breadcrumb generation",
+            "seoOptimization": "Domain-specific meta tags and structured data"
+          }
+        }
+      },
+      "hierarchicalNavigation": {
+        "pattern": "Hierarchical Navigation",
+        "description": "Nested navigation structure with clear hierarchy",
+        "structure": {
+          "primary": {
+            "level": "Primary Navigation",
+            "items": ["Home", "Domains", "Projects", "About", "Contact"],
+            "behavior": "Always visible, domain-aware highlighting"
+          },
+          "secondary": {
+            "level": "Domain Navigation", 
+            "items": ["Domain Overview", "Projects", "Skills", "Case Studies"],
+            "behavior": "Context-sensitive, appears within domain sections"
+          },
+          "tertiary": {
+            "level": "Content Navigation",
+            "items": ["Table of Contents", "Related Content", "Next/Previous"],
+            "behavior": "Content-specific, appears on detail pages"
+          }
+        }
+      },
+      "progressiveDisclosure": {
+        "pattern": "Progressive Disclosure",
+        "description": "Information revealed progressively to reduce cognitive load",
+        "implementations": {
+          "mobileNavigation": {
+            "component": "MobileBottomNav",
+            "behavior": "Essential items always visible, secondary items in drawer",
+            "features": ["Touch-optimized", "Gesture support", "Contextual actions"]
+          },
+          "megaMenu": {
+            "component": "MegaMenu", 
+            "behavior": "Detailed navigation revealed on hover/focus",
+            "features": ["Rich content preview", "Quick actions", "Search integration"]
+          },
+          "expandableContent": {
+            "component": "ExpandableContent",
+            "behavior": "Content sections expand on demand",
+            "features": ["Smooth animations", "Keyboard accessible", "State persistence"]
+          }
+        }
+      }
+    },
+    "routingArchitecture": {
+      "appRouter": {
+        "framework": "Next.js 15 App Router",
+        "description": "File-based routing with nested layouts and advanced features",
+        "structure": {
+          "rootLayout": {
+            "file": "app/layout.tsx",
+            "responsibilities": ["Global providers", "Meta tags", "Font loading", "Analytics"],
+            "features": ["Error boundaries", "Loading states", "Theme providers"]
+          },
+          "domainRoutes": {
+            "pattern": "app/[domain]/page.tsx",
+            "domains": ["full-stack", "cloud-engineering", "data-analytics", "ux-ui-design", "technical-consulting"],
+            "features": ["Static generation", "Domain-specific SEO", "Performance optimization"]
+          },
+          "dynamicRoutes": {
+            "pattern": "app/projects/[id]/page.tsx",
+            "generation": "Static generation with generateStaticParams",
+            "features": ["ISR support", "Fallback handling", "SEO optimization"]
+          },
+          "apiRoutes": {
+            "pattern": "app/api/[endpoint]/route.ts",
+            "endpoints": ["contact", "projects", "testimonials"],
+            "features": ["Type safety", "Validation", "Error handling"]
+          }
+        }
+      },
+      "routingIntelligence": {
+        "description": "Smart routing based on user behavior and performance",
+        "features": {
+          "prefetching": {
+            "implementation": "Next.js Link prefetching with intersection observer",
+            "optimization": "Viewport-based prefetching for performance",
+            "fallbacks": "Graceful degradation for slow connections"
+          },
+          "caching": {
+            "implementation": "Next.js automatic caching with custom strategies",
+            "strategies": ["Static generation", "ISR", "Client-side caching"],
+            "invalidation": "Smart cache invalidation based on content updates"
+          },
+          "analytics": {
+            "implementation": "Route-based analytics and performance tracking",
+            "metrics": ["Page views", "Navigation patterns", "Performance data"],
+            "optimization": "Data-driven route optimization"
+          }
+        }
+      }
+    },
+    "accessibilityNavigation": {
+      "description": "Navigation accessibility features and WCAG compliance",
+      "features": {
+        "keyboardNavigation": {
+          "implementation": "Full keyboard accessibility with logical tab order",
+          "features": [
+            "Arrow key navigation for menus",
+            "Tab navigation for primary elements", 
+            "Escape key for closing modals/menus",
+            "Enter/Space for activation"
+          ],
+          "testing": "Automated accessibility testing with axe-core"
+        },
+        "screenReaderSupport": {
+          "implementation": "Comprehensive ARIA labels and semantic HTML",
+          "features": [
+            "Descriptive link text and button labels",
+            "Navigation landmarks and regions",
+            "Live region announcements for dynamic content",
+            "Skip links for efficient navigation"
+          ],
+          "testing": "Screen reader testing with NVDA/JAWS/VoiceOver"
+        },
+        "focusManagement": {
+          "implementation": "Intelligent focus management for SPA navigation",
+          "features": [
+            "Focus restoration after modal close",
+            "Focus trapping in modal dialogs",
+            "Visible focus indicators",
+            "Logical focus order"
+          ],
+          "utilities": "lib/utils/accessibility.ts focus management functions"
+        },
+        "reducedMotion": {
+          "implementation": "Respect for user motion preferences",
+          "features": [
+            "prefers-reduced-motion media query support",
+            "Alternative navigation for motion-sensitive users",
+            "Configurable animation settings",
+            "Instant navigation option"
+          ]
+        }
+      }
+    },
+    "mobileNavigation": {
+      "description": "Mobile-optimized navigation patterns",
+      "patterns": {
+        "bottomNavigation": {
+          "component": "MobileBottomNav",
+          "description": "Primary navigation at bottom for thumb accessibility",
+          "features": [
+            "Essential actions always accessible",
+            "Visual indicators for current section",
+            "Haptic feedback support",
+            "Safe area handling"
+          ]
+        },
+        "hamburgerMenu": {
+          "component": "MobileMenu within DomainAwareNavigation",
+          "description": "Collapsible menu for secondary navigation",
+          "features": [
+            "Smooth slide animations",
+            "Backdrop for focus management",
+            "Gesture support (swipe to close)",
+            "Nested menu support"
+          ]
+        },
+        "swipeGestures": {
+          "component": "SwipeGestureHandler",
+          "description": "Touch gesture support for navigation",
+          "features": [
+            "Swipe between sections",
+            "Pull-to-refresh support",
+            "Edge swipe navigation",
+            "Gesture conflict resolution"
+          ]
+        }
+      },
+      "optimization": {
+        "touchTargets": {
+          "minSize": "44px minimum touch target size",
+          "spacing": "8px minimum spacing between targets",
+          "feedback": "Visual and haptic feedback for interactions"
+        },
+        "performance": {
+          "lazyLoading": "Lazy load navigation components",
+          "bundleSplitting": "Separate mobile navigation bundles",
+          "caching": "Aggressive caching for mobile performance"
+        }
+      }
+    },
+    "navigationState": {
+      "description": "State management for navigation system",
+      "stateManagement": {
+        "currentDomain": {
+          "source": "URL pathname and domain detection",
+          "storage": "React Context with URL synchronization",
+          "updates": "Automatic updates on route changes"
+        },
+        "navigationHistory": {
+          "source": "Browser history API with custom tracking",
+          "storage": "Session storage with cleanup",
+          "features": ["Back/forward navigation", "History-based suggestions"]
+        },
+        "userPreferences": {
+          "source": "localStorage with system preference detection",
+          "storage": "Persistent user preferences",
+          "features": ["Navigation style", "Animation preferences", "Accessibility settings"]
+        }
+      },
+      "synchronization": {
+        "urlSync": "Bidirectional synchronization between URL and navigation state",
+        "stateHydration": "Server-side state hydration for SSR",
+        "errorRecovery": "Fallback navigation state for error conditions"
+      }
+    },
+    "performanceOptimization": {
+      "description": "Navigation performance optimization strategies",
+      "techniques": {
+        "codesplitting": {
+          "implementation": "Route-based code splitting with React.lazy",
+          "strategy": "Split by domain and feature",
+          "fallbacks": "Loading skeletons and error boundaries"
+        },
+        "prefetching": {
+          "implementation": "Intelligent prefetching based on user behavior",
+          "triggers": ["Hover", "Viewport intersection", "User patterns"],
+          "optimization": "Network-aware prefetching"
+        },
+        "caching": {
+          "implementation": "Multi-level caching strategy",
+          "levels": ["Browser cache", "Service worker", "CDN", "Application cache"],
+          "invalidation": "Smart cache invalidation and updates"
+        },
+        "bundleOptimization": {
+          "implementation": "Optimized bundle splitting for navigation",
+          "strategy": "Critical navigation code in main bundle",
+          "lazyLoading": "Non-critical navigation features lazy loaded"
+        }
+      }
+    },
+    "integrationPoints": {
+      "description": "Navigation system integration with other systems",
+      "integrations": {
+        "themeSystem": {
+          "integration": "Navigation adapts to domain-specific themes",
+          "features": ["Color adaptation", "Style variations", "Animation themes"],
+          "synchronization": "Real-time theme updates"
+        },
+        "analyticsSystem": {
+          "integration": "Navigation tracking and analytics",
+          "metrics": ["Navigation patterns", "User flows", "Performance data"],
+          "optimization": "Data-driven navigation improvements"
+        },
+        "searchSystem": {
+          "integration": "Search functionality within navigation",
+          "features": ["Global search", "Contextual search", "Search suggestions"],
+          "performance": "Optimized search with debouncing and caching"
+        },
+        "accessibilitySystem": {
+          "integration": "Deep accessibility integration",
+          "features": ["Screen reader support", "Keyboard navigation", "Focus management"],
+          "compliance": "WCAG 2.1 AA compliance"
+        }
+      }
+    }
+  }
+}

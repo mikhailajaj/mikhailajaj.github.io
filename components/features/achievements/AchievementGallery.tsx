@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Card } from '@/components/ui/base/Card';
+import React from "react";
+import { motion } from "framer-motion";
+import { Card } from "@/components/ui/card";
 
 export function AchievementGallery() {
   return (
@@ -14,18 +14,19 @@ export function AchievementGallery() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Achievements & Recognition
           </h1>
-          <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-            Professional achievements, industry recognition, and contributions to the tech community.
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Professional achievements, industry recognition, and contributions
+            to the tech community.
           </p>
         </motion.div>
 
-        <Card variant="glass" className="p-8">
-          <div className="text-center text-gray-300">
-            <p>Achievement gallery component - Coming soon in Phase 2</p>
-            <p className="text-sm text-gray-500 mt-2">
+        <Card className="p-8 bg-card/80 backdrop-blur-md">
+          <div className="text-center text-foreground">
+            <p className="text-foreground">Achievement gallery component - Coming soon in Phase 2</p>
+            <p className="text-sm text-muted-foreground mt-2">
               Will showcase awards, certifications, and professional recognition
             </p>
           </div>

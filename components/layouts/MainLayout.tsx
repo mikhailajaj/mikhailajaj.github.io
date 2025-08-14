@@ -1,44 +1,44 @@
-'use client';
+/**
+ * Main Layout Component
+ * 
+ * Provides main layout structure for general pages with consistent
+ * styling and error handling.
+ */
 
-import React from 'react';
-import { Domain } from '@/data/schemas/project';
-import { DomainAwareNavigation } from '@/components/ui/navigation/DomainAwareNavigation';
-import { Footer } from '@/components/ui/layout/Footer';
-import { ScrollProgress } from '@/components/ui/feedback/ScrollProgress';
-import { AccessibilityFeatures } from '@/components/features/accessibility/AccessibilityFeatures';
+import React from "react";
+import { ErrorBoundary } from "@/lib/error/ErrorBoundary";
 
 interface MainLayoutProps {
   children: React.ReactNode;
-  domain?: Domain;
-  showNavigation?: boolean;
-  showFooter?: boolean;
-  showScrollProgress?: boolean;
-  className?: string;
 }
 
-export function MainLayout({
-  children,
-  domain,
-  showNavigation = true,
-  showFooter = true,
-  showScrollProgress = true,
-  className = '',
-}: MainLayoutProps) {
+/**
+ * MainLayout Component
+ * 
+ * Provides consistent layout structure for main pages including:
+ * - Consistent styling and spacing
+ * - Error boundary for graceful error handling
+ * - Responsive design
+ * 
+ * @param children - The page content to render within the layout
+ */
+export function MainLayout({ children }: MainLayoutProps) {
   return (
-    <div className={`min-h-screen bg-black text-white ${className}`}>
-      {showScrollProgress && <ScrollProgress />}
-      
-      {showNavigation && (
-        <DomainAwareNavigation currentDomain={domain} />
-      )}
-      
-      <main className="relative z-10">
-        {children}
-      </main>
-      
-      {showFooter && <Footer />}
-      
-      <AccessibilityFeatures />
-    </div>
+    <ErrorBoundary>
+      <div className="min-h-screen bg-white dark:bg-gray-900">
+        {/* Main Content Container */}
+        <div className="relative">
+          {/* Main layout background pattern */}
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-50/30 to-gray-100/30 dark:from-gray-900/30 dark:to-gray-800/30 pointer-events-none" />
+          
+          {/* Main Content */}
+          <div className="relative z-10">
+            {children}
+          </div>
+        </div>
+      </div>
+    </ErrorBoundary>
   );
 }
+
+export default MainLayout;

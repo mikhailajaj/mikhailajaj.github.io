@@ -1,0 +1,281 @@
+{
+  "architecturalPrinciples": {
+    "lastUpdated": "2024-12-19",
+    "description": "Core architectural principles, design patterns, and protocols governing the project structure",
+    "principles": {
+      "ARCH_CONSISTENCY_001": {
+        "name": "Technology Consistency",
+        "category": "Technology Selection",
+        "description": "Use existing technologies and patterns before introducing new ones",
+        "rationale": "Reduces complexity, improves maintainability, and leverages team expertise",
+        "implementation": [
+          "Check framework documentation before adding new libraries",
+          "Use Context7 to research existing solutions",
+          "Document decision rationale for new technology adoption",
+          "Maintain technology inventory in framework files"
+        ],
+        "benefits": [
+          "Reduced learning curve for team members",
+          "Lower maintenance overhead",
+          "Consistent development patterns",
+          "Smaller bundle size"
+        ],
+        "violations": [
+          "Adding new UI library without checking Tailwind + existing components",
+          "Introducing new state management without evaluating React Context",
+          "Adding animation library without considering Framer Motion capabilities"
+        ]
+      },
+      "ARCH_PERFORMANCE_002": {
+        "name": "Performance First",
+        "category": "Performance",
+        "description": "Prioritize performance in all architectural decisions",
+        "rationale": "User experience depends on fast, responsive applications",
+        "implementation": [
+          "Bundle size limits for each category of dependencies",
+          "Performance budgets for Core Web Vitals",
+          "Static generation over client-side rendering",
+          "Tree-shaking and code splitting by default"
+        ],
+        "metrics": {
+          "bundleSize": "Total framework overhead < 100KB gzipped",
+          "firstContentfulPaint": "< 1.5 seconds",
+          "largestContentfulPaint": "< 2.5 seconds",
+          "cumulativeLayoutShift": "< 0.1"
+        },
+        "tools": [
+          "Next.js bundle analyzer",
+          "Lighthouse performance audits",
+          "Web Vitals monitoring",
+          "Performance budgets in CI/CD"
+        ]
+      },
+      "ARCH_MODULARITY_003": {
+        "name": "Modular Architecture",
+        "category": "Code Organization",
+        "description": "Organize code in feature-based modules with clear boundaries",
+        "rationale": "Improves maintainability, testability, and team collaboration",
+        "structure": {
+          "features": "Domain-specific functionality (cloud, data, full-stack, etc.)",
+          "components": "Reusable UI components organized by purpose",
+          "utilities": "Shared utilities, hooks, and helper functions",
+          "data": "Data management, schemas, and content"
+        },
+        "boundaries": [
+          "Features should not directly import from other features",
+          "Components should be reusable across features",
+          "Utilities should be framework-agnostic",
+          "Data layer should be centralized"
+        ]
+      },
+      "ARCH_ACCESSIBILITY_004": {
+        "name": "Accessibility by Design",
+        "category": "User Experience",
+        "description": "Build accessibility into every component and feature",
+        "rationale": "Inclusive design benefits all users and is legally required",
+        "standards": "WCAG 2.1 AA compliance",
+        "implementation": [
+          "Semantic HTML structure",
+          "Keyboard navigation support",
+          "Screen reader compatibility",
+          "Color contrast compliance",
+          "Focus management",
+          "Reduced motion support"
+        ],
+        "tools": [
+          "ESLint accessibility rules",
+          "Automated accessibility testing",
+          "Manual testing with screen readers",
+          "Color contrast validation"
+        ]
+      },
+      "ARCH_SCALABILITY_005": {
+        "name": "Scalable by Default",
+        "category": "System Design",
+        "description": "Design systems that can grow with project requirements",
+        "rationale": "Avoid architectural rewrites as the project evolves",
+        "strategies": [
+          "Component composition over inheritance",
+          "Configuration over hard-coding",
+          "Lazy loading for non-critical features",
+          "Incremental Static Regeneration for content",
+          "Modular CSS with utility classes",
+          "Type-safe APIs and data structures"
+        ],
+        "patterns": [
+          "Provider pattern for global state",
+          "Hook pattern for reusable logic",
+          "Compound component pattern for complex UI",
+          "Render prop pattern for flexible components"
+        ]
+      }
+    },
+    "designPatterns": {
+      "PATTERN_COMPOSITION_001": {
+        "name": "Component Composition",
+        "category": "React Patterns",
+        "description": "Build complex components by composing simpler ones",
+        "example": "AnimatedBentoGrid composed of AnimatedBentoGridItem",
+        "benefits": ["Reusability", "Testability", "Flexibility"],
+        "implementation": "Use children props and compound components"
+      },
+      "PATTERN_HOOKS_002": {
+        "name": "Custom Hooks",
+        "category": "React Patterns",
+        "description": "Extract reusable logic into custom hooks",
+        "examples": ["useScrollAnimation", "useUserPreferences", "useNavigation"],
+        "benefits": ["Logic reuse", "Separation of concerns", "Testability"],
+        "guidelines": ["Start with 'use'", "Return consistent interface", "Handle cleanup"]
+      },
+      "PATTERN_CONTEXT_003": {
+        "name": "Context for Global State",
+        "category": "State Management",
+        "description": "Use React Context for global application state",
+        "examples": ["DomainThemeContext", "ProjectContext"],
+        "benefits": ["Avoid prop drilling", "Centralized state", "Type safety"],
+        "guidelines": ["Split contexts by concern", "Provide default values", "Use custom hooks"]
+      },
+      "PATTERN_STATIC_FIRST_004": {
+        "name": "Static Generation First",
+        "category": "Next.js Patterns",
+        "description": "Prefer static generation over server-side rendering",
+        "implementation": "generateStaticParams for dynamic routes",
+        "benefits": ["Better performance", "CDN caching", "Lower server costs"],
+        "fallback": "ISR for dynamic content that needs updates"
+      }
+    },
+    "protocols": {
+      "PROTOCOL_NAMING_001": {
+        "name": "Meaningful Naming Convention",
+        "category": "Code Standards",
+        "description": "Use descriptive names that explain purpose over generic prefixes",
+        "examples": {
+          "good": ["InteractiveHero", "AnimatedButton", "MultiStepContactForm"],
+          "bad": ["EnhancedHero", "EnhancedButton", "EnhancedContactForm"]
+        },
+        "rules": [
+          "Describe what the component does, not that it's 'enhanced'",
+          "Use domain-specific terminology when appropriate",
+          "Prefer composition over inheritance in naming",
+          "Be consistent within feature domains"
+        ]
+      },
+      "PROTOCOL_IMPORTS_002": {
+        "name": "Import Organization",
+        "category": "Code Standards",
+        "description": "Organize imports in a consistent, logical order",
+        "order": [
+          "1. React imports",
+          "2. External library imports",
+          "3. Internal absolute imports (@/)",
+          "4. Internal relative imports (./)",
+          "5. Type imports",
+          "6. Stylesheets"
+        ],
+        "tools": ["ESLint import rules", "Prettier import sorting"]
+      },
+      "PROTOCOL_TYPES_003": {
+        "name": "TypeScript Type Safety",
+        "category": "Type Safety",
+        "description": "Maintain strict type safety throughout the application",
+        "rules": [
+          "Use strict mode in tsconfig.json",
+          "Define interfaces for all data structures",
+          "Use type guards for runtime validation",
+          "Avoid 'any' type except for migration scenarios"
+        ],
+        "patterns": [
+          "Interface definitions in types/ directory",
+          "Generic types for reusable components",
+          "Union types for controlled variations",
+          "Utility types for transformations"
+        ]
+      }
+    },
+    "dataStructures": {
+      "STRUCT_PROJECT_001": {
+        "name": "Project Case Study Structure",
+        "file": "data/project-case-studies.ts",
+        "description": "Standardized structure for project data",
+        "schema": "ProjectCaseStudy interface",
+        "benefits": ["Consistent data", "Type safety", "Easy maintenance"],
+        "usage": "Dynamic project pages, filtering, search"
+      },
+      "STRUCT_COMPONENT_002": {
+        "name": "Component Props Interface",
+        "pattern": "ComponentNameProps interface",
+        "description": "Standardized props interface for all components",
+        "requirements": ["Extend HTML element props when applicable", "Optional props with defaults", "Clear prop descriptions"],
+        "example": "AnimatedButtonProps extends ButtonHTMLAttributes"
+      },
+      "STRUCT_THEME_003": {
+        "name": "Theme Configuration",
+        "files": ["lib/config/domainThemes.ts", "tailwind.config.ts"],
+        "description": "Centralized theme and design token management",
+        "structure": ["Color palettes", "Typography scale", "Spacing system", "Animation presets"],
+        "benefits": ["Design consistency", "Easy customization", "Type-safe themes"]
+      }
+    },
+    "interfaces": {
+      "INTERFACE_COMPONENT_001": {
+        "name": "Component Interface Standard",
+        "description": "Standard interface for all React components",
+        "requirements": [
+          "Props interface with descriptive names",
+          "Default props where appropriate",
+          "Forward refs for DOM components",
+          "Accessibility props included"
+        ],
+        "example": "AnimatedButton with AnimatedButtonProps"
+      },
+      "INTERFACE_HOOK_002": {
+        "name": "Custom Hook Interface",
+        "description": "Standard interface for custom hooks",
+        "requirements": [
+          "Return object with named properties",
+          "Consistent naming convention",
+          "Error handling included",
+          "Cleanup functions provided"
+        ],
+        "example": "useScrollAnimation returns { ref, isVisible }"
+      },
+      "INTERFACE_DATA_003": {
+        "name": "Data Layer Interface",
+        "description": "Standard interface for data operations",
+        "requirements": [
+          "Type-safe data structures",
+          "Consistent error handling",
+          "Validation at boundaries",
+          "Transformation utilities"
+        ],
+        "implementation": "Schemas in data/schemas/ directory"
+      }
+    },
+    "qualityGates": {
+      "CODE_QUALITY": [
+        "ESLint passes with zero errors",
+        "TypeScript compiles without errors",
+        "All tests pass",
+        "Code coverage > 80%"
+      ],
+      "PERFORMANCE": [
+        "Bundle size within limits",
+        "Lighthouse score > 90",
+        "Core Web Vitals pass",
+        "No performance regressions"
+      ],
+      "ACCESSIBILITY": [
+        "WCAG 2.1 AA compliance",
+        "Keyboard navigation works",
+        "Screen reader compatible",
+        "Color contrast meets standards"
+      ],
+      "ARCHITECTURE": [
+        "Follows established patterns",
+        "No circular dependencies",
+        "Proper separation of concerns",
+        "Documentation updated"
+      ]
+    }
+  }
+}

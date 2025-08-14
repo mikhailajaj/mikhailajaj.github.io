@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/base/Button';
-import { Card, CardContent } from '@/components/ui/base/Card';
-import { cloudProjects, getFeaturedCloudProjects } from '@/data/projects/cloud';
-import { 
-  FaExternalLinkAlt, 
-  FaGithub, 
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/base/Button";
+import { Card, CardContent } from "@/components/ui/base/Card";
+import { cloudProjects, getFeaturedCloudProjects } from "@/data/projects/cloud";
+import {
+  FaExternalLinkAlt,
+  FaGithub,
   FaArrowRight,
   FaCloud,
   FaUsers,
@@ -17,32 +17,54 @@ import {
   FaAws,
   FaDocker,
   FaShieldAlt,
-  FaChartLine
-} from 'react-icons/fa';
+  FaChartLine,
+} from "react-icons/fa";
 
-type FilterType = 'all' | 'featured' | 'serverless' | 'kubernetes' | 'migration';
+type FilterType =
+  | "all"
+  | "featured"
+  | "serverless"
+  | "kubernetes"
+  | "migration";
 
 const filterOptions = [
-  { value: 'all', label: 'All Projects', count: cloudProjects.length },
-  { value: 'featured', label: 'Featured', count: getFeaturedCloudProjects().length },
-  { value: 'serverless', label: 'Serverless', count: cloudProjects.filter(p => p.tags.includes('Serverless')).length },
-  { value: 'kubernetes', label: 'Kubernetes', count: cloudProjects.filter(p => p.tags.includes('Kubernetes')).length },
-  { value: 'migration', label: 'Migration', count: cloudProjects.filter(p => p.tags.includes('Cloud Migration')).length }
+  { value: "all", label: "All Projects", count: cloudProjects.length },
+  {
+    value: "featured",
+    label: "Featured",
+    count: getFeaturedCloudProjects().length,
+  },
+  {
+    value: "serverless",
+    label: "Serverless",
+    count: cloudProjects.filter((p) => p.tags.includes("Serverless")).length,
+  },
+  {
+    value: "kubernetes",
+    label: "Kubernetes",
+    count: cloudProjects.filter((p) => p.tags.includes("Kubernetes")).length,
+  },
+  {
+    value: "migration",
+    label: "Migration",
+    count: cloudProjects.filter((p) => p.tags.includes("Cloud Migration"))
+      .length,
+  },
 ];
 
 export function CloudProjects() {
-  const [activeFilter, setActiveFilter] = useState<FilterType>('all');
-  
-  const filteredProjects = cloudProjects.filter(project => {
+  const [activeFilter, setActiveFilter] = useState<FilterType>("all");
+
+  const filteredProjects = cloudProjects.filter((project) => {
     switch (activeFilter) {
-      case 'featured':
+      case "featured":
         return project.featured;
-      case 'serverless':
-        return project.tags.includes('Serverless');
-      case 'kubernetes':
-        return project.tags.includes('Kubernetes');
-      case 'migration':
-        return project.tags.includes('Cloud Migration');
+      case "serverless":
+        return project.tags.includes("Serverless");
+      case "kubernetes":
+        return project.tags.includes("Kubernetes");
+      case "migration":
+        return project.tags.includes("Cloud Migration");
       default:
         return true;
     }
@@ -65,8 +87,9 @@ export function CloudProjects() {
             </h2>
           </div>
           <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-            Scalable cloud architectures and DevOps solutions built with AWS services, 
-            delivering significant cost savings and performance improvements.
+            Scalable cloud architectures and DevOps solutions built with AWS
+            services, delivering significant cost savings and performance
+            improvements.
           </p>
         </motion.div>
 
@@ -83,8 +106,8 @@ export function CloudProjects() {
               onClick={() => setActiveFilter(option.value as FilterType)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                 activeFilter === option.value
-                  ? 'bg-blue-600 text-white shadow-lg'
-                  : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                  ? "bg-blue-600 text-white shadow-lg"
+                  : "bg-gray-800 text-gray-300 hover:bg-gray-700"
               }`}
             >
               {option.label} ({option.count})
@@ -101,16 +124,21 @@ export function CloudProjects() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 * index }}
             >
-              <Card variant="interactive" className="h-full bg-blue-900/20 border-blue-700 hover:border-blue-600 group">
+              <Card
+                variant="interactive"
+                className="h-full bg-blue-900/20 border-blue-700 hover:border-blue-600 group"
+              >
                 {/* Project Image */}
                 <div className="relative h-48 overflow-hidden rounded-t-lg">
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-800 to-blue-900 flex items-center justify-center">
                     <div className="text-center">
                       <FaAws className="text-4xl text-blue-400 mb-2 mx-auto" />
-                      <p className="text-blue-300 text-sm">Cloud Architecture</p>
+                      <p className="text-blue-300 text-sm">
+                        Cloud Architecture
+                      </p>
                     </div>
                   </div>
-                  
+
                   {/* Featured Badge */}
                   {project.featured && (
                     <div className="absolute top-4 right-4 bg-yellow-500 text-black px-2 py-1 rounded-full text-xs font-bold flex items-center">
@@ -118,10 +146,12 @@ export function CloudProjects() {
                       Featured
                     </div>
                   )}
-                  
+
                   {/* Status Badge */}
                   <div className="absolute top-4 left-4 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-medium">
-                    {project.status === 'completed' ? 'Completed' : 'In Progress'}
+                    {project.status === "completed"
+                      ? "Completed"
+                      : "In Progress"}
                   </div>
                 </div>
 
@@ -140,18 +170,24 @@ export function CloudProjects() {
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <div className="flex items-center space-x-2">
                       <FaClock className="text-blue-400 text-sm" />
-                      <span className="text-gray-300 text-sm">{project.timeline}</span>
+                      <span className="text-gray-300 text-sm">
+                        {project.timeline}
+                      </span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <FaUsers className="text-green-400 text-sm" />
-                      <span className="text-gray-300 text-sm">{project.client?.size || 'Enterprise'}</span>
+                      <span className="text-gray-300 text-sm">
+                        {project.client?.size || "Enterprise"}
+                      </span>
                     </div>
                   </div>
 
                   {/* Impact Highlight */}
                   {project.impact.metrics.length > 0 && (
                     <div className="mb-4 p-3 bg-blue-800/30 rounded-lg border border-blue-700/50">
-                      <p className="text-blue-400 text-sm font-medium mb-1">Key Impact:</p>
+                      <p className="text-blue-400 text-sm font-medium mb-1">
+                        Key Impact:
+                      </p>
                       <p className="text-gray-300 text-sm">
                         {project.impact.metrics[0]}
                       </p>
@@ -163,8 +199,12 @@ export function CloudProjects() {
                     <div className="mb-4 p-3 bg-green-900/20 rounded-lg border border-green-800/30">
                       <div className="flex items-center space-x-2">
                         <FaChartLine className="text-green-400 text-sm" />
-                        <p className="text-green-400 text-sm font-medium">ROI:</p>
-                        <p className="text-gray-300 text-sm">{project.impact.roi}</p>
+                        <p className="text-green-400 text-sm font-medium">
+                          ROI:
+                        </p>
+                        <p className="text-gray-300 text-sm">
+                          {project.impact.roi}
+                        </p>
                       </div>
                     </div>
                   )}
@@ -193,26 +233,38 @@ export function CloudProjects() {
                   <div className="flex flex-col sm:flex-row gap-3">
                     {project.caseStudyUrl && (
                       <Link href={project.caseStudyUrl} className="flex-1">
-                        <Button variant="default" size="sm" className="w-full bg-blue-600 hover:bg-blue-700">
+                        <Button
+                          variant="default"
+                          size="sm"
+                          className="w-full bg-blue-600 hover:bg-blue-700"
+                        >
                           Case Study
                           <FaArrowRight className="ml-2" />
                         </Button>
                       </Link>
                     )}
-                    
+
                     <div className="flex gap-2">
                       {project.liveDemo && (
                         <Link href={project.liveDemo} target="_blank">
-                          <Button variant="outline" size="sm" className="border-blue-600 text-blue-300 hover:bg-blue-800">
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="border-blue-600 text-blue-300 hover:bg-blue-800"
+                          >
                             <FaExternalLinkAlt className="mr-2" />
                             Demo
                           </Button>
                         </Link>
                       )}
-                      
+
                       {project.codeRepo && (
                         <Link href={project.codeRepo} target="_blank">
-                          <Button variant="outline" size="sm" className="border-blue-600 text-blue-300 hover:bg-blue-800">
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="border-blue-600 text-blue-300 hover:bg-blue-800"
+                          >
                             <FaGithub className="mr-2" />
                             Code
                           </Button>
@@ -225,7 +277,8 @@ export function CloudProjects() {
                   {project.client?.testimonial && (
                     <div className="mt-4 pt-4 border-t border-blue-700/50">
                       <p className="text-gray-400 text-sm italic">
-                        &ldquo;{project.client.testimonial.substring(0, 100)}...&rdquo;
+                        &ldquo;{project.client.testimonial.substring(0, 100)}
+                        ...&rdquo;
                       </p>
                       <p className="text-gray-500 text-xs mt-1">
                         - {project.client.name}
@@ -246,7 +299,11 @@ export function CloudProjects() {
           className="text-center mt-12"
         >
           <Link href="/portfolio?domain=cloud">
-            <Button variant="outline" size="lg" className="border-blue-600 text-blue-300 hover:bg-blue-800">
+            <Button
+              variant="outline"
+              size="lg"
+              className="border-blue-600 text-blue-300 hover:bg-blue-800"
+            >
               View All Cloud Projects
               <FaArrowRight className="ml-2" />
             </Button>

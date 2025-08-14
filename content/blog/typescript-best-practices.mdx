@@ -1,0 +1,472 @@
+---
+title: "TypeScript Best Practices for Enterprise Applications"
+description: "Comprehensive guide to TypeScript best practices, advanced types, and patterns for building robust enterprise-grade applications."
+date: "2024-01-10"
+author: "Mikhail Ajaj"
+category: "Backend Development"
+tags: ["TypeScript", "JavaScript", "Enterprise", "Best Practices"]
+featured: false
+image: "/blog/typescript-guide.svg"
+excerpt: "Learn advanced TypeScript techniques and best practices that will help you build more robust, maintainable, and scalable enterprise applications."
+---
+
+# TypeScript Best Practices for Enterprise Applications
+
+TypeScript has become the de facto standard for building large-scale JavaScript applications. This guide covers advanced TypeScript patterns and best practices that will help you build robust enterprise applications.
+
+## Type Safety Fundamentals
+
+### Strict Configuration
+
+Always start with a strict TypeScript configuration:
+
+```json
+{
+  "compilerOptions": {
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true
+  }
+}
+```
+
+### Advanced Type Patterns
+
+#### Utility Types for API Responses
+
+```typescript
+// Base API response type
+interface ApiResponse<T> {
+  data: T;
+  status: "success" | "error";
+  message?: string;
+  timestamp: string;
+}
+
+// User entity
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: "admin" | "user" | "moderator";
+  createdAt: string;
+  updatedAt: string;
+}
+
+// Create variations using utility types
+type CreateUserRequest = Omit<User, "id" | "createdAt" | "updatedAt">;
+type UpdateUserRequest = Partial<Pick<User, "name" | "role">>;
+type UserSummary = Pick<User, "id" | "name" | "email">;
+
+// API endpoint types
+type GetUsersResponse = ApiResponse<User[]>;
+type CreateUserResponse = ApiResponse<User>;
+type UpdateUserResponse = ApiResponse<User>;
+```
+
+#### Branded Types for Type Safety
+
+```typescript
+// Branded types prevent mixing up similar primitive types
+type UserId = string & { readonly brand: unique symbol };
+type Email = string & { readonly brand: unique symbol };
+type Password = string & { readonly brand: unique symbol };
+
+// Type guards for validation
+const isValidEmail = (email: string): email is Email => {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+};
+
+const createUserId = (id: string): UserId => {
+  if (!id || id.length < 1) {
+    throw new Error("Invalid user ID");
+  }
+  return id as UserId;
+};
+
+// Usage
+const authenticateUser = (userId: UserId, email: Email) => {
+  // Implementation
+};
+
+// This will cause a type error - good!
+// authenticateUser("123", "user@example.com");
+
+// Correct usage
+const userId = createUserId("123");
+const email = "user@example.com";
+if (isValidEmail(email)) {
+  authenticateUser(userId, email);
+}
+```
+
+## Advanced Generic Patterns
+
+### Conditional Types
+
+```typescript
+// Extract array element type
+type ArrayElement<T> = T extends (infer U)[] ? U : never;
+
+// Example usage
+type StringArray = string[];
+type ElementType = ArrayElement<StringArray>; // string
+
+// More complex conditional type
+type ApiEndpoint<T> = T extends "users"
+  ? { data: User[]; total: number }
+  : T extends "posts"
+    ? { data: Post[]; total: number }
+    : never;
+
+// Function overloads with conditional types
+function fetchData<T extends "users" | "posts">(
+  endpoint: T,
+): Promise<ApiEndpoint<T>> {
+  // Implementation
+  return fetch(`/api/${endpoint}`).then((res) => res.json());
+}
+```
+
+### Mapped Types for Form Handling
+
+```typescript
+// Create form state types from entity types
+type FormState<T> = {
+  [K in keyof T]: {
+    value: T[K];
+    error?: string;
+    touched: boolean;
+  };
+};
+
+type FormActions<T> = {
+  [K in keyof T as `set${Capitalize<string & K>}`]: (value: T[K]) => void;
+} & {
+  [K in keyof T as `validate${Capitalize<string & K>}`]: () => boolean;
+};
+
+// Usage
+interface LoginForm {
+  email: string;
+  password: string;
+}
+
+type LoginFormState = FormState<LoginForm>;
+type LoginFormActions = FormActions<LoginForm>;
+
+// Results in:
+// {
+//   email: { value: string; error?: string; touched: boolean };
+//   password: { value: string; error?: string; touched: boolean };
+// }
+// {
+//   setEmail: (value: string) => void;
+//   setPassword: (value: string) => void;
+//   validateEmail: () => boolean;
+//   validatePassword: () => boolean;
+// }
+```
+
+## Error Handling Patterns
+
+### Result Type Pattern
+
+```typescript
+// Result type for better error handling
+type Result<T, E = Error> =
+  | { success: true; data: T }
+  | { success: false; error: E };
+
+// Async function that returns Result
+async function fetchUser(id: UserId): Promise<Result<User, ApiError>> {
+  try {
+    const response = await fetch(`/api/users/${id}`);
+    if (!response.ok) {
+      return {
+        success: false,
+        error: new ApiError(`Failed to fetch user: ${response.statusText}`),
+      };
+    }
+    const user = await response.json();
+    return { success: true, data: user };
+  } catch (error) {
+    return {
+      success: false,
+      error: error instanceof Error ? error : new Error("Unknown error"),
+    };
+  }
+}
+
+// Usage with type safety
+const handleUserFetch = async (id: UserId) => {
+  const result = await fetchUser(id);
+
+  if (result.success) {
+    // TypeScript knows result.data is User
+    console.log(result.data.name);
+  } else {
+    // TypeScript knows result.error is ApiError
+    console.error(result.error.message);
+  }
+};
+```
+
+### Custom Error Classes
+
+```typescript
+// Base error class
+abstract class AppError extends Error {
+  abstract readonly code: string;
+  abstract readonly statusCode: number;
+
+  constructor(
+    message: string,
+    public readonly context?: Record<string, unknown>,
+  ) {
+    super(message);
+    this.name = this.constructor.name;
+  }
+}
+
+// Specific error types
+class ValidationError extends AppError {
+  readonly code = "VALIDATION_ERROR";
+  readonly statusCode = 400;
+}
+
+class NotFoundError extends AppError {
+  readonly code = "NOT_FOUND";
+  readonly statusCode = 404;
+}
+
+class UnauthorizedError extends AppError {
+  readonly code = "UNAUTHORIZED";
+  readonly statusCode = 401;
+}
+
+// Error factory
+const createError = {
+  validation: (message: string, field?: string) =>
+    new ValidationError(message, { field }),
+  notFound: (resource: string, id: string) =>
+    new NotFoundError(`${resource} not found`, { id }),
+  unauthorized: (message = "Unauthorized") => new UnauthorizedError(message),
+};
+```
+
+## Dependency Injection Pattern
+
+```typescript
+// Service interfaces
+interface IUserRepository {
+  findById(id: UserId): Promise<User | null>;
+  create(user: CreateUserRequest): Promise<User>;
+  update(id: UserId, user: UpdateUserRequest): Promise<User>;
+}
+
+interface IEmailService {
+  sendWelcomeEmail(user: User): Promise<void>;
+}
+
+interface ILogger {
+  info(message: string, context?: Record<string, unknown>): void;
+  error(message: string, error?: Error): void;
+}
+
+// Service implementations
+class UserRepository implements IUserRepository {
+  constructor(private db: Database) {}
+
+  async findById(id: UserId): Promise<User | null> {
+    // Implementation
+    return this.db.users.findUnique({ where: { id } });
+  }
+
+  // Other methods...
+}
+
+// Service class with dependency injection
+class UserService {
+  constructor(
+    private userRepository: IUserRepository,
+    private emailService: IEmailService,
+    private logger: ILogger,
+  ) {}
+
+  async createUser(userData: CreateUserRequest): Promise<Result<User>> {
+    try {
+      this.logger.info("Creating user", { email: userData.email });
+
+      const user = await this.userRepository.create(userData);
+      await this.emailService.sendWelcomeEmail(user);
+
+      this.logger.info("User created successfully", { userId: user.id });
+      return { success: true, data: user };
+    } catch (error) {
+      this.logger.error("Failed to create user", error as Error);
+      return {
+        success: false,
+        error: error instanceof Error ? error : new Error("Unknown error"),
+      };
+    }
+  }
+}
+
+// Dependency injection container
+class Container {
+  private services = new Map<string, unknown>();
+
+  register<T>(key: string, factory: () => T): void {
+    this.services.set(key, factory);
+  }
+
+  resolve<T>(key: string): T {
+    const factory = this.services.get(key) as () => T;
+    if (!factory) {
+      throw new Error(`Service ${key} not registered`);
+    }
+    return factory();
+  }
+}
+
+// Setup
+const container = new Container();
+container.register("userRepository", () => new UserRepository(db));
+container.register("emailService", () => new EmailService());
+container.register("logger", () => new Logger());
+container.register(
+  "userService",
+  () =>
+    new UserService(
+      container.resolve("userRepository"),
+      container.resolve("emailService"),
+      container.resolve("logger"),
+    ),
+);
+```
+
+## Testing Patterns
+
+### Type-Safe Mocking
+
+```typescript
+// Mock factory with type safety
+type MockedFunction<T extends (...args: any[]) => any> = jest.MockedFunction<T>;
+
+type MockedClass<T> = {
+  [K in keyof T]: T[K] extends (...args: any[]) => any
+    ? MockedFunction<T[K]>
+    : T[K];
+};
+
+// Create type-safe mocks
+const createMockUserRepository = (): MockedClass<IUserRepository> => ({
+  findById: jest.fn(),
+  create: jest.fn(),
+  update: jest.fn(),
+});
+
+// Test with type safety
+describe("UserService", () => {
+  let userService: UserService;
+  let mockUserRepository: MockedClass<IUserRepository>;
+  let mockEmailService: MockedClass<IEmailService>;
+  let mockLogger: MockedClass<ILogger>;
+
+  beforeEach(() => {
+    mockUserRepository = createMockUserRepository();
+    mockEmailService = { sendWelcomeEmail: jest.fn() };
+    mockLogger = { info: jest.fn(), error: jest.fn() };
+
+    userService = new UserService(
+      mockUserRepository,
+      mockEmailService,
+      mockLogger,
+    );
+  });
+
+  it("should create user successfully", async () => {
+    const userData: CreateUserRequest = {
+      email: "test@example.com" as Email,
+      name: "Test User",
+      role: "user",
+    };
+
+    const expectedUser: User = {
+      id: "user-123" as UserId,
+      ...userData,
+      createdAt: "2024-01-01T00:00:00Z",
+      updatedAt: "2024-01-01T00:00:00Z",
+    };
+
+    mockUserRepository.create.mockResolvedValue(expectedUser);
+    mockEmailService.sendWelcomeEmail.mockResolvedValue();
+
+    const result = await userService.createUser(userData);
+
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data).toEqual(expectedUser);
+    }
+    expect(mockEmailService.sendWelcomeEmail).toHaveBeenCalledWith(
+      expectedUser,
+    );
+  });
+});
+```
+
+## Performance Considerations
+
+### Lazy Loading with Types
+
+```typescript
+// Lazy loading pattern with type safety
+type LazyComponent<T> = React.LazyExoticComponent<React.ComponentType<T>>;
+
+const createLazyComponent = <T extends Record<string, unknown>>(
+  importFn: () => Promise<{ default: React.ComponentType<T> }>
+): LazyComponent<T> => {
+  return React.lazy(importFn);
+};
+
+// Usage
+const LazyUserProfile = createLazyComponent<{ userId: UserId }>(
+  () => import('./UserProfile')
+);
+
+// Type-safe lazy loading with error boundaries
+const LazyComponentWrapper = <T extends Record<string, unknown>>({
+  component: Component,
+  fallback,
+  errorFallback,
+  ...props
+}: {
+  component: LazyComponent<T>;
+  fallback?: React.ReactNode;
+  errorFallback?: React.ComponentType<{ error: Error }>;
+} & T) => (
+  <ErrorBoundary fallback={errorFallback}>
+    <Suspense fallback={fallback || <div>Loading...</div>}>
+      <Component {...props} />
+    </Suspense>
+  </ErrorBoundary>
+);
+```
+
+## Conclusion
+
+TypeScript's type system is incredibly powerful when used correctly. These patterns and practices will help you:
+
+1. **Catch errors at compile time** rather than runtime
+2. **Improve code maintainability** through better documentation
+3. **Enable better refactoring** with confidence
+4. **Enhance developer experience** with better IDE support
+
+Remember that TypeScript is a tool to help you write better JavaScript. Don't over-engineer your types, but do leverage the type system to make your code more robust and maintainable.
+
+The key is finding the right balance between type safety and development velocity. Start with strict settings and gradually adopt more advanced patterns as your team becomes comfortable with TypeScript.

@@ -1,0 +1,623 @@
+INFO10229
+Mobile Computing	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 42.0
+Credit Value: 3.0
+Credit Value Notes: N/A
+Effective: Spring/Summer 2025
+Prerequisites: PROG10004
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: N/A
+Program(s): Hon Bach CompSci - Mobile Comp
+Program Coordinator(s): Magdin Stoica
+Course Leader or Contact: Omer Mohamed
+Version: 20250505_00
+Status: Approved (APPR)
+
+Section I Notes: Students taking this course are required to provide their own MacBook that is suitable for iOS development. Students will develop using the simulator. No devices beyond their MacBook are required or provided.
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+Students learn the foundational concepts and topics in the mobile computing field of Computer Science. Students learn about mobile computing applications and technologies. Three main perspectives are presented: (a) mobile technologies, (b) application development environments, and (c) human computer interaction. Lectures, hands-on exercises and assignment experiences systematically teach the student about common guidelines and models in mobile computing, mobile application frameworks and development environments, user interface designs and human factors.
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+This required course is a foundational course in mobile computing. Students require basic programming skills in an object-oriented language. It is the first in a sequence of courses in the mobile application development stream. The course prepares the student with the principles and fundamental knowledge for future courses in the mobile application development stream.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of this course, students will have demonstrated the ability to develop small mobile applications based on HCI best practices and a comparison of native and cross-platform application paradigms.
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Describe the evolution of mobile computing (past, present and future trends).
+Explain the features and functionality of mobile devices.
+Explain the types of mobile application development environments.
+Compare and contrast mobile application development paradigms (native, web, and hybrid).
+Assess mobile application development challenges (e.g. cross-platform issues, security, reliability, etc.).
+Describe recent and future technology trends in the field of mobile computing.
+Explain the role of Human Computer Interaction (HCI) in mobile computing.
+Design user interfaces based on well-defined HCI guidelines.
+Develop small mobile applications on major mobile platforms in accordance with platform and industry best practices.
+Create a business plan for an entrepreneurial venture in the field of mobile computing.
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	Assignments (4 @ 10%)	40.0%
+ 	Midterm Exam	30.0%
+ 	Final Exam	30.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+To pass the course, students must achieve a 50% weighted average across the exams and at least 50% overall in the course.
+
+Students must submit/complete all assignments, in-class activities and projects by the scheduled due date and write all tests on the specified date/time. Exceptions will only be made under extraordinary circumstances. 
+
+Refer to the School of Applied Computing's Academic Procedures for Evaluations for more details regarding missed work: Procedures for Evaluations
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Portfolio
+Notes:  
+Interview
+Notes:  PLAR consists of both a Portfolio And Interview.
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s):
+Course material costs can be found through the Sheridan Bookstore
+ 	Type	Description
+Required	Other	Link to Swift Docs at https://swift.org/documentation/ Link to iOS Developer Documentation at https://developer.apple.com/develop
+Optional	Textbook	Learn SwiftUI, Barker, C., Packt Publishin, ISBN 9781839215421, 2020, Available through Sheridan's Library Services
+Optional	Textbook	Head First Swift, Manning J., Buttfield-Addison P, O'Reilly Media Inc., 2021, Available through Sheridan's Library Services
+
+Applicable student group(s): Honours Bachelor of Computer Science (Mobile Computing) (PBACS)
+Course Details:
+Module 1: Fundamentals of Mobile Computing
+
+Past, Present and Future Trends of Mobile Devices
+Smart Devices, Environments & Interaction
+Design and Development Environments for Mobile Apps
+Comparing and Contrasting Various Mobile App Development Environments
+Module 2: Fundamentals of Design and Development of Mobile Applications
+
+Introduction to iOS
+Overview of iOS Architecture and Devices
+iOS App Life Cycle
+Fundamentals of the Development Environment and Tools (Xcode)
+Module 3: Programming Languages for Mobile Applications
+
+Principles of Swift Programming Language
+Basics of Swift Programming Language (Constants, Variables, Control Structures, Collections, Strings, Optionals, Tuples, Dictionaries)
+Object-Oriented Programming in Swift
+Functions, Closures
+Initializer and Deinitializers
+Enumerations, Structures, Extensions
+Access Control, Error Handling
+Protocols, Optional Chaining 
+Fundamentals of the Development Environment and Tools (Xcode, Playgrounds)
+Module 4: Human Computer Interaction
+
+Overview of Human Computer Interaction
+User Interfaces and Interaction Design
+Introduction to the iOS App UI Design
+User Interface Design Guidelines for iOS Devices
+Organizing UI Components
+Overview of Basic UI Components and Event Handling
+Introduction to Swiftui
+Module 5: Mobile and Cloud Computing 
+
+Overview of Current Trends in Mobile Computing
+Mobile Devices and Cloud Computing 
+Leveraging Cloud Computing Services in Mobile Applications 
+Module 6: The Future of Mobile Computing 
+
+Overview of Future Challenges 
+Augmented Reality 
+Smart Devices 
+Smart HCI 
+Current Research in Mobile Computing 
+Introduction to the Entrepreneurial Process in Mobile Computing  
+
+PROG10065
+Interactive Application Development	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 84.0
+Credit Value: 4.0
+Credit Value Notes: N/A
+Effective: Winter 2025
+Prerequisites: PROG10004
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: N/A
+Program(s): Hon Bach CompSci - Mobile Comp
+Program Coordinator(s): Magdin Stoica
+Course Leader or Contact: Magdin Stoica
+Version: 20250106_01
+Status: Approved (APPR)
+
+Section I Notes: N/A
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+Students are guided into the science of building well-designed, robust, interactive applications using formalized object-oriented design principles applied in an industry-standard framework. Students learn to organize data into high-level formats such as XML and JSON and create increasingly complex data-driven applications with exciting, easy-to-use graphical user interfaces. Through interactive lectures, presentations, demonstrations and numerous hands-on exercises students practice professional software development techniques, apply best practices and use modern iterative development processes laying foundations that are essential to professional software developers.
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+This is the second of the four required core computer science courses that focus on computer programming, problem solving and algorithm development and continues to build the foundation for both the core-computer science and the mobile computing course streams. The course focuses on building data-driven interactive applications designed according to formalized object-oriented principles using an industry-standard framework. In subsequent courses students will explore different programming languages and programming paradigms as well as advanced problem solving techniques, data structures and algorithms.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of this course, students will have demonstrated the ability to apply object-oriented design principles in the development of increasingly complex data-driven programs that control access to structured collections of data in interactive GUI applications using an industry-standard framework and integrated development environment.
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Characterize strongly typed, imperative language principles, modularization techniques and type categories.
+Apply software design principles of encapsulation, separation of concerns and abstraction with object-oriented mechanisms of inheritance and polymorphism in the development of interactive application applications.
+Create advanced interactive applications that are robust and have easy-to-use graphical user interfaces developed using professional coding practices and frameworks.
+Employ data persistence mechanisms in object-oriented programs.
+Construct complex applications using modern, iterative development processes in a team environment.
+Use distributed version control systems connected to cloud repositories to manage source code developed in a team environment.
+Analyze simple specifications of real-world problems to discover objects, classes, relationships and methods using object-oriented analysis and design methodologies
+Describe the design and operation of object-oriented programs using detailed visual modeling techniques.
+Verify the correctness and completeness of increasingly complex computer programs using debugging techniques and integrated development environments.
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	Quizzes (4 @ 2.5%) approx. week 2, 4, 10, 12	10.0%
+ 	Assignments (2 @ 5%, 1 @ 10%) approx. week 3, 5, 9	20.0%
+ 	Midterm Exam approx. week 7	20.0%
+ 	Team Project (2 iterations @ 10%) approx. week 11, 13	20.0%
+ 	Final Exam	30.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+To pass the course, students must achieve a 50% weighted average across the exams and at least 50% overall in the course.
+
+Students must submit/complete all assignments, in-class activities and projects by the scheduled due date and write all tests on the specified date/time. Exceptions will only be made under extraordinary circumstances. 
+
+Refer to the School of Applied Computing's Academic Procedures for Evaluations for more details regarding missed work: Procedures for Evaluations
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Challenge Exam
+Notes:  
+Interview
+Notes:  PLA consists of both a Challenge Exam AND Interview.
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s):
+Course material costs can be found through the Sheridan Bookstore
+ 	Type	Description
+Required	Textbook	Microsoft Visual C# Step by Step, Sharp, J., Redmond, WA: Microsoft Press, 9th ed., ISBN 9781509307760
+Optional	Textbook	Head First C#, Associates & Stellman A., Greene J., OReilly Media, 3rd ed., ISBN 0636920027812, 2013, This text is available on-line through Safari Books
+Optional	Textbook	C# 3.0 Cookbook, Hilyard J, Telihet S, OReilly Media, 3rd ed., ISBN 9780596516109, 2007
+Optional	Textbook	Code Complete, McConnell S., Microsoft Press, 2nd ed., ISBN 9780735619678, 2004
+Optional	Textbook	Pro C# 7 with .NET and .NET Core, Troelsen A., Japikse, P., Apress, 8th Edition, ISBN 9781484230176, 2017
+
+Applicable student group(s): Honours Bachelor of Computer Science (Mobile Computing) (PBACS)
+Course Details:
+Module 1: Interactive Application Programming Foundations
+
+User Interfaces, Categorization of Programs by User Interface Type. Input and Output Devices and Their Role in Interactivity.
+Universal Applications with Adaptive User Interfaces That Can Run on Diverse Device Families.
+Platforms for Interactive Applications. The .Net Framework. Language Interoperability. The Evolution of The .Net Framework into the Modern Windows Runtime.Modularization in .Net Programs. Packaging Code into Physical Modules (Assemblies). Describing Program Modules. Module (Assembly) Metadata. Packaging Code into Logical Modules (Namespaces). Defining Logical Modules. Native Images.
+Verifying Programs Through Debugging and Unit-Testing Using Visual Studio Ide.
+Developing Interactive Applications in Teams Of Developers: Using Distributed Version Control Systems, Git Connected to Cloud Platforms Such as Bitbucket, To Develop Code Productively in a Team Environment.
+Professional Development of Computer Programs: Design First, Design Visualization, Comments, Coding Conventions, Following an Iterative Development Process. 
+Module 2: Programming with Statically Typed Languages
+
+The Role and Use of Types in Programming Languages. Memory Management Using Types. Type Categories: Reference vs. Value Types, Primitive vs. User-Defined vs. Predefined Types.
+Types Used in the C# Programming Language. Predefined Types in the .Net Framework Class Library (Fcl). C# Literals and Their Types. Creating User-Defined Types in C#: Classes, Stucts and Enums.
+C# Programming with Types: Declarations, Definitions, Initialization. Parametrized Types. Type Transformation and Type-Casting.
+Deriving New Types Through Inheritance with C#. Base and Derived Classes. Constructors in Derived Classes. Overriding Methods. Typecasting Between Objects. 
+Module 3: Software Design Principles
+
+Encapsulation; Visibility of Types, Variables and Methods.
+Separation of Concerns and Modularization. Criteria Used for Breaking Software into Parts. How to Measure Separation of Concerns. Characteristics of Well-Designed Modules.
+Object Coupling Through Relationships: Uses (Dependencies), Has-A (Association, Aggregation And Composition. Differentiating Between Association, Aggregation and Composition.
+Separation of Concerns in Large System Using Layers and Tiers.
+Separation of Concerns Using Interfaces and Delegates.
+Reuse Through Inheritance, Abstraction and Polymorphism; Deriving New Abstract Data Types From Existing Ones. Polymorphic Objects and Polymorphic Methods.
+Generalization Through Abstraction; Abstract Types: Abstract Classes and Interfaces; Functions as Types Used to Define Call-Back Methods.
+Use Advanced Class Diagrams in the Development of Object-Oriented Programs: Navigability, Cardinality, Differentiating Between Aggregation and Composition, Stereotypes, Advanced Relationships. 
+Module 4: C# Language Fundamentals
+
+Scopes in Programing Languages. Named and Unnamed Scopes. Visibility and Scopes. Types of Named Scopes in C#.
+C# Properties as a Mechanism for Defining Accessor and Mutator. Differentiating Between Read-Write, Read-Only and Write-Only Properties. Automatic Properties.
+Branching Program Flow in C# With if Statement, Switch Statements and Conditional Expressions.
+Repetition in Program Flow in C# with Counted and Conditional Loops: For, Foreach, While, Do-While.
+Method Definition, Constructors. Parameter Passing in C# by Value, by Reference, the Use of Input and Output Parameters.
+Sharing Data and Methods Between all Objects of a Class with Static Methods and Variables.
+Manage the Error Flow in C# Program Using Exception Handling. The Use of Try/Catch/Finally Blocks and the Using Statement for Resource Management. User-Defined Exceptions. 
+Module 5: Interactive Application Design and Implementation
+
+Building Complex User Interfaces Using an Integrated Development Environment.
+Architecture of Universal Applications Developed with C# and Visual Studio.
+Xaml Language for Universal User Interface Definition.
+Using Xaml Resources in Interactive Applications to Reuse Ui Code, Define Styles and Use Predefined Ui Elements Such as Icons and Fonts.
+Common Xaml Controls: Analyzing Base Classes For Common Properties. Using Content Controls. Displaying Collections With Items Controls.
+Graphical User Interface Components and Resizable Layouts with Layout Controls.
+Drawing Simple Graphics, Painting, Image Handling, Bitmaps.
+Navigation in Uwp Applications: Using Navigation Frames, Navigation with a Standard Split-View Layout Control. Including System Back Navigation. Standardized Layouts. 
+Module 6: Data-Driven Application Development 
+
+Arrays. Arrays as a Data Structure with Constraints and Benefits. Programing with Arrays: Declaration, Initialization, Accessing and Changing Elements, Enumerating Elements.
+Organizing Data Inside an Array Using Dimensions: Multi-Dimensional Arrays, Jagged Arrays. Contrast Multi-Dimensional with Jagged Arrays.
+Advanced Data Organization Using Collections: Dynamic Arrays, Linked Lists And Dictionaries. Create Programs That Use Dynamic Arrays and Dictionaries.
+Introduction to Basic Text Files in Csv Format, Structured Xml and Json Text Files.
+I/O File System Access in Universal Applications Using .Net and Windows Runtime Mechanisms. Managing Application State Using Application Settings, Files.
+Persist Data Using Basic Text I/O and Serialization Mechanisms with Multiple Text-Based Formats, Csv, Xml and Json. Managing and Handling Exceptions Related to Io.
+Note: The Topics Within Each Module are Grouped Semantically and are Not Meant to Suggest a Time Sequence. At the Beginning of the Course, the Professor will Identify the Class-By-Class Arrangement of Topics and the Timing of Evaluation Components Via a Course Plan.
+
+
+DBAS20146
+Database Modelling	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 42.0
+Credit Value: 3.0
+Credit Value Notes: N/A
+Effective: Winter 2025
+Prerequisites: N/A
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: N/A
+Program(s): Hon Bach CompSci - Mobile Comp, Hons Bach of Computer Science
+Program Coordinator(s): Magdin Stoica, El Sayed Mahmoud
+Course Leader or Contact: Abdul Mustafa
+Version: 20250106_00
+Status: Approved (APPR)
+
+Section I Notes: N/A
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+Students are introduced to the theory behind the development of relational databases, and the techniques that are involved in working with relational databases. They learn to identify the techniques involved in data modeling, SQL development, and Transact SQL (T-SQL) programming, and the level of difficulty associated with each element. Students learn the diagramming conventions associated with Entity Relationship Diagrams, how to model entities and how to model the different relationships between entities. They also learn how to retrieve and display data from the database, and how to program T-SQL procedures and functions. Through interactive-lectures, hands-on activities, and assignments students learn how to determine the degree of a relationship, the nature of recursive relationships, and network structures in a relational database. In addition, students learn to write scripts that automate database tasks while managing the storage and definition of data and controlling and restricting data access and concurrency. Database triggers and constraints are used to introduce the student to security issues in the database. Furthermore, students are introduced to NoSQL databases, exploring their implementation and comparing their structures and functionalities to the traditional relational database model.
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+This is the first of two required courses in the database stream in the Bachelor of Applied Computer Science in Mobile Computing. The second course in Database Administration will build on this foundation as students learn how to secure and administer a database.
+
+Hons Bach of Computer Science	Program Coordinator(s): El Sayed Mahmoud
+This required core course serves as a foundation course for core computer science and the program streams. The course presents an integrated overview of database concepts, including operations and technologies that facilitate designing and implementing relational databases. This introductory level course provides a solid understanding of database systems as a context for later core and specialization courses.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of this course, students will have demonstrated the ability to model entities, query, and manipulate database information using SQL and PL/SQL.
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Identify business entities and the relationships between entities, gather data requirements, and create conceptual models using a variety of techniques.
+Analyze the degree optionality of relationships between objects in a database.
+Explain the benefits of normalization in the design of business models.
+Create tables in third normal form using the Entity Relationship Model.
+Create Sequential Query Language (SQL) commands and scripts to retrieve and display data from the relational database.
+Differentiate between DDL and DML statements and the role that they play in transaction processing.
+Analyze the differences between single-row and multi-row database functions.
+Create explicit cursors and dynamic queries to automate tasks in the database.
+Create effective stored procedures and functions.
+Analyze NoSQL vs. relational databases, evaluate use cases, and implement a basic NoSQL database.
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	Assignments (3 @ 10% each) - approx. weeks 4, 9, 12	30.0%
+ 	Midterm Exam - approx. week 7	35.0%
+ 	Final Exam - approx. week 14	35.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+To pass the course, students must achieve a 50% weighted average across the exams and at least 50% overall in the course.
+
+Students must submit/complete all assignments, in-class activities and projects by the scheduled due date and write all tests on the specified date/time. Exceptions will only be made under extraordinary circumstances. 
+
+Refer to the School of Applied Computing's Academic Procedures for Evaluations for more details regarding missed work: Procedures for Evaluations
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Challenge Exam
+Notes:  Challenge exam, portfolio, and project are required for PLA.
+Portfolio
+Notes:  Challenge exam, portfolio, and project are required for PLA.
+Other
+Notes:  Challenge exam, portfolio, and project are required for PLA.
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s):
+Course material costs can be found through the Sheridan Bookstore
+ 	Type	Description
+Required	Textbook	Modern Database Management (Rental Edition), Hoffer J., Ramesh V., and Topi H., Pearson, 13th, ISBN 9780134792279, 2019, This text is available by subscription at www.mypearsonstore.com
+
+Applicable student group(s): Honours Bachelor of Computer Science (Mobile Computing) (PBACS); Honours Bachelor of Computer Science (All Specializations) (PBCPS)
+Course Details:
+Module 1:
+
+Data Modelling Principles
+Database Development Process
+Module 2:
+
+Modelling Basic Entities
+Entity Relationship Diagrams
+Introduction to Normalization   
+Assignment 1 @ 10%
+
+Module 3:
+
+Sequential Query Language:
+Basic Queries
+ Single-Row Functions
+ Group Functions
+Midterm Exam @ 35%
+
+Module 4:
+
+Complex Queries, Group Functions and Sub-Queries
+Writing Scripts
+Module 5:
+
+Transact-SQL
+Programming with Explicit Cursors and Dynamic Queries
+Module 6:
+
+Programming with Stored Procedures and Functions
+Database Triggers
+Troubleshooting Procedures, Functions, and Database Triggers
+Analyze Row Level and Statement Level Triggers
+Differentiating Database Triggers from Database Constraints
+Assignment 2 @ 10%
+
+Module 7: 
+
+Introduction to NoSQL Logical Model, Convert Parts of ER Model to NoSQL Model
+Physical Implementation of NoSQL, Introduction to Shards, Replicas, Mongos, Mongod and Writing Queries to Read Data from NoSQL Database
+Assignment 3 @ 10%
+
+Final Exam @ 35%
+
+Note: The topics within each module are grouped thematically and are not meant to suggest a time sequence. At the beginning of the course, the professor will identify the class-by-class arrangement of topics and the timing of evaluation components via a course plan.
+
+
+MATH11044
+Linear Algebra	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 42.0
+Credit Value: 3.0
+Credit Value Notes: N/A
+Effective: Winter 2025
+Prerequisites: MATH10025
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: N/A
+Program(s): Hon Bach CompSci - Mobile Comp, Hons Bach of Computer Science
+Program Coordinator(s): Magdin Stoica, El Sayed Mahmoud
+Course Leader or Contact: Jacob Chodoriwsky
+Version: 20250106_00
+Status: Approved (APPR)
+
+Section I Notes: N/A
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+Students learn the mathematical foundations of linear algebra to solve mathematical problems. In this course, students focus on solving systems of linear equations, computing determinants, Euclidean vector spaces, eigenvalues, eigenvectors, as well as diagonalization, linear transformations, and how linear algebra is fundamental in computer graphics. Lectures, hands-on exercises and assignments, along with the use of computer software (e.g., MATLAB) systematically teach the students these foundational skills.
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+The purpose of this required course is to further provide a mathematical foundation in linear algebra required for success in core computer science courses (e.g., architecture, operating systems, programming, software design and development), and other program streams such as, mobile application development, and network fundamentals.
+
+Hons Bach of Computer Science	Program Coordinator(s): El Sayed Mahmoud
+This required course provides a mathematical foundation in linear algebra necessary for success in core computer science courses (e.g., programming, software design and development), and other program specializations such as data analytics, game engineering and cloud computing.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of this course, students will have demonstrated the ability to solve mathematical problems using a variety of linear algebra principles, theories, and techniques.
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Construct simple proofs using introductory proof techniques.
+Create and solve systems of linear equations by applying the theories and techniques of linear algebra.
+Compute the determinant of a matrix.
+Build Euclidean vector spaces.
+Compute eigenvalues, eigenvectors and inner product spaces.
+Use diagonalization to solve mathematical problems.
+Perform linear transformations.
+Use linear algebra numerical methods to solve mathematical problems.
+Apply techniques of linear algebra to computer graphics.
+Use computer software (e.g., MATLAB) to assist in solving mathematical problems (e.g., solving systems of linear equations, computing determinants, eigenvalues, eigenvectors, etc.)
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	Assignments (2 @ 5% each approx. weeks 5, 10)	10.0%
+ 	Quizzes (10 @ 3% each approx. weeks 2,3,4,5,6,9,10,11,12,13)	30.0%
+ 	Midterm Exam (approx. week 7)	30.0%
+ 	Final Exam (approx. week 14)	30.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+To pass the course, students must achieve a 50% weighted average across the tests and at least 50% overall in the course.
+
+Students must submit/complete all assignments, in-class activities and projects by the scheduled due date and write all tests on the specified date/time. Exceptions will only be made under extraordinary circumstances. 
+
+Refer to the School of Applied Computing's Academic Procedures for Evaluations for more details regarding missed work: Procedures for Evaluations
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Challenge Exam
+Notes:  PLAR consists of a Challenge Exam.
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s):
+Course material costs can be found through the Sheridan Bookstore
+ 	Type	Description
+Required	Textbook	Linear Algebra with Applications, Nicholson. W. K., Lyryx, 2021-A, CC BY-NC-SA, 2021, Creative Commons Free PDF. https://lyryx.com/linear-algebra-applications/
+
+Applicable student group(s): Honours Bachelor of Computer Science - Mobile Computing; Honours Bachelor of Computer Science
+Course Details:
+Module 1: Systems of Linear Equations and Matrices
+
+Introduction of Proof Techniques
+Solving Systems of Linear Equations
+Gaussian Elimination
+Problem Solving and Linear Equations
+Fundamental Operations with Matrices
+Module 2: Vectors and Matrices
+
+Fundamental Vector Operations
+The Dot Product
+Length, Distance, and Angles in Inner Product Spaces
+The Cross Product
+Module 3: Euclidean Vector Spaces
+
+Properties of Vector Spaces
+Span
+Linear Independence
+Basis and Dimension
+Midterm Exam
+
+Module 4: Linear Transformations
+
+Fundamental Properties of Linear Transformations
+The Matrices of Linear Transformation
+Common Geometric Transformations with 2D and 3D Graphics Applications
+Module 5: Determinants
+
+Properties and Significance of Determinants
+Computing Determinants of Matrices
+Module 6: Eigenvalues, Eigenvectors, and Diagonalization
+
+Properties of Eigenvalues, and Eigenvectors
+Computing Eigenvalues and Eigenvectors
+Matrix Diagonalization
+Applications
+Module 7: Applications
+
+Numerical Methods for Solving Systems
+Movement in Three Dimensions
+Computer Graphics 
+Final Exam
+
+Note: The topics within each module are grouped thematically and are not meant to suggest a time sequence. At the beginning of the course, the professor will identify the class-by-class arrangement of topics and the timing of evaluation components via a course plan.
+
+

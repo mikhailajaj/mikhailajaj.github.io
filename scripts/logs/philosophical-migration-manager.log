@@ -1,0 +1,8 @@
+{"timestamp":"2025-07-29 03:40:08","level":"INFO","component":"INIT","script":"philosophical-migration-manager.sh","message":"Philosophical framework v2.0 initialized for philosophical-migration-manager","framework_version":"2.0"}
+{"timestamp":"2025-07-29 03:40:08","level":"INFO","component":"MIGRATION","script":"philosophical-migration-manager.sh","message":"Starting theme-unification migration: migration_1753774808","framework_version":"2.0"}
+{"timestamp":"2025-07-29 03:40:08","level":"INFO","component":"STATE","script":"philosophical-migration-manager.sh","message":"Created migration state for: migration_1753774808","framework_version":"2.0"}
+{"timestamp":"2025-07-29 03:40:08","level":"INFO","component":"ROLLBACK","script":"philosophical-migration-manager.sh","message":"Creating rollback point: migration_1753774808_1753774808","framework_version":"2.0"}
+{"timestamp":"2025-07-29 03:40:11","level":"INFO","component":"STATE","script":"philosophical-migration-manager.sh","message":"Updated migration state: migration_1753774808 -> rollback_created","framework_version":"2.0"}
+{"timestamp":"2025-07-29 03:40:11","level":"ERROR","component":"MIGRATION","script":"philosophical-migration-manager.sh","message":"Unknown migration type: theme-unification","framework_version":"2.0"}
+{"timestamp":"2025-07-29 03:40:11","level":"INFO","component":"CLEANUP","script":"philosophical-migration-manager.sh","message":"Framework cleanup initiated with exit code: 1","framework_version":"2.0"}
+{"timestamp":"2025-07-29 03:40:11","level":"ERROR","component":"CLEANUP","script":"philosophical-migration-manager.sh","message":"Script failed with exit code 1","framework_version":"2.0"}

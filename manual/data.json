@@ -1,0 +1,148 @@
+{
+  "dataManagement": {
+    "manualVersion": "2.1.0",
+    "lastUpdated": "2024-12-19",
+    "structure": {
+      "projectData": {
+        "file": "data/project-case-studies.ts",
+        "description": "Comprehensive project data with detailed case studies",
+        "schema": {
+          "ProjectCaseStudy": {
+            "id": "string - Unique project identifier",
+            "slug": "string - URL-friendly identifier",
+            "title": "string - Project title",
+            "description": "string - Brief project description",
+            "longDescription": "string - Detailed project description",
+            "image": "string - Main project image path",
+            "technologies": "string[] - Array of technologies used",
+            "categories": "ProjectCategory[] - Project classification",
+            "featured": "boolean - Whether project is featured",
+            "liveUrl": "string - Live project URL",
+            "githubUrl": "string - GitHub repository URL",
+            "caseStudy": "CaseStudy - Detailed case study information"
+          },
+          "CaseStudy": {
+            "challenge": "string - Problem statement",
+            "solution": "string - Solution approach",
+            "results": "string[] - Measurable outcomes",
+            "technologies": "TechStack - Detailed technology breakdown",
+            "timeline": "string - Project duration",
+            "role": "string - My role in the project"
+          }
+        },
+        "recentChanges": {
+          "date": "2024-12-19",
+          "changes": [
+            "Renamed from projects-enhanced.ts to project-case-studies.ts",
+            "Updated export name from enhancedProjects to projectCaseStudies",
+            "Updated all helper functions to use new export name"
+          ]
+        },
+        "usage": [
+          "Homepage featured projects",
+          "Domain-specific project filtering",
+          "Dynamic project detail pages",
+          "Project search and categorization"
+        ]
+      },
+      "testimonials": {
+        "file": "data/testimonials.ts",
+        "description": "Client testimonials and feedback",
+        "schema": {
+          "Testimonial": {
+            "id": "string - Unique identifier",
+            "client": "string - Client name",
+            "role": "string - Client role/title",
+            "company": "string - Client company",
+            "content": "string - Testimonial text",
+            "rating": "number - 1-5 star rating",
+            "image": "string - Client photo",
+            "featured": "boolean - Featured testimonial",
+            "category": "string - Service category",
+            "date": "string - Testimonial date"
+          }
+        },
+        "features": [
+          "Video testimonials support",
+          "Category filtering",
+          "Featured testimonials",
+          "Star ratings"
+        ]
+      },
+      "gridItems": {
+        "file": "data/gridItems.ts",
+        "description": "About me grid content and configuration",
+        "usage": "AboutMeGrid component data source",
+        "structure": {
+          "id": "number - Grid item identifier",
+          "title": "string - Grid item title",
+          "description": "ReactNode - Content (can be component)",
+          "className": "string - Tailwind CSS classes",
+          "image": "object - Image configuration",
+          "icons": "array - Technology icons"
+        }
+      }
+    },
+    "schemas": {
+      "location": "data/schemas/",
+      "files": {
+        "blog.ts": "Blog post type definitions",
+        "project.ts": "Project and case study schemas",
+        "service.ts": "Service offering schemas"
+      },
+      "purpose": "Centralized TypeScript type definitions for data consistency"
+    },
+    "domainData": {
+      "location": "data/projects/",
+      "structure": {
+        "cloud.ts": "Cloud engineering projects and skills",
+        "data-analytics.ts": "Data analytics projects and tools",
+        "full-stack.ts": "Full-stack development projects",
+        "technical-consulting.ts": "Consulting case studies",
+        "ux-ui-design.ts": "Design projects and process"
+      },
+      "purpose": "Domain-specific project data for filtered views"
+    },
+    "configuration": {
+      "index.ts": {
+        "file": "data/index.ts",
+        "description": "Central data exports and navigation configuration",
+        "exports": [
+          "projectCaseStudies - Main project data",
+          "projects - Alias for backward compatibility",
+          "testimonials - Client feedback",
+          "navItems - Navigation structure",
+          "workExperience - Career timeline",
+          "socialMedia - Social links"
+        ],
+        "recentChanges": "Updated to export projectCaseStudies instead of enhancedProjects"
+      }
+    },
+    "contentManagement": {
+      "blog": {
+        "location": "content/blog/",
+        "format": "MDX (Markdown + JSX)",
+        "features": [
+          "Syntax highlighting",
+          "Interactive components",
+          "Frontmatter metadata",
+          "Table of contents generation"
+        ],
+        "posts": [
+          "advanced-react-patterns.mdx",
+          "building-scalable-nextjs-applications.mdx",
+          "cloud-architecture-aws-best-practices.mdx",
+          "modern-data-engineering-pipelines.mdx",
+          "typescript-best-practices.mdx",
+          "ux-design-principles-for-developers.mdx"
+        ]
+      }
+    },
+    "dataFlow": {
+      "static": "Build-time data loading for performance",
+      "dynamic": "Runtime data fetching for interactive features",
+      "caching": "Next.js automatic caching for static data",
+      "updates": "Content updates require rebuild for static data"
+    }
+  }
+}

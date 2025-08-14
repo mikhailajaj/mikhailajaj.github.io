@@ -1,0 +1,112 @@
+/**
+ * Middleware
+ * 
+ * Next.js middleware for handling requests, errors, and security.
+ * 
+ * @fileoverview Next.js middleware with error handling
+ */
+
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
+
+/**
+ * Error response helper
+ */
+const errorResponse = (status: number, message: string) => {
+  return new NextResponse(
+    JSON.stringify({
+      success: false,
+      error: message,
+      status,
+    }),
+    {
+      status,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }
+  );
+};
+
+/**
+ * Middleware function
+ * 
+ * Handles request processing, error handling, and security.
+ */
+export async function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+  
+  try {
+    // Security headers for all responses
+    const response = NextResponse.next();
+    
+    // Add security headers
+    response.headers.set('X-Content-Type-Options', 'nosniff');
+    response.headers.set('X-Frame-Options', 'DENY');
+    response.headers.set('X-XSS-Protection', '1; mode=block');
+    response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+    response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=(), interest-cohort=()');
+    
+    // Content Security Policy
+    if (!process.env.NEXT_PUBLIC_DISABLE_CSP) {
+      response.headers.set(
+        'Content-Security-Policy',
+        "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com;"
+      );
+    }
+    
+    // Admin route protection
+    if (pathname.startsWith('/admin')) {
+      // In a real app, you would check authentication here
+      // For demo purposes, we'll allow access in development
+      if (process.env.NODE_ENV !== 'development') {
+        // Check for authentication cookie or header
+        const authToken = request.cookies.get('auth-token')?.value;
+        
+        if (!authToken) {
+          // Redirect to login page
+          return NextResponse.redirect(new URL('/login', request.url));
+        }
+        
+        // In a real app, you would validate the token here
+      }
+    }
+    
+    // API rate limiting
+    if (pathname.startsWith('/api')) {
+      // Get client IP
+      const ip = request.ip || '127.0.0.1';
+      
+      // In a real app, you would implement rate limiting here
+      // For demo purposes, we'll just pass through all requests
+      
+      // Example rate limiting logic:
+      // const rateLimit = await checkRateLimit(ip, pathname);
+      // if (!rateLimit.allowed) {
+      //   return errorResponse(429, 'Too many requests');
+      // }
+    }
+    
+    return response;
+  } catch (error) {
+    console.error('Middleware error:', error);
+    
+    // Handle different types of errors
+    if (pathname.startsWith('/api')) {
+      return errorResponse(500, 'Internal server error');
+    }
+    
+    // For page requests, let Next.js handle the error
+    return NextResponse.next();
+  }
+}
+
+/**
+ * Configure which paths the middleware runs on
+ */
+export const config = {
+  matcher: [
+    // Apply to all paths except static files and images
+    '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
+  ],
+};

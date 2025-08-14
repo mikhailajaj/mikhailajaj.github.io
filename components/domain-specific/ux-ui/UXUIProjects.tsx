@@ -1,14 +1,17 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/base/Button';
-import { Card, CardContent } from '@/components/ui/base/Card';
-import { uxuiProjects, getFeaturedUXUIProjects } from '@/data/projects/ux-ui-design';
-import { 
-  FaExternalLinkAlt, 
-  FaEye, 
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/base/Button";
+import { Card, CardContent } from "@/components/ui/base/Card";
+import {
+  uxuiProjects,
+  getFeaturedUXUIProjects,
+} from "@/data/projects/ux-ui-design";
+import {
+  FaExternalLinkAlt,
+  FaEye,
   FaArrowRight,
   FaPaintBrush,
   FaUsers,
@@ -16,32 +19,52 @@ import {
   FaStar,
   FaMobile,
   FaDesktop,
-  FaHeart
-} from 'react-icons/fa';
+  FaHeart,
+} from "react-icons/fa";
 
-type FilterType = 'all' | 'featured' | 'mobile' | 'web' | 'ecommerce';
+type FilterType = "all" | "featured" | "mobile" | "web" | "ecommerce";
 
 const filterOptions = [
-  { value: 'all', label: 'All Projects', count: uxuiProjects.length },
-  { value: 'featured', label: 'Featured', count: getFeaturedUXUIProjects().length },
-  { value: 'mobile', label: 'Mobile Design', count: uxuiProjects.filter(p => p.tags.includes('Mobile Design')).length },
-  { value: 'web', label: 'Web Applications', count: uxuiProjects.filter(p => p.tags.includes('SaaS') || p.tags.includes('Healthcare')).length },
-  { value: 'ecommerce', label: 'E-commerce', count: uxuiProjects.filter(p => p.tags.includes('E-commerce')).length }
+  { value: "all", label: "All Projects", count: uxuiProjects.length },
+  {
+    value: "featured",
+    label: "Featured",
+    count: getFeaturedUXUIProjects().length,
+  },
+  {
+    value: "mobile",
+    label: "Mobile Design",
+    count: uxuiProjects.filter((p) => p.tags.includes("Mobile Design")).length,
+  },
+  {
+    value: "web",
+    label: "Web Applications",
+    count: uxuiProjects.filter(
+      (p) => p.tags.includes("SaaS") || p.tags.includes("Healthcare"),
+    ).length,
+  },
+  {
+    value: "ecommerce",
+    label: "E-commerce",
+    count: uxuiProjects.filter((p) => p.tags.includes("E-commerce")).length,
+  },
 ];
 
 export function UXUIProjects() {
-  const [activeFilter, setActiveFilter] = useState<FilterType>('all');
-  
-  const filteredProjects = uxuiProjects.filter(project => {
+  const [activeFilter, setActiveFilter] = useState<FilterType>("all");
+
+  const filteredProjects = uxuiProjects.filter((project) => {
     switch (activeFilter) {
-      case 'featured':
+      case "featured":
         return project.featured;
-      case 'mobile':
-        return project.tags.includes('Mobile Design');
-      case 'web':
-        return project.tags.includes('SaaS') || project.tags.includes('Healthcare');
-      case 'ecommerce':
-        return project.tags.includes('E-commerce');
+      case "mobile":
+        return project.tags.includes("Mobile Design");
+      case "web":
+        return (
+          project.tags.includes("SaaS") || project.tags.includes("Healthcare")
+        );
+      case "ecommerce":
+        return project.tags.includes("E-commerce");
       default:
         return true;
     }
@@ -64,17 +87,18 @@ export function UXUIProjects() {
             </div>
             <span className="text-purple-400 font-medium">Portfolio</span>
           </div>
-          
+
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Design
             <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Portfolio
             </span>
           </h2>
-          
+
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            User-centered design projects that solve real problems and deliver 
-            measurable business results through thoughtful UX research and beautiful UI design.
+            User-centered design projects that solve real problems and deliver
+            measurable business results through thoughtful UX research and
+            beautiful UI design.
           </p>
         </motion.div>
 
@@ -92,8 +116,8 @@ export function UXUIProjects() {
               onClick={() => setActiveFilter(option.value as FilterType)}
               className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                 activeFilter === option.value
-                  ? 'bg-gradient-to-r from-purple-600 to-purple-700 text-white shadow-lg'
-                  : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-white'
+                  ? "bg-gradient-to-r from-purple-600 to-purple-700 text-white shadow-lg"
+                  : "bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-white"
               }`}
             >
               {option.label} ({option.count})
@@ -111,7 +135,10 @@ export function UXUIProjects() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card variant="glass" className="h-full group hover:shadow-2xl transition-all duration-300">
+              <Card
+                variant="glass"
+                className="h-full group hover:shadow-2xl transition-all duration-300"
+              >
                 <CardContent className="p-6">
                   {/* Project Header */}
                   <div className="flex items-start justify-between mb-4">
@@ -121,7 +148,7 @@ export function UXUIProjects() {
                           <FaStar className="text-yellow-400 text-sm" />
                         )}
                         <span className="text-purple-400 text-sm font-medium">
-                          {project.domain.replace('-', ' ').toUpperCase()}
+                          {project.domain.replace("-", " ").toUpperCase()}
                         </span>
                       </div>
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
@@ -137,12 +164,16 @@ export function UXUIProjects() {
 
                   {/* Impact Metrics */}
                   <div className="mb-4">
-                    <h4 className="text-white font-semibold text-sm mb-2">Key Impact:</h4>
+                    <h4 className="text-white font-semibold text-sm mb-2">
+                      Key Impact:
+                    </h4>
                     <div className="grid grid-cols-1 gap-1">
                       {project.impact.metrics.slice(0, 2).map((metric, idx) => (
                         <div key={idx} className="flex items-center space-x-2">
                           <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                          <span className="text-gray-300 text-sm">{metric}</span>
+                          <span className="text-gray-300 text-sm">
+                            {metric}
+                          </span>
                         </div>
                       ))}
                     </div>
@@ -179,7 +210,9 @@ export function UXUIProjects() {
                         <span>{project.teamSize} team</span>
                       </div>
                     </div>
-                    <span className="text-purple-400 font-medium">{project.role}</span>
+                    <span className="text-purple-400 font-medium">
+                      {project.role}
+                    </span>
                   </div>
 
                   {/* Action Buttons */}
@@ -192,18 +225,29 @@ export function UXUIProjects() {
                         </Button>
                       </Link>
                     )}
-                    
+
                     <div className="flex gap-2">
                       {project.liveUrl && (
                         <Link href={project.liveUrl} target="_blank">
-                          <Button variant="outline" size="sm" className="border-gray-600 text-gray-300 hover:bg-gray-800">
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="border-gray-600 text-gray-300 hover:bg-gray-800"
+                          >
                             <FaExternalLinkAlt className="mr-1" />
                             Live Demo
                           </Button>
                         </Link>
                       )}
-                      <Link href="https://dribbble.com/mikhailajaj" target="_blank">
-                        <Button variant="outline" size="sm" className="border-gray-600 text-gray-300 hover:bg-gray-800">
+                      <Link
+                        href="https://dribbble.com/mikhailajaj"
+                        target="_blank"
+                      >
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="border-gray-600 text-gray-300 hover:bg-gray-800"
+                        >
                           <FaHeart className="mr-1" />
                           Dribbble
                         </Button>
@@ -215,7 +259,8 @@ export function UXUIProjects() {
                   {project.impact.businessValue && (
                     <div className="mt-4 p-3 bg-purple-900/20 border border-purple-400/20 rounded-lg">
                       <p className="text-purple-300 text-sm">
-                        <strong>Business Impact:</strong> {project.impact.businessValue}
+                        <strong>Business Impact:</strong>{" "}
+                        {project.impact.businessValue}
                       </p>
                     </div>
                   )}
@@ -227,7 +272,8 @@ export function UXUIProjects() {
                         &quot;{project.impact.testimonial.quote}&quot;
                       </p>
                       <div className="text-xs text-gray-400">
-                        <strong>{project.impact.testimonial.author}</strong>, {project.impact.testimonial.position}
+                        <strong>{project.impact.testimonial.author}</strong>,{" "}
+                        {project.impact.testimonial.position}
                         <br />
                         {project.impact.testimonial.company}
                       </div>
@@ -248,7 +294,11 @@ export function UXUIProjects() {
           className="text-center mt-12"
         >
           <Link href="/projects">
-            <Button size="lg" variant="outline" className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-black">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-black"
+            >
               View All Design Projects
               <FaArrowRight className="ml-2" />
             </Button>

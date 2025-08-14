@@ -1,0 +1,273 @@
+
+
+--- Page 1 ---
+
+ 
+ 
+ 
+ 
+ 
+ 
+Sheridan College  Official Document Cover Page 
+ 
+Sheridan College official documents are issued directly through MyCreds™ which is owned by the Association of 
+Registrars of the Universities and Colleges of Canada (ARUCC) and powered by Digitary, a trusted international 
+verified digital credential platform. MyCreds™ ensures document authenticity. When transcripts, credentials, and any 
+other documents are issued through MyCreds™, they are verifiable, secure, and include a cryptographic signature. 
+ 
+If you have received a notification of this document from noreply@mycreds.ca  and a link to access it through 
+MyCreds™, you are viewing a certified official document that you can trust. A document routed to you as an 
+attachment from an individual personal email is not official and may not reflect the most recent version.  
+ 
+When viewed in PDF format in Adobe 9.0 or later, this document has a number of security features described below. 
+These security features do not apply to a printed copy. Under no circumstance should a printed copy be relied upon as 
+it could be subject to tampering. This document is shared as a single-use transaction between the learner and the 
+recipient and downloads are for record keeping purposes only. Forwarding or reproducing this document will render 
+the document not valid. 
+Security information 
+To verify the authenticity of the digital document, make sure you are accessing it online via a link to the document on 
+MyCreds™. The link will start with https://learner.mycreds.ca . 
+When viewed in PDF format in Adobe 9.0 (or later), the digital signature of the document should be interpreted as 
+follows:  
+ 
+The blue-ribbon symbol signifies that the contents of the document have not been altered after it was 
+downloaded.  It does not signify its currency (it may have been revoked or replaced by the institution or 
+organization with a more up to date document). If the document does not display a valid certification and 
+signature message, reject this document immediately. 
+ 
+This symbol with a red cross signifies that the issued document is invalid. An invalid digital certificate display 
+means either the digital signature is not authentic, or the document has been altered. A document with an 
+invalid digital signature display should be rejected. 
+ 
+This symbol signifies that the Author is Unknown. Author Unknown can have two possible meanings: The 
+document is a self-signed document or has been issued by an unknown or untrusted authority and therefore 
+has not been trusted. If you receive this message, make sure you are properly connected to the internet. If 
+you have a connection and you still cannot validate the digital signature on-line, reject this document. 
+ 
+This symbol indicates that Adobe needs to validate the signatures. You will need to follow the instructions to 
+validate the signature. Should the signature validate successfully, you will be presented with the blue-ribbon 
+symbol above. If it cannot validate the signature, the red cross will be presented. 
+ 
+This document is available for viewing until the expiry date set by the Learner.  If your access has expired, you will 
+need to contact the Learner to request a new share of the document. MyCreds™ cannot reissue documents.  
+For details about Sheridan College grading scales, academic standing and continuance policies, please refer to the 
+institutional legend. 
+For more information regarding electronic documents, see Recipient FAQs (employers, institutions, security and legal 
+validity, verifying documents) https://mycreds.ca/verifiers/#verify-faq   
+
+
+--- Page 2 ---
+
+Shawna Garrett, MEd | Registrar and AVP Enrolment Management                 
+                 
+                 Official - PostSecondary
+   Name:  Ajaj, Mikhail 
+   Student ID:  991464762
+   Date issued: 04-29-2025   
+                     
+  
+ 
+Print Date   :  04-29-2025 
+ 
+         - - - - -   Academic Program History   - - - - -
+ 
+Program     :  Bach ApplCompSci - Mobile Comp 
+ 
+               03-28-2017 : Bach ApplCompSci - Mobile Comp Plan 
+ 
+      - - - - -   Beginning of Academic Record   - - - - -
+ 
+                              Fall 2017
+ 
+Course Description Credits Grade Points Repeat
+ENGL 17889GD Composition & Rhetoric  3.00 657.50
+MATH 10025 Mathematics for Computing  3.00 8310.80
+PROG 10004 Programming Principles  6.00 8822.80
+SYST 10082 Operating Systems Fundamentals  3.00 8911.40
+TELE 10025 Network Foundations  3.00 8010.80
+ 
+                    Good Standing 
+ 
+Program  GPA  for Term:3.52 
+ 
+Cumulative Program GPA:3.52 
+ 
+TERM GPA :    3.52    CREDITS EARNED :                   18.00                 63.30 
+ 
+                             Winter 2018
+ 
+Course Description Credits Grade Points Repeat
+DBAS 20146 Database Modelling  3.00 759.90
+INFO 10229 Mobile Computing  3.00 10012.00
+INFO 16206 Scripting & Web Languages  3.00 8210.80
+MATH 11044 Linear Algebra  3.00 9512.00
+PHYS 13796GD Creativity in Physics  3.00 719.00
+PROG 10065 Interactive Appl'n Development  6.00 9624.00
+ 
+                    Good Standing 
+ 
+Cumulative Program GPA:3.62 
+ 
+TERM GPA :    3.70    CREDITS EARNED :                   21.00                 77.70 
+ 
+                              Fall 2018
+ 
+Course Description Credits Grade Points Repeat
+CULT 25288GD The Power of Voice  3.00 729.00
+INFO 23431 Intro to Info Sys Security  3.00 8010.80
+PROG 20082 Mobile Application Principles  6.00 8321.60
+PROG 24310 Programming Languages  3.00 8911.40
+SYST 19207 Computer Systems Architecture  3.00 8410.80
+TELE 25892 Wireless Network Principles  3.00 789.90
+ 
+                    Good Standing 
+ 
+Cumulative Program GPA:3.58 
+ 
+TERM GPA :    3.50    CREDITS EARNED :                   21.00                 73.50  
+                             Winter 2019
+ 
+Course Description Credits Grade Points Repeat
+MATH 17028GD Creativity in Mathematics  3.00 W0.00
+MATH 29599 Calculus  3.00 789.90
+PROG 20261 Mobile Web App Development  3.00 789.90
+PROG 23672 Data Structures and Algorithms  6.00 7318.00
+PROG 27545 Web Application Design & Impl.  3.00 9312.00
+PSYC 16571GD Principles of Psychology  3.00 503.00
+ 
+                    Good Standing 
+ 
+Cumulative Program GPA:3.43 
+ 
+TERM GPA :    2.93    CREDITS EARNED :                   18.00                 52.80 
+ 
+                              Fall 2019
+ 
+Course Description Credits Grade Points Repeat
+COWT 10023 Co-Operative Education Forum  1.00 W0.00
+MATH 37198 Statistics for Data Science  3.00 W0.00
+PHIL 28877GD Philosophy of the Environment  3.00 W0.00
+PROG 30000 Enterprise Software Systems  3.00 W0.00
+PROG 31975 Advanced Mobile App Developm  6.00 W0.00
+SYST 30049 Software Design  3.00 W0.00
+SYST 30102 OS Analysis and Design  3.00 W0.00
+ 
+Withdrew  : 2019-10-08 
+ 
+TERM GPA :    0.00    CREDITS EARNED :                    0.00                  0.00 
+ 
+                              Fall 2020
+ 
+Course Description Credits Grade Points Repeat
+COWT 10023 Co-Operative Education Forum  1.00 S0.00
+MATH 37198 Statistics for Data Science  3.00 F0.00 E
+PROG 30000 Enterprise Software Systems  3.00 533.00
+PROG 31975 Advanced Mobile App Developm  4.00 6710.00
+SYST 30049 Software Design  3.00 687.50
+SYST 30102 OS Analysis and Design  3.00 533.00
+ 
+                    Academic Probation - See Academic Advisor 
+ 
+Cumulative Program GPA:3.09 
+ 
+TERM GPA :    1.81    CREDITS EARNED :                   13.00                 23.50 
+ 
+                             Winter 2021
+ 
+Course Description Credits Grade Points Repeat
+INFO 31179 Human Computer Interaction  3.00 W0.00
+INFO 47546 Theory of Computation  3.00 W0.00
+PROG 34104 Distributed Mobility  3.00 W0.00
+
+--- Page 3 ---
+
+Shawna Garrett, MEd | Registrar and AVP Enrolment Management  Name:        Ajaj, Mikhail 
+  Student ID:  991464762
+  Date issued : 04-29-2025
+SYST 30025 Software Engineering  4.00 F0.00 E
+ 
+                    Academic Suspension 
+ 
+Cumulative Program GPA:2.97 
+ 
+TERM GPA :    0.00    CREDITS EARNED :                    0.00                  0.00 
+ 
+                              Fall 2022
+ 
+Course Description Credits Grade Points Repeat
+CULT 20859GD Collective Memory  3.00 F0.00
+MATH 37198 Statistics for Data Science  3.00 533.00
+TELE 21895 Network Engineering  3.00 W0.00
+ 
+                    Academic Suspension 
+ 
+Cumulative Program GPA:2.91 
+ 
+TERM GPA :    0.50    CREDITS EARNED :                    6.00                  3.00 
+ 
+                              Fall 2023
+ 
+Course Description Credits Grade Points Repeat
+INFO 40975 Artificial Intelligence  3.00 646.00
+TELE 21895 Network Engineering  3.00 9012.00
+ 
+                    Good Standing 
+ 
+Cumulative Program GPA:2.91 
+ 
+TERM GPA :    3.00    CREDITS EARNED :                    6.00                 18.00 
+ 
+                             Winter 2024
+ 
+Course Description Credits Grade Points Repeat
+INFO 31179 Human Computer Interaction  3.00 8911.40
+INFO 47546 Theory of Computation  3.00 8410.80
+PROG 34104 Distributed Mobility  3.00 8611.40
+SYST 30025 Software Engineering  4.00 8815.20
+ 
+                    Good Standing 
+ 
+Cumulative Program GPA:3.11 
+ 
+TERM GPA :    3.75    CREDITS EARNED :                   13.00                 48.80 
+ 
+                          Spring/Summer 2024
+ 
+Course Description Credits Grade Points Repeat
+COWT 18888 Degree Internship Work-Term 1  1.00 W0.00
+ 
+Cumulative Program GPA:3.11 
+ 
+TERM GPA :    0.00    CREDITS EARNED :                    0.00                  0.00 
+ 
+                              Fall 2024
+ 
+Course Description Credits Grade Points Repeat
+DBAS 40551 Bus Intell and Data Mining  3.00 8911.40
+INFO 49635 CS Capstone Proj. (Inception)  4.00 7713.20
+PROG 48031 Cognitive Computing  3.00 9612.00
+ 
+                    Good Standing 
+ 
+Cumulative Program GPA:3.15 
+ 
+TERM GPA :    3.66    CREDITS EARNED :                   10.00                 36.60 
+ 
+                             Winter 2025 
+Course Description Credits Grade Points Repeat
+HIST 11228GD Creating Public History  3.00 769.90
+SCIE 10009GD Intro to Environmental Science  3.00 677.50
+ 
+Cumulative Program GPA:3.14 
+ 
+TERM GPA :    2.90    CREDITS EARNED :                    6.00                 17.40 
+ 
+ Academic Career Totals
+ 
+OVERALL  GPA :    3.14   CUM  TOTALS :                   132.0               414.60 
+                                     - - - - -  End of Transcript  - - - - -
+ 
+ 
+
+--- Page 4 ---
+

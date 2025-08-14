@@ -1,8 +1,8 @@
 "use client";
-import React from 'react';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { FaArrowRight } from 'react-icons/fa';
+import React from "react";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
 
 interface PageHeaderProps {
   title: string;
@@ -13,7 +13,7 @@ interface PageHeaderProps {
   actions?: {
     label: string;
     href: string;
-    variant?: 'primary' | 'secondary';
+    variant?: "primary" | "secondary";
   }[];
   stats?: {
     label: string;
@@ -28,10 +28,12 @@ const PageHeader: React.FC<PageHeaderProps> = ({
   backgroundGradient = "from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800",
   children,
   actions = [],
-  stats = []
+  stats = [],
 }) => {
   return (
-    <section className={`relative py-16 md:py-20 bg-gradient-to-br ${backgroundGradient}`}>
+    <section
+      className={`relative py-16 md:py-20 bg-gradient-to-br ${backgroundGradient}`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           {/* Subtitle */}
@@ -53,7 +55,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground dark:text-white mb-6"
           >
             {title}
           </motion.h1>
@@ -64,7 +66,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8"
+              className="text-xl text-foreground/80 dark:text-muted-foreground max-w-3xl mx-auto mb-8"
             >
               {description}
             </motion.p>
@@ -83,9 +85,9 @@ const PageHeader: React.FC<PageHeaderProps> = ({
                   key={index}
                   href={action.href}
                   className={`inline-flex items-center px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                    action.variant === 'secondary'
-                      ? 'bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700'
-                      : 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl'
+                    action.variant === "secondary"
+                      ? "bg-white dark:bg-card text-foreground dark:text-white border border-border dark:border-border hover:bg-muted/20 dark:hover:bg-card"
+                      : "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl"
                   }`}
                 >
                   {action.label}
@@ -105,10 +107,10 @@ const PageHeader: React.FC<PageHeaderProps> = ({
             >
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
+                  <div className="text-2xl md:text-3xl font-bold text-foreground dark:text-white">
                     {stat.value}
                   </div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">
+                  <div className="text-sm text-foreground/80 dark:text-muted-foreground">
                     {stat.label}
                   </div>
                 </div>

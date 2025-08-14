@@ -1,0 +1,180 @@
+{
+  "pages": {
+    "manualVersion": "2.1.0", 
+    "lastUpdated": "2024-12-19",
+    "structure": {
+      "app": {
+        "description": "Next.js 13+ app directory structure",
+        "routes": {
+          "/": {
+            "file": "app/page.tsx",
+            "description": "Homepage with multi-domain showcase",
+            "components": ["InteractiveHero", "AboutMeGrid", "TestimonialsSection"],
+            "features": ["Static generation", "SEO optimized", "Performance monitoring"],
+            "recentChanges": "Updated component imports after Enhanced namespace removal"
+          },
+          "/contact": {
+            "file": "app/contact/page.tsx", 
+            "description": "Contact page with multi-step form",
+            "components": ["MultiStepContactForm", "NewsletterSignup"],
+            "features": ["Form validation", "Email integration"],
+            "recentChanges": "Updated to use MultiStepContactForm"
+          },
+          "/full-stack": {
+            "file": "app/full-stack/page.tsx",
+            "description": "Full-stack development domain showcase",
+            "components": ["FullStackHero", "FullStackProjects", "FullStackSkills"],
+            "features": ["Domain-specific theming", "Project filtering"]
+          },
+          "/cloud-engineering": {
+            "file": "app/cloud-engineering/page.tsx",
+            "description": "Cloud engineering expertise showcase",
+            "components": ["CloudHero", "CloudProjects", "CloudSkills"],
+            "features": ["AWS/Azure project highlights", "Architecture diagrams"]
+          },
+          "/data-analytics": {
+            "file": "app/data-analytics/page.tsx",
+            "description": "Data analytics and ML projects",
+            "components": ["DataHero", "DataProjects", "DataSkills"],
+            "features": ["Interactive data visualizations", "ML model showcases"]
+          },
+          "/ux-ui-design": {
+            "file": "app/ux-ui-design/page.tsx",
+            "description": "UX/UI design portfolio and process",
+            "components": ["UXUIHero", "UXUIProjects", "UXUISkills"],
+            "features": ["Design process showcase", "Interactive prototypes"]
+          },
+          "/technical-consulting": {
+            "file": "app/technical-consulting/page.tsx",
+            "description": "Technical consulting services and case studies",
+            "components": ["ConsultingHero", "ConsultingProjects", "ConsultingSkills"],
+            "features": ["ROI calculators", "Process optimization tools"]
+          },
+          "/projects/[id]": {
+            "file": "app/projects/[id]/page.tsx",
+            "description": "Dynamic project detail pages",
+            "components": ["ProjectDetailPage"],
+            "features": ["Static generation", "Project case studies"],
+            "dataSource": "data/project-case-studies.ts",
+            "recentChanges": "Updated to use projectCaseStudies instead of enhancedProjects"
+          },
+          "/ui-showcase": {
+            "file": "app/ui-showcase/page.tsx",
+            "description": "Interactive UI component showcase",
+            "components": ["AnimatedButton", "ExpandableContent", "Accordion"],
+            "features": ["Component demos", "Interactive examples"],
+            "status": "needs-fixing",
+            "issues": ["Component reference errors after renaming"]
+          }
+        },
+        "layouts": {
+          "app/layout.tsx": {
+            "description": "Root layout with navigation and theme providers",
+            "features": ["Theme system", "Font optimization", "SEO meta tags"],
+            "providers": ["ThemeProvider", "PerformanceMonitor"]
+          },
+          "app/blog/layout.tsx": {
+            "description": "Blog-specific layout with sidebar navigation",
+            "features": ["Blog navigation", "Table of contents", "Reading progress"]
+          }
+        },
+        "specialPages": {
+          "app/loading.tsx": "Global loading UI",
+          "app/error.tsx": "Error boundary for app-level errors", 
+          "app/not-found.tsx": "Custom 404 page",
+          "app/global-error.tsx": "Global error handler"
+        },
+        "admin": {
+          "location": "app/admin/",
+          "description": "Comprehensive admin dashboard for portfolio management and monitoring",
+          "pages": {
+            "dashboard": {
+              "file": "app/admin/page.tsx",
+              "route": "/admin",
+              "description": "Main admin dashboard with overview and quick access",
+              "features": [
+                "System status overview",
+                "Quick stats (uptime, sessions, status)",
+                "Admin tools navigation",
+                "Recent activity log"
+              ],
+              "status": "implemented",
+              "lastUpdated": "2024-12-19"
+            },
+            "performance": {
+              "file": "app/admin/performance/page.tsx",
+              "route": "/admin/performance",
+              "description": "Performance monitoring dashboard",
+              "features": ["Core Web Vitals", "Performance metrics", "Real-time monitoring"]
+            },
+            "errorAnalytics": {
+              "file": "app/admin/error-analytics/page.tsx",
+              "route": "/admin/error-analytics",
+              "description": "Advanced error tracking and analytics dashboard",
+              "features": [
+                "Real-time error monitoring",
+                "Error trend analysis",
+                "Automated insights and recommendations",
+                "Error resolution management",
+                "Performance impact tracking",
+                "Domain-aware error categorization",
+                "Data export capabilities"
+              ],
+              "integration": [
+                "Error reporting service",
+                "Error tracking system",
+                "Performance monitoring",
+                "Business impact analysis"
+              ],
+              "status": "implemented",
+              "lastUpdated": "2024-12-19"
+            }
+          },
+          "layout": "app/admin/layout.tsx",
+          "navigation": {
+            "sidebar": [
+              "Performance Monitor",
+              "Error Analytics",
+              "System Settings", 
+              "Security Monitor"
+            ],
+            "features": ["Responsive design", "Dark mode support", "Quick navigation"]
+          },
+          "access": "Development and admin use only",
+          "security": "No authentication implemented (development only)",
+          "recentChanges": "Added comprehensive error analytics dashboard and improved admin navigation"
+        }
+      }
+    },
+    "routing": {
+      "strategy": "App Router (Next.js 13+)",
+      "features": [
+        "File-based routing",
+        "Nested layouts",
+        "Loading states",
+        "Error boundaries",
+        "Static generation",
+        "Dynamic routes"
+      ],
+      "domainRouting": {
+        "description": "Each domain has dedicated routes and components",
+        "pattern": "/[domain-name]",
+        "sharedComponents": ["DomainHero", "DomainProjects", "DomainSkills"],
+        "theming": "Domain-specific color schemes and styling"
+      }
+    },
+    "performance": {
+      "staticGeneration": {
+        "pages": ["/", "/full-stack", "/cloud-engineering", "/data-analytics", "/ux-ui-design", "/technical-consulting"],
+        "dynamicPages": ["/projects/[id]"],
+        "benefits": ["Faster loading", "Better SEO", "Reduced server load"]
+      },
+      "optimization": {
+        "images": "Next.js Image component with lazy loading",
+        "fonts": "Progressive font loading with fallbacks",
+        "code": "Component-level code splitting",
+        "css": "Tailwind CSS with purging"
+      }
+    }
+  }
+}

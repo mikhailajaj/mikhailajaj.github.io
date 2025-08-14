@@ -4,7 +4,14 @@ description: "Essential UX design principles that developers can apply to create
 date: "2024-01-20"
 author: "Mikhail Ajaj"
 category: "UX Design"
-tags: ["UX Design", "User Experience", "Frontend Development", "Design Principles", "Usability"]
+tags:
+  [
+    "UX Design",
+    "User Experience",
+    "Frontend Development",
+    "Design Principles",
+    "Usability",
+  ]
 featured: false
 image: "/blog/ux-principles.svg"
 excerpt: "Bridge the gap between development and design by understanding core UX principles that improve user satisfaction and application success."
@@ -48,6 +55,7 @@ interface AdminDashboard {
 ```
 
 **Implementation Tips:**
+
 - Create user personas and user journey maps
 - Conduct user research and usability testing
 - Prioritize features based on user value, not technical complexity
@@ -58,27 +66,33 @@ Maintain consistency across your application to reduce cognitive load.
 
 ```tsx
 // Create a design system with consistent components
-const Button = styled.button<{ variant: 'primary' | 'secondary' | 'danger' }>`
+const Button = styled.button<{ variant: "primary" | "secondary" | "danger" }>`
   padding: 12px 24px;
   border-radius: 8px;
   font-weight: 600;
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;
-  
-  ${props => props.variant === 'primary' && `
+
+  ${(props) =>
+    props.variant === "primary" &&
+    `
     background-color: #3b82f6;
     color: white;
     &:hover { background-color: #2563eb; }
   `}
-  
-  ${props => props.variant === 'secondary' && `
+
+  ${(props) =>
+    props.variant === "secondary" &&
+    `
     background-color: #f3f4f6;
     color: #374151;
     &:hover { background-color: #e5e7eb; }
   `}
   
-  ${props => props.variant === 'danger' && `
+  ${(props) =>
+    props.variant === "danger" &&
+    `
     background-color: #ef4444;
     color: white;
     &:hover { background-color: #dc2626; }
@@ -98,6 +112,7 @@ function UserActions() {
 ```
 
 **Key Areas for Consistency:**
+
 - Color schemes and typography
 - Button styles and interactions
 - Navigation patterns
@@ -119,13 +134,13 @@ function DataTable({ isLoading, data, error }: DataTableProps) {
       </div>
     );
   }
-  
+
   if (error) {
     return (
       <div className="bg-red-50 border border-red-200 rounded-lg p-4">
         <h3 className="text-red-800 font-medium">Unable to load data</h3>
         <p className="text-red-600 text-sm mt-1">{error.message}</p>
-        <button 
+        <button
           onClick={retryLoad}
           className="mt-2 text-red-700 underline text-sm"
         >
@@ -134,7 +149,7 @@ function DataTable({ isLoading, data, error }: DataTableProps) {
       </div>
     );
   }
-  
+
   return <Table data={data} />;
 }
 
@@ -143,7 +158,7 @@ function ContactForm() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
-  
+
   return (
     <form onSubmit={handleSubmit}>
       <div className="mb-4">
@@ -154,10 +169,10 @@ function ContactForm() {
           type="email"
           id="email"
           className={`w-full px-3 py-2 border rounded-lg ${
-            errors.email ? 'border-red-500' : 'border-gray-300'
+            errors.email ? "border-red-500" : "border-gray-300"
           }`}
           aria-invalid={!!errors.email}
-          aria-describedby={errors.email ? 'email-error' : undefined}
+          aria-describedby={errors.email ? "email-error" : undefined}
         />
         {errors.email && (
           <p id="email-error" className="text-red-600 text-sm mt-1">
@@ -165,15 +180,15 @@ function ContactForm() {
           </p>
         )}
       </div>
-      
-      <button 
-        type="submit" 
+
+      <button
+        type="submit"
         disabled={isSubmitting}
         className="bg-blue-600 text-white px-6 py-2 rounded-lg disabled:opacity-50"
       >
-        {isSubmitting ? 'Sending...' : 'Send Message'}
+        {isSubmitting ? "Sending..." : "Send Message"}
       </button>
-      
+
       {submitSuccess && (
         <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
           <p className="text-green-800">Message sent successfully!</p>
@@ -192,25 +207,26 @@ Design to prevent errors and help users recover when they occur.
 // Confirmation dialogs for destructive actions
 function DeleteButton({ onDelete, itemName }: DeleteButtonProps) {
   const [showConfirm, setShowConfirm] = useState(false);
-  
+
   return (
     <>
-      <button 
+      <button
         onClick={() => setShowConfirm(true)}
         className="bg-red-600 text-white px-4 py-2 rounded"
       >
         Delete
       </button>
-      
+
       {showConfirm && (
         <Modal onClose={() => setShowConfirm(false)}>
           <div className="p-6">
             <h3 className="text-lg font-medium mb-4">Confirm Deletion</h3>
             <p className="text-gray-600 mb-6">
-              Are you sure you want to delete "{itemName}"? This action cannot be undone.
+              Are you sure you want to delete "{itemName}"? This action cannot
+              be undone.
             </p>
             <div className="flex gap-3">
-              <button 
+              <button
                 onClick={() => {
                   onDelete();
                   setShowConfirm(false);
@@ -219,7 +235,7 @@ function DeleteButton({ onDelete, itemName }: DeleteButtonProps) {
               >
                 Yes, Delete
               </button>
-              <button 
+              <button
                 onClick={() => setShowConfirm(false)}
                 className="bg-gray-300 text-gray-700 px-4 py-2 rounded"
               >
@@ -237,8 +253,8 @@ function DeleteButton({ onDelete, itemName }: DeleteButtonProps) {
 function PhoneInput({ value, onChange }: PhoneInputProps) {
   const formatPhoneNumber = (input: string) => {
     // Remove all non-digits
-    const digits = input.replace(/\D/g, '');
-    
+    const digits = input.replace(/\D/g, "");
+
     // Format as (XXX) XXX-XXXX
     if (digits.length >= 6) {
       return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6, 10)}`;
@@ -248,7 +264,7 @@ function PhoneInput({ value, onChange }: PhoneInputProps) {
       return digits;
     }
   };
-  
+
   return (
     <input
       type="tel"
@@ -286,11 +302,13 @@ function AccessibleForm() {
           Must be at least 3 characters long
         </p>
       </div>
-      
+
       {/* Keyboard navigation */}
       <div className="mb-4">
         <fieldset>
-          <legend className="text-sm font-medium mb-2">Notification Preferences</legend>
+          <legend className="text-sm font-medium mb-2">
+            Notification Preferences
+          </legend>
           <div className="space-y-2">
             <label className="flex items-center">
               <input type="checkbox" className="mr-2" />
@@ -303,9 +321,9 @@ function AccessibleForm() {
           </div>
         </fieldset>
       </div>
-      
+
       {/* Focus management */}
-      <button 
+      <button
         type="submit"
         className="bg-blue-600 text-white px-6 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
       >
@@ -318,7 +336,7 @@ function AccessibleForm() {
 // Skip navigation for keyboard users
 function SkipNavigation() {
   return (
-    <a 
+    <a
       href="#main-content"
       className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
     >
@@ -334,9 +352,9 @@ Fast applications provide better user experiences.
 
 ```tsx
 // Lazy loading and code splitting
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense } from "react";
 
-const HeavyComponent = lazy(() => import('./HeavyComponent'));
+const HeavyComponent = lazy(() => import("./HeavyComponent"));
 
 function App() {
   return (
@@ -352,33 +370,33 @@ function App() {
 function LikeButton({ postId, initialLiked }: LikeButtonProps) {
   const [liked, setLiked] = useState(initialLiked);
   const [isUpdating, setIsUpdating] = useState(false);
-  
+
   const handleLike = async () => {
     // Optimistic update
     setLiked(!liked);
     setIsUpdating(true);
-    
+
     try {
       await updateLikeStatus(postId, !liked);
     } catch (error) {
       // Revert on error
       setLiked(liked);
-      showErrorMessage('Failed to update like status');
+      showErrorMessage("Failed to update like status");
     } finally {
       setIsUpdating(false);
     }
   };
-  
+
   return (
-    <button 
+    <button
       onClick={handleLike}
       disabled={isUpdating}
       className={`flex items-center px-3 py-1 rounded ${
-        liked ? 'bg-red-100 text-red-600' : 'bg-gray-100 text-gray-600'
+        liked ? "bg-red-100 text-red-600" : "bg-gray-100 text-gray-600"
       }`}
     >
       <Heart filled={liked} />
-      <span className="ml-1">{liked ? 'Liked' : 'Like'}</span>
+      <span className="ml-1">{liked ? "Liked" : "Like"}</span>
     </button>
   );
 }
@@ -407,7 +425,7 @@ Build reusable components that enforce UX consistency:
 
 ```tsx
 // Design system components
-export const Card = ({ children, variant = 'default' }: CardProps) => (
+export const Card = ({ children, variant = "default" }: CardProps) => (
   <div className={`rounded-lg shadow-sm border ${cardVariants[variant]}`}>
     {children}
   </div>
@@ -429,16 +447,16 @@ Start with basic functionality and enhance with JavaScript:
 // Form that works without JavaScript
 function ContactForm() {
   const [isEnhanced, setIsEnhanced] = useState(false);
-  
+
   useEffect(() => {
     setIsEnhanced(true);
   }, []);
-  
+
   return (
     <form action="/api/contact" method="POST">
       <input type="email" name="email" required />
       <textarea name="message" required />
-      
+
       {isEnhanced ? (
         <EnhancedSubmitButton />
       ) : (
@@ -456,25 +474,25 @@ Implement analytics and user feedback mechanisms:
 ```tsx
 // User feedback component
 function FeedbackWidget() {
-  const [feedback, setFeedback] = useState('');
+  const [feedback, setFeedback] = useState("");
   const [rating, setRating] = useState(0);
-  
+
   const submitFeedback = async () => {
-    await analytics.track('feedback_submitted', {
+    await analytics.track("feedback_submitted", {
       rating,
       feedback,
-      page: window.location.pathname
+      page: window.location.pathname,
     });
-    
+
     // Send to feedback service
     await submitUserFeedback({ rating, feedback });
   };
-  
+
   return (
     <div className="fixed bottom-4 right-4 bg-white shadow-lg rounded-lg p-4">
       <h3>How was your experience?</h3>
       <StarRating value={rating} onChange={setRating} />
-      <textarea 
+      <textarea
         value={feedback}
         onChange={(e) => setFeedback(e.target.value)}
         placeholder="Tell us more..."
@@ -488,6 +506,7 @@ function FeedbackWidget() {
 ## Common UX Mistakes Developers Make
 
 ### 1. Technical Jargon in UI
+
 ```tsx
 // Bad
 <div>Error: HTTP 500 - Internal Server Error</div>
@@ -500,14 +519,11 @@ function FeedbackWidget() {
 ```
 
 ### 2. Overwhelming Users with Options
+
 ```tsx
 // Bad: Too many options at once
 function SettingsPage() {
-  return (
-    <div>
-      {/* 50+ different settings all on one page */}
-    </div>
-  );
+  return <div>{/* 50+ different settings all on one page */}</div>;
 }
 
 // Good: Organized into categories
@@ -524,17 +540,18 @@ function SettingsPage() {
 ```
 
 ### 3. Ignoring Mobile Users
+
 ```tsx
 // Good: Mobile-first responsive design
 const ResponsiveGrid = styled.div`
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr;
-  
+
   @media (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   @media (min-width: 1024px) {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -551,6 +568,7 @@ Understanding UX principles makes you a more effective developer by helping you:
 - Create more successful products
 
 Key takeaways:
+
 1. **Always consider the user's perspective** when making technical decisions
 2. **Consistency is crucial** - establish patterns and stick to them
 3. **Provide clear feedback** for all user interactions

@@ -1,0 +1,52 @@
+MIKHAIL AJAJ
+DATA ANALYST
+SUMMARY
+Phone
+(416) 474-5749
+Address
+Burlington, ON
+Email
+ajaj@sheridancollege.ca
+Website
+https://www.linkedin.com/in/mik hail-ajaj/
+Detail-oriented Data Science student with strong programming skills in Python and SQL, seeking an internship position at Interac. Equipped with hands-on experience in statistical modeling and data analysis, with a focus on delivering actionable insights through data visualization. Demonstrates proven ability to manipulate large datasets and develop machine learning models.
+EDUCATION
+Honours Bachelor of Computer Science (Mobile Computing)
+Apr 2026
+Sheridan College | Oakville, ON
+Related Courses:
+• BusinessIntelligenceandDataMining (Completed: 2025/01)
+• SoftwareEngineering(Completed:2024/04)
+• TheoryofComputation(Completed:2024/04)
+• Artificial Intelligence (Completed: 2024/01)
+• StatisticsforDataScience(Completed:2023/01)
+Supportive Courses:
+Jira, Microsoft Azure, AWS, Report Automation, Azure DevOps
+Methodologies:
+Agile Scrum, Project Management
+• SoftwareDesign(Completed:2021/01)
+• DataStructuresandAlgorithms(Completed:
+2020/01)
+TECHNICAL SKILLS
+Data Analysis & Automation:
+MS Excel (Advanced), Power Platform, Python, Data Analysis, Process Automation, Business Intelligence Tools
+Programming Languages
+Python, SQL, JavaScript, Kotlin, Swift, Java, C#
+PROJECTS
+Software and Tools:
+Development Frameworks Technologies
+React/React Native, .NET, APIs, iOS/Android App Development
+Soft Skills:
+Problem-Solving, Communication, Team Collaboration
+Sep 2024 - Dec 2024
+Business Intelligence & Data mining (assignments)
+https://colab.research.google.com/drive/1sVxThilHXATxMv_1ulKXUFputiBkkV59?usp=sharing
+-(Assignment 1)
+https://colab.research.google.com/drive/1mKKMrP42gCntroAwEh0_J5gvfVm0_rVf?usp=sharing
+-(Assignment 3)
+Ai, ML assignment, research Sep 2023 - Jan 2024 AI Classification of Abalone Sex Jan 2024 - Apr 2024 https://github.com/mikhailajaj/Ai_Classification_Abalone_Sex
+Developed a machine learning model to classify the sex of abalones using various physical measurements. The project applies data preprocessing, feature engineering, and model optimization techniques to enhance classification accuracy.
+Implemented supervised learning algorithms and compared performance metrics.
+Applied data preprocessing steps such as handling missing values, feature scaling, and encoding categorical data. Experimented with different models and hyperparameter tuning to improve model accuracy.
+Conducted thorough data analysis and visualization to understand data distribution and relationships.
+• AgileTeamCollaboration• TechnicalDocumentation&Communication • ContinuousLearning&Adaptability Technologies Used: Python, Scikit-Learn, Pandas, NumPy, Matplotlib, Jupyter Notebook

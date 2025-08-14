@@ -1,121 +1,197 @@
-'use client';
+/**
+ * Card Component - shadcn/ui Compatible
+ *
+ * A versatile card component following shadcn/ui design patterns.
+ * Built with class-variance-authority for consistent styling.
+ *
+ * @fileoverview Modern card component with shadcn/ui patterns
+ */
 
-import React from 'react';
-import { Slot } from '@radix-ui/react-slot';
-import { cva, type VariantProps } from 'class-variance-authority';
-import { cn } from '@/lib/utils/cn';
+"use client";
 
+// 1. React Imports
+import * as React from "react";
+
+// 2. External Libraries
+import { cva, type VariantProps } from "class-variance-authority";
+
+// 3. Internal Absolute Imports (@/) - Portfolio Structure
+import { cn } from "@/lib/utils/cn";
+
+// 4. Internal Relative Imports
+// (None in this component)
+
+// 5. Type Imports
+// (Included inline above)
+
+// 6. Stylesheets
+// (None in this component)
+
+/**
+ * Card variant styles using class-variance-authority
+ */
 const cardVariants = cva(
-  'rounded-lg border bg-card text-card-foreground shadow-sm transition-all duration-200',
+  "rounded-lg border bg-card text-card-foreground shadow-sm",
   {
     variants: {
       variant: {
-        default: 'border-border',
-        elevated: 'shadow-lg hover:shadow-xl',
-        interactive: 'hover:shadow-lg hover:scale-[1.02] cursor-pointer',
-        gradient: 'bg-gradient-to-br border-0',
-        glass: 'backdrop-blur-sm bg-white/10 border-white/20',
+        default: "border-border",
+        elevated: "shadow-md hover:shadow-lg transition-shadow duration-200",
+        outlined: "border-2 shadow-none",
+        ghost: "border-transparent shadow-none bg-transparent",
       },
-      size: {
-        sm: 'p-4',
-        default: 'p-6',
-        lg: 'p-8',
-        xl: 'p-10',
-      },
-      domain: {
-        'full-stack': 'from-slate-900/50 to-slate-800/50 border-slate-700',
-        'cloud': 'from-blue-900/50 to-blue-800/50 border-blue-700',
-        'data': 'from-green-900/50 to-green-800/50 border-green-700',
-        'ux-ui': 'from-purple-900/50 to-purple-800/50 border-purple-700',
-        'consulting': 'from-orange-900/50 to-orange-800/50 border-orange-700',
+      padding: {
+        none: "",
+        sm: "p-3",
+        default: "p-6",
+        lg: "p-8",
       },
     },
     defaultVariants: {
-      variant: 'default',
-      size: 'default',
+      variant: "default",
+      padding: "default",
     },
   }
 );
 
+/**
+ * Card component props interface
+ */
 export interface CardProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof cardVariants> {
+  /** Render as a different element */
   asChild?: boolean;
 }
 
-export const Card = React.forwardRef<HTMLDivElement, CardProps>(
-  ({ className, variant, size, domain, asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : 'div';
-    
-    return (
-      <Comp
-        ref={ref}
-        className={cn(cardVariants({ variant, size, domain, className }))}
-        {...props}
-      />
-    );
-  }
+/**
+ * Card Component
+ *
+ * A flexible card component that provides a consistent container
+ * for content with various styling options.
+ *
+ * @component
+ * @example
+ * ```tsx
+ * // Basic usage
+ * <Card>
+ *   <h3>Card Title</h3>
+ *   <p>Card content goes here</p>
+ * </Card>
+ *
+ * // With variants
+ * <Card variant="elevated" padding="lg">
+ *   <h3>Elevated Card</h3>
+ * </Card>
+ *
+ * // Custom styling
+ * <Card className="max-w-md mx-auto">
+ *   Content
+ * </Card>
+ * ```
+ *
+ * Features:
+ * - Multiple visual variants (default, elevated, outlined, ghost)
+ * - Flexible padding options
+ * - Consistent styling with design system
+ * - Full accessibility support
+ * - TypeScript support with proper types
+ *
+ * @param props - Card component props
+ * @returns JSX.Element - The rendered card
+ */
+const Card = React.forwardRef<HTMLDivElement, CardProps>(
+  ({ className, variant, padding, ...props }, ref) => (
+    <div
+      ref={ref}
+      className={cn(cardVariants({ variant, padding, className }))}
+      {...props}
+    />
+  )
 );
 
-Card.displayName = 'Card';
+Card.displayName = "Card";
 
-export const CardHeader = React.forwardRef<
+/**
+ * Card Header Component
+ */
+const CardHeader = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn('flex flex-col space-y-1.5 pb-6', className)}
+    className={cn("flex flex-col space-y-1.5 p-6", className)}
     {...props}
   />
 ));
+CardHeader.displayName = "CardHeader";
 
-CardHeader.displayName = 'CardHeader';
-
-export const CardTitle = React.forwardRef<
+/**
+ * Card Title Component
+ */
+const CardTitle = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLHeadingElement>
 >(({ className, ...props }, ref) => (
   <h3
     ref={ref}
-    className={cn('text-2xl font-semibold leading-none tracking-tight', className)}
+    className={cn(
+      "text-2xl font-semibold leading-none tracking-tight",
+      className
+    )}
     {...props}
   />
 ));
+CardTitle.displayName = "CardTitle";
 
-CardTitle.displayName = 'CardTitle';
-
-export const CardDescription = React.forwardRef<
+/**
+ * Card Description Component
+ */
+const CardDescription = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
   <p
     ref={ref}
-    className={cn('text-sm text-muted-foreground', className)}
+    className={cn("text-sm text-muted-foreground", className)}
     {...props}
   />
 ));
+CardDescription.displayName = "CardDescription";
 
-CardDescription.displayName = 'CardDescription';
-
-export const CardContent = React.forwardRef<
+/**
+ * Card Content Component
+ */
+const CardContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn('pt-0', className)} {...props} />
+  <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
 ));
+CardContent.displayName = "CardContent";
 
-CardContent.displayName = 'CardContent';
-
-export const CardFooter = React.forwardRef<
+/**
+ * Card Footer Component
+ */
+const CardFooter = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn('flex items-center pt-6', className)}
+    className={cn("flex items-center p-6 pt-0", className)}
     {...props}
   />
 ));
+CardFooter.displayName = "CardFooter";
 
-CardFooter.displayName = 'CardFooter';
+export {
+  Card,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  cardVariants,
+};

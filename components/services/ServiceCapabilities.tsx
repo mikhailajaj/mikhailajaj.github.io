@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { FaCheckCircle } from 'react-icons/fa';
+import React from "react";
+import { SafeMotionDiv } from "@/components/ui/MotionComponents";
+import { FaCheckCircle } from "react-icons/fa";
 
 interface Capability {
   title: string;
@@ -12,7 +12,9 @@ interface ServiceCapabilitiesProps {
   capabilities: Capability[];
 }
 
-const ServiceCapabilities: React.FC<ServiceCapabilitiesProps> = ({ capabilities }) => {
+const ServiceCapabilities: React.FC<ServiceCapabilitiesProps> = ({
+  capabilities,
+}) => {
   return (
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-4">
@@ -27,7 +29,7 @@ const ServiceCapabilities: React.FC<ServiceCapabilitiesProps> = ({ capabilities 
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {capabilities.map((capability, index) => (
-            <motion.div
+            <SafeMotionDiv
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -43,13 +45,16 @@ const ServiceCapabilities: React.FC<ServiceCapabilitiesProps> = ({ capabilities 
               </p>
               <ul className="space-y-3">
                 {capability.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-gray-700 dark:text-gray-300">
+                  <li
+                    key={featureIndex}
+                    className="flex items-center text-gray-700 dark:text-gray-300"
+                  >
                     <FaCheckCircle className="text-green-500 mr-3 flex-shrink-0" />
                     {feature}
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </SafeMotionDiv>
           ))}
         </div>
       </div>

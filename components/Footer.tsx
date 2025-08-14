@@ -8,7 +8,6 @@ import MagicButton from "./ui/MagicButton";
 const Footer = () => {
   return (
     <footer className="w-full pt-20 pb-10" id="contact">
-
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]">
           Ready to take <span className="text-purple">your</span> digital
@@ -35,17 +34,17 @@ const Footer = () => {
           {socialMedia.map((info, index) => {
             // Map social media links based on the image name
             const socialLinks = {
-              '/git.svg': 'https://github.com/mikhailajaj',
-              '/twit.svg': 'https://twitter.com/mikhailajaj',
-              '/link.svg': 'https://linkedin.com/in/mikhailajaj'
+              "/git.svg": "https://github.com/mikhailajaj",
+              "/twit.svg": "https://twitter.com/mikhailajaj",
+              "/link.svg": "https://linkedin.com/in/mikhailajaj",
             };
-            
+
             const socialNames = {
-              '/git.svg': 'GitHub',
-              '/twit.svg': 'Twitter',
-              '/link.svg': 'LinkedIn'
+              "/git.svg": "GitHub",
+              "/twit.svg": "Twitter",
+              "/link.svg": "LinkedIn",
             };
-            
+
             return (
               <Link
                 key={info.id}
@@ -54,10 +53,10 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300 hover:bg-opacity-90 transition-all duration-300"
               >
-                <Image 
-                  src={info.img} 
-                  alt={`${socialNames[info.img] || 'Social media'} icon`} 
-                  width={20} 
+                <Image
+                  src={info.img}
+                  alt={`${socialNames[info.img] || "Social media"} icon`}
+                  width={20}
                   height={20}
                   className="object-contain"
                 />

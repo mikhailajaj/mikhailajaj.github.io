@@ -1,0 +1,956 @@
+PROG31975
+Advanced Mobile App Development	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 84.0
+Credit Value: 4.0
+Credit Value Notes: N/A
+Effective: Fall 2024
+Prerequisites: PROG20082
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: N/A
+Program(s): Hon Bach CompSci - Mobile Comp
+Program Coordinator(s): Magdin Stoica
+Course Leader or Contact: Omer Mohamed
+Version: 20240903_00
+Status: Approved (APPR)
+
+Section I Notes: Students will need a MacBook laptop or equivalent.
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+Students learn how to design and develop iOS applications using Swift while considering well-defined User Interface design principles. The course is structured around three main foundational components: (a) Tools (Xcode), (b) Cocoa Touch Frameworks (Foundation, UIKit, SwiftUI) and other related frameworks (Map Kit, CoreLocation, SpriteKit), and (c) the Swift programming language. Lectures, hands-on exercises, assignments and project experiences systematically teach the student how to use Swift, and iOS SDK features, including typical mobile resources (e.g., internet web services, location awareness, etc.), and apply design patterns to develop iOS applications.
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+This required third year course provides a comprehensive foundation to the design, analysis, and implementation of mobile applications on iOS devices (e.g., iPhone, iPad). This course builds on the students skills and knowledge in software development and mobile device application development. This course extends the scope of these skills and knowledge to include iOS devices and serves as a foundation for advanced topics in mobile computing to be presented and discussed in following courses in the program
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of this course, students will have demonstrated the ability to design and build comprehensive iOS applications in the Swift programming language.
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Describe the features of iOS devices (e.g., iPhone, iPad) with regard to application development.
+Demonstrate using the software tools, frameworks and programming language for iOS application development.
+Demonstrate competence in the Swift programming language.
+Evaluate Human Computer Interaction (HCI) and User Interface (UI) principles, guidelines, and heuristics to design iOS applications that incorporate human factors while taking into consideration the characteristics and limitations of iOS devices.
+Create iOS apps using SwiftUI that incorporate foundational iOS application design components (Handling basic interaction, Views (Lists), Navigation, Communicate with a remote server using JSON).
+Create iOS apps using Swift that incorporate more than 2 Design Patterns (MVVM, MVC, Factory, etc.).
+Create iOS apps using SwiftUI that incorporate more than 2 application frameworks: (Map Kit, CoreLocation, WidgetKit, SpriteKit, etc.).
+Create iOS apps using SwiftUI that incorporate advanced iOS design components and frameworks (multithreading, accelerometer, audio, etc.).
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	Assignments (4 @ 5% approx. weeks 3, 5, 7,9)	20.0%
+ 	Mid Term Exam (approx. week 7)	25.0%
+ 	Project (approx. week 12)	20.0%
+ 	Final Exam (approx. week 13)	35.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+To pass the course, students must achieve a 50% weighted average across the tests and the exams and at least 50% overall in the course.
+
+Students must submit/complete all assignments, in-class activities and projects by the scheduled due date and write all tests on the specified date/time. Exceptions will only be made under extraordinary circumstances. 
+
+Refer to the School of Applied Computing's Academic Procedures for Evaluations for more details regarding missed work: Procedures for Evaluations
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Challenge Exam
+Notes:  
+Portfolio
+Notes:  
+Other
+Notes:  Challenge exam, portfolio, and project are required for PLA
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s):
+Course material costs can be found through the Sheridan Bookstore
+ 	Type	Description
+Optional	Textbook	Learn SwiftUI, Barker C., Packt Publishing, ISBN 9781839215421, 2020, Available through Sheridan's Library Services
+Optional	Other	The Professor will inform the students at the beginning of the course. For example: https://developer.apple.com/develop
+
+Applicable student group(s): Honours Bachelor of Computer Science - Mobile Computing
+Course Details:
+Module 1: Advanced Swift with Xcode
+
+Functions (Variadic Parameters, In-Out Parameters)
+Enumerations, Deinitialization, Access Control, Property Observers
+Protocols, Optional Chaining, Error Handling, Extensions
+Xcode: Integrated Development Environment (IDE) Features and Tools 
+Debugging iOS Applications
+SwiftUI & Preview Features and Tools 
+Source Code Management
+Module 2: Fundamentals of iOS Design and Development
+
+GUI Components Using Declarative Syntax
+Layouts, Multi-Scene Apps
+Handling Basic Interaction 
+Views (Lists) 
+Navigation
+Tab Bars and Pickers
+Module 3: iOS Human Interface Guidelines
+
+User Interface Design Principles for iOS Devices (e.g., iPhones, iPads, etc.)
+Intuitive User Experience Designs: Taps, Touches, and Gestures
+Designing Apps for Responsive UI 
+Module 4: Application Design Frameworks
+
+Design Patterns:
+Model-View-ViewModel (MVVM), Model-View-Controller (MVC), Singleton, Factory, etc.
+Cocoa Touch Frameworks: 
+Foundation, UIKit, SwiftUI
+Other Frameworks:
+MapKit, CoreLocation, SpriteKit, WidgetKit
+Module 5: Persistence and Connectivity in iOS Apps
+
+Types of Data Persistence in iOS (Native, Core Data and SQLite)
+Overview of Data Persistence Over the Cloud in iOS Apps
+Communicate with a Remote Server using JSON (Convert Model Objects (Classes and Structs) to and from JSON)
+Concurrency in iOS Apps
+Module 6: Multimedia 
+
+Overview of Multimedia Tools and Frameworks
+PhotoKit, PhotoLibrary
+Camera
+Audio-Video
+Preserving User Privacy for Multimedia
+Module 7: Advanced iOS Design Components and Frameworks
+
+Overview of WidgetKit
+Human Interface Guidelines for Widgets
+Creating and Configuring App Clips
+Overview of Push notifications 
+Integrating Machine Learning Models in iOS Apps
+Security and Privacy Features in iOS Apps
+Module 8: watchOS and iPadOS
+
+Design and Develop watchOS App
+Overview of iPadOS Features
+Design and Develop Apps for iPad
+Note: The suggested number of weeks allocated to each module may vary depending on the professor’s and/or class requirements. The topics within each module are grouped semantically and are not meant to suggest a time sequence. A course plan must be provided by the professor identifying the class-by-class arrangement of topics.
+ 
+
+ SYST30102
+Operating Systems Analysis and Design	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 42.0
+Credit Value: 3.0
+Credit Value Notes: N/A
+Effective: Winter 2024
+Prerequisites: (PROG23672 AND SYST19207)
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: N/A
+Program(s): Hon Bach CompSci - Mobile Comp, Hons Bach of Computer Science
+Program Coordinator(s): Magdin Stoica, El Sayed Mahmoud
+Course Leader or Contact: Richard Pyne
+Version: 20240108_00
+Status: Approved (APPR)
+
+Section I Notes: N/A
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+Students learn about the issues that influence the design of contemporary operating systems, focusing on five basic components of an operating system: processes, threads, process scheduling; inter process communications and concurrency issues; memory management and I/O concepts. The topics address both the use of operating systems (externals) and their design and implementation (internals). Through interactive lectures, hands-on exercises, and assignments, students also learn about the design of various types of operating systems such as: general purpose, real time and mobile operating systems.
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+This third year course is designed as part of the core computer science curriculum with extensions to include mobile computing issues. The course is the third of a sequence of courses designed as core computer science: Operating Systems Fundamentals (semester 1), Computer Architecture (semester 2) and Operating Systems (semester 5). The course also serves as a culmination of the programming stream of courses comprised of Programming Principle (semester 1), Interactive Application Development (semester 2), Programming Languages (semester 3) and Data Structures and Algorithms (Semester 4).
+
+Hons Bach of Computer Science	Program Coordinator(s): El Sayed Mahmoud
+This required course is the third in a three-course sequence that covers operating systems comprehensively. This three-course sequence is designed as core computer science courses. The sequence includes this course in semester 5, Computer Architecture in semester 3, and Operating Systems & Network Services in semester 3. This course also is the end of the programming stream of courses, which included Programming Principles in semester 1, Interactive Application Development in semester 2, Programming Languages in semester 3, and Data Structures and Algorithms in semester 4.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of this course, students will have demonstrated the ability to evaluate the functionality of the major components of an operating system as well as the ability to write programs to interact with the kernel to perform several OS tasks.
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Evaluate the objectives and functions of modern operating systems.
+Analyze core operating systems principles.
+Analyze operating system concurrency issues (potential run-time problems and solutions arising from the concurrent operation of many tasks).
+Evaluate the principles of task and process scheduling and solutions to scheduling problems.
+Analyze operating system memory and memory management principles.
+Explain how an Operating System manages input/output devices.
+Characterize special concerns that real-time and mobile systems present and how these concerns are addressed.
+Design system programs to interact with the kernel.
+Implement concepts in process management, thread management and Inter Process Communication.
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	Assignments (1@5% & 1@10%) approx. weeks 5,6	15.0%
+ 	Lab Exercises (2@5%) approx. weeks 3,9	10.0%
+ 	Research Paper approx. week 10	15.0%
+ 	Midterm Exam approx. week 7	25.0%
+ 	Final Exam approx. week 14	35.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+To pass the course, students must achieve a 50% weighted average across the tests and the exams and at least 50% overall in the course.
+
+Students must submit/complete all assignments, in-class activities and projects by the scheduled due date and write all tests on the specified date/time. Exceptions will only be made under extraordinary circumstances. 
+
+Refer to the School of Applied Computing's Academic Procedures for Evaluations for more details regarding missed work: Procedures for Evaluations
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Challenge Exam
+Notes:  PLAR consists of both a Challenge Exam and Interview.
+Interview
+Notes:  
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s):
+Course material costs can be found through the Sheridan Bookstore
+ 	Type	Description
+Required	Textbook	Operating System Concepts, Silberschatz, A., Galvin, P. B., & Gagne, G, Wiley, 10th, ISBN 9781119800361, Looseleaf
+
+Applicable student group(s): PBACS - Honours Bachelor of Computer Science - Mobile Computing; PBCPS - Honours Bachelor of Computer Science
+Course Details:
+Module 1: Concurrency - Demonstrate the potential run-time problems and solutions  arising from the concurrent operation of many tasks:
+
+States and state diagrams
+Critical sections and mutual exclusion
+Deadlock: causes, conditions, prevention
+Producer-consumer problems and synchronization
+Models and mechanism for IPC (semaphores, monitors, condition variables, pipes, shared memory and sockets)
+Module 2: Process Scheduling - Assess the principles of task and process scheduling and solutions to scheduling problems:
+
+Schedulers and policies
+Common algorithms used for preemptive and non-preemptive scheduling of tasks in operating systems, such as priority, performance comparison and fair-share schemes
+Scheduling algorithms and application domains
+Static and dynamic approaches to real-time scheduling 
+Module 3: Memory and Memory Management - Evaluate memory and memory  management principles:
+
+Memory segmentation
+Virtual memory and paging
+Memory caching
+Working sets and thrashing
+Memory page replacement algorithms vs policy 
+Module 4: I/O Processing and File systems - Explain how an Operating System manages input/output devices.
+
+Buffering strategies
+Direct memory access
+Device drivers
+Character vs block devices 
+Module 5: Process and Kernel Design - Design and implement programs to interact  with the kernel to implement concepts in process management, thread management, Interprocess communication (IPC), and concurrency:
+
+Implement system programs to create and maintain processes
+Implement system programs to perform Inter Process Communications
+Implement system programs to create and maintain threads
+Module 6: Protection:
+
+Goals of protection, domain of protection
+Access matrix
+capability-based systems, language based projection
+Module 7: Security:
+
+Role of the operating system to provide a secure working environment
+User authentication
+Program threats, system threats
+Intrusion detection
+Cryptography
+Classifications of computer-security
+Module 8: Mobile Devices - Special concerns that real-time and mobile systems present and how these concerns are addressed:
+
+Real-time operating systems vs general purpose operating systems issues
+Mobile operating systems (comparisons and differences)
+ Note: The topics within each module are grouped semantically and are not meant to suggest a time sequence. A course plan must be provided by the professor identifying the class-by-class arrangement of topics.
+
+
+ PROG30000
+Enterprise Software Systems	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 56.0
+Credit Value: 3.0
+Credit Value Notes: N/A
+Effective: Fall 2024
+Prerequisites: (INFO16206 AND PROG10065 AND DBAS20146) OR (PROG27545)
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: The pre-requisites of INFO16206 and PROG10065 and DBAS20146 apply to students registered in the Honours Bachelor of Computer Science (Mobile Computing) program. The pre-requisite of PROG27545 applies to students registered in the Honours Bachelor of Computer Science program.
+Program(s): Hon Bach CompSci - Mobile Comp, Hons Bach of Computer Science
+Program Coordinator(s): Magdin Stoica, El Sayed Mahmoud
+Course Leader or Contact: Syed Tanbeer
+Version: 20240903_00
+Status: Approved (APPR)
+
+Section I Notes: N/A
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+Students focus on the design and implementation of enterprise-grade web information systems using multi-tier and service-oriented architectures in this advanced web application development course. Students gain essential experience developing secure scalable enterprise web applications and web services and integrate them into an enterprise ecosystem using ASP.NET, MVC, WCF and Web API, ADO.NET and the Entity Framework with Visual Studio.NET IDE. While designing and implementing enterprise software on the back-end students research and use modern client-side technologies such as Bootstrap, AngularJS. Students participate in interactive lectures, presentations and demonstrations, numerous hands-on labs as well as group work allowing them to build larger-scale web applications. Students continue to practice professional software development techniques and processes laying foundations that are essential to professional software developers.
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+In this required course, students advance their knowledge with the design and implementation of enterprise-grade web applications having learned the fundamentals of web development building medium-scale object-oriented web applications in previous courses. The course focuses on designing enterprise web application using .NET and C# using secure, scalable, enterprise-grade web information systems and advanced web architectures.
+
+Hons Bach of Computer Science	Program Coordinator(s): El Sayed Mahmoud
+This required course furthers students' knowledge by designing and implementing enterprise-grade web applications. It builds on their previous experience in creating medium-sized object-oriented web applications. The course emphasizes using .NET and C# to design enterprise web applications utilizing stable, secure, and scalable web information systems. The knowledge and skills gained in this course are crucial for all specializations of the Honours Bachelor of Computer Science program since advanced web applications are an effective delivery method for data analytics, cloud computing, online gaming services, and other services.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of the course, students will have demonstrated the ability to build scalable, secure enterprise web applications and web services based on effective analysis and design, using multi-tier and service-oriented architectures and the .NET Framework.
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Analyze the requirements of enterprise-grade information systems with a focus on web applications and their role in the enterprise ecosystem.
+Create enterprise-grade web applications using multi-tier and service oriented architectures using ASP.NET, Data Entity Framework, MVC that are deployed in the cloud.
+Use client-side development methodologies while ensuring the scalability of the back-end components of an enterprise web application.
+Build secure enterprise-grade web application using standard security primitives for authenticating and authorizing users and protecting the integrity and confidentiality of enterprise data.
+Contrast various communication technologies used by back-end enterprise information system components and the client side applications.
+Develop SOAP and RESTful web services integrated with client applications through secure channels of communication.
+Explain the design and implementation of load-balancing, fault-tolerance and reliability requirements in enterprise information systems.
+Describe the design and operation of web applications using detailed visual modeling techniques.
+Verify the correctness and completeness of enterprise web applications using debugging techniques and integrated development environments.
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	Assignments (4@5%) approx. weeks 2,4, 6,10	20.0%
+ 	Team Project approx. week 12	20.0%
+ 	Midterm Exam approx. week 7	25.0%
+ 	Final Exam approx. week 14	35.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+To pass the course, students must achieve a 50% weighted average across the tests and the exams and at least 50% overall in the course.
+
+Students must submit/complete all assignments, in-class activities and projects by the scheduled due date and write all tests on the specified date/time. Exceptions will only be made under extraordinary circumstances. 
+
+Refer to the School of Applied Computing's Academic Procedures for Evaluations for more details regarding missed work: Procedures for Evaluations
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Challenge Exam
+Notes:  Both challenge exam and portfolio are required for PLAR.
+Portfolio
+Notes:  
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s):
+Course material costs can be found through the Sheridan Bookstore
+ 	Type	Description
+Required	Textbook	Pro ASP.NET Core MVC 2, Freeman A., APRESS, 7th Edition, ISBN 9781484231494, 2017
+Required	Textbook	Patterns of Enterprise Application Architecture, Fowler M., Boston, MA: Addison-Wesley, 1st ed., ISBN 9780321127426, 2003
+Optional	Textbook	C# 6.0 and the .NET 4.6 Framework, Troelsen A., Japikse P., New York, NY, APRESS, 7th ed., ISBN 9781484213322, 2015
+Optional	Textbook	Microsoft .NET: Architecting Applications for the Enterprise, Esposito D., Saltarello A., Redmond, WA: Microsoft Press, 2nd. ed., ISBN 9780735685352, 2014
+Optional	Textbook	Pro ASP.NET Web API Security: Securing ASP.NET Web API, Lakshmiraghavan B., New York, NY, APRESS, ISBN 9781430257837, 2013
+
+Applicable student group(s): Honours Bachelor of Computer Science (Mobile Computing); Honours Bachelor of Computer Science
+Course Details:
+Module 1: Enterprise Application Design with the .NET Framework
+
+Multi-Tier Architectures
+Service-Oriented Architectures
+.NET web application development methods: Web Forms vs. MVC
+Web Service Foundations: SOAP, WSDL, UDDI, Web Services and Web Methods
+RESTful web services and the Web APIs
+ASP.NET applications, anatomy of an ASPX page
+Enterprise requirements: scalability and reliability
+C# programming language advanced features
+ Module 2: Enterprise Design Patterns
+
+Business Layer Design Patterns
+Service Layer Design Patterns
+Data Access Layer Design Patterns
+Presentation Layer Design Patterns
+ Module 3: ASP.NET MVC
+
+ASP.NET MVC Infrastructure and the MVC Pattern
+Controllers and Actions
+Views, the RAZOR view engine, integrating CSS and JavaScript
+Models, model binding and model validation
+Developing interface mocks for iterative development and testability
+Developing unit tests for MVC web applications
+URL Routing
+ Module 4: Database Programming in Web Applications
+
+Entity Framework and Entity Relationship Model
+Data First vs. Model First development methods, defining POCO entities
+Querying data models using LINQ to Entities
+Managing and modifying state of entities
+Data binding in web applications
+ Module 5: Web Services
+
+SOAP vs. RESTful web services
+Development of SOAP Web Services using WCF
+Consume SOAP Web Services in client side applications such as mobile apps
+Development of RESTful Web Services using WEB APIs
+Using entities in web services 
+Module 6: Security
+
+Security primitives and their implementations in web applications
+Authentication methods
+Authorization mechanisms
+Protecting data confidentiality
+Using the Identity framework in MVC applications
+ Module 7: Deployment
+
+Deployment of web applications in the cloud using Azure
+Deploy databases in the cloud using Azure
+Manage user credientials in a secure fashion in the cloud with Azure
+ Note: The suggested number of weeks allocated to each module may vary depending on the professor’s and/or class requirements. The topics within each module are grouped semantically and are not meant to suggest a time sequence. A course plan must be provided by the professor identifying the class-by-class arrangement of topics.PROG30000
+Enterprise Software Systems	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 56.0
+Credit Value: 3.0
+Credit Value Notes: N/A
+Effective: Fall 2024
+Prerequisites: (INFO16206 AND PROG10065 AND DBAS20146) OR (PROG27545)
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: The pre-requisites of INFO16206 and PROG10065 and DBAS20146 apply to students registered in the Honours Bachelor of Computer Science (Mobile Computing) program. The pre-requisite of PROG27545 applies to students registered in the Honours Bachelor of Computer Science program.
+Program(s): Hon Bach CompSci - Mobile Comp, Hons Bach of Computer Science
+Program Coordinator(s): Magdin Stoica, El Sayed Mahmoud
+Course Leader or Contact: Syed Tanbeer
+Version: 20240903_00
+Status: Approved (APPR)
+
+Section I Notes: N/A
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+Students focus on the design and implementation of enterprise-grade web information systems using multi-tier and service-oriented architectures in this advanced web application development course. Students gain essential experience developing secure scalable enterprise web applications and web services and integrate them into an enterprise ecosystem using ASP.NET, MVC, WCF and Web API, ADO.NET and the Entity Framework with Visual Studio.NET IDE. While designing and implementing enterprise software on the back-end students research and use modern client-side technologies such as Bootstrap, AngularJS. Students participate in interactive lectures, presentations and demonstrations, numerous hands-on labs as well as group work allowing them to build larger-scale web applications. Students continue to practice professional software development techniques and processes laying foundations that are essential to professional software developers.
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+In this required course, students advance their knowledge with the design and implementation of enterprise-grade web applications having learned the fundamentals of web development building medium-scale object-oriented web applications in previous courses. The course focuses on designing enterprise web application using .NET and C# using secure, scalable, enterprise-grade web information systems and advanced web architectures.
+
+Hons Bach of Computer Science	Program Coordinator(s): El Sayed Mahmoud
+This required course furthers students' knowledge by designing and implementing enterprise-grade web applications. It builds on their previous experience in creating medium-sized object-oriented web applications. The course emphasizes using .NET and C# to design enterprise web applications utilizing stable, secure, and scalable web information systems. The knowledge and skills gained in this course are crucial for all specializations of the Honours Bachelor of Computer Science program since advanced web applications are an effective delivery method for data analytics, cloud computing, online gaming services, and other services.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of the course, students will have demonstrated the ability to build scalable, secure enterprise web applications and web services based on effective analysis and design, using multi-tier and service-oriented architectures and the .NET Framework.
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Analyze the requirements of enterprise-grade information systems with a focus on web applications and their role in the enterprise ecosystem.
+Create enterprise-grade web applications using multi-tier and service oriented architectures using ASP.NET, Data Entity Framework, MVC that are deployed in the cloud.
+Use client-side development methodologies while ensuring the scalability of the back-end components of an enterprise web application.
+Build secure enterprise-grade web application using standard security primitives for authenticating and authorizing users and protecting the integrity and confidentiality of enterprise data.
+Contrast various communication technologies used by back-end enterprise information system components and the client side applications.
+Develop SOAP and RESTful web services integrated with client applications through secure channels of communication.
+Explain the design and implementation of load-balancing, fault-tolerance and reliability requirements in enterprise information systems.
+Describe the design and operation of web applications using detailed visual modeling techniques.
+Verify the correctness and completeness of enterprise web applications using debugging techniques and integrated development environments.
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	Assignments (4@5%) approx. weeks 2,4, 6,10	20.0%
+ 	Team Project approx. week 12	20.0%
+ 	Midterm Exam approx. week 7	25.0%
+ 	Final Exam approx. week 14	35.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+To pass the course, students must achieve a 50% weighted average across the tests and the exams and at least 50% overall in the course.
+
+Students must submit/complete all assignments, in-class activities and projects by the scheduled due date and write all tests on the specified date/time. Exceptions will only be made under extraordinary circumstances. 
+
+Refer to the School of Applied Computing's Academic Procedures for Evaluations for more details regarding missed work: Procedures for Evaluations
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Challenge Exam
+Notes:  Both challenge exam and portfolio are required for PLAR.
+Portfolio
+Notes:  
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s):
+Course material costs can be found through the Sheridan Bookstore
+ 	Type	Description
+Required	Textbook	Pro ASP.NET Core MVC 2, Freeman A., APRESS, 7th Edition, ISBN 9781484231494, 2017
+Required	Textbook	Patterns of Enterprise Application Architecture, Fowler M., Boston, MA: Addison-Wesley, 1st ed., ISBN 9780321127426, 2003
+Optional	Textbook	C# 6.0 and the .NET 4.6 Framework, Troelsen A., Japikse P., New York, NY, APRESS, 7th ed., ISBN 9781484213322, 2015
+Optional	Textbook	Microsoft .NET: Architecting Applications for the Enterprise, Esposito D., Saltarello A., Redmond, WA: Microsoft Press, 2nd. ed., ISBN 9780735685352, 2014
+Optional	Textbook	Pro ASP.NET Web API Security: Securing ASP.NET Web API, Lakshmiraghavan B., New York, NY, APRESS, ISBN 9781430257837, 2013
+
+Applicable student group(s): Honours Bachelor of Computer Science (Mobile Computing); Honours Bachelor of Computer Science
+Course Details:
+Module 1: Enterprise Application Design with the .NET Framework
+
+Multi-Tier Architectures
+Service-Oriented Architectures
+.NET web application development methods: Web Forms vs. MVC
+Web Service Foundations: SOAP, WSDL, UDDI, Web Services and Web Methods
+RESTful web services and the Web APIs
+ASP.NET applications, anatomy of an ASPX page
+Enterprise requirements: scalability and reliability
+C# programming language advanced features
+ Module 2: Enterprise Design Patterns
+
+Business Layer Design Patterns
+Service Layer Design Patterns
+Data Access Layer Design Patterns
+Presentation Layer Design Patterns
+ Module 3: ASP.NET MVC
+
+ASP.NET MVC Infrastructure and the MVC Pattern
+Controllers and Actions
+Views, the RAZOR view engine, integrating CSS and JavaScript
+Models, model binding and model validation
+Developing interface mocks for iterative development and testability
+Developing unit tests for MVC web applications
+URL Routing
+ Module 4: Database Programming in Web Applications
+
+Entity Framework and Entity Relationship Model
+Data First vs. Model First development methods, defining POCO entities
+Querying data models using LINQ to Entities
+Managing and modifying state of entities
+Data binding in web applications
+ Module 5: Web Services
+
+SOAP vs. RESTful web services
+Development of SOAP Web Services using WCF
+Consume SOAP Web Services in client side applications such as mobile apps
+Development of RESTful Web Services using WEB APIs
+Using entities in web services 
+Module 6: Security
+
+Security primitives and their implementations in web applications
+Authentication methods
+Authorization mechanisms
+Protecting data confidentiality
+Using the Identity framework in MVC applications
+ Module 7: Deployment
+
+Deployment of web applications in the cloud using Azure
+Deploy databases in the cloud using Azure
+Manage user credientials in a secure fashion in the cloud with Azure
+ Note: The suggested number of weeks allocated to each module may vary depending on the professor’s and/or class requirements. The topics within each module are grouped semantically and are not meant to suggest a time sequence. A course plan must be provided by the professor identifying the class-by-class arrangement of topics.
+
+
+
+ SYST30049
+Software Design	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 42.0
+Credit Value: 3.0
+Credit Value Notes: N/A
+Effective: Fall 2025
+Prerequisites: PROG10065
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: N/A
+Program(s): Hon Bach CompSci - Mobile Comp, Hons Bach of Computer Science
+Program Coordinator(s): Magdin Stoica, El Sayed Mahmoud
+Course Leader or Contact: Magdin Stoica
+Version: 20250902_00
+Status: Approved (APPR)
+
+Section I Notes: N/A
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+Students explore the design aspects of building complex software systems with a focus on designing applications that are both extensible and maintainable, applying industry proven methodologies, software architectures and modeling software systems using visual modeling languages and tools. Students discover and implement proven solutions to real-world problems using design patterns and anti-patterns and gain the ability of placing programming in the larger context of software development for medium to large-scale software intensive systems. Students participate in interactive lectures, demonstrations, hands-on labs, collaborative case-studies and presentations leading to a higher-level of understanding of the software design process.
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+This is the first of 3 required courses that focus on software engineering, analyzing, designing, developing and verifying medium to large-scale software systems using systematic software engineering activities, processes and artefacts. The course focuses on the design of software intensive systems using industry proven design patterns and software architectures as well as the refactoring of legacy software systems using software anti-patterns. Prior development experience of medium scale web-based application is beneficial to understanding the issues pertaining to larger scale software systems. In subsequent courses students gain a higher-level perspective of the software engineering process in its entirety and delve in depth into the software systems verification.
+
+Hons Bach of Computer Science	Program Coordinator(s): El Sayed Mahmoud
+This required course is the first of a two-course sequence focusing on using systematic software engineering processes, artifacts, and activities to analyze, design, develop and verify medium- to large-scale software systems. This course uses industry-proven design patterns and software architectures to design software-intensive systems and refactor legacy software using anti-patterns. A further course provides students with a more comprehensive understanding of the software engineering process and the verification of software systems. The skills gained in this course are beneficial for all specializations of the Honours Bachelor of Computer Science program.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of the course, students will have demonstrated the ability to design and analyze medium to large-scale software systems using industry proven methodologies, design patterns, architecture styles, and visual modeling languages and tools.
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Contrast various software design methodologies exploring their use, strengths and limitations.
+Design software systems using a defined iterative process applied to solving technical requirements of designing software for change and expansion.
+Characterize creational, structural and behavioural design patterns used in object-oriented design and their role in creating flexible, maintainable and scalable software systems.
+Develop software designs using a wide range of design patterns.
+Establish proven techniques in refactoring legacy software systems using software anti-patterns and their design patterns counterparts.
+Contrast design patterns and anti-patterns.
+Evaluate software architectures using visual modeling techniques.
+Create detailed models of existing or new medium to large-scale software intensive systems using industry-proven architectures and the Unified Modeling Language.
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	Assignments (2 @ 10%) - approx. weeks 4 & 10	20.0%
+ 	Paper Outline - approx. week 5	5.0%
+ 	Midterm Exam - approx. week 7	25.0%
+ 	Paper Submission 1 - approx. week 9	10.0%
+ 	Paper Presentation - approx. week 9	5.0%
+ 	Paper Submission 2 - approx. week 13	10.0%
+ 	Final Exam - approx. week 14	25.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+To pass the course, students must achieve a 50% weighted average across the exams and at least 50% overall in the course.
+
+Students must submit/complete all assignments, in-class activities and projects by the scheduled due date and write all tests on the specified date/time. Exceptions will only be made under extraordinary circumstances. 
+
+Refer to the School of Applied Computing's Academic Procedures for Evaluations for more details regarding missed work: Procedures for Evaluations
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Challenge Exam
+Notes:  Challenge exam and portfolio containing a project are required for PLAR.
+Portfolio
+Notes:  
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s):
+Course material costs can be found through the Sheridan Bookstore
+ 	Type	Description
+Required	Textbook	Agile Principles, Patterns and Practices in C#, Martin R. C., Martin M., Boston, MA: Prentice Hall, 1st ed., ISBN 9780131857254, 2006
+Required	Textbook	Design Patterns: Elements of Reusable Object-Oriented Software, Gamma E., Helm R. Johnson R, Vlissides J., Addison-Wesley Professional, ISBN 9780201633610, 1995
+Optional	Textbook	Head First Design Patterns, Freeman T.E., Robson E, Bates B, Sierra K, OReilly Media, ISBN 0596007124, 2004
+Optional	Textbook	Unified Modeling Language User Guide, Booch G, Rumbaugh J, Jacobson I., Addison-Wesley Professional, ISBN 0321267974, 2005
+Optional	Textbook	AntiPatterns: Refactoring Software, Architectures and Projects in Crisis, Brown W. J., Malveau R. C, McCormick H.W., Mowbray T. J., John Wiley & Sons, ISBN 9780471197133, 1998
+Optional	Textbook	Software Development and Professional Practice, Dooley J., New York NY: APRESS, ISBN 9781430238027, 2011
+
+Applicable student group(s): Honours Bachelor of Computer Science (Mobile Computing) (PBACS); Honours Bachelor of Computer Science (All Specializations) (PBCPS)
+Course Details:
+ Module 1: Software Design Methodologies and Processes
+
+Structured Design
+Object-Oriented Design
+Aspect-Oriented Design
+High-Level Design vs. Detailed Design
+Architectural Patterns, Design Patterns and Anti-Patterns and Idioms
+ Module 2: Design Patterns and Applications
+
+Creational Patterns and Applications
+Structural Patterns and Applications
+Behavioural Patterns and Applications
+Module 3: Design Anti-Patterns and Refactoring
+
+Definition, contrast with design patterns, role of refactoring in new and legacy software systems
+Selected Design Anti-Patterns
+Selected Architectural Anti-Patterns
+ Module 4: Software Architecture Fundamentals
+
+Definition, structures, software architecture as a company asset, role of the software architect
+Survey of major architectures
+4+1 Views Model
+ Module 5: Software Models
+
+Role of software models in software development
+Design visualization using UML
+Use-Case Models and Diagrams (intro)
+Logical Models and Diagrams (in-depth)
+Component Models and Diagrams
+Deployment Models and Diagrams 
+Note: The suggested number of weeks allocated to each module may vary depending on the professor’s and/or class requirements. The topics within each module are grouped semantically and are not meant to suggest a time sequence. A course plan must be provided by the professor identifying the class-by-class arrangement of topics.
+
+
+MATH37198
+Statistics for Data Science	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 42.0
+Credit Value: 3.0
+Credit Value Notes: N/A
+Effective: Winter 2025
+Prerequisites: N/A
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: N/A
+Program(s): Hon Bach CompSci - Mobile Comp, Hons Bach of Computer Science
+Program Coordinator(s): Magdin Stoica, El Sayed Mahmoud
+Course Leader or Contact: Jacob Chodoriwsky
+Version: 20250106_00
+Status: Approved (APPR)
+
+Section I Notes: N/A
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+Students learn various statistical methods of qualitative and quantitative data collection, analysis and presentation. This course focuses on organizing qualitative and quantitative data, measures of variances and central tendencies, Samples, Discrete Random Variables, binomial, Poisson and Normal Distributions. Statistical software is used to analyze data sets and develop conclusions. Students learn how to generate and verify random number sequences for simulations and apply statistical knowledge to modern datasets, including comparing various methodologies for analyzing modern data sets. Through interactive lectures, discussions, quizzes, readings, assignments and exercises, learners identify the relevance of statistics in computer applications, applied research and data science.
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+This required course provides a comprehensive foundation on Statistics and Probability concepts with application in Data Science. This course builds a foundation for future coursework in computer science applications, applied research methods and data analysis.
+
+Hons Bach of Computer Science	Program Coordinator(s): El Sayed Mahmoud
+This required course provides a comprehensive foundation on statistics and probability concepts with application in data science. It builds a foundation for future coursework and a career in computer science, including specializations such as data analytics and cloud computing.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of this course, students will have demonstrated the ability to validate informed decisions about a given or randomly-generated data set by using a variety of statistical tools and techniques.
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Assess statistical reports for accuracy and the appropriate application of statistical techniques.
+Calculate various measures of central tendency and variability in a given research situation.
+Create appropriate statistical analysis solutions including graphs, tables and charts of the data for research in the applied sciences.
+Draw inferences about a population based on statistical comparison of population means.
+Interpret statistical outcomes for differences between population means.
+Apply linear regression techniques to identify relationships between research variables.
+Develop random number sequences.
+Perform statistical analyses and visualizations using a high-level data science programming language (e.g., Python) and other tools (e.g., MS Excel).
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	Exercises (10 @ 1%) approx. weeks 1, 2, 3, 4, 5, 8, 9, 10, 11, 12	10.0%
+ 	Assignments (5 @ 4%) approx. weeks 2, 4, 6, 9, 11	20.0%
+ 	Quizzes (4 @ 2.5%) approx. weeks 2, 5, 9, 11	10.0%
+ 	Midterm Exam approx. week 7	30.0%
+ 	Final Exam approx. week 13	30.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+To pass the course, students must achieve a 50% weighted average across the exams and at least 50% overall in the course.
+
+Students must submit/complete all assignments, in-class activities and projects by the scheduled due date and write all tests on the specified date/time. Exceptions will only be made under extraordinary circumstances. 
+
+Refer to the School of Applied Computing's Academic Procedures for Evaluations for more details regarding missed work: Procedures for Evaluations
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Challenge Exam
+Notes:  Challenge exam and portfolio are required for PLAR.
+Portfolio
+Notes:  
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s):
+Course material costs can be found through the Sheridan Bookstore
+ 	Type	Description
+Optional	Textbook	Foundations of Statistics for Data Scientists with R and Python, Agresti, A., Kateri., M., CRC Press, ISBN 0367748452, 2022
+Optional	Other	Selections from the following texts and other resources to be announced by the Professor: Python Data Analytics: Data Analysis and Science Using Pandas, Matplotlib, and the Python Prog. Lang, Nelli, F., Apress, ISBN 9781484209585, 2015, Available on Books 24x7, through Sheridan Library Services. Lind, D., A. (2015) Basic Statistics for Business & Economics, 5th Canadian Edition, McGraw-Hill O'Neil, C., Schutt, R. (2013). Doing Data Science: Straight Talk from the Frontline, O'Reilly Media Barlow, M. (2015). Learning to Love Data Science, O'Reilly Media, Inc. (Books 24/7) Grus, J. (2015). Data Science from Scratch, O'Reilly Media, Inc. (Books 24/7) Dietrich, D., Heller, B., Yang, B. (2015). Data Science and Big Data Analytics: Discovering, Analyzing, Visualizing and Presenting Data, John Wiley & Sons, John Wiley & Sons. (Books 24/7)
+
+Applicable student group(s): Honours Bachelor of Applied Computer Science - Mobile Computing; Honours Bachelor of Computer Science (all specializations)
+Course Details:
+Module 1: Fundamentals of Statistics 
+
+Fundamentals of Statistics
+Descriptive Statistics
+Descriptive Measures 
+Module 2: Probability Concepts
+
+Probability Basics
+Events, Factorials, Combinations, and Permutations
+Joint and Marginal Probabilities, Conditional Probability
+Module 3: Discrete Random Variables
+
+Discrete Random Variables and Probability Distributions
+The Mean and Standard Deviation of a Discrete Random Variable
+The Binomial Distribution and the Poisson Distribution
+Module 4: Normal Distribution and Confidence Intervals
+
+Normally Distributed Variables
+Working with Normally Distributed Variables
+Sampling Error
+The Sampling Distribution of the Sample Mean
+Estimating a Population Mean
+Confidence Intervals for Population Mean
+Module 5: Hypothesis Testing and Inferences for Population Means
+
+The Nature of Hypothesis Testing
+Approaches to Hypothesis Testing
+Type II Error Probabilities 
+Difference Between Two Sample 
+Means for Independent Samples
+Inferences for Two Population Means
+Inferences for Population Standard Deviations and Proportions
+Confidence Intervals for One Population Proportion
+Module 6: Statistical Analysis Procedures
+
+Chi-Square Procedures 
+Descriptive Methods in Regression and Correlation
+Inferential Methods in Regression and Correlation
+Estimation and Prediction
+Analysis of Variance (ANOVA). 
+Module 7: Data Science
+
+Overview of Data Science
+Introduction to Python for Data Science (e.g., Python Pandas, Matplotlib, Statistics, SciPy Library, etc.)
+Data Visualization Using Python
+Data Manipulation Using Python
+Data Analytics Using Python
+Note: The topics within each module are grouped semantically and are not meant to suggest a time sequence. A course plan must be provided by the professor identifying the class-by-class arrangement of topics.
+ 

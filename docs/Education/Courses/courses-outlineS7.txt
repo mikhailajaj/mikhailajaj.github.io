@@ -1,0 +1,452 @@
+PROG48031
+Cognitive Computing	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 42.0
+Credit Value: 3.0
+Credit Value Notes: N/A
+Effective: Fall 2025
+Prerequisites: PROG31975
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: N/A
+Program(s): Hon Bach CompSci - Mobile Comp
+Program Coordinator(s): Magdin Stoica
+Course Leader or Contact: Magdin Stoica
+Version: 20250902_00
+Status: Approved (APPR)
+
+Section I Notes: N/A
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+Students are immersed into the emerging field of Cognitive Computing and learn to create intelligent applications that use natural language processing, image recognition and other machine learning services. Students integrate various cloud computing AI platforms in the development of mobile application systems. This includes an introduction to working with natural human language and other common cognitive tasks. Students create applications that use new multi-modal input methods by Controlling the flow of communication in a program through enhanced methods of both natural text language and speech recognition and synthesis. Other processes such as computer vision and information generalization add a powerful collection of data processing tools to the student¿s growing repertoire. Students take advantage of cognitive computing services to create modern mobile applications using tools such as voice interaction, translation, computer vision, information generalization, and sentiment/text analytics.
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+This required fourth year course is an advanced topic in mobile computing which tackles an emerging field in computer science, the application of machine learning and artificial intelligence services to mobile app development. Situated in the final year of the program, after the student has acquired substantial skills and knowledge in programming, mobile app development and cloud computing, this course presents the student with an introduction to the cognitive computing services and their application in mobile computing. The course supports students with topics that can be used in the Capstone or Thesis Proposal and Project courses.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of this course, students will be able to develop mobile applications that apply cognitive computing cloud services to the creation of applications with an intelligent user interaction.
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Explain the applications of cognitive computing in solving real-world problems with intelligent mobile applications.
+Evaluate human communication and cognitive processes to identify the areas that can be leveraged and enhanced using computing models and services.
+Identify strengths and limitations of cognitive computing technology to increase user engagement with software systems and applications.
+Compare cloud computing services for their capabilities of language understanding, image recognition, information discovery, and knowledge extraction.
+Design multi-modal human-computer interaction (HCI) mechanisms in mobile applications using cognitive computing services.
+Train computer cognitive models such as natural language processing (NLP) models and vision models to improve recognition.
+Create mobile apps that integrate cognitive computing services to deliver innovative services and enhanced usability.
+Create intelligent bots that use natural language processing and cognitive services to communicate with users, traditional applications and other bots through conversations.
+Integrate mobile and bot applications with operating system-wide cognitive assistants (e.g. Siri, Cortana).
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	Assignments (5 @ 10%)	50.0%
+ 	Seminar Presentation (Apps. of Cognitive Services)	20.0%
+ 	Final Exam	30.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+To pass the course, students must achieve at least 50% overall in the course, as well as a 50% weighted average across the final exam and presentation.
+
+Students must submit/complete all assignments, in-class activities and projects by the scheduled due date and write all tests on the specified date/time. Exceptions will only be made under extraordinary circumstances. 
+
+Refer to the School of Applied Computing's Academic Procedures for Evaluations for more details regarding missed work: Procedures for Evaluations
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Challenge Exam
+Notes:  
+Portfolio
+Notes:  PLAR consists of a Challenge Exam, Portfolio AND Other.
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s):
+Course material costs can be found through the Sheridan Bookstore
+ 	Type	Description
+Required	Other	Online reading material will be provided through SLATE.
+
+Applicable student group(s): Honours Bachelor of Computer Science (Mobile Computing) (PBACS)
+Course Details:
+Module 1: Introduction to Cognitive Computing
+
+History of Cognitive Computing and Types of Cognitive Processes
+The Importance of Automated Cognitive Computing Processes
+Current and Future Direction of Cognitive Computing
+Overview of Available Cognitive Computing Services from Industry Leaders: IBM, Microsoft, Google, Apple 
+Module 2: Foundations of Cognitive Computing
+
+Define Language Concepts Such as Phonology, Syntax, Semantics, and Discourse
+Introducing Phonemes, a Phonetic Alphabet, and the Mental Lexicon (Language Storage Centre of the Brain). How are These Different from the English Alphabet and Dictionary?
+Best HCI Practices with Natural Language
+Conversation Models, Synonyms and Homographs, Unforeseen Phrases, Errors
+Voice-To-Text, Directing Conversations Towards a Goal 
+Module 3: Natural Language Processing
+
+Creating an Interactive Voice Response (IVR) System
+Different Approaches to Speech Synthesis
+Speaker Diarization - Segmenting Different Speakers from Continuous Recordings
+Speaker and Writer Recognition from Others
+Sentiment Analysis - Determining Attitude on Trending Topics
+Automated Language Translations (and Issues with Real-Time Translations)
+Use IBM Watson Services 
+Module 4: Computer Vision
+
+Automated Image Recognition
+Training Models
+Tagging and Describing Images
+Use Google Computer Vision Services 
+Module 5: Bot Development
+
+Creating a Goal-Oriented Textual Chat Bot
+Creating a Conversational Bot
+Building a Bot Using the Microsoft Bot Framework and Bot Builder SDK For .NET
+Bot Intelligence Using Cognitive Services: Information Discovery, Knowledge Extraction, Conversation Skills, Image and Video Understanding
+Communication Channels that Connect Bots and Users (E.G. SMS, Email, Cortana, Applications) 
+Module 6: Cognitive Assistants
+
+Overview of Available Cognitive Assistants and Platforms: Siri, Cortana, Google Assistant, Alexa
+Create Applications That Respond the Queries from Cognitive Assistants (E.G. Cortana Skills, Sirikit)
+Create Applications That Provide Output to Cognitive Assistants (E.G. Cortana Skills, Sirikit)
+Using a Cognitive Assistant for App-to-App Communication (E.G. Bot-to-Bot or Bot-to-App Communication Through the Cognitive Assistant)
+
+INFO40975
+Artificial Intelligence	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 42.0
+Credit Value: 3.0
+Credit Value Notes: N/A
+Effective: Fall 2025
+Prerequisites: MATH37198
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: N/A
+Program(s): Hon Bach CompSci - Mobile Comp
+Program Coordinator(s): Magdin Stoica
+Course Leader or Contact: Ghassem Tofighi
+Version: 20250902_00
+Status: Approved (APPR)
+
+Section I Notes: N/A
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+Students learn how to design and implement machine learning algorithms with application to various computing fields. Interactive lectures, hands-on exercises and assignment experiences systematically build the capabilities of the student to use machine learning algorithms and investigate how they may be applied to problems in area of computer science and in creating intelligent software solutions.
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+This required course provides a comprehensive foundation on the design and analysis of machine learning algorithms and applies these algorithms to mobile computing applications. This senior level course builds on the students skills and knowledge in application development, software engineering and human-computer interaction. The course supports students for their thesis or project work in their final year.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of this course, students will have demonstrated the ability to create machine learning models used in the development of intelligent systems.
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Explain the scope, goals, and principles of artificial intelligence and its relationship to other fields.
+Evaluate the strengths and limitations of different linear classification machine learning algorithms: Decision trees, K-nearest neighbours, and Support Vector Machines.
+Evaluate the strengths and limitations of different feature learning and classification machine learning algorithms: Artificial Neural Networks, Deep Neural Networks, Genetic Algorithms, Fuzzy Inference Systems, Hybrid Systems.
+Evaluate the strengths and limitations of different probabilistic machine learning algorithms: Naïve Bayes Classifier, and Bayesian Networks.
+Evaluate the strengths and limitations of different clustering and other machine learning algorithms: K-Means, Linear Regression, and Logistic Regression.
+Create machine learning models using appropriate frameworks and tools.
+Create intelligent software systems (e.g., mobile apps) that use appropriate machine learning algorithms.
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	Assignments (4 @ 5%)	20.0%
+ 	Midterm Exam	25.0%
+ 	Research Project Paper	25.0%
+ 	Final Exam	30.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+To pass the course, students must achieve a 50% weighted average across the exams and at least 50% overall in the course.
+
+Students must submit/complete all assignments, in-class activities and projects by the scheduled due date and write all tests on the specified date/time. Exceptions will only be made under extraordinary circumstances. 
+
+Refer to the School of Applied Computing's Academic Procedures for Evaluations for more details regarding missed work: Procedures for Evaluations
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Portfolio
+Notes:  
+Other
+Notes:  PLAR consists of both a Portfolio AND Other
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s):
+Course material costs can be found through the Sheridan Bookstore
+ 	Type	Description
+Required	Textbook	Artificial Intelligence: A Guide to Intelligent Systems, Negnevitsky, M., Pearson Education Canada, 3rd edition, ISBN 9781408225745, 2011
+Optional	Textbook	Fundamentals of Machine Learning for Predictive Data Analytics, Algorithms, Worked Ex., & Case Stud., Kelleher, J. D., MacNamee, B., D'Arcy, Aoife, MIT Press, 1st ed., ISBN 9780262029445, 2015
+Optional	Textbook	Deep Learning, Goodfellow, Ian, Bengio, Y, Courville, A., MIT Press, ISBN 9780262035613, 2016
+Optional	Textbook	Artificial Intelligence: A Modern Approach, Russell, S., & Norvig,P., Prentice Hall., 3rd ed., ISBN 9789332543515, 2015
+Optional	Textbook	Modeling and Reasoning with Bayesian Networks, Darwiche, A., Cambridge University Press, 1st ed., ISBN 978107678422, 2014
+Optional	Textbook	Bayesian Networks and Decision Graphs, Jensen, F., & Nielsen, D. T., Springer, 2nd ed., ISBN 9780387682815, 2007
+
+Applicable student group(s): Honours Bachelor of Computer Science (Mobile Computing) (PBACS)
+Course Details:
+Module 1: Foundations of Artificial Intelligence
+
+Overview of Evolution of the AI Field
+Areas of AI Research
+Relationships Between Sub-Fields of AI 
+Module 2: Principles of Machine Learning
+
+Theory, Benefits and Limitations
+Data Representation and Gathering Techniques
+Computational Complexity Considerations
+Designing, Modeling and Evaluation Techniques 
+Module 3: Machine Learning Algorithms for Linear Classification Problems
+
+Decision Trees
+K-Nearest Neighbours
+Support Vector Machines 
+Module 4: Machine Learning Algorithms Feature Learning and Classification Requirements
+
+Artificial Neural Networks
+Deep Neural Networks
+Genetic Algorithms
+Fuzzy Inference Systems
+Hybrid Systems
+Module 5: Machine Learning Algorithms Involving Probability
+
+Naïve Bayes Classifier
+Bayesian Networks
+Module 6: Machine Learning Algorithms (Clustering and Other)
+
+K-Means
+Linear Regression
+Logistic Regression 
+Module 7: Machine Learning Applications
+
+Application of Machine Learning Algorithms in Different Areas of Computing 
+App Design and HCI Considerations that Leverage Artificial Intelligence in System Architectures to Use AI in Mobile Apps (On Device vs. Cloud Services)
+
+MATH29599
+Calculus	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 42.0
+Credit Value: 3.0
+Credit Value Notes: N/A
+Effective: Fall 2025
+Prerequisites: MATH10025
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: N/A
+Program(s): Hon Bach CompSci - Mobile Comp, Hons Bach of Computer Science
+Program Coordinator(s): Magdin Stoica, El Sayed Mahmoud
+Course Leader or Contact: Jacob Chodoriwsky
+Version: 20250902_00
+Status: Approved (APPR)
+
+Section I Notes: N/A
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+Students learn the mathematical foundations of calculus to solve mathematical problems. Students focus on methods and applications of calculus including derivatives, exponential and logarithmic functions, optimization problems, related rates, integration, partial derivatives, and differential equations. Lectures, hands-on exercises and assignments with the use of computer software (e.g., MATLAB) systematically teach the student about these topics.
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+This is a Level 1 professional elective in the mathematics course cluster. Level 1 professional elective courses can be selected in terms 3, 4 and 6. Professional elective course offering is subject to enrolment demand. This course is for students who would like to strengthen their mathematical foundations to be better prepared for advanced theoretical computer science topics, especially those covered in graduate computer science programs. Certain pathways to graduate studies require this course as a pre-requisite for consideration.
+
+Hons Bach of Computer Science	Program Coordinator(s): El Sayed Mahmoud
+This required course aims to increase the students' uptake of future theoretical computer science topics. The course strengthens students' mathematical foundations to prepare them for advanced topics in theoretical computer science topics. The skills gained in this course will benefit many core and specialization courses in the following semesters.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of this course, students will have demonstrated the ability to evaluate and solve mathematical problems using differential and integral calculus for functions of one variable.
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Classify, and differentiate between, different types of mathematical functions.
+Evaluate linear and polynomial functions by graphing.
+Explain the principle of a mathematical limit.
+Synthesize the concepts of differentiation in solving real-world problems (e.g. instantaneous change, marginal cost, motion, related rates of change, optimization).
+Apply the Product and Quotient rules to differentiate algebraic functions.
+Apply the Chain rule to differentiate composite functions.
+Distinguish between indefinite and definite integrals.
+Synthesize the concepts of integration in solving real-world problems (e.g., average value of a function, area under a curve, volume of revolution).
+Synthesize the concepts of differential equations in solving real-world problems.
+Synthesize the concepts of partial derivatives in solving real-world problems.
+Use computer software (e.g., MATLAB) to assist in solving mathematical problems (e.g., graphing, computing integrals and derivatives of functions, etc.)
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	In-Class Assignments (Best 10 of 12 @ 1%)	10.0%
+ 	Quizzes (5 @ 5%)	25.0%
+ 	Midterm Exam	25.0%
+ 	Final Exam	40.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+To pass the course, students must achieve a 50% weighted average across the exams and at least 50% overall in the course.
+
+Students must submit/complete all assignments, in-class activities and projects by the scheduled due date and write all tests on the specified date/time. Exceptions will only be made under extraordinary circumstances. 
+
+Refer to the School of Applied Computing's Academic Procedures for Evaluations for more details regarding missed work: Procedures for Evaluations
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Challenge Exam
+Notes:  
+Portfolio
+Notes:  
+Other
+Notes:  Challenge exam, portfolio, and project are required for PLAR.
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s):
+Course material costs can be found through the Sheridan Bookstore
+ 	Type	Description
+Required	Textbook	Calculus, Stewart, J., Clegg D., Watson, S., Cengage Learning, 9th Edition, ISBN 9781337624183, 2020
+
+Applicable student group(s): PBACS - Honours Bachelor of Computer Science - Mobile Computing; PBCPS - Honours Bachelor of Computer Science - All Specializations
+Course Details:
+Module 1: Functions and Limits
+
+Ways to Represent a Function
+Mathematical Models and Essential Functions
+Tangent and Velocity
+Calculating Limits
+Module 2: Derivatives
+
+Derivatives and Rates of Change
+Derivative as a Function
+Differentiation Formulas
+Derivatives of Trigonometric Functions
+The Chain Rule
+Module 3: Applications of Differentiation
+
+Maximum and Minimum Values
+The Mean Value Theorem
+Limits at Infinity and Horizontal Asymptotes
+Graphing Calculus Problems
+Newton's Method
+Antiderivatives
+Module 4: Integrals
+
+Areas and Distances
+The Definite Integral
+The Fundamental Theorem of Calculus
+Indefinite Integrals and the Net Change Theorem
+The Substitution Rule
+Module 5: Applications of Integration
+
+Areas Between Curves
+Volumes
+Average Value of a Function
+Module 6: Inverse Functions
+
+Exponential
+Logarithmic
+Inverse Trig Functions
+Module 7: Differential Equations
+
+Modeling with Differential Equations
+Direction Fields
+Euler's Method
+Module 8: Partial Derivatives
+
+Functions of Several Variables
+Limits and Continuity
+Tangent Planes and Linear Approximation
+The Chain Rule
+Note: The topics within each module are grouped semantically and are not meant to suggest a time sequence. A course plan must be provided by the professor identifying the class-by-class arrangement of topics.
+
+

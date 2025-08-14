@@ -1,5 +1,5 @@
-'use client';
-import { useEffect, useRef, useState } from 'react';
+"use client";
+import { useEffect, useRef, useState } from "react";
 
 interface UseScrollAnimationOptions {
   threshold?: number;
@@ -8,7 +8,7 @@ interface UseScrollAnimationOptions {
 }
 
 export const useScrollAnimation = (options: UseScrollAnimationOptions = {}) => {
-  const { threshold = 0.1, rootMargin = '0px', triggerOnce = true } = options;
+  const { threshold = 0.1, rootMargin = "0px", triggerOnce = true } = options;
   const [isVisible, setIsVisible] = useState(false);
   const [supportsScrollTimeline, setSupportsScrollTimeline] = useState(true);
   const elementRef = useRef<HTMLElement>(null);
@@ -18,8 +18,8 @@ export const useScrollAnimation = (options: UseScrollAnimationOptions = {}) => {
     const checkSupport = () => {
       try {
         // Check for CSS.supports
-        if (typeof CSS !== 'undefined' && CSS.supports) {
-          return CSS.supports('animation-timeline', 'scroll()');
+        if (typeof CSS !== "undefined" && CSS.supports) {
+          return CSS.supports("animation-timeline", "scroll()");
         }
         return false;
       } catch {
@@ -48,7 +48,7 @@ export const useScrollAnimation = (options: UseScrollAnimationOptions = {}) => {
       {
         threshold,
         rootMargin,
-      }
+      },
     );
 
     observer.observe(element);
@@ -72,20 +72,23 @@ export const useScrollProgress = () => {
   useEffect(() => {
     const updateScrollProgress = () => {
       const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const docHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
       const progress = scrollTop / docHeight;
       setScrollProgress(progress);
     };
 
-    window.addEventListener('scroll', updateScrollProgress);
-    return () => window.removeEventListener('scroll', updateScrollProgress);
+    window.addEventListener("scroll", updateScrollProgress);
+    return () => window.removeEventListener("scroll", updateScrollProgress);
   }, []);
 
   return scrollProgress;
 };
 
 // Hook for element scroll progress
-export const useElementScrollProgress = (elementRef: React.RefObject<HTMLElement>) => {
+export const useElementScrollProgress = (
+  elementRef: React.RefObject<HTMLElement>,
+) => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -103,15 +106,18 @@ export const useElementScrollProgress = (elementRef: React.RefObject<HTMLElement
       const endOffset = -elementHeight;
       const totalDistance = startOffset - endOffset;
       const currentDistance = startOffset - elementTop;
-      
-      const progress = Math.max(0, Math.min(1, currentDistance / totalDistance));
+
+      const progress = Math.max(
+        0,
+        Math.min(1, currentDistance / totalDistance),
+      );
       setProgress(progress);
     };
 
-    window.addEventListener('scroll', updateProgress);
+    window.addEventListener("scroll", updateProgress);
     updateProgress(); // Initial calculation
 
-    return () => window.removeEventListener('scroll', updateProgress);
+    return () => window.removeEventListener("scroll", updateProgress);
   }, []);
 
   return progress;

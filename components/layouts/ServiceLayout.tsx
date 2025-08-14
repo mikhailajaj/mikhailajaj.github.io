@@ -1,30 +1,45 @@
-import React from 'react';
-import { EnhancedFloatingNav } from '@/components/ui/EnhancedFloatingNav';
-import { navItems } from '@/data';
-import Footer from '@/components/Footer';
-import ScrollProgress from '@/components/ScrollProgress';
-import { ShootingStars } from '@/components/ui/shooting-stars';
-import { StarsBackground } from '@/components/ui/stars-background';
+/**
+ * Service Layout Component
+ * 
+ * Provides service-specific layout with navigation, service-focused
+ * styling, and content structure optimized for service pages.
+ */
+
+import React from "react";
+import { ErrorBoundary } from "@/lib/error/ErrorBoundary";
 
 interface ServiceLayoutProps {
   children: React.ReactNode;
 }
 
-const ServiceLayout: React.FC<ServiceLayoutProps> = ({ children }) => {
+/**
+ * ServiceLayout Component
+ * 
+ * Provides consistent layout structure for service pages including:
+ * - Service-specific navigation and styling
+ * - Call-to-action optimization
+ * - Content structure optimized for services
+ * - Error boundary for graceful error handling
+ * 
+ * @param children - The page content to render within the layout
+ */
+export function ServiceLayout({ children }: ServiceLayoutProps) {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
-      <ScrollProgress />
-      <ShootingStars />
-      <StarsBackground className="z-10" />
-      <div className="relative z-20">
-        <EnhancedFloatingNav navItems={navItems} />
-        <main>
-          {children}
-        </main>
-        <Footer />
+    <ErrorBoundary>
+      <div className="min-h-screen bg-white dark:bg-gray-900">
+        {/* Service Content Container */}
+        <div className="relative">
+          {/* Service-specific background pattern */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-purple-100/30 dark:from-gray-900/30 dark:to-gray-800/30 pointer-events-none" />
+          
+          {/* Main Content */}
+          <div className="relative z-10">
+            {children}
+          </div>
+        </div>
       </div>
-    </div>
+    </ErrorBoundary>
   );
-};
+}
 
 export default ServiceLayout;

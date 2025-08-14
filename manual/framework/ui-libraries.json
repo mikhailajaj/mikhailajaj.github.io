@@ -1,0 +1,258 @@
+{
+  "uiLibraries": {
+    "lastUpdated": "2024-12-19",
+    "description": "UI libraries and styling frameworks for component development and visual design",
+    "libraries": {
+      "LIB_TAILWIND_CORE": {
+        "name": "Tailwind CSS",
+        "version": "3.x",
+        "category": "CSS Framework",
+        "trustScore": 10,
+        "context7ID": "/tailwindlabs/tailwindcss",
+        "description": "Utility-first CSS framework for rapid UI development",
+        "benefits": [
+          "Utility-first approach for rapid development",
+          "Highly customizable design system",
+          "Automatic CSS purging for optimal bundle size",
+          "Built-in responsive design utilities",
+          "Dark mode support out of the box",
+          "Excellent developer experience with IntelliSense",
+          "No runtime JavaScript overhead",
+          "Consistent design tokens and spacing"
+        ],
+        "builtInFeatures": {
+          "utilityClasses": {
+            "description": "Comprehensive set of utility classes for styling",
+            "benefits": ["Rapid prototyping", "Consistent spacing", "Responsive design"],
+            "categories": ["Layout", "Typography", "Colors", "Spacing", "Effects"]
+          },
+          "responsiveDesign": {
+            "description": "Mobile-first responsive design utilities",
+            "benefits": ["Breakpoint-based design", "Mobile optimization", "Flexible layouts"],
+            "breakpoints": ["sm: 640px", "md: 768px", "lg: 1024px", "xl: 1280px", "2xl: 1536px"]
+          },
+          "darkMode": {
+            "description": "Built-in dark mode support with class strategy",
+            "benefits": ["Automatic theme switching", "System preference detection", "Custom themes"],
+            "implementation": "class-based dark mode with next-themes integration"
+          },
+          "purging": {
+            "description": "Automatic removal of unused CSS in production",
+            "benefits": ["Smaller bundle size", "Faster loading", "Optimized performance"],
+            "currentUsage": "Configured in tailwind.config.ts"
+          }
+        },
+        "performanceImpact": {
+          "bundleSize": "~8KB gzipped after purging",
+          "buildTime": "Fast compilation with JIT mode",
+          "runtimeOverhead": "Zero - pure CSS"
+        },
+        "configurationComplexity": "Medium - Requires tailwind.config.ts setup",
+        "currentImplementation": {
+          "config": "tailwind.config.ts with custom design tokens",
+          "features": ["JIT mode", "Custom colors", "Typography plugin", "Dark mode"],
+          "customizations": ["Domain-specific color schemes", "Custom spacing scale", "Animation utilities"],
+          "integration": "Next.js with PostCSS and app/globals.css"
+        },
+        "migrationPath": "Stable - Tailwind 3.x features fully adopted",
+        "documentation": "https://tailwindcss.com/docs",
+        "context7Source": "Retrieved latest utility patterns and performance optimizations"
+      },
+      "LIB_FRAMER_MOTION": {
+        "name": "Framer Motion",
+        "version": "11.x",
+        "category": "Animation Library",
+        "trustScore": 9,
+        "context7ID": "/grx7/framer-motion",
+        "description": "Production-ready motion library for React with declarative animations",
+        "benefits": [
+          "Declarative animation API",
+          "Hardware-accelerated animations",
+          "Gesture support (drag, tap, hover)",
+          "Layout animations with automatic FLIP",
+          "Scroll-triggered animations",
+          "SVG path animations",
+          "Shared element transitions",
+          "Reduced motion support for accessibility"
+        ],
+        "builtInFeatures": {
+          "motionComponents": {
+            "description": "Enhanced HTML elements with animation capabilities",
+            "benefits": ["Simple API", "Performance optimized", "TypeScript support"],
+            "usage": "motion.div, motion.button, etc."
+          },
+          "variants": {
+            "description": "Reusable animation configurations",
+            "benefits": ["Consistent animations", "Easy orchestration", "Staggered animations"],
+            "currentUsage": "Used in lib/animations.ts for preset animations"
+          },
+          "gestures": {
+            "description": "Built-in gesture recognition and handling",
+            "benefits": ["Touch support", "Drag interactions", "Hover effects"],
+            "currentUsage": "Interactive buttons and hover effects"
+          },
+          "layoutAnimations": {
+            "description": "Automatic layout transition animations",
+            "benefits": ["Smooth layout changes", "FLIP animations", "Shared layouts"],
+            "usage": "layout prop for automatic animations"
+          }
+        },
+        "performanceImpact": {
+          "bundleSize": "~28KB gzipped",
+          "renderingTime": "Hardware-accelerated, 60fps animations",
+          "memoryUsage": "Efficient with automatic cleanup"
+        },
+        "configurationComplexity": "Low - Works out of the box with React",
+        "currentImplementation": {
+          "patterns": ["Fade animations", "Slide transitions", "Stagger effects", "Scroll animations"],
+          "features": ["Viewport animations", "Hover effects", "Loading states", "Page transitions"],
+          "presets": "Defined in lib/animations.ts for consistency",
+          "components": ["InteractiveHero", "AnimatedBentoGrid", "AnimatedButton"]
+        },
+        "migrationPath": "Stable - Framer Motion 11.x features adopted",
+        "documentation": "https://www.framer.com/motion/",
+        "context7Source": "Retrieved latest animation patterns and performance best practices"
+      },
+      "LIB_REACT_ICONS": {
+        "name": "React Icons",
+        "version": "5.x",
+        "category": "Icon Library",
+        "trustScore": 9,
+        "context7ID": "/react-icons/react-icons",
+        "description": "Popular icon library with SVG icons from multiple icon packs",
+        "benefits": [
+          "Comprehensive icon collection",
+          "Tree-shakable imports",
+          "Consistent API across icon sets",
+          "SVG-based for scalability",
+          "TypeScript support",
+          "No additional dependencies",
+          "Customizable size and color",
+          "Excellent performance"
+        ],
+        "builtInFeatures": {
+          "iconSets": {
+            "description": "Multiple icon sets in one package",
+            "benefits": ["Variety of styles", "Consistent API", "Single dependency"],
+            "sets": ["Font Awesome", "Material Design", "Heroicons", "Feather", "Bootstrap"]
+          },
+          "treeShaking": {
+            "description": "Import only the icons you use",
+            "benefits": ["Smaller bundle size", "Faster loading", "Optimized builds"],
+            "usage": "import { FaIcon } from 'react-icons/fa'"
+          },
+          "customization": {
+            "description": "Easy styling with props and CSS",
+            "benefits": ["Flexible sizing", "Color customization", "CSS integration"],
+            "usage": "size, color, className props"
+          }
+        },
+        "performanceImpact": {
+          "bundleSize": "~2KB per icon (tree-shaken)",
+          "renderingTime": "Fast SVG rendering",
+          "scalability": "Vector-based, infinite scalability"
+        },
+        "configurationComplexity": "Very Low - Import and use",
+        "currentImplementation": {
+          "iconSets": ["Font Awesome (Fa*)", "Lucide (Lu*)", "Hero Icons (Hi*)"],
+          "usage": ["Navigation icons", "Social media icons", "UI indicators", "Action buttons"],
+          "patterns": ["Consistent sizing", "Theme-aware colors", "Hover states"],
+          "components": "Used throughout UI components and navigation"
+        },
+        "migrationPath": "Stable - React Icons 5.x adopted",
+        "documentation": "https://react-icons.github.io/react-icons/",
+        "context7Source": "Standard React Icons patterns for optimal performance"
+      },
+      "LIB_NEXT_THEMES": {
+        "name": "next-themes",
+        "version": "0.3.x",
+        "category": "Theme Management",
+        "trustScore": 9,
+        "context7ID": "/pacocoursey/next-themes",
+        "description": "Perfect theme switching for Next.js with zero flicker",
+        "benefits": [
+          "Zero-flicker theme switching",
+          "System preference detection",
+          "Persistent theme storage",
+          "SSR/SSG compatible",
+          "TypeScript support",
+          "Minimal bundle size",
+          "Framework agnostic",
+          "Automatic theme synchronization"
+        ],
+        "builtInFeatures": {
+          "themeProvider": {
+            "description": "React context provider for theme management",
+            "benefits": ["Global theme state", "Automatic persistence", "SSR support"],
+            "usage": "Wrap app with ThemeProvider"
+          },
+          "useTheme": {
+            "description": "Hook for accessing and controlling theme",
+            "benefits": ["Theme state access", "Theme switching", "System detection"],
+            "api": "theme, setTheme, resolvedTheme, systemTheme"
+          },
+          "noFlicker": {
+            "description": "Prevents flash of incorrect theme",
+            "benefits": ["Better UX", "Seamless transitions", "SSR compatibility"],
+            "implementation": "Script injection before hydration"
+          }
+        },
+        "performanceImpact": {
+          "bundleSize": "~2KB gzipped",
+          "renderingTime": "No impact on rendering",
+          "hydrationTime": "Optimized for fast hydration"
+        },
+        "configurationComplexity": "Low - Simple provider setup",
+        "currentImplementation": {
+          "themes": ["light", "dark", "system"],
+          "storage": "localStorage with fallback",
+          "integration": "DomainThemeButton component",
+          "features": ["System detection", "Manual toggle", "Persistent storage"]
+        },
+        "migrationPath": "Stable - next-themes 0.3.x adopted",
+        "documentation": "https://github.com/pacocoursey/next-themes",
+        "context7Source": "Standard next-themes patterns for Next.js integration"
+      }
+    },
+    "designSystem": {
+      "colorPalette": {
+        "primary": "Domain-specific color schemes",
+        "semantic": "Success, warning, error, info colors",
+        "neutral": "Gray scale for text and backgrounds",
+        "implementation": "CSS custom properties with Tailwind"
+      },
+      "typography": {
+        "fonts": "Inter with system fallbacks",
+        "scale": "Tailwind typography scale",
+        "responsive": "Fluid typography with clamp()",
+        "implementation": "next/font with progressive loading"
+      },
+      "spacing": {
+        "scale": "Tailwind spacing scale (0.25rem increments)",
+        "responsive": "Consistent spacing across breakpoints",
+        "implementation": "Tailwind utilities with custom values"
+      },
+      "animations": {
+        "duration": "Fast (150ms), Normal (300ms), Slow (500ms)",
+        "easing": "Tailwind easing functions",
+        "implementation": "Framer Motion with Tailwind classes"
+      }
+    },
+    "performanceGuidelines": {
+      "bundleSizeLimit": "UI libraries total < 50KB gzipped",
+      "animationPerformance": "60fps animations, hardware acceleration",
+      "iconOptimization": "Tree-shake unused icons",
+      "cssOptimization": "Purge unused Tailwind classes"
+    },
+    "decisionCriteria": {
+      "addNewUILibrary": [
+        "Does Tailwind + existing libraries solve the need?",
+        "Bundle size impact < 5KB gzipped",
+        "Accessibility compliance (WCAG 2.1 AA)",
+        "TypeScript support available",
+        "Active maintenance and community",
+        "Performance impact acceptable"
+      ]
+    }
+  }
+}

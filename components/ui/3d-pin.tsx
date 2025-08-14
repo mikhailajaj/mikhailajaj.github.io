@@ -17,7 +17,7 @@ export const PinContainer = ({
   containerClassName?: string;
 }) => {
   const [transform, setTransform] = useState(
-    "translate(-50%,-50%) rotateX(0deg)"
+    "translate(-50%,-50%) rotateX(0deg)",
   );
 
   const onMouseEnter = () => {
@@ -56,11 +56,7 @@ export const PinContainer = ({
   );
 };
 
-export const PinPerspective = ({
-  title,
-}: {
-  title?: string;
-}) => {
+export const PinPerspective = ({ title }: { title?: string }) => {
   return (
     <motion.div className="pointer-events-none w-96 h-80 flex items-center justify-center opacity-0 group-hover/pin:opacity-100 z-[60] transition duration-500">
       <div className="w-full h-full -mt-7 flex-none inset-0">

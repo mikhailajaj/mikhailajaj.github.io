@@ -1,0 +1,41 @@
+{
+  "$schema": "https://context7.com/schema/context7.json",
+  "projectTitle": "Mikhail Ajaj Professional Portfolio",
+  "description": "A comprehensive SoC-based portfolio showcasing multi-domain technical expertise across Full-Stack Development, Cloud Engineering, Data Analytics, UX/UI Design, and Technical Consulting. Built with Next.js 15, TypeScript, and modern web technologies with $30M+ demonstrated business impact.",
+  "folders": ["app", "components", "data", "lib", "content", "hooks", "docs"],
+  "excludeFolders": [
+    "node_modules",
+    ".next",
+    "out",
+    ".git",
+    ".ai",
+    ".rovodev",
+    "public"
+  ],
+  "excludeFiles": [
+    "*.log",
+    "*.tmp",
+    "*.cache",
+    "package-lock.json",
+    ".DS_Store",
+    "*.svg",
+    "*.png",
+    "*.jpg",
+    "*.jpeg",
+    "*.gif",
+    "*.ico"
+  ],
+  "rules": [
+    "Follow Separation of Concerns (SoC) architecture principles",
+    "Use TypeScript strict mode for all components",
+    "Implement WCAG 2.1 AA accessibility compliance",
+    "Optimize for performance with sub-10kB page sizes",
+    "Use Next.js 15 App Router with static export",
+    "Follow atomic design principles for components",
+    "Implement proper error boundaries and loading states",
+    "Use Tailwind CSS with custom design system",
+    "Ensure responsive design (mobile-first approach)",
+    "Maintain professional quality and business impact focus"
+  ],
+  "previousVersions": []
+}

@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Card } from '@/components/ui/base/Card';
+import React from "react";
+import { motion } from "framer-motion";
+import { Card } from "@/components/ui/card";
 
 export function SkillsOverview() {
   return (
@@ -18,7 +18,8 @@ export function SkillsOverview() {
             Technical Excellence Across Domains
           </h2>
           <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-            Comprehensive expertise spanning the full technology stack, from frontend interfaces to cloud infrastructure.
+            Comprehensive expertise spanning the full technology stack, from
+            frontend interfaces to cloud infrastructure.
           </p>
         </motion.div>
 
@@ -26,7 +27,8 @@ export function SkillsOverview() {
           <div className="text-center text-gray-300">
             <p>Skills overview component - Coming soon in Phase 2</p>
             <p className="text-sm text-gray-500 mt-2">
-              Will showcase technical skills organized by domain with proficiency levels
+              Will showcase technical skills organized by domain with
+              proficiency levels
             </p>
           </div>
         </Card>

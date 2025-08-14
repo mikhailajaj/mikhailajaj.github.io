@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Card } from '@/components/ui/base/Card';
+import React from "react";
+import { motion } from "framer-motion";
+import { Card } from "@/components/ui/card";
 
 export function ProfessionalHighlights() {
   return (
@@ -18,7 +18,8 @@ export function ProfessionalHighlights() {
             Professional Highlights
           </h2>
           <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-            Key achievements, certifications, and recognition across my professional journey.
+            Key achievements, certifications, and recognition across my
+            professional journey.
           </p>
         </motion.div>
 
@@ -26,7 +27,8 @@ export function ProfessionalHighlights() {
           <div className="text-center text-gray-300">
             <p>Professional highlights component - Coming soon in Phase 2</p>
             <p className="text-sm text-gray-500 mt-2">
-              Will showcase certifications, awards, and key professional milestones
+              Will showcase certifications, awards, and key professional
+              milestones
             </p>
           </div>
         </Card>

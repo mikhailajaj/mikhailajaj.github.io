@@ -1,11 +1,11 @@
-'use client';
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  FaSearch, 
-  FaShieldAlt, 
-  FaChartBar, 
-  FaCode, 
+"use client";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import {
+  FaSearch,
+  FaShieldAlt,
+  FaChartBar,
+  FaCode,
   FaBug,
   FaDatabase,
   FaNetworkWired,
@@ -16,8 +16,8 @@ import {
   FaClock,
   FaFileAlt,
   FaMicroscope,
-  FaUserSecret
-} from 'react-icons/fa';
+  FaUserSecret,
+} from "react-icons/fa";
 
 interface InvestigationService {
   id: number;
@@ -28,14 +28,15 @@ interface InvestigationService {
   capabilities: string[];
   tools: string[];
   timeline: string;
-  urgency: 'Standard' | 'Priority' | 'Emergency';
+  urgency: "Standard" | "Priority" | "Emergency";
 }
 
 const investigationServices: InvestigationService[] = [
   {
     id: 1,
     title: "Security Vulnerability Assessment",
-    description: "Comprehensive security analysis to identify and remediate potential threats",
+    description:
+      "Comprehensive security analysis to identify and remediate potential threats",
     icon: FaShieldAlt,
     color: "from-red-500 to-orange-500",
     capabilities: [
@@ -43,16 +44,17 @@ const investigationServices: InvestigationService[] = [
       "Code security review",
       "Infrastructure scanning",
       "Social engineering assessment",
-      "Compliance auditing"
+      "Compliance auditing",
     ],
     tools: ["OWASP ZAP", "Burp Suite", "Nmap", "Metasploit", "Wireshark"],
     timeline: "1-3 weeks",
-    urgency: "Priority"
+    urgency: "Priority",
   },
   {
     id: 2,
     title: "Performance Investigation",
-    description: "Deep dive analysis to identify bottlenecks and optimization opportunities",
+    description:
+      "Deep dive analysis to identify bottlenecks and optimization opportunities",
     icon: FaChartBar,
     color: "from-blue-500 to-cyan-500",
     capabilities: [
@@ -60,16 +62,23 @@ const investigationServices: InvestigationService[] = [
       "Database optimization",
       "Network analysis",
       "Memory leak detection",
-      "Load testing"
+      "Load testing",
     ],
-    tools: ["New Relic", "DataDog", "Chrome DevTools", "JProfiler", "Apache JMeter"],
+    tools: [
+      "New Relic",
+      "DataDog",
+      "Chrome DevTools",
+      "JProfiler",
+      "Apache JMeter",
+    ],
     timeline: "1-2 weeks",
-    urgency: "Standard"
+    urgency: "Standard",
   },
   {
     id: 3,
     title: "Code Quality Audit",
-    description: "Thorough examination of codebase for quality, maintainability, and best practices",
+    description:
+      "Thorough examination of codebase for quality, maintainability, and best practices",
     icon: FaCode,
     color: "from-green-500 to-teal-500",
     capabilities: [
@@ -77,16 +86,17 @@ const investigationServices: InvestigationService[] = [
       "Architecture review",
       "Technical debt assessment",
       "Code smell detection",
-      "Documentation review"
+      "Documentation review",
     ],
     tools: ["SonarQube", "ESLint", "CodeClimate", "Checkmarx", "Veracode"],
     timeline: "1-2 weeks",
-    urgency: "Standard"
+    urgency: "Standard",
   },
   {
     id: 4,
     title: "Bug Investigation & Root Cause Analysis",
-    description: "Systematic investigation to identify, reproduce, and resolve complex issues",
+    description:
+      "Systematic investigation to identify, reproduce, and resolve complex issues",
     icon: FaBug,
     color: "from-purple-500 to-pink-500",
     capabilities: [
@@ -94,16 +104,17 @@ const investigationServices: InvestigationService[] = [
       "Log analysis",
       "Debugging sessions",
       "Environment comparison",
-      "Fix validation"
+      "Fix validation",
     ],
     tools: ["Sentry", "LogRocket", "Bugsnag", "Rollbar", "Splunk"],
     timeline: "3-7 days",
-    urgency: "Emergency"
+    urgency: "Emergency",
   },
   {
     id: 5,
     title: "Data Integrity Investigation",
-    description: "Comprehensive analysis of data quality, consistency, and integrity issues",
+    description:
+      "Comprehensive analysis of data quality, consistency, and integrity issues",
     icon: FaDatabase,
     color: "from-indigo-500 to-purple-500",
     capabilities: [
@@ -111,16 +122,23 @@ const investigationServices: InvestigationService[] = [
       "Consistency checks",
       "Migration verification",
       "Backup integrity",
-      "Corruption detection"
+      "Corruption detection",
     ],
-    tools: ["SQL Profiler", "MongoDB Compass", "Tableau", "Apache Spark", "Pandas"],
+    tools: [
+      "SQL Profiler",
+      "MongoDB Compass",
+      "Tableau",
+      "Apache Spark",
+      "Pandas",
+    ],
     timeline: "1-3 weeks",
-    urgency: "Priority"
+    urgency: "Priority",
   },
   {
     id: 6,
     title: "Digital Forensics",
-    description: "Professional investigation of digital incidents and evidence collection",
+    description:
+      "Professional investigation of digital incidents and evidence collection",
     icon: FaUserSecret,
     color: "from-gray-600 to-gray-800",
     capabilities: [
@@ -128,33 +146,43 @@ const investigationServices: InvestigationService[] = [
       "Evidence preservation",
       "Timeline reconstruction",
       "Malware analysis",
-      "Legal compliance"
+      "Legal compliance",
     ],
     tools: ["Autopsy", "Volatility", "Wireshark", "YARA", "Sleuth Kit"],
     timeline: "1-4 weeks",
-    urgency: "Emergency"
-  }
+    urgency: "Emergency",
+  },
 ];
 
 const InvestigationServices: React.FC = () => {
   const [activeService, setActiveService] = useState<number>(1);
-  const [selectedUrgency, setSelectedUrgency] = useState<string>('All');
+  const [selectedUrgency, setSelectedUrgency] = useState<string>("All");
 
-  const filteredServices = selectedUrgency === 'All' 
-    ? investigationServices 
-    : investigationServices.filter(service => service.urgency === selectedUrgency);
+  const filteredServices =
+    selectedUrgency === "All"
+      ? investigationServices
+      : investigationServices.filter(
+          (service) => service.urgency === selectedUrgency,
+        );
 
   const getUrgencyColor = (urgency: string) => {
     switch (urgency) {
-      case 'Emergency': return 'text-red-400 bg-red-500/20';
-      case 'Priority': return 'text-yellow-400 bg-yellow-500/20';
-      case 'Standard': return 'text-green-400 bg-green-500/20';
-      default: return 'text-gray-400 bg-gray-500/20';
+      case "Emergency":
+        return "text-red-400 bg-red-500/20";
+      case "Priority":
+        return "text-yellow-400 bg-yellow-500/20";
+      case "Standard":
+        return "text-green-400 bg-green-500/20";
+      default:
+        return "text-gray-400 bg-gray-500/20";
     }
   };
 
   return (
-    <section id="investigation" className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
+    <section
+      id="investigation"
+      className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white"
+    >
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -168,9 +196,10 @@ const InvestigationServices: React.FC = () => {
             Investigation & Research
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Professional digital investigation services to uncover issues, analyze problems, 
-            and provide actionable insights. From security breaches to performance bottlenecks, 
-            I help you get to the bottom of complex technical challenges.
+            Professional digital investigation services to uncover issues,
+            analyze problems, and provide actionable insights. From security
+            breaches to performance bottlenecks, I help you get to the bottom of
+            complex technical challenges.
           </p>
         </motion.div>
 
@@ -181,32 +210,32 @@ const InvestigationServices: React.FC = () => {
               icon: FaEye,
               title: "Observe",
               description: "Initial assessment and data gathering",
-              step: "01"
+              step: "01",
             },
             {
               icon: FaMicroscope,
               title: "Analyze",
               description: "Deep dive investigation using specialized tools",
-              step: "02"
+              step: "02",
             },
             {
               icon: FaSearch,
               title: "Investigate",
               description: "Systematic exploration of potential causes",
-              step: "03"
+              step: "03",
             },
             {
               icon: FaFileAlt,
               title: "Document",
               description: "Comprehensive reporting of findings",
-              step: "04"
+              step: "04",
             },
             {
               icon: FaCheckCircle,
               title: "Resolve",
               description: "Actionable recommendations and solutions",
-              step: "05"
-            }
+              step: "05",
+            },
           ].map((process, index) => (
             <motion.div
               key={index}
@@ -232,14 +261,14 @@ const InvestigationServices: React.FC = () => {
         {/* Urgency Filter */}
         <div className="flex justify-center mb-12">
           <div className="flex bg-white/10 rounded-full p-1 backdrop-blur-sm">
-            {['All', 'Emergency', 'Priority', 'Standard'].map((urgency) => (
+            {["All", "Emergency", "Priority", "Standard"].map((urgency) => (
               <button
                 key={urgency}
                 onClick={() => setSelectedUrgency(urgency)}
                 className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
                   selectedUrgency === urgency
-                    ? 'bg-white text-gray-900'
-                    : 'text-white hover:bg-white/20'
+                    ? "bg-white text-gray-900"
+                    : "text-white hover:bg-white/20"
                 }`}
               >
                 {urgency}
@@ -263,19 +292,23 @@ const InvestigationServices: React.FC = () => {
               layout
             >
               <div className="flex justify-between items-start mb-4">
-                <div className={`w-14 h-14 rounded-full bg-gradient-to-r ${service.color} flex items-center justify-center`}>
+                <div
+                  className={`w-14 h-14 rounded-full bg-gradient-to-r ${service.color} flex items-center justify-center`}
+                >
                   <service.icon className="text-xl text-white" />
                 </div>
-                <span className={`px-3 py-1 rounded-full text-xs font-medium ${getUrgencyColor(service.urgency)}`}>
+                <span
+                  className={`px-3 py-1 rounded-full text-xs font-medium ${getUrgencyColor(service.urgency)}`}
+                >
                   {service.urgency}
                 </span>
               </div>
-              
+
               <h3 className="text-xl font-bold mb-3">{service.title}</h3>
               <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                 {service.description}
               </p>
-              
+
               <div className="flex items-center text-sm text-gray-400">
                 <FaClock className="mr-2" />
                 {service.timeline}
@@ -291,107 +324,121 @@ const InvestigationServices: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          {investigationServices.map((service) => (
-            activeService === service.id && (
-              <div key={service.id} className="grid lg:grid-cols-3 gap-8">
-                <div className="lg:col-span-2">
-                  <div className="flex items-center mb-6">
-                    <div className={`w-16 h-16 rounded-full bg-gradient-to-r ${service.color} flex items-center justify-center mr-4`}>
-                      <service.icon className="text-2xl text-white" />
+          {investigationServices.map(
+            (service) =>
+              activeService === service.id && (
+                <div key={service.id} className="grid lg:grid-cols-3 gap-8">
+                  <div className="lg:col-span-2">
+                    <div className="flex items-center mb-6">
+                      <div
+                        className={`w-16 h-16 rounded-full bg-gradient-to-r ${service.color} flex items-center justify-center mr-4`}
+                      >
+                        <service.icon className="text-2xl text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-bold">{service.title}</h3>
+                        <span
+                          className={`px-3 py-1 rounded-full text-xs font-medium ${getUrgencyColor(service.urgency)}`}
+                        >
+                          {service.urgency} Response
+                        </span>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-2xl font-bold">{service.title}</h3>
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${getUrgencyColor(service.urgency)}`}>
-                        {service.urgency} Response
-                      </span>
-                    </div>
-                  </div>
-                  
-                  <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-                  
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="bg-white/5 rounded-xl p-4">
-                      <h4 className="font-bold mb-3 text-yellow-400 flex items-center">
-                        <FaCheckCircle className="mr-2" />
-                        Capabilities
-                      </h4>
-                      <ul className="space-y-2">
-                        {service.capabilities.map((capability, index) => (
-                          <li key={index} className="flex items-center text-sm">
-                            <div className="w-2 h-2 bg-yellow-400 rounded-full mr-3 flex-shrink-0" />
-                            {capability}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    
-                    <div className="bg-white/5 rounded-xl p-4">
-                      <h4 className="font-bold mb-3 text-green-400 flex items-center">
-                        <FaCode className="mr-2" />
-                        Tools & Technologies
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {service.tools.map((tool, index) => (
-                          <span
-                            key={index}
-                            className="px-3 py-1 bg-white/10 rounded-full text-xs font-medium"
-                          >
-                            {tool}
-                          </span>
-                        ))}
+
+                    <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+                      {service.description}
+                    </p>
+
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div className="bg-white/5 rounded-xl p-4">
+                        <h4 className="font-bold mb-3 text-yellow-400 flex items-center">
+                          <FaCheckCircle className="mr-2" />
+                          Capabilities
+                        </h4>
+                        <ul className="space-y-2">
+                          {service.capabilities.map((capability, index) => (
+                            <li
+                              key={index}
+                              className="flex items-center text-sm"
+                            >
+                              <div className="w-2 h-2 bg-yellow-400 rounded-full mr-3 flex-shrink-0" />
+                              {capability}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div className="bg-white/5 rounded-xl p-4">
+                        <h4 className="font-bold mb-3 text-green-400 flex items-center">
+                          <FaCode className="mr-2" />
+                          Tools & Technologies
+                        </h4>
+                        <div className="flex flex-wrap gap-2">
+                          {service.tools.map((tool, index) => (
+                            <span
+                              key={index}
+                              className="px-3 py-1 bg-white/10 rounded-full text-xs font-medium"
+                            >
+                              {tool}
+                            </span>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                
-                <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-6 border border-white/20">
-                  <h4 className="text-xl font-bold mb-6 text-center">Investigation Package</h4>
-                  
-                  <div className="space-y-4 mb-6">
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-300">Response Time:</span>
-                      <span className="font-semibold text-yellow-400">{service.timeline}</span>
+
+                  <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-6 border border-white/20">
+                    <h4 className="text-xl font-bold mb-6 text-center">
+                      Investigation Package
+                    </h4>
+
+                    <div className="space-y-4 mb-6">
+                      <div className="flex justify-between items-center">
+                        <span className="text-gray-300">Response Time:</span>
+                        <span className="font-semibold text-yellow-400">
+                          {service.timeline}
+                        </span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-gray-300">Urgency Level:</span>
+                        <span
+                          className={`px-2 py-1 rounded text-xs font-medium ${getUrgencyColor(service.urgency)}`}
+                        >
+                          {service.urgency}
+                        </span>
+                      </div>
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-300">Urgency Level:</span>
-                      <span className={`px-2 py-1 rounded text-xs font-medium ${getUrgencyColor(service.urgency)}`}>
-                        {service.urgency}
-                      </span>
+
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center text-sm">
+                        <FaCheckCircle className="text-green-400 mr-2" />
+                        Detailed investigation report
+                      </div>
+                      <div className="flex items-center text-sm">
+                        <FaCheckCircle className="text-green-400 mr-2" />
+                        Actionable recommendations
+                      </div>
+                      <div className="flex items-center text-sm">
+                        <FaCheckCircle className="text-green-400 mr-2" />
+                        Follow-up consultation
+                      </div>
+                      <div className="flex items-center text-sm">
+                        <FaCheckCircle className="text-green-400 mr-2" />
+                        Documentation & evidence
+                      </div>
                     </div>
+
+                    <motion.button
+                      className={`w-full bg-gradient-to-r ${service.color} text-white py-3 px-6 rounded-xl font-bold hover:opacity-90 transition-all duration-300`}
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      Start Investigation
+                    </motion.button>
                   </div>
-                  
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-center text-sm">
-                      <FaCheckCircle className="text-green-400 mr-2" />
-                      Detailed investigation report
-                    </div>
-                    <div className="flex items-center text-sm">
-                      <FaCheckCircle className="text-green-400 mr-2" />
-                      Actionable recommendations
-                    </div>
-                    <div className="flex items-center text-sm">
-                      <FaCheckCircle className="text-green-400 mr-2" />
-                      Follow-up consultation
-                    </div>
-                    <div className="flex items-center text-sm">
-                      <FaCheckCircle className="text-green-400 mr-2" />
-                      Documentation & evidence
-                    </div>
-                  </div>
-                  
-                  <motion.button
-                    className={`w-full bg-gradient-to-r ${service.color} text-white py-3 px-6 rounded-xl font-bold hover:opacity-90 transition-all duration-300`}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    Start Investigation
-                  </motion.button>
                 </div>
-              </div>
-            )
-          ))}
+              ),
+          )}
         </motion.div>
 
         {/* Emergency Contact */}
@@ -403,9 +450,12 @@ const InvestigationServices: React.FC = () => {
           viewport={{ once: true }}
         >
           <FaExclamationTriangle className="text-4xl mb-4 mx-auto" />
-          <h3 className="text-3xl font-bold mb-4">Emergency Investigation Services</h3>
+          <h3 className="text-3xl font-bold mb-4">
+            Emergency Investigation Services
+          </h3>
           <p className="text-xl mb-6 opacity-90">
-            Critical security incident or system failure? Get immediate expert assistance.
+            Critical security incident or system failure? Get immediate expert
+            assistance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.button

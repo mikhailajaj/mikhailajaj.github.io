@@ -4,7 +4,15 @@ description: "Learn how to build robust, scalable data engineering pipelines usi
 date: "2024-01-05"
 author: "Mikhail Ajaj"
 category: "Data Engineering"
-tags: ["Data Engineering", "ETL", "Apache Airflow", "Python", "Data Pipeline", "Analytics"]
+tags:
+  [
+    "Data Engineering",
+    "ETL",
+    "Apache Airflow",
+    "Python",
+    "Data Pipeline",
+    "Analytics",
+  ]
 featured: false
 image: "/blog/data-pipeline.svg"
 excerpt: "Discover how to design and implement modern data engineering pipelines that transform raw data into actionable business insights."
@@ -61,7 +69,7 @@ dag = DAG(
 def extract_sales_data(**context):
     """Extract sales data from source systems"""
     execution_date = context['execution_date']
-    
+
     # Connect to source database
     import psycopg2
     conn = psycopg2.connect(
@@ -70,10 +78,10 @@ def extract_sales_data(**context):
         user=os.environ['DB_USER'],
         password=os.environ['DB_PASSWORD']
     )
-    
+
     # Extract data for the execution date
     query = """
-    SELECT 
+    SELECT
         order_id,
         customer_id,
         product_id,
@@ -81,44 +89,44 @@ def extract_sales_data(**context):
         price,
         order_date,
         created_at
-    FROM sales_orders 
+    FROM sales_orders
     WHERE DATE(created_at) = %s
     """
-    
+
     df = pd.read_sql(query, conn, params=[execution_date.date()])
-    
+
     # Save to staging area
     staging_path = f"s3://data-lake/staging/sales/{execution_date.strftime('%Y/%m/%d')}/sales_data.parquet"
     df.to_parquet(staging_path)
-    
+
     return staging_path
 
 def transform_sales_data(**context):
     """Transform and clean sales data"""
     staging_path = context['task_instance'].xcom_pull(task_ids='extract_sales_data')
-    
+
     # Load data from staging
     df = pd.read_parquet(staging_path)
-    
+
     # Data cleaning and transformation
     df = df.dropna()  # Remove null values
     df['total_amount'] = df['quantity'] * df['price']
     df['order_date'] = pd.to_datetime(df['order_date'])
-    
+
     # Add derived columns
     df['year'] = df['order_date'].dt.year
     df['month'] = df['order_date'].dt.month
     df['day'] = df['order_date'].dt.day
     df['weekday'] = df['order_date'].dt.day_name()
-    
+
     # Data validation
     assert df['total_amount'].min() >= 0, "Negative amounts found"
     assert df['quantity'].min() > 0, "Invalid quantities found"
-    
+
     # Save transformed data
     output_path = f"s3://data-lake/processed/sales/{context['execution_date'].strftime('%Y/%m/%d')}/sales_data.parquet"
     df.to_parquet(output_path, partition_cols=['year', 'month'])
-    
+
     return output_path
 
 # Define tasks
@@ -161,7 +169,7 @@ class StreamProcessor:
     def __init__(self, input_topic, output_topic, bootstrap_servers):
         self.input_topic = input_topic
         self.output_topic = output_topic
-        
+
         self.consumer = KafkaConsumer(
             input_topic,
             bootstrap_servers=bootstrap_servers,
@@ -170,42 +178,42 @@ class StreamProcessor:
             enable_auto_commit=True,
             auto_offset_reset='latest'
         )
-        
+
         self.producer = KafkaProducer(
             bootstrap_servers=bootstrap_servers,
             value_serializer=lambda x: json.dumps(x).encode('utf-8')
         )
-        
+
         self.logger = logging.getLogger(__name__)
-    
+
     def process_message(self, message):
         """Process individual message"""
         try:
             # Extract data
             data = message.value
-            
+
             # Data validation
             required_fields = ['user_id', 'event_type', 'timestamp']
             if not all(field in data for field in required_fields):
                 raise ValueError(f"Missing required fields: {required_fields}")
-            
+
             # Data enrichment
             enriched_data = {
                 **data,
                 'processed_at': datetime.utcnow().isoformat(),
                 'processing_version': '1.0'
             }
-            
+
             # Business logic
             if data['event_type'] == 'purchase':
                 enriched_data['category'] = self.categorize_purchase(data)
                 enriched_data['risk_score'] = self.calculate_risk_score(data)
-            
+
             # Send to output topic
             self.producer.send(self.output_topic, enriched_data)
-            
+
             return enriched_data
-            
+
         except Exception as e:
             self.logger.error(f"Error processing message: {e}")
             # Send to dead letter queue
@@ -214,7 +222,7 @@ class StreamProcessor:
                 'error': str(e),
                 'timestamp': datetime.utcnow().isoformat()
             })
-    
+
     def categorize_purchase(self, data):
         """Categorize purchase based on amount and product"""
         amount = data.get('amount', 0)
@@ -224,30 +232,30 @@ class StreamProcessor:
             return 'medium_value'
         else:
             return 'low_value'
-    
+
     def calculate_risk_score(self, data):
         """Calculate fraud risk score"""
         # Simplified risk calculation
         base_score = 0
-        
+
         # Check amount
         amount = data.get('amount', 0)
         if amount > 5000:
             base_score += 30
         elif amount > 1000:
             base_score += 10
-        
+
         # Check time of day
         hour = datetime.fromisoformat(data['timestamp']).hour
         if hour < 6 or hour > 22:
             base_score += 20
-        
+
         return min(base_score, 100)
-    
+
     def run(self):
         """Start processing messages"""
         self.logger.info(f"Starting stream processor for topic: {self.input_topic}")
-        
+
         try:
             for message in self.consumer:
                 self.process_message(message)
@@ -287,9 +295,9 @@ class CustomerAnalyticsETL:
             .config("spark.sql.adaptive.enabled", "true") \
             .config("spark.sql.adaptive.coalescePartitions.enabled", "true") \
             .getOrCreate()
-        
+
         self.logger = logging.getLogger(__name__)
-    
+
     def extract_data(self, date_str):
         """Extract data from various sources"""
         # Customer data
@@ -297,30 +305,30 @@ class CustomerAnalyticsETL:
             .option("header", "true") \
             .option("inferSchema", "true") \
             .csv(f"s3://data-lake/raw/customers/{date_str}/")
-        
+
         # Orders data
         orders_df = self.spark.read \
             .option("header", "true") \
             .option("inferSchema", "true") \
             .csv(f"s3://data-lake/raw/orders/{date_str}/")
-        
+
         # Products data
         products_df = self.spark.read \
             .option("header", "true") \
             .option("inferSchema", "true") \
             .csv(f"s3://data-lake/raw/products/{date_str}/")
-        
+
         return customers_df, orders_df, products_df
-    
+
     def transform_data(self, customers_df, orders_df, products_df):
         """Transform and aggregate data"""
-        
+
         # Clean customer data
         customers_clean = customers_df \
             .filter(col("customer_id").isNotNull()) \
             .filter(col("email").rlike(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$')) \
             .withColumn("registration_date", to_date(col("registration_date"), "yyyy-MM-dd"))
-        
+
         # Clean and enrich orders data
         orders_clean = orders_df \
             .filter(col("order_id").isNotNull()) \
@@ -330,14 +338,14 @@ class CustomerAnalyticsETL:
             .withColumn("order_year", year(col("order_date"))) \
             .withColumn("order_month", month(col("order_date"))) \
             .withColumn("order_quarter", quarter(col("order_date")))
-        
+
         # Join orders with products
         order_details = orders_clean.join(
             products_df.select("product_id", "category", "subcategory"),
             "product_id",
             "left"
         )
-        
+
         # Calculate customer metrics
         customer_metrics = order_details.groupBy("customer_id") \
             .agg(
@@ -349,16 +357,16 @@ class CustomerAnalyticsETL:
                 countDistinct("category").alias("categories_purchased"),
                 collect_set("category").alias("preferred_categories")
             )
-        
+
         # Calculate customer lifetime value
         customer_metrics = customer_metrics \
-            .withColumn("days_as_customer", 
+            .withColumn("days_as_customer",
                        datediff(col("last_order_date"), col("first_order_date"))) \
             .withColumn("customer_lifetime_value",
                        when(col("days_as_customer") > 0,
                             col("total_spent") / col("days_as_customer") * 365)
                        .otherwise(col("total_spent")))
-        
+
         # Customer segmentation
         customer_segments = customer_metrics \
             .withColumn("segment",
@@ -366,7 +374,7 @@ class CustomerAnalyticsETL:
                        .when((col("total_spent") > 500) & (col("total_orders") > 5), "Premium")
                        .when(col("total_orders") > 1, "Regular")
                        .otherwise("New"))
-        
+
         # Join with customer details
         final_df = customers_clean.join(customer_segments, "customer_id", "left") \
             .fillna({
@@ -374,66 +382,66 @@ class CustomerAnalyticsETL:
                 "total_spent": 0.0,
                 "segment": "New"
             })
-        
+
         return final_df
-    
+
     def load_data(self, df, output_path):
         """Load transformed data to destination"""
         df.write \
             .mode("overwrite") \
             .partitionBy("segment", "order_year", "order_month") \
             .parquet(output_path)
-        
+
         # Also save as Delta table for ACID transactions
         df.write \
             .format("delta") \
             .mode("overwrite") \
             .option("overwriteSchema", "true") \
             .save(f"{output_path}_delta")
-    
+
     def run_etl(self, date_str):
         """Run the complete ETL process"""
         try:
             self.logger.info(f"Starting ETL process for date: {date_str}")
-            
+
             # Extract
             customers_df, orders_df, products_df = self.extract_data(date_str)
-            
+
             # Transform
             final_df = self.transform_data(customers_df, orders_df, products_df)
-            
+
             # Data quality checks
             self.validate_data(final_df)
-            
+
             # Load
             output_path = f"s3://data-lake/processed/customer_analytics/{date_str}"
             self.load_data(final_df, output_path)
-            
+
             self.logger.info(f"ETL process completed successfully for date: {date_str}")
-            
+
         except Exception as e:
             self.logger.error(f"ETL process failed: {e}")
             raise
         finally:
             self.spark.stop()
-    
+
     def validate_data(self, df):
         """Perform data quality checks"""
         # Check for null customer IDs
         null_customers = df.filter(col("customer_id").isNull()).count()
         if null_customers > 0:
             raise ValueError(f"Found {null_customers} records with null customer_id")
-        
+
         # Check for negative values
         negative_spent = df.filter(col("total_spent") < 0).count()
         if negative_spent > 0:
             raise ValueError(f"Found {negative_spent} records with negative total_spent")
-        
+
         # Check data freshness
         max_date = df.agg(max("last_order_date")).collect()[0][0]
         if max_date is None:
             raise ValueError("No order dates found in the data")
-        
+
         self.logger.info("Data quality checks passed")
 
 # Usage
@@ -479,20 +487,20 @@ class QualityResult:
 class DataQualityMonitor:
     def __init__(self):
         self.checks: List[QualityCheck] = []
-    
+
     def add_check(self, check: QualityCheck):
         """Add a quality check"""
         self.checks.append(check)
-    
+
     def check_completeness(self, df: pd.DataFrame, column: str, threshold: float) -> QualityResult:
         """Check data completeness (non-null percentage)"""
         non_null_count = df[column].notna().sum()
         total_count = len(df)
         completeness_score = (non_null_count / total_count) * 100 if total_count > 0 else 0
-        
+
         passed = completeness_score >= threshold
         message = f"Completeness: {completeness_score:.2f}% (threshold: {threshold}%)"
-        
+
         return QualityResult(
             check_name=f"completeness_{column}",
             passed=passed,
@@ -500,16 +508,16 @@ class DataQualityMonitor:
             threshold=threshold,
             message=message
         )
-    
+
     def check_uniqueness(self, df: pd.DataFrame, column: str, threshold: float) -> QualityResult:
         """Check data uniqueness (unique values percentage)"""
         unique_count = df[column].nunique()
         total_count = len(df)
         uniqueness_score = (unique_count / total_count) * 100 if total_count > 0 else 0
-        
+
         passed = uniqueness_score >= threshold
         message = f"Uniqueness: {uniqueness_score:.2f}% (threshold: {threshold}%)"
-        
+
         return QualityResult(
             check_name=f"uniqueness_{column}",
             passed=passed,
@@ -517,8 +525,8 @@ class DataQualityMonitor:
             threshold=threshold,
             message=message
         )
-    
-    def check_validity(self, df: pd.DataFrame, column: str, threshold: float, 
+
+    def check_validity(self, df: pd.DataFrame, column: str, threshold: float,
                       validation_func=None) -> QualityResult:
         """Check data validity using custom validation function"""
         if validation_func is None:
@@ -526,13 +534,13 @@ class DataQualityMonitor:
             valid_count = df[column].apply(lambda x: pd.notna(x) and isinstance(x, (int, float))).sum()
         else:
             valid_count = df[column].apply(validation_func).sum()
-        
+
         total_count = len(df)
         validity_score = (valid_count / total_count) * 100 if total_count > 0 else 0
-        
+
         passed = validity_score >= threshold
         message = f"Validity: {validity_score:.2f}% (threshold: {threshold}%)"
-        
+
         return QualityResult(
             check_name=f"validity_{column}",
             passed=passed,
@@ -540,11 +548,11 @@ class DataQualityMonitor:
             threshold=threshold,
             message=message
         )
-    
+
     def run_checks(self, df: pd.DataFrame) -> List[QualityResult]:
         """Run all configured quality checks"""
         results = []
-        
+
         for check in self.checks:
             if check.check_type == QualityCheckType.COMPLETENESS:
                 result = self.check_completeness(df, check.column, check.threshold)
@@ -554,16 +562,16 @@ class DataQualityMonitor:
                 result = self.check_validity(df, check.column, check.threshold)
             else:
                 continue
-            
+
             results.append(result)
-        
+
         return results
-    
+
     def generate_report(self, results: List[QualityResult]) -> Dict[str, Any]:
         """Generate quality report"""
         total_checks = len(results)
         passed_checks = sum(1 for r in results if r.passed)
-        
+
         report = {
             "timestamp": pd.Timestamp.now().isoformat(),
             "total_checks": total_checks,
@@ -581,7 +589,7 @@ class DataQualityMonitor:
                 for r in results
             ]
         }
-        
+
         return report
 
 # Usage example
@@ -637,6 +645,7 @@ Modern data engineering pipelines require careful consideration of multiple fact
 5. **Maintainability** - Write clean, documented, and testable code
 
 Key technologies and practices:
+
 - **Apache Airflow** for workflow orchestration
 - **Apache Spark** for large-scale data processing
 - **Apache Kafka** for real-time streaming

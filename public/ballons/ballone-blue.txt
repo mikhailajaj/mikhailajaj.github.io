@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="450" viewBox="0 0 300 450" role="img" aria-label="Idealized wide-top narrow-bottom balloon">
+  <defs>
+    <radialGradient id="gMain" cx="35%" cy="28%" r="70%">
+      <stop offset="0%"  stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="20%" stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="60%" stop-color="#ff6b6b" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#c43030" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="gRim" x1="0" x2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="fShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="b"/>
+      <feOffset in="b" dx="0" dy="12" result="o"/>
+      <feMerge><feMergeNode in="o"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- ground shadow -->
+  <ellipse cx="150" cy="400" rx="70" ry="12" fill="#000" opacity="0.12"/>
+
+  <!-- balloon body -->
+  <g filter="url(#fShadow)">
+    <path d="
+      M150 40
+      C215 40, 255 115, 240 185
+      C225 255, 180 310, 155 320
+      C152 321, 148 321, 145 320
+      C120 310, 75 255, 60 185
+      C45 115, 85 40, 150 40
+      Z
+    " fill="url(#gMain)" stroke="#a92323" stroke-width="2"/>
+
+    <!-- rim highlight -->
+    <path d="
+      M148 48
+      C195 48, 230 115, 220 175
+      C210 215, 175 255, 150 255
+    " fill="none" stroke="url(#gRim)" stroke-width="12" stroke-linecap="round" opacity="0.22"/>
+
+    <!-- highlight shapes -->
+    <ellipse cx="115" cy="110" rx="26" ry="44" transform="rotate(-18 115 110)" fill="white" opacity="0.26"/>
+    <ellipse cx="130" cy="88" rx="9" ry="14" transform="rotate(-18 130 88)" fill="white" opacity="0.75"/>
+  </g>
+
+  <!-- knot -->
+  <path d="M150 320 L158 338 L142 338 Z" fill="#8a1d1d"/>
+
+  <!-- string -->
+  <path d="M152 338 L152 420" stroke="#333" stroke-width="1.6" stroke-linecap="round"/>
+</svg>

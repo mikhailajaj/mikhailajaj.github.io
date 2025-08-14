@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import { FaRocket } from 'react-icons/fa';
+import React from "react";
+import Link from "next/link";
+import { FaRocket } from "react-icons/fa";
 
 interface ServiceCTAProps {
   title: string;
@@ -11,13 +11,13 @@ interface ServiceCTAProps {
   secondaryActionLink?: string;
 }
 
-const ServiceCTA: React.FC<ServiceCTAProps> = ({ 
-  title, 
-  description, 
-  primaryAction, 
+const ServiceCTA: React.FC<ServiceCTAProps> = ({
+  title,
+  description,
+  primaryAction,
   secondaryAction,
-  primaryActionLink = '/#contact',
-  secondaryActionLink = '/services'
+  primaryActionLink = "/#contact",
+  secondaryActionLink = "/services",
 }) => {
   return (
     <section className="py-20 bg-gray-50 dark:bg-gray-800">

@@ -1,0 +1,77 @@
+{
+  "manualVersion": "2.1.0",
+  "lastUpdated": "2024-12-19",
+  "versionHistory": "See manual/version-history.json for complete version tracking",
+  "projectOverview": {
+    "name": "Mikhail Ajaj Portfolio",
+    "description": "A modern, multi-domain portfolio showcasing expertise in Full-Stack Development, Cloud Engineering, Data Analytics, UX/UI Design, and Technical Consulting",
+    "architecture": {
+      "framework": "Next.js 15.4.1",
+      "language": "TypeScript",
+      "styling": "Tailwind CSS",
+      "animations": "Framer Motion",
+      "deployment": "Vercel/GitHub Pages"
+    },
+    "keyFeatures": [
+      "Multi-domain expertise showcase",
+      "Interactive animations and micro-interactions",
+      "Responsive design with mobile optimization",
+      "Dark/light theme with domain-specific theming",
+      "Progressive Web App capabilities",
+      "Accessibility-first design (WCAG 2.1 AA)",
+      "Performance optimized with lazy loading",
+      "SEO optimized with static generation"
+    ],
+    "projectStructure": {
+      "app/": "Next.js 15+ app directory with domain-aware routing and layouts",
+      "components/": "Feature-first organized React components with atomic design hierarchy",
+      "lib/": "Business logic, utilities, contexts, and services organized by feature",
+      "data/": "Static data, schemas, and content management with type safety",
+      "public/": "Static assets, images, icons, and patterns organized by domain",
+      "hooks/": "Custom React hooks for state management and side effects",
+      "types/": "TypeScript type definitions and schema validation",
+      "docs/": "Comprehensive project documentation and architectural guides",
+      "manual/": "Technical manual with system patterns and troubleshooting guides"
+    },
+    "systemPatterns": {
+      "architecture": "Domain-driven design with feature-first organization",
+      "dataFlow": "Unidirectional flow with context-based state management",
+      "navigation": "Domain-aware navigation with accessibility-first design",
+      "theming": "Multi-layer theme system with domain-specific customization",
+      "performance": "Optimized with lazy loading, code splitting, and monitoring",
+      "accessibility": "Universal Accessibility System with WCAG 2.1 AA compliance and cognitive optimization"
+    },
+    "domains": [
+      {
+        "name": "Full-Stack Development",
+        "route": "/full-stack",
+        "color": "blue",
+        "technologies": ["React", "Next.js", "Node.js", "TypeScript"]
+      },
+      {
+        "name": "Cloud Engineering",
+        "route": "/cloud-engineering", 
+        "color": "teal",
+        "technologies": ["AWS", "Azure", "Docker", "Kubernetes"]
+      },
+      {
+        "name": "Data Analytics",
+        "route": "/data-analytics",
+        "color": "purple", 
+        "technologies": ["Python", "SQL", "Power BI", "Machine Learning"]
+      },
+      {
+        "name": "UX/UI Design",
+        "route": "/ux-ui-design",
+        "color": "pink",
+        "technologies": ["Figma", "Design Systems", "User Research"]
+      },
+      {
+        "name": "Technical Consulting",
+        "route": "/technical-consulting",
+        "color": "green",
+        "technologies": ["Architecture", "Strategy", "Process Optimization"]
+      }
+    ]
+  }
+}

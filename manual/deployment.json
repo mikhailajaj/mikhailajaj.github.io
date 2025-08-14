@@ -1,0 +1,153 @@
+{
+  "deployment": {
+    "manualVersion": "2.1.0",
+    "lastUpdated": "2024-12-19",
+    "platforms": {
+      "primary": {
+        "platform": "Vercel",
+        "url": "https://mikhailajaj.vercel.app",
+        "features": [
+          "Automatic deployments from Git",
+          "Preview deployments for PRs",
+          "Edge network CDN",
+          "Serverless functions",
+          "Analytics and monitoring"
+        ],
+        "configuration": {
+          "file": "vercel.json",
+          "settings": {
+            "framework": "nextjs",
+            "buildCommand": "npm run build",
+            "outputDirectory": ".next",
+            "installCommand": "npm install"
+          }
+        }
+      },
+      "secondary": {
+        "platform": "GitHub Pages",
+        "url": "https://mikhailajaj.github.io",
+        "features": [
+          "Static site hosting",
+          "Custom domain support",
+          "GitHub Actions integration",
+          "Free hosting for public repos"
+        ],
+        "workflow": ".github/workflows/nextjs.yml"
+      }
+    },
+    "buildProcess": {
+      "commands": {
+        "development": "npm run dev",
+        "build": "npm run build",
+        "start": "npm run start",
+        "lint": "npm run lint",
+        "typeCheck": "npm run type-check"
+      },
+      "optimization": {
+        "staticGeneration": "Pre-render pages at build time",
+        "imageOptimization": "Next.js Image component with WebP",
+        "bundleAnalysis": "Webpack bundle analyzer",
+        "treeshaking": "Remove unused code"
+      },
+      "validation": {
+        "typescript": "Type checking during build",
+        "eslint": "Code quality and style checking",
+        "testing": "Unit and integration tests",
+        "accessibility": "Automated a11y testing"
+      }
+    },
+    "environment": {
+      "variables": {
+        "NODE_ENV": "production | development | test",
+        "NEXT_PUBLIC_SITE_URL": "Public site URL for SEO",
+        "NEXT_PUBLIC_GA_ID": "Google Analytics tracking ID",
+        "ANALYZE": "Enable bundle analysis"
+      },
+      "secrets": {
+        "management": "Vercel environment variables",
+        "security": "No sensitive data in client bundle",
+        "validation": "Runtime environment validation"
+      }
+    },
+    "performance": {
+      "metrics": {
+        "lighthouse": "Performance, accessibility, SEO scores",
+        "webVitals": "Core Web Vitals monitoring",
+        "bundleSize": "JavaScript bundle size tracking"
+      },
+      "optimization": {
+        "caching": "Static asset caching with CDN",
+        "compression": "Gzip and Brotli compression",
+        "preloading": "Critical resource preloading",
+        "lazyLoading": "Component and image lazy loading"
+      }
+    },
+    "monitoring": {
+      "analytics": {
+        "platform": "Google Analytics 4",
+        "metrics": ["Page views", "User engagement", "Conversion tracking"],
+        "privacy": "GDPR compliant tracking"
+      },
+      "errors": {
+        "tracking": "Client-side error reporting",
+        "logging": "Server-side error logs",
+        "alerts": "Critical error notifications"
+      },
+      "performance": {
+        "realUserMonitoring": "RUM data collection",
+        "syntheticMonitoring": "Automated performance testing",
+        "alerts": "Performance degradation alerts"
+      }
+    },
+    "security": {
+      "headers": {
+        "csp": "Content Security Policy",
+        "hsts": "HTTP Strict Transport Security",
+        "xframe": "X-Frame-Options protection",
+        "xss": "XSS protection headers"
+      },
+      "dependencies": {
+        "scanning": "Automated vulnerability scanning",
+        "updates": "Regular dependency updates",
+        "audit": "npm audit for security issues"
+      }
+    },
+    "cicd": {
+      "githubActions": {
+        "file": ".github/workflows/nextjs.yml",
+        "triggers": ["Push to main", "Pull requests"],
+        "steps": [
+          "Checkout code",
+          "Setup Node.js",
+          "Install dependencies", 
+          "Run tests",
+          "Build application",
+          "Deploy to GitHub Pages"
+        ]
+      },
+      "vercel": {
+        "integration": "Automatic deployments",
+        "previews": "PR preview deployments",
+        "rollbacks": "One-click rollback capability"
+      }
+    },
+    "domains": {
+      "custom": {
+        "primary": "mikhailajaj.com (if configured)",
+        "redirects": "www to non-www redirect",
+        "ssl": "Automatic SSL certificate"
+      },
+      "subdomains": {
+        "api": "API endpoints (if needed)",
+        "blog": "Blog subdomain (if separated)",
+        "docs": "Documentation subdomain"
+      }
+    },
+    "backup": {
+      "code": "Git repository with multiple remotes",
+      "content": "Content versioning in Git",
+      "database": "No database - static content only",
+      "assets": "CDN asset backup"
+    }
+  }
+}

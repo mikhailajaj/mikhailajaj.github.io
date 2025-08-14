@@ -1,0 +1,29 @@
+{
+  "personalPhilosophy": {
+    "coreValues": [
+      "Autonomy and self-determination",
+      "Rational decision-making",
+      "Helping others while respecting boundaries",
+      "Ethical consistency",
+      "Personal growth and learning",
+      "Practical wisdom over abstract ideals"
+    ],
+    "alignedPhilosophers": [
+      {
+        "name": "Aristotle",
+        "school": "Virtue Ethics",
+        "keyPrinciples": [
+          "Practical wisdom (phronesis)",
+          "Golden mean - balance between extremes",
+          "Character development through practice",
+          "Eudaimonia - human flourishing"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "version": "2.0",
+    "created": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+    "optimizations": ["caching", "parallel_processing", "error_recovery"]
+  }
+}

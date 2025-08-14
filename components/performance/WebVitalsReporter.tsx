@@ -1,6 +1,6 @@
 "use client";
-import { useEffect } from 'react';
-import { trackWebVitals, logWebVitals } from '@/lib/performance';
+import { useEffect } from "react";
+import { trackWebVitals, logWebVitals } from "@/lib/performance";
 
 /**
  * Component that reports Web Vitals metrics
@@ -11,40 +11,42 @@ export default function WebVitalsReporter() {
     // Dynamically import web-vitals to avoid SSR issues
     const loadWebVitals = async () => {
       try {
-        const { onCLS, onFID, onLCP, onFCP, onTTFB } = await import('web-vitals');
-        
+        const { onCLS, onFID, onLCP, onFCP, onTTFB } = await import(
+          "web-vitals"
+        );
+
         // Register web vitals reporting
-        onCLS(metric => {
+        onCLS((metric) => {
           trackWebVitals(metric);
           logWebVitals(metric);
         });
-        
-        onFID(metric => {
+
+        onFID((metric) => {
           trackWebVitals(metric);
           logWebVitals(metric);
         });
-        
-        onLCP(metric => {
+
+        onLCP((metric) => {
           trackWebVitals(metric);
           logWebVitals(metric);
         });
-        
-        onFCP(metric => {
+
+        onFCP((metric) => {
           trackWebVitals(metric);
           logWebVitals(metric);
         });
-        
-        onTTFB(metric => {
+
+        onTTFB((metric) => {
           trackWebVitals(metric);
           logWebVitals(metric);
         });
       } catch (error) {
-        console.warn('Failed to load web-vitals:', error);
+        console.warn("Failed to load web-vitals:", error);
       }
     };
 
     // Only load web-vitals in the browser
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       loadWebVitals();
     }
   }, []);

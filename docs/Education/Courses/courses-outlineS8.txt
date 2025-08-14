@@ -1,0 +1,508 @@
+DBAS40551
+Business Intelligence and Data Mining	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 42.0
+Credit Value: 3.0
+Credit Value Notes: N/A
+Effective: Fall 2023
+Prerequisites: (DBAS20146 AND MATH37198)
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: N/A
+Program(s): Hon Bach CompSci - Mobile Comp
+Program Coordinator(s): Magdin Stoica
+Course Leader or Contact: El Sayed Mahmoud
+Version: 20230905_01
+Status: Approved (APPR)
+
+Section I Notes: N/A
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+Students learn to capture business intelligence by designing and managing data warehouse and online analytical processing infrastructures using multidimensional database architectures. Students program higher-level functions of a database such as distributed transactions, advanced SQL operations, NoSQL operations and runtime integration working with standard relational data as well as alternative data models like hierarchical data, file streams and geospatial types. Through specialized data models and statistical algorithms students find correlations and trends in large data sets using data mining. Throughout the course, students focus on the security of information systems. Learning is supported by project-based learning, interactive lectures and labs, and hands-on application of database and data warehouse design and management tools including cloud-based tools.
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+This is a Level 2 professional elective in the data analytics course cluster. Level 2 professional elective courses can be selected in terms 6, 7 and 8. Professional elective course offering is subject to enrolment demand. This advanced professional elective course is for students interested in learning advanced topics in database programming, analytics, management, organization and security. Students leverage the knowledge gained in previous courses in the data analytics cluster. The course, through its correlation with other advanced topics, such as intelligent systems, simulation and visualization and prepares students for emerging careers and graduate studies.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of this course students will have demonstrated the ability to derive business intelligence through data mining of big-data stored in multidimensional databases operating in a data warehouse.
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Create database applications using transactions, triggers, runtime integration applied to the Extract-Transform-Load (ETL) process.
+Integrate runtime processing and high-level programming languages in the implementation of stored procedures, transactions and support of advanced data formats such as hierarchical data and geospatial types.
+Differentiate between top-down and bottom-up approaches to data warehouse design and implementation paradigms.
+Evaluate operational processes in data warehouse design and management.
+Build multidimensional models and databases for analytical processing of aggregated transactional information.
+Analyze multidimensional information using Online Analytical processing (OLAP) on Hadoop.
+Ensure the security of information in relational and multidimensional databases.
+Derive business intelligence through data mining using specialized database models and statistical algorithms including big data techniques.
+Compare the complementary uses of data warehousing and big data technologies.
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	Assignments (3 @ 10% each) approx. weeks 4,8,12	30.0%
+ 	Quizzes (5 quizzes @ 3% each) approx. weeks 3,5,9,11,13	15.0%
+ 	Mid-Term Exam approx. week 7	25.0%
+ 	Final Exam approx. week 14	30.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+To pass the course, students must achieve a 50% weighted average across the tests and the exams and at least 50% overall in the course.
+The project portfolio is to be built throughout the term following a project-based learning approach.
+
+Students must submit/complete all assignments, in-class activities and projects by the scheduled due date and write all tests on the specified date/time. Exceptions will only be made under extraordinary circumstances. 
+
+Refer to the School of Applied Computing's Academic Procedures for Evaluations for more details regarding missed work: Procedures for Evaluations
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Challenge Exam
+Notes:  
+Other
+Notes:  PLAR consists of both a Challenge Exam and Project.
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s):
+Course material costs can be found through the Sheridan Bookstore
+ 	Type	Description
+Required	Textbook	Data Mining: A Tutorial-Based Primer, Second Edition, Roiger, R., CRC Press, 2nd Edition, ISBN 9781498763974, 2017
+Optional	Textbook	Business Intelligence, Analytics, and Data Science : A Managerial Perspective, Ramesh S., Dursun D., Efraim T., Pearson, 4th, ISBN 978-0134633282, 2017
+
+Applicable student group(s): Honours Bachelor of Computer Science (Mobile Computing)
+Course Details:
+Module 1: Nature of data, statistical modeling and visualization
+
+Computerized support of managerial decision making
+The relationships among BI, data analytics, data mining and Big data
+Examples of BI applications
+The nature of data as it relates to business intelligence.
+Taxonomy of data
+Data preprocessing
+Statistical modeling for business analytics
+Regression modeling for inferential Statistics
+Data visualization
+Information dashboards
+Module 2: Data Mining techniques
+
+Data mining overview
+Data mining strategies
+Supervising data mining techniques
+Unsupervised learning techniques
+Association rules
+Decision trees
+The K-means algorithm
+The knowledge discovery process
+Tools for knowledge discovery
+Choosing a data mining technique
+Evaluating supervised and unsupervised techniques
+ Module 3: Advanced data mining techniques
+
+Feed-forward neural networks
+Neural network training
+Neural network testing
+Building neural network models with current platforms such as Weka and RapidMiner
+Support vector Machines
+Linear regression analysis
+ Module 4: Business Intelligence and Data warehousing
+
+Data warehousing basic concepts
+Data warehousing architecture
+Operational databases
+Data warehouse design
+Typical OLAP operations
+Multidimensional data models
+Excel Pivot tables for data analytics
+Data integration and the extraction, transformation, and load (ETL) processes
+The problems involved in the development of a data warehouse
+Data Warehousing administration and security
+ Module 5: Big Data Concepts and Tools
+
+Fundamentals of Big Data Analytics
+Big data Technologies such as MapReduce and Hadoop
+Big Data and Data Warehousing
+Big Data Platforms
+Big Data and Stream Analytics
+Application of Stream Analytics
+ Module 6: Text, web, social media Analytics
+
+Text mining overview
+Natural Language Processing
+Sentiment Analysis
+Web mining
+Social Analytics
+ Module 7: Future Trends, Security and Privacy
+
+Internet of Things
+Cloud Computing and Business Analytics
+Location-based Analytics for Organizations
+Information systems security design and principles.
+Issues of Privacy and Ethics
+Attacks and defenses
+Note: The topics within each module are grouped semantically and are not meant to suggest a time sequence. A course plan must be provided by the professor identifying the class-by-class arrangement of topics.
+
+
+
+PROG49332
+Ubiquitous Computing	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 3.0
+Credit Value: 3.0
+Credit Value Notes: N/A
+Effective: Fall 2025
+Prerequisites: (INFO31179 AND PROG34104)
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: N/A
+Program(s): Hon Bach CompSci - Mobile Comp
+Program Coordinator(s): Magdin Stoica
+Course Leader or Contact: Abdul Mustafa
+Version: 20250902_00
+Status: Approved (APPR)
+
+Section I Notes: N/A
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+Students use ubiquitous computing as an advanced mobile computing model of human-computer interaction in which information is processed by everyday objects and activities. Students use Internet of Things (IoT) interconnected computing devices to provide innovative ways to interact along the boundaries between the digital and physical world. Students apply ubiquitous computing paradigms to create advanced mobile computing model of human-computer interaction in which information is processed by everyday objects and activities. Students focus on topics including leading-edge mobile computing devices and applications, mobility management, context-aware computing, ad hoc and wireless sensor networks, smart devices and applications, environments, interactions, and ubiquitous communication. Through interactive lab sessions, lectures, discussion, critique, and assignment experiences students systematically learn how ubiquitous computing can be used to improve people's lives.
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+This required program core course is a culmination of the mobile computing stream of courses. Building on a strong foundation of mobile computing and core computer science, this course presents opportunities for synergy between courses in the final term. Ubiquitous computing prepares students in the development of their thesis or graduation project work and provides students with innovation opportunities upon graduation.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of this course, students will have demonstrated the ability to create ubiquitous computing systems that integrate IoT, wearable computing devices, and machine learning and models of user, task, and environment contextual information.
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Create ubiquitous computing systems that use models of user, task, and environment contextual information.
+Use wearable computing devices that synthesize contextual information in the development of cloud-connected IoT applications.
+Create ubiquitous computing systems that use machine learning to make appropriate inferences, predictions and decisions.
+Assess the security, privacy and ethical implications of ubiquitous computing.
+Develop advanced mobile application systems that leverage smart devices to improve quality of life.
+Compare tagging and sensing algorithms used in ubiquitous computing.
+Create sensor rich environments to support ubiquitous computing systems in the home.
+Develop intelligent ubiquitous applications that connect to SmartHome devices and use Human Computer Interaction (HCI) best practices.
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	Assignments 10 @ 5%	30.0%
+ 	Research Project Paper	15.0%
+ 	Research Project Presentation	5.0%
+ 	UbiComp Topic - Presentation	20.0%
+ 	UbiComp - Quizzes (5 @ 4%)	20.0%
+ 	Ubicomp - Labs	10.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+Students must submit/complete all assignments, in-class activities and projects by the scheduled due date and write all tests/quizzes on the specified date/time. Exceptions will only be made under extraordinary circumstances. 
+
+Refer to the School of Applied Computing's Academic Procedures for Evaluations for more details regarding missed work: Procedures for Evaluations
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Portfolio
+Notes:  
+Other
+Notes:  PLAR consists of both a Portfolio and Project.
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s):
+Course material costs can be found through the Sheridan Bookstore
+ 	Type	Description
+Required	Other	Relevant articles will be selected and provided by the Professor.
+
+Applicable student group(s): Honours Bachelor of Computer Science (Mobile Computing) (PBACS)
+Course Details:
+Module 1: Ubiquitous Computing Foundations
+
+Past, Present and Future
+Overview of IoT, Wearable Computing, Artificial Intelligence and Machine Learning
+Adaptive Systems
+Visions for the Future for Ubiquitous Computing
+Module 2: Challenges
+
+Current Challenges in Ubiquitous Computing
+Technologies, Apps, and Infrastructures
+Human Factors, Security Risks, and Privacy
+Ethical and Legal Considerations
+Module 3: Methods and Tools
+
+Methods and Tools for the Implementation of Ubiquitous Computing Systems
+Methods and Tools for the Analysis and Evaluation of Ubiquitous Computing Systems
+Design Considerations
+Module 4: Context Awareness
+
+Definitions of Contextual Awareness
+Extraction of Meaningful Information from Contexts
+Abstraction Techniques
+Implications to Data Management, Analysis and Evaluation, and Security and Privacy
+Module 5: Sensing and Tagging
+
+Sensor Tags, Form and Function, Strengths and Limitations
+Identifying Ideal Locations for a Ubiquitous Computing Device
+Implications to Data Management, Security and Privacy
+Module 6: Privacy and Security
+
+Security Risks and Issues in Using Ubiquitous Systems and Devices
+Privacy Issues in Using Ubiquitous Computing Systems
+Ethical and Legal Considerations
+Module 7: Wearable Computing
+
+Wearable Computing and Other Smart Devices
+User Profiling, Task Profiling, and Environment Profiling
+Modeling for the Ubiquitous Computing Device's Environment
+Decision Analytics for Smart Devices
+Module 8: Smart Homes
+
+Definitions of Smart Homes
+Usability and Human Computer Interaction (HCI) Considerations
+Current and Future Applications of Artificial Intelligence to Smart Homes
+Design, Efficiency and Implementation Considerations
+Implications to Data Management, Security and Privacy
+Module 9: Smart Cities
+
+Definitions of Smart Cities
+Smart Transportation
+Usability and Human Computer Interaction (HCI) Considerations
+Current and Future Applications of Artificial Intelligence to Smart Cities
+Design, Efficiency and Implementation Considerations
+Implications to Data Management, Security and Privacy
+Module 10: Healthcare
+
+Current and Future Directions of Ubiquitous Computing to Healthcare
+Computer Vision, Augmented/Virtual Reality, Internet of Things, Wearable Computing and Artificial Intelligence and Their Implications to Healthcare Ubiquitous Computing
+Implications to Data Management, Security and Privacy
+Module 11: Artificial Intelligence and Ubiquitous Computing Systems
+
+Classification Algorithms
+Data Collection, Analytics Processing for Predictive Decision Making
+Intelligent Agents
+Remote vs. Local Intelligent System Processing (I.E., Machine Learning Algorithms Executed on a Server (Remote), vs. the Actual Device (Local)
+ 
+
+Note: The topics within each module are grouped semantically and are not meant to suggest a time sequence. A course plan must be provided by the professor identifying the class-by-class arrangement of topics.
+
+
+SYST48557
+Quality Assurance & Software Testing	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 42.0
+Credit Value: 3.0
+Credit Value Notes: N/A
+Effective: Fall 2023
+Prerequisites: SYST30025
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: N/A
+Program(s): Hon Bach CompSci - Mobile Comp
+Program Coordinator(s): Magdin Stoica
+Course Leader or Contact: Cristina Ribeiro
+Version: 20230905_00
+Status: Approved (APPR)
+
+Section I Notes: N/A
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+Students focus on quality assurance, quality factors, and components of a software quality assurance system, integration of quality activities in project lifecycles, software verification, testing processes and techniques. Students learn the principles of verification and validation and how to design and execute an overall project test plan which is integral to the successful development and implementation of all computer systems. Students also learn how to use various black box and white box testing techniques and explore automated testing and test tools. Through a combination of real world case studies, classroom exercises, assignments and a major project, students learn how to design a software test plan for a project.
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+This required senior level course provides a comprehensive foundation of quality assurance, quality factors, and software testing processes, techniques and tools. The course builds on the foundational concepts covered in the Software Engineering course in the previous term and caps the series of software engineering courses. The concepts, skills and knowledge in this course are fundamental to a successful software system created in the Capstone Proposal and Project courses.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of this course students will have demonstrated the ability to create a test plan and the associated tests that can feasibly verify the suitability and robustness of a large software system.
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Compare testing techniques with respect to their practical value.
+Select appropriate testing techniques given specific test objectives.
+Design testing activities appropriate to different software engineering development processes.
+Explain the attribute of software quality, the differences between software testing and quality assurance, and the role of quality assurance in the software development life cycle.
+Apply industry standard formats for documenting test plans and results.
+Discuss how regression testing is used to test programming modifications.
+Construct test cases using Specification Based or Black Box test design techniques.
+Use structure-based or white-box testing techniques.
+Compare the advantages and disadvantages of manual and automated testing given specific testing requirements.
+Describe automated software testing tools.
+Evaluate the relationship between well designed software systems and software testing (Design by Contract, Assertions, and Class Invariants).
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	Quizzes 2x5% (approx. weeks 4,11)	10.0%
+ 	Assignments 4x10% (approx. weeks 3,6,10,12)	40.0%
+ 	Mid-Term Exam (approx. week 7)	25.0%
+ 	Final Exam (approx. week 14)	25.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+To pass the course, students must achieve a 50% weighted average across the tests and the exams and at least 50% overall in the course.
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Challenge Exam
+Notes:  
+Portfolio
+Notes:  PLAR consists of both a Challenge Exam AND Portfolio.
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s):
+Course material costs can be found through the Sheridan Bookstore
+ 	Type	Description
+Required	Textbook	Pragmatic Software Testing, Black, R., Wiley Publishing Inc., 1st ed., ISBN 978-0470127902, 2007
+Optional	Textbook	Software Quality Assurance: From Theory to Implementation, Galin, D., Pearson Education, 1st ed., ISBN 978-0201709452, 2004
+Optional	Textbook	Software Engineering, Sommerville I., Pearson, 10th ed., ISBN 978-0133943030, 2015
+Optional	Textbook	Software Testing: Concepts & Operations, Milli, A. & Tchier, F., Wiley, ISBN 978-1118662878, 2015
+
+Applicable student group(s): Bachelor of Applied Computer Science - Mobile Computing
+Course Details:
+Module 1: Quality Assurance
+
+Definition and role of QA & Software Development Models   
+Test Management organizational structures
+Causes of Software defects                                                
+Testing and Quality
+Capability Maturity Model (CMM)
+ISO9000 
+Module 2: Fundamentals of Software Testing
+
+Black Box Testing
+White Box Testing
+Validation & Verification Testing
+Unit/Integration/System Testing
+Independent Testing
+Acceptance Testing
+Regression Testing
+Static vs Dynamic Testing 
+Module 3: Behavioral Testing
+
+Specification Based or Black Box
+Test Design Techniques
+Use Case Testing
+Equivalence Partitioning Boundary Value Analysis
+Decision Table Testing
+State Transition Testing
+Test Oracles 
+Module 4: Structural Testing
+
+Structure-Based or White-Box Techniques
+Branch and Statement Coverage
+Cyclomatic Complexity
+The Problem of Complete Testing 
+Module 5: Test Scripts
+
+Test Procedures & Scripts
+Developing, executing and maintaining test Scripts. 
+Module 6: Automated Testing
+
+Automated Testing & Software Testing Tools
+Design by Contract, Assertions, and Class Invariants
+Benefits and Realities of using test tools and testing automation 
+Module 7: Test Plan
+
+Test Planning
+Developing a Testing Plan 
+Module 8: Test Documentation
+
+Test Documentation
+System Test Plan Standards
+Analysis and Reporting of Test Results
+Judgement and Risk in Testing

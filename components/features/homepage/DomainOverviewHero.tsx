@@ -1,64 +1,68 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/base/Button';
-import { Card } from '@/components/ui/base/Card';
-import { 
-  FaCode, 
-  FaCloud, 
-  FaChartBar, 
-  FaPalette, 
+import React from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import {
+  FaCode,
+  FaCloud,
+  FaChartBar,
+  FaPalette,
   FaLightbulb,
-  FaArrowRight
-} from 'react-icons/fa';
+  FaArrowRight,
+} from "react-icons/fa";
 
 const domains = [
   {
-    id: 'full-stack',
-    name: 'Full-Stack Development',
-    description: 'End-to-end web applications with React, Node.js, and modern databases',
+    id: "full-stack",
+    name: "Full-Stack Development",
+    description:
+      "End-to-end web applications with React, Node.js, and modern databases",
     icon: <FaCode />,
-    href: '/full-stack',
-    color: 'from-slate-600 to-slate-800',
-    projects: '15+ Projects',
+    href: "/full-stack",
+    color: "from-slate-600 to-slate-800",
+    projects: "15+ Projects",
   },
   {
-    id: 'cloud',
-    name: 'Cloud Engineering',
-    description: 'AWS infrastructure, DevOps automation, and scalable cloud solutions',
+    id: "cloud",
+    name: "Cloud Engineering",
+    description:
+      "AWS infrastructure, DevOps automation, and scalable cloud solutions",
     icon: <FaCloud />,
-    href: '/cloud-engineering',
-    color: 'from-blue-600 to-blue-800',
-    projects: '12+ Projects',
+    href: "/cloud-engineering",
+    color: "from-blue-600 to-blue-800",
+    projects: "12+ Projects",
   },
   {
-    id: 'data',
-    name: 'Data Analytics',
-    description: 'Machine learning, business intelligence, and data visualization',
+    id: "data",
+    name: "Data Analytics",
+    description:
+      "Machine learning, business intelligence, and data visualization",
     icon: <FaChartBar />,
-    href: '/data-analytics',
-    color: 'from-green-600 to-green-800',
-    projects: '8+ Projects',
+    href: "/data-analytics",
+    color: "from-green-600 to-green-800",
+    projects: "8+ Projects",
   },
   {
-    id: 'ux-ui',
-    name: 'UX/UI Design',
-    description: 'User experience design, prototyping, and design system creation',
+    id: "ux-ui",
+    name: "UX/UI Design",
+    description:
+      "User experience design, prototyping, and design system creation",
     icon: <FaPalette />,
-    href: '/ux-ui-design',
-    color: 'from-purple-600 to-purple-800',
-    projects: '10+ Projects',
+    href: "/ux-ui-design",
+    color: "from-purple-600 to-purple-800",
+    projects: "10+ Projects",
   },
   {
-    id: 'consulting',
-    name: 'Technical Consulting',
-    description: 'Strategic technology guidance and digital transformation',
+    id: "consulting",
+    name: "Technical Consulting",
+    description: "Strategic technology guidance and digital transformation",
     icon: <FaLightbulb />,
-    href: '/technical-consulting',
-    color: 'from-orange-600 to-orange-800',
-    projects: '20+ Clients',
+    href: "/technical-consulting",
+    color: "from-orange-600 to-orange-800",
+    projects: "20+ Clients",
   },
 ];
 
@@ -78,15 +82,15 @@ export function DomainOverviewHero() {
               Mikhail Ajaj
             </span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto font-medium">
             Full-Stack Developer, Cloud Engineer & Technical Consultant
           </p>
-          <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
-            Specializing in scalable solutions across five technical domains. 
-            From concept to deployment, I deliver comprehensive technology solutions 
-            that drive business growth and digital transformation.
+          <p className="text-lg text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
+            Specializing in scalable solutions across five technical domains.
+            From concept to deployment, I deliver comprehensive technology
+            solutions that drive business growth and digital transformation.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
               <Button size="lg" variant="gradient">
@@ -116,30 +120,30 @@ export function DomainOverviewHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 * index }}
             >
-              <Card 
-                variant="interactive" 
+              <Card
+                variant="interactive"
                 className="h-full bg-black/40 backdrop-blur-sm border-white/10 hover:border-white/20 group"
               >
                 <Link href={domain.href} className="block h-full p-6">
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${domain.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200`}>
-                    <span className="text-white text-xl">
-                      {domain.icon}
-                    </span>
+                  <div
+                    className={`w-12 h-12 rounded-lg bg-gradient-to-r ${domain.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200`}
+                  >
+                    <span className="text-white text-xl">{domain.icon}</span>
                   </div>
-                  
+
                   <h3 className="text-white font-semibold text-lg mb-2 group-hover:text-blue-400 transition-colors">
                     {domain.name}
                   </h3>
-                  
-                  <p className="text-gray-400 text-sm mb-4 line-clamp-3">
+
+                  <p className="text-muted-foreground text-sm mb-4 line-clamp-3 leading-relaxed">
                     {domain.description}
                   </p>
-                  
+
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-gray-500">
+                    <span className="text-xs text-muted-foreground font-medium">
                       {domain.projects}
                     </span>
-                    <FaArrowRight className="text-gray-500 group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-200" />
+                    <FaArrowRight className="text-muted-foreground group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-200" />
                   </div>
                 </Link>
               </Card>
@@ -155,16 +159,16 @@ export function DomainOverviewHero() {
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           {[
-            { label: 'Projects Completed', value: '50+' },
-            { label: 'Years Experience', value: '5+' },
-            { label: 'Technologies Mastered', value: '25+' },
-            { label: 'Client Satisfaction', value: '98%' },
+            { label: "Projects Completed", value: "50+" },
+            { label: "Years Experience", value: "5+" },
+            { label: "Technologies Mastered", value: "25+" },
+            { label: "Client Satisfaction", value: "98%" },
           ].map((stat, index) => (
             <div key={stat.label} className="text-center">
               <div className="text-2xl md:text-3xl font-bold text-white mb-2">
                 {stat.value}
               </div>
-              <div className="text-sm text-gray-400">
+              <div className="text-sm text-muted-foreground font-medium">
                 {stat.label}
               </div>
             </div>

@@ -1,5 +1,5 @@
 // Enhanced Animation System for Portfolio
-import { Variants } from 'framer-motion';
+import { Variants } from "framer-motion";
 
 // Easing functions for consistent animation feel
 export const easings = {
@@ -115,12 +115,12 @@ export const hoverAnimations: Record<string, Variants> = {
     },
   },
   glow: {
-    rest: { 
-      boxShadow: '0 0 0 rgba(59, 130, 246, 0)',
+    rest: {
+      boxShadow: "0 0 0 rgba(59, 130, 246, 0)",
       scale: 1,
     },
     hover: {
-      boxShadow: '0 20px 40px rgba(59, 130, 246, 0.3)',
+      boxShadow: "0 20px 40px rgba(59, 130, 246, 0.3)",
       scale: 1.05,
       transition: {
         duration: durations.fast,
@@ -139,17 +139,17 @@ export const hoverAnimations: Record<string, Variants> = {
     },
   },
   shimmer: {
-    rest: { 
-      background: 'linear-gradient(90deg, transparent, transparent)',
+    rest: {
+      background: "linear-gradient(90deg, transparent, transparent)",
     },
     hover: {
       background: [
-        'linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)',
-        'linear-gradient(90deg, transparent, transparent)',
+        "linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)",
+        "linear-gradient(90deg, transparent, transparent)",
       ],
       transition: {
         duration: 0.6,
-        ease: 'linear',
+        ease: "linear",
       },
     },
   },
@@ -229,7 +229,7 @@ export const loadingAnimations: Record<string, Variants> = {
       transition: {
         duration: 1.5,
         repeat: Infinity,
-        ease: 'easeInOut',
+        ease: "easeInOut",
       },
     },
   },
@@ -239,7 +239,7 @@ export const loadingAnimations: Record<string, Variants> = {
       transition: {
         duration: 0.6,
         repeat: Infinity,
-        ease: 'easeInOut',
+        ease: "easeInOut",
       },
     },
   },
@@ -249,7 +249,7 @@ export const loadingAnimations: Record<string, Variants> = {
       transition: {
         duration: 1,
         repeat: Infinity,
-        ease: 'linear',
+        ease: "linear",
       },
     },
   },
@@ -259,7 +259,7 @@ export const loadingAnimations: Record<string, Variants> = {
 export const createViewportAnimation = (
   animation: Variants,
   threshold = 0.1,
-  once = true
+  once = true,
 ) => ({
   ...animation,
   viewport: { once, amount: threshold },
@@ -269,7 +269,7 @@ export const createViewportAnimation = (
 export const createStaggeredAnimation = (
   childAnimation: Variants,
   staggerDelay = 0.1,
-  containerDelay = 0
+  containerDelay = 0,
 ) => ({
   container: {
     hidden: { opacity: 0 },
@@ -288,7 +288,11 @@ export const createStaggeredAnimation = (
 export const presetAnimations = {
   heroTitle: createViewportAnimation(fadeAnimations.fadeInUp, 0.3),
   heroSubtitle: createViewportAnimation(fadeAnimations.fadeInUp, 0.3),
-  cardGrid: createStaggeredAnimation(scrollAnimations.slideInFromBottom, 0.15, 0.2),
+  cardGrid: createStaggeredAnimation(
+    scrollAnimations.slideInFromBottom,
+    0.15,
+    0.2,
+  ),
   skillIcons: createStaggeredAnimation(fadeAnimations.fadeInScale, 0.1, 0.3),
   projectCards: createStaggeredAnimation(scrollAnimations.scaleIn, 0.2, 0.1),
 };

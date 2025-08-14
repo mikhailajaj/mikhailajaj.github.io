@@ -1,0 +1,175 @@
+{
+  "manual": {
+    "title": "Mikhail Ajaj Portfolio - Technical Manual",
+    "version": "2.0.0",
+    "lastUpdated": "2024-12-19",
+    "description": "Comprehensive technical documentation with system patterns and architectural blueprints",
+    "sections": [
+      {
+        "id": "overview",
+        "title": "Project Overview",
+        "file": "overview.json",
+        "description": "High-level project architecture, technology stack, and system patterns"
+      },
+      {
+        "id": "patterns",
+        "title": "System Patterns",
+        "subsections": [
+          {
+            "id": "system-architecture",
+            "title": "System Architecture",
+            "file": "patterns/system-architecture.json",
+            "description": "Architectural patterns, component hierarchy, and design principles"
+          },
+          {
+            "id": "data-flow",
+            "title": "Data Flow Patterns",
+            "file": "patterns/data-flow.json", 
+            "description": "Data management, state flow, and integration patterns"
+          },
+          {
+            "id": "navigation-system",
+            "title": "Navigation System",
+            "file": "patterns/navigation-system.json",
+            "description": "Domain-aware navigation, routing, and accessibility patterns"
+          },
+          {
+            "id": "integration-patterns",
+            "title": "Integration Patterns",
+            "file": "patterns/integration-patterns.json",
+            "description": "Third-party integrations, internal system communication, and cross-cutting concerns"
+          }
+        ]
+      },
+      {
+        "id": "components",
+        "title": "Component Documentation",
+        "file": "components.json",
+        "description": "Detailed documentation for all React components with pattern classifications"
+      },
+      {
+        "id": "pages",
+        "title": "Page Structure",
+        "file": "pages.json",
+        "description": "Next.js pages, routing, and layout documentation"
+      },
+      {
+        "id": "utilities",
+        "title": "Utilities & Helpers",
+        "file": "utilities.json",
+        "description": "Helper functions, hooks, and utility libraries"
+      },
+      {
+        "id": "data",
+        "title": "Data Management",
+        "file": "data.json",
+        "description": "Data structures, schemas, and content management"
+      },
+      {
+        "id": "styling",
+        "title": "Styling & Theming",
+        "file": "styling.json",
+        "description": "CSS, Tailwind, and theme system documentation"
+      },
+      {
+        "id": "framework",
+        "title": "Framework Documentation",
+        "subsections": [
+          {
+            "id": "framework-overview",
+            "title": "Framework Overview",
+            "file": "framework/README.md",
+            "description": "Technology stack, decision matrix, and architectural baseline"
+          },
+          {
+            "id": "core-technologies",
+            "title": "Core Technologies",
+            "file": "framework/core-technologies.json",
+            "description": "Next.js, React, TypeScript foundation and configuration"
+          },
+          {
+            "id": "ui-libraries",
+            "title": "UI Libraries",
+            "file": "framework/ui-libraries.json",
+            "description": "Tailwind CSS, Framer Motion, component libraries"
+          },
+          {
+            "id": "development-tools",
+            "title": "Development Tools",
+            "file": "framework/development-tools.json",
+            "description": "ESLint, Prettier, Jest, TypeScript compiler setup"
+          },
+          {
+            "id": "performance-guidelines",
+            "title": "Performance Guidelines",
+            "file": "framework/performance-guidelines.json",
+            "description": "Performance budgets, optimization techniques, monitoring"
+          },
+          {
+            "id": "architecture-principles",
+            "title": "Architecture Principles",
+            "file": "framework/architecture-principles.json",
+            "description": "Design patterns, protocols, and development principles"
+          }
+        ]
+      },
+      {
+        "id": "troubleshooting",
+        "title": "Troubleshooting Guide",
+        "file": "troubleshooting.json",
+        "description": "Common issues, solutions, and debugging procedures"
+      },
+      {
+        "id": "deployment",
+        "title": "Deployment & Configuration",
+        "file": "deployment.json",
+        "description": "Build, deployment, and environment configuration"
+      }
+    ],
+    "quickAccess": {
+      "systemPatterns": "patterns/system-architecture.json#architecturalPatterns",
+      "dataFlow": "patterns/data-flow.json#dataArchitecture",
+      "navigation": "patterns/navigation-system.json#navigationPatterns",
+      "integrations": "patterns/integration-patterns.json#thirdPartyIntegrations",
+      "componentAPI": "components.json#api-reference",
+      "buildErrors": "troubleshooting.json#build-errors",
+      "themeSystem": "styling.json#theme-system",
+      "performanceGuidelines": "framework/performance-guidelines.json",
+      "architecturePrinciples": "framework/architecture-principles.json"
+    },
+    "searchIndex": {
+      "patterns": [
+        "domain-driven design",
+        "feature-first organization", 
+        "atomic design",
+        "compound components",
+        "unidirectional data flow",
+        "context-based state management",
+        "domain-aware navigation",
+        "accessibility-first design",
+        "performance optimization",
+        "integration patterns"
+      ],
+      "technologies": [
+        "Next.js 15",
+        "React 18",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Three.js",
+        "Jest",
+        "React Testing Library"
+      ],
+      "features": [
+        "theme system",
+        "navigation system",
+        "accessibility framework",
+        "performance monitoring",
+        "error handling",
+        "animation system",
+        "3D visualizations",
+        "responsive design"
+      ]
+    }
+  }
+}

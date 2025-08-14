@@ -1,11 +1,13 @@
-import React from 'react';
-import { Testimonial } from '@/data/testimonials';
+import React from "react";
+import { Testimonial } from "@/data/testimonials";
 
 interface ServiceTestimonialsProps {
   testimonials: Testimonial[];
 }
 
-const ServiceTestimonials: React.FC<ServiceTestimonialsProps> = ({ testimonials }) => {
+const ServiceTestimonials: React.FC<ServiceTestimonialsProps> = ({
+  testimonials,
+}) => {
   if (!testimonials || testimonials.length === 0) {
     return null;
   }

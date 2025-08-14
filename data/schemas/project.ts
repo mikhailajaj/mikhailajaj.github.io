@@ -1,9 +1,17 @@
-export type Domain = 'full-stack' | 'cloud' | 'data' | 'ux-ui' | 'consulting';
+export type Domain = "full-stack" | "cloud" | "data" | "ux-ui" | "consulting";
 
 export interface Technology {
   name: string;
-  category: 'frontend' | 'backend' | 'database' | 'cloud' | 'devops' | 'analytics' | 'design' | 'other';
-  proficiency: 'beginner' | 'intermediate' | 'advanced' | 'expert';
+  category:
+    | "frontend"
+    | "backend"
+    | "database"
+    | "cloud"
+    | "devops"
+    | "analytics"
+    | "design"
+    | "other";
+  proficiency: "beginner" | "intermediate" | "advanced" | "expert";
   icon?: string;
 }
 
@@ -18,7 +26,7 @@ export interface ProjectImpact {
 export interface ClientInfo {
   name: string;
   industry: string;
-  size: 'startup' | 'small' | 'medium' | 'large' | 'enterprise';
+  size: "startup" | "small" | "medium" | "large" | "enterprise";
   testimonial?: string;
   logo?: string;
   website?: string;
@@ -42,7 +50,7 @@ export interface Project {
   impact: ProjectImpact;
   techStack: Technology[];
   timeline: string;
-  status: 'completed' | 'in-progress' | 'planned';
+  status: "completed" | "in-progress" | "planned";
   client?: ClientInfo;
   gallery: Image[];
   liveDemo?: string;
@@ -57,12 +65,12 @@ export interface Project {
 export interface ProjectFilter {
   domain?: Domain;
   technology?: string;
-  status?: Project['status'];
+  status?: Project["status"];
   featured?: boolean;
   tags?: string[];
 }
 
 export interface ProjectSortOptions {
-  field: 'createdAt' | 'updatedAt' | 'title' | 'timeline';
-  direction: 'asc' | 'desc';
+  field: "createdAt" | "updatedAt" | "title" | "timeline";
+  direction: "asc" | "desc";
 }

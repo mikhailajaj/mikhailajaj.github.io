@@ -1,9 +1,9 @@
-import { Domain, Technology } from './project';
+import { Domain, Technology } from "./project";
 
 export interface ServicePricing {
-  type: 'fixed' | 'hourly' | 'project' | 'retainer';
+  type: "fixed" | "hourly" | "project" | "retainer";
   range: string;
-  currency: 'USD' | 'CAD' | 'EUR';
+  currency: "USD" | "CAD" | "EUR";
   description?: string;
 }
 
@@ -58,6 +58,6 @@ export interface ServiceInquiry {
   budget?: string;
   timeline?: string;
   requirements: string[];
-  contactMethod: 'email' | 'phone' | 'video';
-  urgency: 'low' | 'medium' | 'high';
+  contactMethod: "email" | "phone" | "video";
+  urgency: "low" | "medium" | "high";
 }

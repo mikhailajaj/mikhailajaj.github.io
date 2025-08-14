@@ -46,10 +46,10 @@ export const ShootingStars: React.FC<ShootingStarsProps> = ({
   maxSpeed = 17,
   minDelay = 1200,
   maxDelay = 4200,
-  starColor = "#6366F1",
-  trailColor = "#22D3EE",
-  starWidth = 10,
-  starHeight = 1,
+  starColor = "#E6E6FA",
+  trailColor = "#9370DB",
+  starWidth = 15,
+  starHeight = 2,
   className,
 }) => {
   const [star, setStar] = useState<ShootingStar | null>(null);
@@ -115,10 +115,7 @@ export const ShootingStars: React.FC<ShootingStarsProps> = ({
   }, [star]);
 
   return (
-    <svg
-      ref={svgRef}
-      className={cn("w-full h-full fixed inset-0", className)}
-    >
+    <svg ref={svgRef} className={cn("w-full h-full fixed inset-0", className)}>
       {star && (
         <rect
           key={star.id}

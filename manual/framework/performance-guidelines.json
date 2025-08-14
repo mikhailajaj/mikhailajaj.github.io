@@ -1,0 +1,236 @@
+{
+  "performanceGuidelines": {
+    "lastUpdated": "2024-12-19",
+    "description": "Performance optimization guidelines and metrics for the entire technology stack",
+    "coreMetrics": {
+      "PERF_BUNDLE_SIZE": {
+        "name": "Bundle Size Optimization",
+        "category": "Loading Performance",
+        "targets": {
+          "totalJavaScript": "< 200KB gzipped",
+          "initialBundle": "< 100KB gzipped",
+          "frameworkOverhead": "< 50KB gzipped",
+          "componentLibraries": "< 30KB gzipped",
+          "utilities": "< 20KB gzipped"
+        },
+        "currentImplementation": {
+          "nextjs": "~45KB gzipped (framework)",
+          "react": "~42KB gzipped (runtime)",
+          "framerMotion": "~28KB gzipped (animations)",
+          "tailwindcss": "~8KB gzipped (after purging)",
+          "reactIcons": "~2KB per icon (tree-shaken)"
+        },
+        "optimizationStrategies": [
+          "Tree shaking for unused code elimination",
+          "Code splitting at route and component level",
+          "Dynamic imports for non-critical components",
+          "Bundle analysis with @next/bundle-analyzer",
+          "Lazy loading for below-the-fold content"
+        ],
+        "monitoring": {
+          "tool": "@next/bundle-analyzer",
+          "frequency": "Every build",
+          "alerts": "Bundle size increase > 10%"
+        }
+      },
+      "PERF_CORE_WEB_VITALS": {
+        "name": "Core Web Vitals",
+        "category": "User Experience",
+        "targets": {
+          "LCP": "< 2.5s (Largest Contentful Paint)",
+          "FID": "< 100ms (First Input Delay)",
+          "CLS": "< 0.1 (Cumulative Layout Shift)",
+          "TTFB": "< 600ms (Time to First Byte)",
+          "FCP": "< 1.8s (First Contentful Paint)"
+        },
+        "currentImplementation": {
+          "staticGeneration": "Pre-rendered pages for optimal LCP",
+          "imageOptimization": "Next.js Image component prevents CLS",
+          "fontOptimization": "Progressive font loading reduces CLS",
+          "codeOptimization": "Minimal JavaScript for better FID"
+        },
+        "optimizationStrategies": [
+          "Static generation for critical pages",
+          "Image optimization with proper sizing",
+          "Font preloading and fallback strategies",
+          "Critical CSS inlining",
+          "Minimize main thread blocking"
+        ],
+        "monitoring": {
+          "tools": ["Vercel Analytics", "Google PageSpeed Insights", "Lighthouse"],
+          "frequency": "Continuous monitoring",
+          "alerts": "Core Web Vitals degradation"
+        }
+      },
+      "PERF_RENDERING_TIME": {
+        "name": "Rendering Performance",
+        "category": "Runtime Performance",
+        "targets": {
+          "componentRender": "< 16ms (60fps)",
+          "animationFrames": "60fps consistent",
+          "interactionResponse": "< 100ms",
+          "scrollPerformance": "Smooth 60fps scrolling",
+          "memoryUsage": "< 50MB heap growth per session"
+        },
+        "currentImplementation": {
+          "reactOptimization": "useMemo and useCallback for expensive operations",
+          "framerMotion": "Hardware-accelerated animations",
+          "lazyLoading": "Intersection Observer for scroll-triggered content",
+          "virtualScrolling": "For large lists (when needed)"
+        },
+        "optimizationStrategies": [
+          "React.memo for component memoization",
+          "useMemo for expensive calculations",
+          "useCallback for stable function references",
+          "Virtualization for large datasets",
+          "Debouncing for frequent events"
+        ],
+        "monitoring": {
+          "tools": ["React DevTools Profiler", "Chrome DevTools", "Performance API"],
+          "frequency": "Development and staging testing",
+          "alerts": "Render time > 16ms consistently"
+        }
+      }
+    },
+    "technologySpecificGuidelines": {
+      "nextjs": {
+        "staticGeneration": {
+          "usage": "Use for all possible pages",
+          "benefits": ["Fastest loading", "CDN caching", "SEO optimization"],
+          "implementation": "generateStaticParams for dynamic routes"
+        },
+        "imageOptimization": {
+          "component": "Always use next/image",
+          "benefits": ["WebP conversion", "Lazy loading", "Responsive images"],
+          "configuration": "Optimized sizes and quality settings"
+        },
+        "fontOptimization": {
+          "strategy": "next/font with progressive loading",
+          "benefits": ["Reduced CLS", "Faster loading", "Fallback fonts"],
+          "implementation": "Inter font with system fallbacks"
+        }
+      },
+      "react": {
+        "componentOptimization": {
+          "patterns": ["Functional components", "Custom hooks", "Context optimization"],
+          "antiPatterns": ["Inline object creation", "Unnecessary re-renders", "Large component trees"],
+          "tools": ["React.memo", "useMemo", "useCallback"]
+        },
+        "stateManagement": {
+          "strategy": "Local state first, context for shared state",
+          "optimization": ["State colocation", "State normalization", "Selective subscriptions"],
+          "tools": ["useState", "useReducer", "Context API"]
+        }
+      },
+      "tailwindcss": {
+        "optimization": {
+          "purging": "Automatic unused CSS removal",
+          "jit": "Just-in-time compilation for faster builds",
+          "customization": "Minimal custom CSS, utility-first approach"
+        },
+        "performance": {
+          "bundleSize": "~8KB after purging",
+          "buildTime": "Fast with JIT mode",
+          "runtime": "Zero JavaScript overhead"
+        }
+      },
+      "framerMotion": {
+        "optimization": {
+          "hardwareAcceleration": "Use transform properties for animations",
+          "willChange": "Automatic will-change optimization",
+          "reducedMotion": "Respect user motion preferences"
+        },
+        "performance": {
+          "animationStrategy": "60fps hardware-accelerated animations",
+          "memoryManagement": "Automatic cleanup on unmount",
+          "bundleImpact": "Tree-shakable imports"
+        }
+      }
+    },
+    "buildOptimization": {
+      "compilation": {
+        "typescript": {
+          "incremental": "Faster subsequent builds",
+          "strict": "Better optimization opportunities",
+          "target": "ES2020 for modern browsers"
+        },
+        "nextjs": {
+          "swc": "Rust-based compiler for faster builds",
+          "turbopack": "Experimental faster bundler",
+          "caching": "Aggressive build caching"
+        }
+      },
+      "bundling": {
+        "codesplitting": "Automatic route-based splitting",
+        "treeshaking": "Remove unused code",
+        "compression": "Gzip and Brotli compression",
+        "minification": "Terser for JavaScript minification"
+      }
+    },
+    "runtimeOptimization": {
+      "caching": {
+        "strategy": "Multi-layer caching approach",
+        "layers": ["Browser cache", "CDN cache", "Static generation"],
+        "implementation": "Cache-Control headers and service workers"
+      },
+      "loading": {
+        "critical": "Inline critical CSS and JavaScript",
+        "nonCritical": "Lazy load below-the-fold content",
+        "progressive": "Progressive enhancement approach"
+      },
+      "networking": {
+        "http2": "HTTP/2 server push for critical resources",
+        "preloading": "Preload critical resources",
+        "prefetching": "Prefetch likely next pages"
+      }
+    },
+    "monitoringAndMeasurement": {
+      "realUserMonitoring": {
+        "tools": ["Vercel Analytics", "Google Analytics", "Core Web Vitals"],
+        "metrics": ["Page load times", "User interactions", "Error rates"],
+        "frequency": "Continuous monitoring"
+      },
+      "syntheticMonitoring": {
+        "tools": ["Lighthouse CI", "PageSpeed Insights", "WebPageTest"],
+        "metrics": ["Performance scores", "Optimization opportunities", "Best practices"],
+        "frequency": "Every deployment"
+      },
+      "developmentMonitoring": {
+        "tools": ["React DevTools", "Chrome DevTools", "Bundle Analyzer"],
+        "metrics": ["Component render times", "Bundle sizes", "Memory usage"],
+        "frequency": "During development"
+      }
+    },
+    "performanceBudgets": {
+      "budgets": {
+        "totalBundleSize": "200KB gzipped",
+        "initialPageLoad": "1.5s on 3G",
+        "timeToInteractive": "3s on 3G",
+        "firstContentfulPaint": "1.8s",
+        "largestContentfulPaint": "2.5s"
+      },
+      "enforcement": {
+        "ci": "Fail builds that exceed budgets",
+        "monitoring": "Alert on budget violations",
+        "reporting": "Regular performance reports"
+      }
+    },
+    "decisionFramework": {
+      "addNewTechnology": [
+        "Performance impact analysis required",
+        "Bundle size increase < 10KB gzipped",
+        "Rendering performance maintained",
+        "Core Web Vitals not degraded",
+        "Performance budget compliance",
+        "Monitoring and measurement plan"
+      ],
+      "optimizationPriority": [
+        "1. Core Web Vitals compliance",
+        "2. Bundle size optimization",
+        "3. Runtime performance",
+        "4. Build performance",
+        "5. Development experience"
+      ]
+    }
+  }
+}

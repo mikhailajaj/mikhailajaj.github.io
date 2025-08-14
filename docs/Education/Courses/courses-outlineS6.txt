@@ -1,0 +1,630 @@
+PROG34104
+Distributed Mobility	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 56.0
+Credit Value: 3.0
+Credit Value Notes: N/A
+Effective: Winter 2025
+Prerequisites: PROG31975
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: N/A
+Program(s): Hon Bach CompSci - Mobile Comp
+Program Coordinator(s): Magdin Stoica
+Course Leader or Contact: Muhammad Asif
+Version: 20250106_00
+Status: Approved (APPR)
+
+Section I Notes: N/A
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+Students apply distributed computing principles and methods while building advanced mobile device collaborative applications connected to a computing cloud for data synchronization, services and inter-device communication. With a strong focus on multi-threading, synchronization mechanisms and distributed and asynchronous design patterns, students evaluate concurrency aspects and peer-to-peer architectures in the implementation of distributed and multi-threaded mobile applications. Through interactive lectures, presentations, demonstrations and numerous hands-on labs students gain valuable experience in distributed mobility and its applications in selected application domains.
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+Having gained experience in the development of both web based and device mobile applications on a variety of platforms, students now focus on the development of advanced larger scale mobile applications that use concurrency, distributed functionality and cloud computing. This course prepares the students for follow-up courses that treat advanced topics in mobile computing such as ubiquitous computing and the use of artificial intelligence in various application domains.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of the course, students will have demonstrated the ability to develop collaborative, cloud-connected mobile applications that use various synchronization mechanisms, distributed computing principles and asynchronous design patterns in selected application domains.
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Develop collaborative mobile applications using concurrent programming, inter-process and inter-device communication and synchronization mechanisms.
+Evaluate distributed architectures, distributed design patterns and frameworks in the implementation of distributed mobile applications.
+Use synchronous and asynchronous communication mechanisms for information retrieval and dissemination.
+Design peer-to-peer (P2P) mobile applications using relevant platforms, frameworks and services.
+Determine the impact of social networking and the opportunities for integrating social networking services and functionality into mobile applications.
+Manage resources in distributed mobile applications using protocols, standards and cooperative mechanisms.
+Ensure security, data integrity and confidentiality used in distributed mobile applications.
+Build data synchronization mechanism using cloud-computing frameworks, tools and technologies.
+Analyze the characteristics, requirements and the economics of cloud-connected mobile applications using current standards, frameworks and cloud computing services.
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	Assignments 3 @ 10% approx. week 3,6,10	30.0%
+ 	Midterm Exam approx. week 7	25.0%
+ 	Final Exam approx. week 13	25.0%
+ 	Team Project approx. week 14	20.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+To pass the course, students must achieve a 50% weighted average across the exams and at least 50% overall in the course.
+
+Students must submit/complete all assignments, in-class activities and projects by the scheduled due date and write all tests on the specified date/time. Exceptions will only be made under extraordinary circumstances. 
+
+Refer to the School of Applied Computing's Academic Procedures for Evaluations for more details regarding missed work: Procedures for Evaluations
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Challenge Exam
+Notes:  
+Portfolio
+Notes:  
+Other
+Notes:  Challenge exam, portfolio, and project are required for PLAR
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s):
+Course material costs can be found through the Sheridan Bookstore
+ 	Type	Description
+Required	Textbook	Mobile Cloud Computing: Architectures, Algorithms and Applications, De., D., CRC Press, ISBN 9781482242836, 2016
+Optional	Textbook	Programming Models for Parallel Computing, Balaji, Pavan, MIT Press, ISBN 9780262528818, 2015
+Optional	Textbook	Cloud Computing: Principles, Systems and Applications, Antonopoulos, N. & (eds), Lee G., Springer-Verlag, 9781849962407, 2010
+Optional	Textbook	Mobile Peer To Peer (P2P): A Tutorial Guide, Fitzek F. H., Charaf H., Wiley, 1st, ISBN 9780470699928, 2009, West Sussex, UK
+Optional	Textbook	Mobile P2P Computing for Next Generation Distributed Environ.: Advancing Con. and Algorithmic Apps., Boon-chong, Seet, IGI Global, ISBN 9781605667157, 2009
+Optional	Textbook	Principles of Concurrent and Distributed Programming, Ben-Ari, M., Addison Wesley Professional, 2nd ed., ISBN 9780321312839, 2006, London, UK
+Optional	Textbook	Synchronization Algorithms and Concurrent Programming, Gadi T., Prentice Hall, ISBN 9780131972599, 2006
+Optional	Textbook	Pattern-Oriented Software Architecture Volume 2: Patterns for Concurrent and Networked Objects, Schmidt D., Stal M., Rohnert M, Buschmann F., Wiley, ISBN 9780471606956, 2000
+
+Applicable student group(s): Honours Bachelor of Computer Science - Mobile Computing
+Course Details:
+Module 1: Principles of Concurrent and Distributed Programming
+
+Concurrent Programming Fundamentals, Multitasking, Parallelism, Challenges, Designing for Multiple Devices and Platforms
+Critical Sections
+Synchronization Mechanisms, Semaphores, Monitors
+Verification of Concurrent Programs
+Inter-Process Communication, Channels, Synchronous and Asynchronous Communication
+Distributed Algorithms
+Distributed Architecture Design Patterns
+ Module 2: Mobile Distributed Architectures and Algorithms    
+
+Background Applications (Review)
+Push/Notification Services (Review)
+Mobile Peer-to-Peer (P2P) Architectures, Platforms, Frameworks and Services
+Information Retrieval and Dissemination
+Resource Management
+Standards and Protocols
+Cooperative Mechanisms
+ Module 3: Cloud Computing   
+
+Characteristics of Cloud Computing and Related Technologies
+Cloud Computing Service Models (IaaS, Paas, Saas)
+Cloud Computing Deployment Models (Public, Private, Hybrid, and Community)
+Cloud Economics
+Module 4: Mobile Cloud Computing
+
+Motivation to Mobile Cloud Computing
+Three-Tier Architecture of Mobile Cloud Computing
+Platform and Techniques of Mobile Cloud Computing
+Mobile Augmentation Approaches
+Offloading in Mobile Cloud Computing
+Three-Tier Architecture of Mobile Cloud Computing
+Requirement of Data Offloading
+Performance Analysis of Offloading Technique
+Task Partitioning in Mobile Cloud Computing
+Multi-Cloud Offloading in Mobile Cloud Computing Environment 
+Module 5: Mobile Social Cloud Computing
+
+Mobile Social Cloud Architecture
+Resource Sharing in Mobile Social Cloud
+Warehousing and Analyzing Social Data Using Cloud
+Social Compute Cloud: Sharing and Allocating Resources
+3D Visualization of Social Network Data
+Trust in Mobile Social Cloud
+Applications of Mobile Social Cloud 
+Module 6: Privacy and Security in Mobile Cloud Computing
+
+Security Needed in Different Levels for Securing Mobile Cloud Computing
+Security Issues in Mobile Cloud Computing 
+Module 7: Applications of Mobile Cloud Computing
+
+Cloud Mobile Media Application
+Vehicle Monitoring
+Mobile Learning
+Context-Aware Navigation System
+
+INFO47546
+Theory of Computation	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 3.0
+Credit Value: 3.0
+Credit Value Notes: N/A
+Effective: Winter 2025
+Prerequisites: (MATH37198 AND PROG23672)
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: N/A
+Program(s): Hon Bach CompSci - Mobile Comp, Hons Bach of Computer Science
+Program Coordinator(s): Magdin Stoica, El Sayed Mahmoud
+Course Leader or Contact: Joshua Schneider
+Version: 20250106_00
+Status: Approved (APPR)
+
+Section I Notes: N/A
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+Students learn about the concept of equivalence when considering standard formalization of algorithms and the concept of computability. Students design solutions to a variety of problems using tools such as finite automata, regular expressions, push-down automata, grammars and Touring Machines. Students examine ways to calculate the computational complexity of algorithms in interactive lectures, hands-on exercises, and assignments.
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+This advanced required program core course is a theoretical course in computer science. This course builds upon knowledge and application of data structures and algorithms attained throughout the program.
+
+Hons Bach of Computer Science	Program Coordinator(s): El Sayed Mahmoud
+This required core course is a fundamental component of the Honours Bachelor of Computer Science program. It provides students with a comprehensive understanding of the theoretical underpinnings of computation. This course delves into the exploration of formal languages, automata theory, and computational complexity, enabling students to analyze the capabilities and limitations of various computational models. The course equips students with the analytical tools and conceptual frameworks necessary to address complex algorithmic challenges and make informed software design and problem-solving decisions. Through a combination of lectures, interactive discussions, and hands-on exercises, students will develop a solid grasp of the theoretical aspects that shape the boundaries of computational possibility.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of this course, students will have demonstrated the ability to evaluate algorithms using automata and languages, computability theory, and complexity theory.
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Design finite automata and regular expressions for regular languages.
+Analyze grammars and push-down automata for context-free languages.
+Evaluate Turing machines for simple languages and functions.
+Determine the undecidability of languages using problem reductions.
+Calculate the computational complexity of algorithms prior to implementation.
+Explain the significance of the classes P and NP problems in Computer Science.
+Analyze the significance of the Church-Turing thesis as it applies to modern computational problems.
+Design a problem reduction to show that an algorithm is NP-Complete.
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	Assignments (2 @ 10%) approx. weeks 4, 11	20.0%
+ 	Quizzes (4 @ 5%) approx. weeks 2,5,10,12	20.0%
+ 	Midterm Exam approx. week 7	25.0%
+ 	Final Exam approx. week 14	35.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+To pass the course, students must achieve a 50% weighted average across the exams and at least 50% overall in the course.
+
+Students must submit/complete all assignments, in-class activities and projects by the scheduled due date and write all tests on the specified date/time. Exceptions will only be made under extraordinary circumstances. 
+
+Refer to the School of Applied Computing's Academic Procedures for Evaluations for more details regarding missed work: Procedures for Evaluations
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Challenge Exam
+Notes:  A Challenge Exam is required for PLAR.
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s):
+Course material costs can be found through the Sheridan Bookstore
+ 	Type	Description
+Required	Textbook	Introduction to the Theory of Computation, Sipser, M., Cengage, 3rd edition, ISBN 9781133187790, 2013
+
+Applicable student group(s): Honours Bachelor of Computer Science - Mobile Computing; Honours Bachelor of Computer Science
+Course Details:
+Module 1: Automata and Languages – Regular Languages:
+
+Finite automata
+Nondeterminism
+Regular Expressions
+Module 2: Automata and Languages – Context-Free Languages:
+
+Context-free Grammars
+Pushdown Automata
+Non-context free Languages
+Module 3: Computability Theory – The Church-Turing Thesis
+
+Turing Machines
+Variants of Turing Machines
+Module 4: Computability Theory – Decidability
+
+Decidable Languages
+The Halting Problem
+Module 5: Computability Theory – Reducibility
+
+Undecidable Problems
+Module 6: Complexity Theory – Time Complexity:
+
+Measuring Complexity
+The Class P
+The Class NP
+NP-Completeness
+Module 7: Complexity Theory – Space Complexity:
+
+Savitch’s Theorem
+Module 8: Complexity Theory – Intractability :
+
+Hierarchy Theorems
+Relativization
+Circuit Complexity
+Note: The topics within each module are grouped semantically and are not meant to suggest a time sequence. A course plan must be provided by the professor identifying the class-by-class arrangement of topics.
+
+INFO31179
+Human Computer Interaction	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 42.0
+Credit Value: 3.0
+Credit Value Notes: N/A
+Effective: Winter 2023
+Prerequisites: N/A
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: N/A
+Program(s): Hon Bach CompSci - Mobile Comp
+Program Coordinator(s): Magdin Stoica
+Course Leader or Contact: Ghassem Tofighi
+Version: 20230109_00
+Status: Approved (APPR)
+
+Section I Notes: N/A
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+Students learn the foundational concepts and principles of Human Computer Interaction (HCI). Students learn about human factors, usability, user-centric design, user experience, and analysis and assessment techniques with emphasis on the mobile computing field. Students learn to apply models that predict user performance in various human-computer interaction tasks and recognize the limits of human performance as they apply to computer operation; use evaluation methodologies that focus on the user; compare and contrast a variety of conventional and non-traditional user interface paradigms; analyze mobile computing devices; and understand the social implications of technology. Students learn about interaction principles and user interface design paradigms through lectures, hands-on exercises and assignments.
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+This required third year course is a foundational course in mobile computing. Situated approximately mid-point in the program, after the student has acquired substantial skills and knowledge in programming, this course prepares the student with the principles and fundamental knowledge of human computer interaction that will be applied to increasingly more complex problems, systems and apps. The course aims to prepare students for senior level courses in the mobile application development stream and ultimately for thesis or project work in their final year.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of this course, students will be able to apply models to predict user performance in various human-computer interaction tasks and recognize the limits of human performance as they apply to computer operation (e.g., mobile devices).
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Analyze the users behaviour and the users tasks (user and task analysis).
+Critique the usability of products (e.g., mobile devices, applications, websites).
+Describe interaction design, usability principles and heuristics
+Build effective user models (e.g., based on user-centered designs).
+Create an interactive app or system for entertainment, education or business.
+Characterize the principle forms of gestural interaction with respect to mobile devices and mobile applications.
+Explain effective uses of graphics and sound in human computer interaction.
+Assess multimodal interfaces based on principles of human computer interaction.
+Use design principles for wearable device interaction and app design.
+Evaluate interaction designs for mobile computing (e.g., smartphones, tablets, wearable devices, etc.).
+Evaluate the impact of the following paradigms: ubiquitous computing, augmented reality, and Internet of Things (IoT) on human-computer interaction.
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	Assignments 3 @ 10% approx. week 3,5, and 9	30.0%
+ 	Research Paper approx. week 12	15.0%
+ 	Midterm Exam approx. week 7	25.0%
+ 	Final Exam approx. week 14	30.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+To pass the course, students must achieve a 50% weighted average across the tests and the exams and at least 50% overall in the course.
+
+Students must submit/complete all assignments, in-class activities and projects by the scheduled due date and write all tests on the specified date/time. Exceptions will only be made under extraordinary circumstances. 
+
+Refer to the School of Applied Computing's Academic Procedures for Evaluations for more details regarding missed work: Procedures for Evaluations
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Challenge Exam
+Notes:  
+Portfolio
+Notes:  
+Other
+Notes:  Challenge exam, portfolio, and project are required for PLAR
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s):
+Course material costs can be found through the Sheridan Bookstore
+ 	Type	Description
+Required	Textbook	Human-Computer Interaction, Dix, A., Finlay, J., Abowd, G., & Beale, R, Pearson, 3rd edition, ISBN 9780130461094, 2003
+Optional	Textbook	Usability Engineering, Nielsen. J., Academic Press, ISBN 978-0125184069, 1994
+Optional	Textbook	About Face 3: The Essentials of Interaction Design, Cooper, A., Wiley, 3rd edition, ISBN 978-0470084113, 2007
+Optional	Other	Additional recommended reading will be presented by the Professor during the course.
+
+Applicable student group(s): Bachelor of Applied Computer Science - Mobile Computing
+Course Details:
+Module 1. Human Computer Interaction Foundations
+
+The Human
+The Computer
+The Interaction
+Paradigms
+ Module 2. Design Process
+
+Foundations and principles of interaction design
+HCI in the software process
+Design principles and guidelines
+Evaluation techniques
+Universal design
+User Support
+Graphics and Sound
+ Module 3. Models and Theories
+
+Cognitive models
+User modeling and mental modeling (e.g., Fitts' Law, Hick's Law, the Magical Number 7, Shneiderman's Syntactic/Semantic Model, Norman's Seven Stages of Action, Information Visualization)
+Communication and collaborative models
+Task modeling and analysis
+Models of the system
+Modeling rich interaction
+ Module 4. Gestural Interaction
+
+Gestural interaction and mobile devices and mobile applications
+Touch screens
+The impact of haptics
+ Module 5. Wearables
+
+Wearable device features and limitations
+Design principles for wearables (device interaction and app design)
+ Module 6. Ubiquitous Computing and Augmented Realities
+
+Ubiquitous computing devices (types, features and limitations)
+Internet of Things
+Natural language processing
+Context-aware computing
+
+
+SYST30025
+Software Engineering	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 84.0
+Credit Value: 4.0
+Credit Value Notes: N/A
+Effective: Winter 2025
+Prerequisites: (SYST30049) AND (PROG27545 OR PROG30000)
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: The pre-requisites for students registered in the Honours Bachelor of Computer Science - Mobile Computing program are: SYST30049 and PROG27545 or PROG30000. The pre-requisite for students registered in the Honours Bachelor of Computer Science program is SYST30049.
+Program(s): Hon Bach CompSci - Mobile Comp, Hons Bach of Computer Science
+Program Coordinator(s): Magdin Stoica, El Sayed Mahmoud
+Course Leader or Contact: Magdin Stoica
+Version: 20250106_00
+Status: Approved (APPR)
+
+Section I Notes: N/A
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+Students experience the full life cycle development of software intensive systems using systematic iterative software engineering activities, processes and artifacts. Through project-based learning, students discover and analyze software requirements using use-cases, design software architectures using architectural styles, patterns and models, implement and verify software systems while managing the software engineering process from beginning to end. Students experience the full engineering life-cycle including software engineering economics and project management. Students can use an existing codebase to minimize the implementation phase, focusing on refactoring and verification according to software engineering practices. Students participate in problem-based learning activities and build a portfolio showcasing the complete development process they undergo leading to an in-depth understanding of the software engineering profession and its role in the modern society.
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+This is the second of 3 required courses that focus on software engineering, analyzing, designing, developing and verifying medium to large-scale software systems using systematic software engineering activities, processes and artifacts. In a subsequent course, students will focus on the process of verifying software systems through systematic quality assurance and software testing.
+
+Hons Bach of Computer Science	Program Coordinator(s): El Sayed Mahmoud
+This required course is the second in the two-course sequence that teaches software engineering activities, processes, and artifacts that are used to analyze, design, develop, and verify large-scale software systems. The course covers all aspects of the software engineering life cycle, including software engineering economics and project management. The skills gained from this course help students in all specializations of the Honours Bachelor of Computer Science program to develop and test large enterprise applications.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of the course, students will have demonstrated the ability to produce an engineered software system according to principles and best practices, software engineering processes and activities using a repeatable and systematically managed life-cycle.
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Characterize the role of software engineers and the software engineering profession in our society.
+Define software requirements using a systematic, repeatable requirements analysis and elicitation process
+Determine software architectures, architectural styles and patterns to implement given functional and technical requirements.
+Justify the role of software architecture as an enterprise asset and the characteristics and responsibilities of a software architect in the overall software development process.
+Improve an existing codebase using refactoring, design patterns and anti-patterns and best-practices.
+Verify the implementation of both technical and functional requirements in existing software systems using systematic quality assurance and software testing techniques and processes.
+Demonstrate the traceability of requirements from stakeholder needs throughout the design and implementation.
+Manage the full software engineering life-cycle using repeatable, systematic, iterative development processes and best-practices.
+Estimate the time and cost of software development projects.
+Manage continuous integration and delivery of software systems with DevOps pipelines and tools
+Critique current and past industry practices in order to determine their feasibility, scalability, and applicability to a diverse set of software systems.
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	Project Proposal (approx. week 2)	5.0%
+ 	Project Plan (approx. week 3)	5.0%
+ 	SE Project Inception Release (approx. week 7)	15.0%
+ 	SE Project Elaboration Release (approx. week 13)	15.0%
+ 	Agile Project Management (10 @ 1%) (approx. week 4-13)	10.0%
+ 	SE Topical Discussions (5 @ 2%) (approx. week 2, 4, 6, 9, 11)	10.0%
+ 	Tests 4 @ 10% (approx. week 4, 7, 10, 14)	40.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+To pass the course, students must achieve a 50% weighted average across the tests and at least 50% overall in the course.
+
+Students must submit/complete all assignments, in-class activities and projects by the scheduled due date and write all tests on the specified date/time. Exceptions will only be made under extraordinary circumstances. 
+
+Refer to the School of Applied Computing's Academic Procedures for Evaluations for more details regarding missed work: Procedures for Evaluations
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Challenge Exam
+Notes:  
+Portfolio
+Notes:  
+Other
+Notes:  Challenge exam, portfolio, and project are required for PLAR
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s):
+Course material costs can be found through the Sheridan Bookstore
+ 	Type	Description
+Optional	Textbook	Software Engineering, Sommerville I, Boston, MA: Addison-Wesley Professional, 10th Edition, ISBN 9780133943030, 2015
+Optional	Textbook	The Mythical Man-Month, Essays on Software Engineering, Brooks F. P. Jr., Boston, MA: Addison-Wesley Professional, Anniversary Edition, ISBN 9780201835953, 1995
+Optional	Textbook	Facts and Fallacies of Software Engineering, Glass R. L., Boston, MA: Addison-Wesley Professional, 1st Edition, ISBN 9780321117427, 2002
+Optional	Textbook	Rapid Development, McConnell S., WA: Microsoft Press, 1st Edition, ISBN 9781556159008, 1996
+Optional	Textbook	Software Estimation: Demystifying the Black Art, McConnell S., Redmond, WA: Microsoft Press, 1st Edition, ISBN 9780735605350, 2006
+Optional	Textbook	Peopleware: Productive Projects and Teams, DeMarco T., Lister T., New York, NY: Dorset House Publishing, 2nd Revised Edition, ISBN 9780932633439, 1999
+Optional	Textbook	Software Requirements, Wiegers K. E., Beatty J, Redmond, WA: Microsoft Press, 3rd Edition, ISBN 9780735679665, 2013
+Optional	Textbook	Writing Effective Use Cases, Alistair Cockburn, Boston, MA: Addison-Wesley Professional, 1st Edition, ISBN 9780201702255, 2000
+Optional	Textbook	Software Architecture in Practice, Bass L., Clements P., Kazman R., MA: Addison-Wesley Professional, 3rd Edition, ISBN 9780321815736, 2012
+Optional	Textbook	Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives, Rozanski N., Woods E., Upper Saddle River, NJ: Addison-Wesley Professional, 2nd Edition, ISBN 9780321718334, 2011
+Optional	Textbook	Pattern-Oriented Software Architecture Volume 1: A System of Patterns, Buschman F., Meunier R., Rohnert H., Sommerlad P., Stal M., New York, NY: John Wiley & Sons Inc., 1st Edition, ISBN 9780471958697, 1996
+Optional	Textbook	Code Complete, McConnell S., Redmond, WA: Microsoft Press, 2nd Edition, ISBN 9780735619678, 2004
+Optional	Textbook	Software Engineering Economics, Boehm B. W., Upper Saddle River, NJ: Prentice Hall, 1st Edition, ISBN 9780138221225, 1981
+
+Applicable student group(s): Honours Bachelor of Computer Science (Mobile Computing) (PBACS); Honours Bachelor of Computer Science (All Specializations) (PBCPS)
+Course Details:
+Module 1: Software Engineering Profession 
+
+Software Engineering Profession and Its Role in Our Society. Software Engineering Case Studies: Successes and Disasters.
+Software Engineering, Craft, Art and Science
+Characteristics and Role of Software Engineers in Software Development and Computer Science
+The Role of Economics, Management and Process in Software Engineering
+Module 2: Requirements Analysis and Definition
+
+Users, Clients, Stakeholders and Their Needs
+Types of Requirements, Functional Requirements, Technical Requirements
+Requirements Elicitation Techniques
+Use-Cases, Definitions, Types, Development of Use-Cases
+Requirements Traceability
+Use-Case Models, Use-Case Diagrams, Use-Case Realizations, Activity Diagrams. Use-Case Diagrams and Use-Case Documents.
+Use-Case Driven Development, From Management Through Design to Implementation and Verification
+Module 3: Software Architecture and Design 
+
+Software Architecture Definitions, Role of Software Architecture as Enterprise Asset, Characteristics and Responsibilities of Software Architects
+Software Architecture Styles, Views, Viewpoints, Perspectives, Patterns
+Technical Requirements and Software Architectures. Designing for Change. Designing for Scalability. Designing for Extensibility. Iterative Architectural Design. Identifying Architectural Essential Requirements/Use-Cases.
+Architectural Design: Layers, Subsystems, Interfaces, Models. 4+1 Views Model. Other Models.
+Case-Studies of Different Software Architectures and Their Characteristics
+Module 4: Software Implementation and Verification 
+
+Role of Idioms and Difference Between Idioms and Patterns
+Best-Practices in Software Implementation and Verification. Development (Coding) Standards.
+Step-Wise Refinement, Design by Contract, Implementing Assumptions
+Refactoring
+Managing Source Code, Versioning Control Using Configuration Management Tools
+Iterative Development, Agile Methods, Test-Driven Development Methods, Scrum, Xp
+DevOps Concepts, Practices and Tools
+Continuous Integration and Deployment of Software Projects Using Industry-Standard Tools and Techniques
+Module 5: Software Process and Management 
+
+Peopleware, Team Dynamics, Role of Motivation in Productivity, Developer?s Productivity
+Estimation, Estimation Models, Best-Practices in Estimation Time and Cost
+Development Activities, Phases and Artefacts
+Full Life-Cycle Software Management. Types of Sdlc. Focus on Iterative Life-Cycle Approaches
+Modern Iterative Development Processes: Agile Processes, Scrum, Xp, Tdd (Test-Driven Development), Rup (Model-Driven Development)
+Modern Use-Case Driven Project Management Vs. Tasks Breakdown and Traditional Work Breakdown Structures (Wbs)
+Systematic, Repeatable Processes. Introduction to Cmmi
+Risk Management
+Note: The Suggested Number of Weeks Allocated to Each Module May Vary Depending on the Professors and/or Class Requirements. The Topics Within Each Module are Grouped Semantically and are Not Meant to Suggest a Time Sequence. A Course Plan Must be Provided by the Professor Identifying the Class-By-Class Arrangement of Topics.-class arrangement of topics.

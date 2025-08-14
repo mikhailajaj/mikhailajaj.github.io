@@ -1,0 +1,160 @@
+{
+  "styling": {
+    "manualVersion": "2.1.0",
+    "lastUpdated": "2024-12-19",
+    "framework": "Tailwind CSS",
+    "themeSystem": {
+      "overview": "Multi-layered theme system with domain-specific customization",
+      "layers": {
+        "base": {
+          "file": "tailwind.config.ts",
+          "description": "Core Tailwind configuration with custom design tokens",
+          "features": [
+            "Custom color palette",
+            "Typography scale",
+            "Spacing system",
+            "Animation presets",
+            "Responsive breakpoints"
+          ]
+        },
+        "domain": {
+          "location": "lib/config/domainThemes.ts",
+          "description": "Domain-specific color schemes and styling",
+          "domains": {
+            "full-stack": {
+              "primary": "Blue spectrum",
+              "accent": "Cyan",
+              "description": "Technical and professional"
+            },
+            "cloud": {
+              "primary": "Teal spectrum", 
+              "accent": "Sky blue",
+              "description": "Cloud and infrastructure"
+            },
+            "data": {
+              "primary": "Purple spectrum",
+              "accent": "Violet",
+              "description": "Data and analytics"
+            },
+            "ux-ui": {
+              "primary": "Pink spectrum",
+              "accent": "Rose",
+              "description": "Creative and design"
+            },
+            "consulting": {
+              "primary": "Green spectrum",
+              "accent": "Emerald", 
+              "description": "Growth and strategy"
+            }
+          }
+        },
+        "component": {
+          "description": "Component-specific styling with CSS-in-JS",
+          "approach": "Tailwind classes with conditional styling",
+          "patterns": [
+            "Variant-based styling",
+            "State-dependent classes",
+            "Responsive design patterns",
+            "Dark mode support"
+          ]
+        }
+      },
+      "darkMode": {
+        "strategy": "CSS class-based with system preference detection",
+        "implementation": "next-themes library",
+        "features": [
+          "Automatic system detection",
+          "Manual toggle",
+          "Persistent preference",
+          "Smooth transitions"
+        ]
+      }
+    },
+    "globalStyles": {
+      "file": "app/globals.css",
+      "includes": [
+        "Tailwind base styles",
+        "Custom CSS variables",
+        "Font face declarations",
+        "Animation keyframes",
+        "Utility classes"
+      ],
+      "customProperties": {
+        "colors": "CSS custom properties for dynamic theming",
+        "fonts": "Font family variables with fallbacks",
+        "spacing": "Custom spacing scale",
+        "animations": "Animation timing and easing"
+      }
+    },
+    "componentStyling": {
+      "approach": "Utility-first with component variants",
+      "patterns": {
+        "variants": {
+          "description": "Multiple visual styles for components",
+          "example": "Button variants: primary, secondary, outline, ghost",
+          "implementation": "Conditional Tailwind classes"
+        },
+        "sizes": {
+          "description": "Consistent sizing across components",
+          "scale": "sm, md, lg, xl",
+          "properties": "Padding, font size, border radius"
+        },
+        "states": {
+          "description": "Interactive state styling",
+          "states": ["hover", "focus", "active", "disabled", "loading"],
+          "approach": "Tailwind state modifiers"
+        }
+      }
+    },
+    "animations": {
+      "library": "Framer Motion",
+      "integration": "lib/animations.ts",
+      "types": {
+        "entrance": "Fade, slide, scale animations for component mounting",
+        "exit": "Smooth transitions for component unmounting", 
+        "hover": "Interactive hover effects and micro-interactions",
+        "scroll": "Scroll-triggered animations with Intersection Observer",
+        "gesture": "Touch and drag gesture animations"
+      },
+      "performance": {
+        "optimization": "GPU-accelerated transforms",
+        "reducedMotion": "Respect user motion preferences",
+        "lazyLoading": "Animation definitions loaded on demand"
+      }
+    },
+    "responsiveDesign": {
+      "breakpoints": {
+        "sm": "640px - Mobile landscape",
+        "md": "768px - Tablet portrait", 
+        "lg": "1024px - Tablet landscape",
+        "xl": "1280px - Desktop",
+        "2xl": "1536px - Large desktop"
+      },
+      "strategy": "Mobile-first responsive design",
+      "patterns": [
+        "Flexible grid layouts",
+        "Responsive typography",
+        "Adaptive component sizing",
+        "Touch-friendly interactions"
+      ]
+    },
+    "accessibility": {
+      "colorContrast": "WCAG AA compliant color combinations",
+      "focusManagement": "Visible focus indicators and logical tab order",
+      "reducedMotion": "Respect prefers-reduced-motion setting",
+      "semanticColors": "Meaningful color usage beyond decoration"
+    },
+    "performance": {
+      "purging": "Unused CSS removal in production",
+      "compression": "CSS minification and gzip",
+      "criticalCSS": "Above-the-fold CSS inlining",
+      "caching": "Long-term CSS caching with versioning"
+    },
+    "maintenance": {
+      "linting": "Stylelint for CSS quality",
+      "formatting": "Prettier for consistent formatting",
+      "documentation": "Component style guides and examples",
+      "testing": "Visual regression testing for UI consistency"
+    }
+  }
+}

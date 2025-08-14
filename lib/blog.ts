@@ -1,7 +1,7 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-import readingTime from 'reading-time';
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import readingTime from "reading-time";
 
 export interface BlogPost {
   slug: string;
@@ -18,35 +18,35 @@ export interface BlogPost {
   excerpt: string;
 }
 
-const postsDirectory = path.join(process.cwd(), 'content/blog');
+const postsDirectory = path.join(process.cwd(), "content/blog");
 
 export async function getAllBlogPosts(): Promise<BlogPost[]> {
   try {
     const fileNames = fs.readdirSync(postsDirectory);
     const allPostsData = fileNames
-      .filter((fileName) => fileName.endsWith('.mdx'))
+      .filter((fileName) => fileName.endsWith(".mdx"))
       .map((fileName) => {
-        const slug = fileName.replace(/\.mdx$/, '');
+        const slug = fileName.replace(/\.mdx$/, "");
         const fullPath = path.join(postsDirectory, fileName);
-        const fileContents = fs.readFileSync(fullPath, 'utf8');
+        const fileContents = fs.readFileSync(fullPath, "utf8");
         const { data, content } = matter(fileContents);
-        
+
         // Calculate reading time
         const readingTimeResult = readingTime(content);
-        
+
         // Generate excerpt from content (first 160 characters)
-        const excerpt = content.replace(/[#*`]/g, '').substring(0, 160) + '...';
+        const excerpt = content.replace(/[#*`]/g, "").substring(0, 160) + "...";
 
         return {
           slug,
-          title: data.title || '',
-          description: data.description || '',
-          date: data.date || '',
-          author: data.author || 'Mikhail Ajaj',
+          title: data.title || "",
+          description: data.description || "",
+          date: data.date || "",
+          author: data.author || "Mikhail Ajaj",
           tags: data.tags || [],
-          category: data.category || 'General',
+          category: data.category || "General",
           featured: data.featured || false,
-          image: data.image || '',
+          image: data.image || "",
           content,
           readingTime: readingTimeResult.text,
           excerpt: data.excerpt || excerpt,
@@ -58,30 +58,32 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
       return new Date(b.date).getTime() - new Date(a.date).getTime();
     });
   } catch (error) {
-    console.error('Error reading blog posts:', error);
+    console.error("Error reading blog posts:", error);
     return [];
   }
 }
 
-export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> {
+export async function getBlogPostBySlug(
+  slug: string,
+): Promise<BlogPost | null> {
   try {
     const fullPath = path.join(postsDirectory, `${slug}.mdx`);
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
+    const fileContents = fs.readFileSync(fullPath, "utf8");
     const { data, content } = matter(fileContents);
-    
+
     const readingTimeResult = readingTime(content);
-    const excerpt = content.replace(/[#*`]/g, '').substring(0, 160) + '...';
+    const excerpt = content.replace(/[#*`]/g, "").substring(0, 160) + "...";
 
     return {
       slug,
-      title: data.title || '',
-      description: data.description || '',
-      date: data.date || '',
-      author: data.author || 'Mikhail Ajaj',
+      title: data.title || "",
+      description: data.description || "",
+      date: data.date || "",
+      author: data.author || "Mikhail Ajaj",
       tags: data.tags || [],
-      category: data.category || 'General',
+      category: data.category || "General",
       featured: data.featured || false,
-      image: data.image || '',
+      image: data.image || "",
       content,
       readingTime: readingTimeResult.text,
       excerpt: data.excerpt || excerpt,
@@ -94,38 +96,44 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> 
 
 export async function getFeaturedBlogPosts(): Promise<BlogPost[]> {
   const allPosts = await getAllBlogPosts();
-  return allPosts.filter(post => post.featured).slice(0, 3);
+  return allPosts.filter((post) => post.featured).slice(0, 3);
 }
 
-export async function getBlogPostsByCategory(category: string): Promise<BlogPost[]> {
+export async function getBlogPostsByCategory(
+  category: string,
+): Promise<BlogPost[]> {
   const allPosts = await getAllBlogPosts();
-  return allPosts.filter(post => post.category.toLowerCase() === category.toLowerCase());
+  return allPosts.filter(
+    (post) => post.category.toLowerCase() === category.toLowerCase(),
+  );
 }
 
 export async function getBlogPostsByTag(tag: string): Promise<BlogPost[]> {
   const allPosts = await getAllBlogPosts();
-  return allPosts.filter(post => post.tags.some(t => t.toLowerCase() === tag.toLowerCase()));
+  return allPosts.filter((post) =>
+    post.tags.some((t) => t.toLowerCase() === tag.toLowerCase()),
+  );
 }
 
 export function getAllCategories(): string[] {
   try {
     const fileNames = fs.readdirSync(postsDirectory);
     const categories = new Set<string>();
-    
+
     fileNames
-      .filter((fileName) => fileName.endsWith('.mdx'))
+      .filter((fileName) => fileName.endsWith(".mdx"))
       .forEach((fileName) => {
         const fullPath = path.join(postsDirectory, fileName);
-        const fileContents = fs.readFileSync(fullPath, 'utf8');
+        const fileContents = fs.readFileSync(fullPath, "utf8");
         const { data } = matter(fileContents);
         if (data.category) {
           categories.add(data.category);
         }
       });
-    
+
     return Array.from(categories);
   } catch (error) {
-    console.error('Error getting categories:', error);
+    console.error("Error getting categories:", error);
     return [];
   }
 }
@@ -134,21 +142,21 @@ export function getAllTags(): string[] {
   try {
     const fileNames = fs.readdirSync(postsDirectory);
     const tags = new Set<string>();
-    
+
     fileNames
-      .filter((fileName) => fileName.endsWith('.mdx'))
+      .filter((fileName) => fileName.endsWith(".mdx"))
       .forEach((fileName) => {
         const fullPath = path.join(postsDirectory, fileName);
-        const fileContents = fs.readFileSync(fullPath, 'utf8');
+        const fileContents = fs.readFileSync(fullPath, "utf8");
         const { data } = matter(fileContents);
         if (data.tags && Array.isArray(data.tags)) {
           data.tags.forEach((tag: string) => tags.add(tag));
         }
       });
-    
+
     return Array.from(tags);
   } catch (error) {
-    console.error('Error getting tags:', error);
+    console.error("Error getting tags:", error);
     return [];
   }
 }

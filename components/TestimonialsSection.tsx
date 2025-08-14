@@ -1,16 +1,28 @@
 "use client";
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
-import { FaStar, FaQuoteLeft, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import { testimonials, getFeaturedTestimonials, getTestimonialsByCategory } from '@/data/testimonials';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+import {
+  FaStar,
+  FaQuoteLeft,
+  FaChevronLeft,
+  FaChevronRight,
+} from "react-icons/fa";
+import {
+  testimonials,
+  getFeaturedTestimonials,
+  getTestimonialsByCategory,
+} from "@/data/testimonials";
 
 interface TestimonialCardProps {
-  testimonial: typeof testimonials[0];
+  testimonial: (typeof testimonials)[0];
   index: number;
 }
 
-const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial, index }) => {
+const TestimonialCard: React.FC<TestimonialCardProps> = ({
+  testimonial,
+  index,
+}) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -69,25 +81,27 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial, index })
   );
 };
 
-const TestimonialCarousel: React.FC<{ testimonials: typeof testimonials }> = ({ testimonials }) => {
+const TestimonialCarousel: React.FC<{ testimonials: typeof testimonials }> = ({
+  testimonials,
+}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
 
   const slideVariants = {
     enter: (direction: number) => ({
       x: direction > 0 ? 1000 : -1000,
-      opacity: 0
+      opacity: 0,
     }),
     center: {
       zIndex: 1,
       x: 0,
-      opacity: 1
+      opacity: 1,
     },
     exit: (direction: number) => ({
       zIndex: 0,
       x: direction < 0 ? 1000 : -1000,
-      opacity: 0
-    })
+      opacity: 0,
+    }),
   };
 
   const swipeConfidenceThreshold = 10000;
@@ -119,7 +133,7 @@ const TestimonialCarousel: React.FC<{ testimonials: typeof testimonials }> = ({ 
             exit="exit"
             transition={{
               x: { type: "spring", stiffness: 300, damping: 30 },
-              opacity: { duration: 0.2 }
+              opacity: { duration: 0.2 },
             }}
             drag="x"
             dragConstraints={{ left: 0, right: 0 }}
@@ -135,7 +149,10 @@ const TestimonialCarousel: React.FC<{ testimonials: typeof testimonials }> = ({ 
             }}
             className="w-full"
           >
-            <TestimonialCard testimonial={testimonials[currentIndex]} index={0} />
+            <TestimonialCard
+              testimonial={testimonials[currentIndex]}
+              index={0}
+            />
           </motion.div>
         </AnimatePresence>
       </div>
@@ -165,8 +182,8 @@ const TestimonialCarousel: React.FC<{ testimonials: typeof testimonials }> = ({ 
             }}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
               index === currentIndex
-                ? 'bg-blue-500'
-                : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500'
+                ? "bg-blue-500"
+                : "bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500"
             }`}
           />
         ))}
@@ -176,22 +193,22 @@ const TestimonialCarousel: React.FC<{ testimonials: typeof testimonials }> = ({ 
 };
 
 const TestimonialsSection: React.FC = () => {
-  const [activeFilter, setActiveFilter] = useState<string>('featured');
+  const [activeFilter, setActiveFilter] = useState<string>("featured");
   const featuredTestimonials = getFeaturedTestimonials();
-  
+
   const getFilteredTestimonials = () => {
-    if (activeFilter === 'featured') return featuredTestimonials;
+    if (activeFilter === "featured") return featuredTestimonials;
     return getTestimonialsByCategory(activeFilter);
   };
 
   const filteredTestimonials = getFilteredTestimonials();
 
   const filterButtons = [
-    { key: 'featured', label: 'Featured' },
-    { key: 'full-stack', label: 'Full-Stack' },
-    { key: 'cloud', label: 'Cloud' },
-    { key: 'data', label: 'Data' },
-    { key: 'consulting', label: 'Consulting' }
+    { key: "featured", label: "Featured" },
+    { key: "full-stack", label: "Full-Stack" },
+    { key: "cloud", label: "Cloud" },
+    { key: "data", label: "Data" },
+    { key: "consulting", label: "Consulting" },
   ];
 
   return (
@@ -206,10 +223,14 @@ const TestimonialsSection: React.FC = () => {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black dark:text-white">
-            Client <span className="text-blue-600 dark:text-blue-400">Testimonials</span>
+            Client{" "}
+            <span className="text-blue-600 dark:text-blue-400">
+              Testimonials
+            </span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 text-lg">
-            What clients say about working with me across different specializations
+            What clients say about working with me across different
+            specializations
           </p>
         </motion.div>
 
@@ -227,8 +248,8 @@ const TestimonialsSection: React.FC = () => {
               onClick={() => setActiveFilter(button.key)}
               className={`px-6 py-2 rounded-full text-sm transition-all duration-300 ${
                 activeFilter === button.key
-                  ? 'bg-gradient-to-r from-blue-600 to-blue-400 text-white shadow-md'
-                  : 'bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700'
+                  ? "bg-gradient-to-r from-blue-600 to-blue-400 text-white shadow-md"
+                  : "bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700"
               }`}
             >
               {button.label}
@@ -295,7 +316,9 @@ const TestimonialsSection: React.FC = () => {
             <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
               100%
             </div>
-            <p className="text-gray-600 dark:text-gray-400">Project Success Rate</p>
+            <p className="text-gray-600 dark:text-gray-400">
+              Project Success Rate
+            </p>
           </div>
         </motion.div>
       </div>

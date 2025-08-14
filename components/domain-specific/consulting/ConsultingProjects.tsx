@@ -1,14 +1,17 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/base/Button';
-import { Card, CardContent } from '@/components/ui/base/Card';
-import { technicalConsultingProjects, getFeaturedTechnicalConsultingProjects } from '@/data/projects/technical-consulting';
-import { 
-  FaExternalLinkAlt, 
-  FaEye, 
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/base/Button";
+import { Card, CardContent } from "@/components/ui/base/Card";
+import {
+  technicalConsultingProjects,
+  getFeaturedTechnicalConsultingProjects,
+} from "@/data/projects/technical-consulting";
+import {
+  FaExternalLinkAlt,
+  FaEye,
   FaArrowRight,
   FaChartLine,
   FaUsers,
@@ -16,32 +19,61 @@ import {
   FaStar,
   FaRocket,
   FaCogs,
-  FaHandshake
-} from 'react-icons/fa';
+  FaHandshake,
+} from "react-icons/fa";
 
-type FilterType = 'all' | 'featured' | 'transformation' | 'agile' | 'strategy';
+type FilterType = "all" | "featured" | "transformation" | "agile" | "strategy";
 
 const filterOptions = [
-  { value: 'all', label: 'All Projects', count: technicalConsultingProjects.length },
-  { value: 'featured', label: 'Featured', count: getFeaturedTechnicalConsultingProjects().length },
-  { value: 'transformation', label: 'Digital Transformation', count: technicalConsultingProjects.filter(p => p.tags.includes('Digital Transformation')).length },
-  { value: 'agile', label: 'Agile Coaching', count: technicalConsultingProjects.filter(p => p.tags.includes('Agile Transformation')).length },
-  { value: 'strategy', label: 'Technical Strategy', count: technicalConsultingProjects.filter(p => p.tags.includes('Startup Strategy')).length }
+  {
+    value: "all",
+    label: "All Projects",
+    count: technicalConsultingProjects.length,
+  },
+  {
+    value: "featured",
+    label: "Featured",
+    count: getFeaturedTechnicalConsultingProjects().length,
+  },
+  {
+    value: "transformation",
+    label: "Digital Transformation",
+    count: technicalConsultingProjects.filter((p) =>
+      p.tags.includes("Digital Transformation"),
+    ).length,
+  },
+  {
+    value: "agile",
+    label: "Agile Coaching",
+    count: technicalConsultingProjects.filter((p) =>
+      p.tags.includes("Agile Transformation"),
+    ).length,
+  },
+  {
+    value: "strategy",
+    label: "Technical Strategy",
+    count: technicalConsultingProjects.filter((p) =>
+      p.tags.includes("Startup Strategy"),
+    ).length,
+  },
 ];
 
 export function ConsultingProjects() {
-  const [activeFilter, setActiveFilter] = useState<FilterType>('all');
-  
-  const filteredProjects = technicalConsultingProjects.filter(project => {
+  const [activeFilter, setActiveFilter] = useState<FilterType>("all");
+
+  const filteredProjects = technicalConsultingProjects.filter((project) => {
     switch (activeFilter) {
-      case 'featured':
+      case "featured":
         return project.featured;
-      case 'transformation':
-        return project.tags.includes('Digital Transformation');
-      case 'agile':
-        return project.tags.includes('Agile Transformation');
-      case 'strategy':
-        return project.tags.includes('Startup Strategy') || project.tags.includes('Technical Audit');
+      case "transformation":
+        return project.tags.includes("Digital Transformation");
+      case "agile":
+        return project.tags.includes("Agile Transformation");
+      case "strategy":
+        return (
+          project.tags.includes("Startup Strategy") ||
+          project.tags.includes("Technical Audit")
+        );
       default:
         return true;
     }
@@ -64,17 +96,18 @@ export function ConsultingProjects() {
             </div>
             <span className="text-indigo-400 font-medium">Portfolio</span>
           </div>
-          
+
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Consulting
             <span className="block bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent">
               Projects
             </span>
           </h2>
-          
+
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Strategic consulting engagements that transform organizations through 
-            technical leadership, process optimization, and measurable business results.
+            Strategic consulting engagements that transform organizations
+            through technical leadership, process optimization, and measurable
+            business results.
           </p>
         </motion.div>
 
@@ -92,8 +125,8 @@ export function ConsultingProjects() {
               onClick={() => setActiveFilter(option.value as FilterType)}
               className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                 activeFilter === option.value
-                  ? 'bg-gradient-to-r from-indigo-600 to-indigo-700 text-white shadow-lg'
-                  : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-white'
+                  ? "bg-gradient-to-r from-indigo-600 to-indigo-700 text-white shadow-lg"
+                  : "bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-white"
               }`}
             >
               {option.label} ({option.count})
@@ -111,7 +144,10 @@ export function ConsultingProjects() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card variant="glass" className="h-full group hover:shadow-2xl transition-all duration-300">
+              <Card
+                variant="glass"
+                className="h-full group hover:shadow-2xl transition-all duration-300"
+              >
                 <CardContent className="p-6">
                   {/* Project Header */}
                   <div className="flex items-start justify-between mb-4">
@@ -121,7 +157,7 @@ export function ConsultingProjects() {
                           <FaStar className="text-yellow-400 text-sm" />
                         )}
                         <span className="text-indigo-400 text-sm font-medium">
-                          {project.domain.replace('-', ' ').toUpperCase()}
+                          {project.domain.replace("-", " ").toUpperCase()}
                         </span>
                       </div>
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">
@@ -137,12 +173,16 @@ export function ConsultingProjects() {
 
                   {/* Impact Metrics */}
                   <div className="mb-4">
-                    <h4 className="text-white font-semibold text-sm mb-2">Key Impact:</h4>
+                    <h4 className="text-white font-semibold text-sm mb-2">
+                      Key Impact:
+                    </h4>
                     <div className="grid grid-cols-1 gap-1">
                       {project.impact.metrics.slice(0, 2).map((metric, idx) => (
                         <div key={idx} className="flex items-center space-x-2">
                           <div className="w-1.5 h-1.5 bg-indigo-400 rounded-full"></div>
-                          <span className="text-gray-300 text-sm">{metric}</span>
+                          <span className="text-gray-300 text-sm">
+                            {metric}
+                          </span>
                         </div>
                       ))}
                     </div>
@@ -179,7 +219,9 @@ export function ConsultingProjects() {
                         <span>{project.teamSize} team</span>
                       </div>
                     </div>
-                    <span className="text-indigo-400 font-medium">{project.role}</span>
+                    <span className="text-indigo-400 font-medium">
+                      {project.role}
+                    </span>
                   </div>
 
                   {/* Action Buttons */}
@@ -192,16 +234,27 @@ export function ConsultingProjects() {
                         </Button>
                       </Link>
                     )}
-                    
+
                     <div className="flex gap-2">
                       <Link href="/contact">
-                        <Button variant="outline" size="sm" className="border-gray-600 text-gray-300 hover:bg-gray-800">
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="border-gray-600 text-gray-300 hover:bg-gray-800"
+                        >
                           <FaHandshake className="mr-1" />
                           Discuss
                         </Button>
                       </Link>
-                      <Link href="https://linkedin.com/in/mikhailajaj" target="_blank">
-                        <Button variant="outline" size="sm" className="border-gray-600 text-gray-300 hover:bg-gray-800">
+                      <Link
+                        href="https://linkedin.com/in/mikhailajaj"
+                        target="_blank"
+                      >
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="border-gray-600 text-gray-300 hover:bg-gray-800"
+                        >
                           <FaExternalLinkAlt className="mr-1" />
                           LinkedIn
                         </Button>
@@ -213,7 +266,8 @@ export function ConsultingProjects() {
                   {project.impact.businessValue && (
                     <div className="mt-4 p-3 bg-indigo-900/20 border border-indigo-400/20 rounded-lg">
                       <p className="text-indigo-300 text-sm">
-                        <strong>Business Impact:</strong> {project.impact.businessValue}
+                        <strong>Business Impact:</strong>{" "}
+                        {project.impact.businessValue}
                       </p>
                     </div>
                   )}
@@ -225,7 +279,8 @@ export function ConsultingProjects() {
                         &quot;{project.impact.testimonial.quote}&quot;
                       </p>
                       <div className="text-xs text-gray-400">
-                        <strong>{project.impact.testimonial.author}</strong>, {project.impact.testimonial.position}
+                        <strong>{project.impact.testimonial.author}</strong>,{" "}
+                        {project.impact.testimonial.position}
                         <br />
                         {project.impact.testimonial.company}
                       </div>
@@ -246,7 +301,11 @@ export function ConsultingProjects() {
           className="text-center mt-12"
         >
           <Link href="/projects">
-            <Button size="lg" variant="outline" className="border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-black">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-black"
+            >
               View All Consulting Projects
               <FaArrowRight className="ml-2" />
             </Button>

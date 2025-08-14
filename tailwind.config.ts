@@ -1,88 +1,200 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: "class",
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
-    
     container: {
       center: true,
       padding: "2rem",
       screens: {
-        "sm": "640px",
-        "md": "768px",
-        "lg": "1024px",
-        "xl": "1280px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
         "2xl": "1400px",
         "3xl": "1536px",
-        
       },
-
     },
     extend: {
+      // Font families with comprehensive fallback stacks
+      fontFamily: {
+        'sans': ['var(--font-inter)', 'var(--font-system)', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        'primary': ['var(--font-primary)', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        'fallback': ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        'system': ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+      },
+      // Consistent spacing system
+      spacing: {
+        "2xs": "4px",
+        xs: "8px",
+        sm: "16px",
+        md: "24px",
+        lg: "32px",
+        xl: "48px",
+        "2xl": "64px",
+        "3xl": "96px",
+        "4xl": "128px",
+        "5xl": "192px",
+      },
+      // Font families with fallback support
+      fontFamily: {
+        sans: ["var(--font-inter)", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
+        inter: ["var(--font-inter)", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
+        fallback: ["system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "sans-serif"],
+      },
+      // Typography scale with proper line heights and letter spacing
+      fontSize: {
+        display: [
+          "3.5rem",
+          { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "800" },
+        ],
+        h1: [
+          "3rem",
+          { lineHeight: "1.2", letterSpacing: "-0.015em", fontWeight: "700" },
+        ],
+        h2: [
+          "2.5rem",
+          { lineHeight: "1.25", letterSpacing: "-0.01em", fontWeight: "600" },
+        ],
+        h3: [
+          "2rem",
+          { lineHeight: "1.3", letterSpacing: "-0.005em", fontWeight: "600" },
+        ],
+        h4: [
+          "1.5rem",
+          { lineHeight: "1.35", letterSpacing: "0em", fontWeight: "600" },
+        ],
+        h5: [
+          "1.25rem",
+          { lineHeight: "1.4", letterSpacing: "0em", fontWeight: "500" },
+        ],
+        h6: [
+          "1.125rem",
+          { lineHeight: "1.4", letterSpacing: "0em", fontWeight: "500" },
+        ],
+        "body-lg": [
+          "1.125rem",
+          { lineHeight: "1.6", letterSpacing: "0em", fontWeight: "400" },
+        ],
+        body: [
+          "1rem",
+          { lineHeight: "1.6", letterSpacing: "0em", fontWeight: "400" },
+        ],
+        "body-sm": [
+          "0.875rem",
+          { lineHeight: "1.5", letterSpacing: "0em", fontWeight: "400" },
+        ],
+        caption: [
+          "0.75rem",
+          { lineHeight: "1.4", letterSpacing: "0.01em", fontWeight: "400" },
+        ],
+      },
       colors: {
-        // Enhanced color palette with better contrast
+        // Semantic color tokens for theme adaptation
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
         primary: {
-          50: '#eff6ff',
-          100: '#dbeafe', 
-          200: '#bfdbfe',
-          300: '#93c5fd',
-          400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          800: '#1e40af',
-          900: '#1e3a8a',
-          950: '#172554',
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          50: '#faf5ff',
-          100: '#f3e8ff',
-          200: '#e9d5ff', 
-          300: '#d8b4fe',
-          400: '#c084fc',
-          500: '#a855f7',
-          600: '#9333ea',
-          700: '#7c3aed',
-          800: '#6b21a8',
-          900: '#581c87',
-          950: '#3b0764',
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          50: '#ecfdf5',
-          100: '#d1fae5',
-          200: '#a7f3d0',
-          300: '#6ee7b7',
-          400: '#34d399',
-          500: '#10b981',
-          600: '#059669',
-          700: '#047857',
-          800: '#065f46',
-          900: '#064e3b',
-          950: '#022c22',
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+        // Custom semantic colors for better UX
+        "text-primary": "hsl(var(--text-primary))",
+        "text-secondary": "hsl(var(--text-secondary))",
+        "text-muted": "hsl(var(--text-muted))",
+        surface: {
+          DEFAULT: "hsl(var(--surface))",
+          elevated: "hsl(var(--surface-elevated))",
+        },
+        // Enhanced color palette with better contrast (legacy support)
+        "primary-legacy": {
+          50: "#eff6ff",
+          100: "#dbeafe",
+          200: "#bfdbfe",
+          300: "#93c5fd",
+          400: "#60a5fa",
+          500: "#3b82f6",
+          600: "#2563eb",
+          700: "#1d4ed8",
+          800: "#1e40af",
+          900: "#1e3a8a",
+          950: "#172554",
+        },
+        "secondary-legacy": {
+          50: "#faf5ff",
+          100: "#f3e8ff",
+          200: "#e9d5ff",
+          300: "#d8b4fe",
+          400: "#c084fc",
+          500: "#a855f7",
+          600: "#9333ea",
+          700: "#7c3aed",
+          800: "#6b21a8",
+          900: "#581c87",
+          950: "#3b0764",
+        },
+        "accent-legacy": {
+          50: "#ecfdf5",
+          100: "#d1fae5",
+          200: "#a7f3d0",
+          300: "#6ee7b7",
+          400: "#34d399",
+          500: "#10b981",
+          600: "#059669",
+          700: "#047857",
+          800: "#065f46",
+          900: "#064e3b",
+          950: "#022c22",
         },
         neutral: {
-          50: '#fafafa',
-          100: '#f5f5f5',
-          200: '#e5e5e5',
-          300: '#d4d4d4',
-          400: '#a3a3a3',
-          500: '#737373',
-          600: '#525252',
-          700: '#404040',
-          800: '#262626',
-          900: '#171717',
-          950: '#0a0a0a',
+          50: "#fafafa",
+          100: "#f5f5f5",
+          200: "#e5e5e5",
+          300: "#d4d4d4",
+          400: "#a3a3a3",
+          500: "#737373",
+          600: "#525252",
+          700: "#404040",
+          800: "#262626",
+          900: "#171717",
+          950: "#0a0a0a",
         },
       },
       zIndex: {
-        '100': '100',
+        "100": "100",
       },
       keyframes: {
         "accordion-down": {
@@ -93,59 +205,67 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "float": {
+        float: {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-10px)" },
         },
-        "glow": {
+        glow: {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0.5" },
         },
-        "shimmer": {
+        shimmer: {
           "0%": { transform: "translateX(-100%)" },
           "100%": { transform: "translateX(100%)" },
         },
-        "gradient": {
+        gradient: {
           "0%, 100%": { backgroundPosition: "0% 50%" },
           "50%": { backgroundPosition: "100% 50%" },
         },
         "pulse-glow": {
-          "0%, 100%": { 
+          "0%, 100%": {
             boxShadow: "0 0 20px rgba(59, 130, 246, 0.3)",
-            transform: "scale(1)"
+            transform: "scale(1)",
           },
-          "50%": { 
+          "50%": {
             boxShadow: "0 0 40px rgba(59, 130, 246, 0.6)",
-            transform: "scale(1.02)"
+            transform: "scale(1.02)",
           },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "float": "float 3s ease-in-out infinite",
-        "glow": "glow 2s ease-in-out infinite",
-        "shimmer": "shimmer 2s linear infinite",
-        "gradient": "gradient 3s ease infinite",
+        float: "float 3s ease-in-out infinite",
+        glow: "glow 2s ease-in-out infinite",
+        shimmer: "shimmer 2s linear infinite",
+        gradient: "gradient 3s ease infinite",
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+        "font-loading": "shimmer 1.5s ease-in-out infinite",
       },
       boxShadow: {
-        'glow': '0 0 20px rgba(59, 130, 246, 0.3)',
-        'glow-lg': '0 0 40px rgba(59, 130, 246, 0.4)',
-        'glow-xl': '0 0 60px rgba(59, 130, 246, 0.5)',
-        '3xl': '0 35px 60px -12px rgba(0, 0, 0, 0.25)',
+        glow: "0 0 20px rgba(59, 130, 246, 0.3)",
+        "glow-lg": "0 0 40px rgba(59, 130, 246, 0.4)",
+        "glow-xl": "0 0 60px rgba(59, 130, 246, 0.5)",
+        "3xl": "0 35px 60px -12px rgba(0, 0, 0, 0.25)",
       },
       backdropBlur: {
-        'xs': '2px',
+        xs: "2px",
       },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'mesh-gradient': 'linear-gradient(45deg, #667eea 0%, #764ba2 100%)',
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "mesh-gradient": "linear-gradient(45deg, #667eea 0%, #764ba2 100%)",
+        // Theme-aware gradients
+        "gradient-theme": "linear-gradient(to bottom, hsl(var(--background-start)), hsl(var(--background-end)))",
+        "gradient-theme-reverse": "linear-gradient(to top, hsl(var(--background-start)), hsl(var(--background-end)))",
+        "gradient-surface": "linear-gradient(135deg, hsl(var(--surface)), hsl(var(--surface-elevated)))",
+        // Font loading states
+        "font-loading-shimmer": "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%)",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;

@@ -1,0 +1,242 @@
+{
+  "systemArchitecture": {
+    "lastUpdated": "2024-12-19",
+    "version": "1.0.0",
+    "overview": "Comprehensive system architecture documentation for the Mikhail Ajaj Portfolio",
+    "architecturalPatterns": {
+      "domainDrivenDesign": {
+        "pattern": "Domain-Driven Design (DDD)",
+        "description": "Application organized around business domains rather than technical layers",
+        "implementation": {
+          "domains": [
+            {
+              "name": "full-stack",
+              "route": "/full-stack",
+              "components": "components/domain-specific/full-stack/",
+              "data": "data/projects/full-stack.ts",
+              "theme": "Blue spectrum (#3B82F6)"
+            },
+            {
+              "name": "cloud-engineering", 
+              "route": "/cloud-engineering",
+              "components": "components/domain-specific/cloud/",
+              "data": "data/projects/cloud.ts",
+              "theme": "Teal spectrum (#06B6D4)"
+            },
+            {
+              "name": "data-analytics",
+              "route": "/data-analytics", 
+              "components": "components/domain-specific/data/",
+              "data": "data/projects/data-analytics.ts",
+              "theme": "Purple spectrum (#8B5CF6)"
+            },
+            {
+              "name": "ux-ui-design",
+              "route": "/ux-ui-design",
+              "components": "components/domain-specific/ux-ui/", 
+              "data": "data/projects/ux-ui-design.ts",
+              "theme": "Pink spectrum (#EC4899)"
+            },
+            {
+              "name": "technical-consulting",
+              "route": "/technical-consulting",
+              "components": "components/domain-specific/consulting/",
+              "data": "data/projects/technical-consulting.ts", 
+              "theme": "Green spectrum (#F97316)"
+            }
+          ],
+          "benefits": [
+            "Clear separation of concerns",
+            "Domain-specific theming and branding",
+            "Scalable architecture for new domains",
+            "Consistent user experience per domain"
+          ]
+        }
+      },
+      "featureFirstOrganization": {
+        "pattern": "Feature-First Organization",
+        "description": "Components and logic organized by feature rather than technical type",
+        "structure": {
+          "components": {
+            "ui": "Base design system components (buttons, cards, inputs)",
+            "features": "Feature-specific components (homepage, achievements, education)",
+            "domain-specific": "Domain-specialized components (cloud, data, full-stack)",
+            "layouts": "Layout components and providers",
+            "navigation": "Navigation-specific components"
+          },
+          "lib": {
+            "contexts": "React contexts organized by feature area",
+            "services": "Business logic services",
+            "utils": "Utility functions grouped by purpose",
+            "theme": "Theme system with domain awareness"
+          }
+        },
+        "benefits": [
+          "Easier to locate related functionality",
+          "Reduced coupling between features", 
+          "Clearer ownership and responsibility",
+          "Simplified testing and maintenance"
+        ]
+      },
+      "layeredArchitecture": {
+        "pattern": "Layered Architecture",
+        "description": "Clear separation between presentation, business logic, and data layers",
+        "layers": {
+          "presentation": {
+            "layer": "Presentation Layer",
+            "components": ["app/", "components/ui/", "components/features/"],
+            "responsibilities": ["User interface", "User interactions", "Visual presentation"],
+            "technologies": ["React", "Next.js", "Tailwind CSS", "Framer Motion"]
+          },
+          "business": {
+            "layer": "Business Logic Layer", 
+            "components": ["lib/services/", "lib/contexts/", "hooks/"],
+            "responsibilities": ["Business rules", "State management", "Data processing"],
+            "technologies": ["React Context", "Custom hooks", "TypeScript"]
+          },
+          "data": {
+            "layer": "Data Layer",
+            "components": ["data/", "lib/api/", "lib/utils/"],
+            "responsibilities": ["Data access", "API integration", "Data validation"],
+            "technologies": ["Static data", "API routes", "Zod validation"]
+          }
+        }
+      }
+    },
+    "componentPatterns": {
+      "atomicDesign": {
+        "pattern": "Atomic Design",
+        "description": "Component hierarchy based on atomic design principles",
+        "hierarchy": {
+          "atoms": {
+            "location": "components/ui/base/",
+            "examples": ["Button", "Input", "Label"],
+            "characteristics": ["Single responsibility", "Highly reusable", "No business logic"]
+          },
+          "molecules": {
+            "location": "components/ui/",
+            "examples": ["SearchBox", "FormField", "NavigationItem"],
+            "characteristics": ["Combination of atoms", "Specific functionality", "Reusable patterns"]
+          },
+          "organisms": {
+            "location": "components/features/",
+            "examples": ["Header", "ProductList", "ContactForm"],
+            "characteristics": ["Complex functionality", "Feature-specific", "Business logic"]
+          },
+          "templates": {
+            "location": "components/layouts/",
+            "examples": ["MainLayout", "DocumentationLayout", "ServiceLayout"],
+            "characteristics": ["Page structure", "Layout patterns", "Content organization"]
+          },
+          "pages": {
+            "location": "app/",
+            "examples": ["HomePage", "ProjectPage", "ContactPage"],
+            "characteristics": ["Complete user interfaces", "Route-specific", "Data integration"]
+          }
+        }
+      },
+      "compoundComponents": {
+        "pattern": "Compound Components",
+        "description": "Complex components built from smaller, focused components",
+        "examples": {
+          "navigation": {
+            "component": "DomainAwareNavigation",
+            "subcomponents": ["NavigationItem", "ThemeButton", "MobileMenu"],
+            "benefits": ["Flexible composition", "Shared state", "Consistent API"]
+          },
+          "themeSystem": {
+            "component": "ThemeProvider",
+            "subcomponents": ["DomainThemeContext", "ThemeButton", "ThemeEngine"],
+            "benefits": ["Centralized theme logic", "Domain-specific theming", "Performance optimization"]
+          }
+        }
+      },
+      "renderProps": {
+        "pattern": "Render Props / Children as Function",
+        "description": "Flexible component composition through function children",
+        "examples": {
+          "animations": {
+            "component": "ScrollAnimation",
+            "usage": "Provides scroll visibility state to children",
+            "benefits": ["Flexible rendering", "State sharing", "Reusable logic"]
+          },
+          "errorBoundaries": {
+            "component": "ErrorBoundary", 
+            "usage": "Provides error state and recovery options",
+            "benefits": ["Error isolation", "Custom error UI", "Graceful degradation"]
+          }
+        }
+      }
+    },
+    "dataFlowPatterns": {
+      "unidirectionalFlow": {
+        "pattern": "Unidirectional Data Flow",
+        "description": "Data flows down through props, events flow up through callbacks",
+        "implementation": {
+          "globalState": "React Context for application-wide state",
+          "localState": "Component state for UI-specific data",
+          "eventHandling": "Callback props for user interactions",
+          "stateUpdates": "Immutable updates through setState or context actions"
+        },
+        "benefits": [
+          "Predictable data flow",
+          "Easier debugging",
+          "Better performance optimization",
+          "Clearer component responsibilities"
+        ]
+      },
+      "observerPattern": {
+        "pattern": "Observer Pattern",
+        "description": "Event-driven updates for loosely coupled components",
+        "implementations": {
+          "themeChanges": "Theme context notifies all subscribers of theme updates",
+          "performanceMonitoring": "Performance events broadcast to monitoring components",
+          "accessibilityEvents": "Accessibility state changes notify relevant components"
+        }
+      },
+      "strategyPattern": {
+        "pattern": "Strategy Pattern", 
+        "description": "Interchangeable algorithms for different scenarios",
+        "implementations": {
+          "fontLoading": "Different strategies for font loading (progressive, fallback, network-aware)",
+          "themeComputation": "Different algorithms for theme calculation based on domain",
+          "routingIntelligence": "Adaptive routing based on user behavior and performance"
+        }
+      }
+    },
+    "integrationPatterns": {
+      "providerPattern": {
+        "pattern": "Provider Pattern",
+        "description": "Context-based dependency injection for cross-cutting concerns",
+        "providers": {
+          "ProductionProviders": {
+            "file": "lib/contexts/ProductionProviders.tsx",
+            "responsibilities": ["Theme management", "Error boundaries", "Performance monitoring"],
+            "optimization": "Optimized context splitting to prevent unnecessary re-renders"
+          },
+          "DomainThemeContext": {
+            "file": "lib/contexts/DomainThemeContext.tsx", 
+            "responsibilities": ["Domain-specific theming", "Color management", "CSS variable generation"],
+            "optimization": "Memoized selectors and computed values"
+          }
+        }
+      },
+      "facadePattern": {
+        "pattern": "Facade Pattern",
+        "description": "Simplified interfaces for complex subsystems",
+        "examples": {
+          "accessibilityUtils": {
+            "file": "lib/utils/accessibility.ts",
+            "purpose": "Unified interface for accessibility features",
+            "subsystems": ["Screen readers", "Focus management", "Keyboard navigation"]
+          },
+          "performanceMonitor": {
+            "file": "lib/services/performance.ts",
+            "purpose": "Unified interface for performance tracking",
+            "subsystems": ["Web Vitals", "Custom metrics", "Error tracking"]
+          }
+        }
+      }
+    }
+  }
+}

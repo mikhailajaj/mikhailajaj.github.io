@@ -1,0 +1,286 @@
+{
+  "decisionMatrix": {
+    "lastUpdated": "2024-12-19",
+    "description": "Framework for evaluating and deciding on new technologies and libraries",
+    "evaluationProcess": {
+      "DECISION_FRAMEWORK_CORE": {
+        "name": "Technology Evaluation Framework",
+        "category": "Decision Making",
+        "description": "Systematic approach to evaluate new technologies before adoption",
+        "phases": {
+          "phase1_assessment": {
+            "name": "Initial Assessment",
+            "duration": "1-2 hours",
+            "steps": [
+              "Check existing core-technologies.json for solutions",
+              "Identify specific problem or need",
+              "Research alternatives using Context7 MCP",
+              "Document findings and options"
+            ],
+            "deliverables": ["Problem statement", "Technology options", "Initial research"]
+          },
+          "phase2_analysis": {
+            "name": "Detailed Analysis",
+            "duration": "4-8 hours",
+            "steps": [
+              "Performance impact analysis",
+              "Bundle size measurement",
+              "Integration complexity assessment",
+              "Maintenance overhead evaluation",
+              "Team expertise requirement"
+            ],
+            "deliverables": ["Performance report", "Integration plan", "Risk assessment"]
+          },
+          "phase3_decision": {
+            "name": "Decision Making",
+            "duration": "1-2 hours",
+            "steps": [
+              "Score against decision criteria",
+              "Discuss findings with team",
+              "Make go/no-go decision",
+              "Document rationale"
+            ],
+            "deliverables": ["Decision document", "Implementation plan", "Documentation updates"]
+          }
+        }
+      }
+    },
+    "evaluationCriteria": {
+      "CRITERIA_PERFORMANCE": {
+        "name": "Performance Impact",
+        "weight": 30,
+        "description": "Impact on application performance and user experience",
+        "metrics": {
+          "bundleSize": {
+            "threshold": "< 10KB gzipped",
+            "scoring": "0-10 points based on size impact",
+            "critical": "Automatic rejection if > 25KB"
+          },
+          "renderingTime": {
+            "threshold": "No degradation in 60fps",
+            "scoring": "0-10 points based on performance impact",
+            "critical": "Must maintain Core Web Vitals"
+          },
+          "loadTime": {
+            "threshold": "< 100ms additional load time",
+            "scoring": "0-10 points based on load impact",
+            "critical": "Must not affect LCP significantly"
+          }
+        }
+      },
+      "CRITERIA_NECESSITY": {
+        "name": "Problem Necessity",
+        "weight": 25,
+        "description": "How well existing solutions address the problem",
+        "evaluation": {
+          "existingSolution": {
+            "question": "Can existing tech stack solve this problem?",
+            "scoring": "0 points if yes, 10 points if no viable solution",
+            "critical": "Must justify why existing solutions are insufficient"
+          },
+          "problemSeverity": {
+            "question": "How critical is this problem?",
+            "scoring": "1-10 based on business/user impact",
+            "critical": "Must be significant problem to justify new dependency"
+          },
+          "alternativeApproaches": {
+            "question": "Are there non-library solutions?",
+            "scoring": "Consider custom implementation vs library",
+            "critical": "Prefer simple custom solutions for small problems"
+          }
+        }
+      },
+      "CRITERIA_MAINTENANCE": {
+        "name": "Maintenance Overhead",
+        "weight": 20,
+        "description": "Long-term maintenance and support requirements",
+        "factors": {
+          "communitySupport": {
+            "metrics": ["GitHub stars", "NPM downloads", "Issue response time"],
+            "threshold": "> 1000 stars, > 10k weekly downloads",
+            "scoring": "0-10 based on community health"
+          },
+          "updateFrequency": {
+            "metrics": ["Release cadence", "Breaking changes", "Migration guides"],
+            "threshold": "Stable releases, clear migration paths",
+            "scoring": "0-10 based on stability and documentation"
+          },
+          "teamExpertise": {
+            "metrics": ["Learning curve", "Documentation quality", "Team familiarity"],
+            "threshold": "Team can become proficient within 1 week",
+            "scoring": "0-10 based on adoption difficulty"
+          }
+        }
+      },
+      "CRITERIA_INTEGRATION": {
+        "name": "Integration Complexity",
+        "weight": 15,
+        "description": "How easily the technology integrates with existing stack",
+        "factors": {
+          "nextjsCompatibility": {
+            "requirement": "Must work seamlessly with Next.js App Router",
+            "scoring": "0-10 based on integration ease",
+            "critical": "No conflicts with SSR/SSG"
+          },
+          "typescriptSupport": {
+            "requirement": "Must have TypeScript definitions",
+            "scoring": "0-10 based on type quality",
+            "critical": "Strong TypeScript support required"
+          },
+          "configurationComplexity": {
+            "requirement": "Minimal configuration preferred",
+            "scoring": "0-10 based on setup complexity",
+            "critical": "Should not require extensive configuration"
+          }
+        }
+      },
+      "CRITERIA_FUTURE_PROOF": {
+        "name": "Future Proofing",
+        "weight": 10,
+        "description": "Long-term viability and technology direction",
+        "factors": {
+          "technologyTrends": {
+            "consideration": "Alignment with industry trends",
+            "scoring": "0-10 based on future relevance",
+            "research": "Industry adoption and roadmap analysis"
+          },
+          "vendorLockIn": {
+            "consideration": "Risk of vendor dependency",
+            "scoring": "0-10 based on portability",
+            "preference": "Open source and standard technologies"
+          },
+          "migrationPath": {
+            "consideration": "Ability to migrate away if needed",
+            "scoring": "0-10 based on exit strategy",
+            "requirement": "Clear migration path must exist"
+          }
+        }
+      }
+    },
+    "scoringSystem": {
+      "calculation": {
+        "formula": "Weighted sum of criteria scores",
+        "maxScore": 100,
+        "passingScore": 70,
+        "excellentScore": 85
+      },
+      "thresholds": {
+        "reject": "< 60 points",
+        "conditional": "60-69 points (requires additional justification)",
+        "accept": "70-84 points",
+        "strongAccept": "85+ points"
+      },
+      "criticalFailures": {
+        "bundleSize": "> 25KB gzipped",
+        "performance": "Degrades Core Web Vitals",
+        "compatibility": "Breaks existing functionality",
+        "security": "Introduces security vulnerabilities"
+      }
+    },
+    "decisionTemplates": {
+      "uiLibrary": {
+        "name": "UI Library Evaluation",
+        "specificCriteria": [
+          "Accessibility compliance (WCAG 2.1 AA)",
+          "Theme system compatibility",
+          "Component API consistency",
+          "Animation performance",
+          "Mobile responsiveness"
+        ],
+        "additionalConsiderations": [
+          "Design system alignment",
+          "Customization flexibility",
+          "Component coverage",
+          "Documentation quality"
+        ]
+      },
+      "utilityLibrary": {
+        "name": "Utility Library Evaluation",
+        "specificCriteria": [
+          "Tree-shaking support",
+          "TypeScript definitions quality",
+          "API surface area",
+          "Performance characteristics",
+          "Alternative implementations"
+        ],
+        "additionalConsiderations": [
+          "Custom implementation feasibility",
+          "Dependency chain analysis",
+          "Bundle impact assessment",
+          "Maintenance requirements"
+        ]
+      },
+      "buildTool": {
+        "name": "Build Tool Evaluation",
+        "specificCriteria": [
+          "Build performance impact",
+          "Development experience improvement",
+          "Configuration complexity",
+          "Ecosystem compatibility",
+          "Migration effort required"
+        ],
+        "additionalConsiderations": [
+          "Team learning curve",
+          "CI/CD integration",
+          "Debugging capabilities",
+          "Long-term support"
+        ]
+      }
+    },
+    "documentationRequirements": {
+      "decisionRecord": {
+        "sections": [
+          "Problem statement and context",
+          "Options considered",
+          "Evaluation criteria and scores",
+          "Decision rationale",
+          "Implementation plan",
+          "Success metrics",
+          "Rollback plan"
+        ],
+        "location": "manual/framework/decisions/",
+        "format": "Markdown with structured template"
+      },
+      "frameworkUpdate": {
+        "requirements": [
+          "Update core-technologies.json with new entry",
+          "Add Context7 source information",
+          "Document integration patterns",
+          "Update performance guidelines",
+          "Add to decision matrix examples"
+        ],
+        "process": "Update framework documentation within 1 week of adoption"
+      }
+    },
+    "reviewProcess": {
+      "frequency": "Quarterly review of all technologies",
+      "criteria": [
+        "Performance impact assessment",
+        "Maintenance overhead evaluation",
+        "Usage pattern analysis",
+        "Alternative technology assessment",
+        "Team satisfaction survey"
+      ],
+      "outcomes": [
+        "Continue with current technology",
+        "Plan migration to alternative",
+        "Deprecate and remove",
+        "Upgrade to newer version"
+      ]
+    },
+    "emergencyOverride": {
+      "conditions": [
+        "Security vulnerability requiring immediate fix",
+        "Critical production issue",
+        "Regulatory compliance requirement",
+        "Major performance degradation"
+      ],
+      "process": [
+        "Document emergency context",
+        "Implement minimal viable solution",
+        "Schedule proper evaluation within 2 weeks",
+        "Plan long-term solution if needed"
+      ]
+    }
+  }
+}

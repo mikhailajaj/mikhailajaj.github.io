@@ -1,15 +1,25 @@
-import React from 'react';
-import { Metadata } from 'next';
-import { getAllBlogPosts, getAllCategories, getAllTags } from '@/lib/blog';
-import BlogGrid from '@/components/blog/BlogGrid';
-import EnhancedLayout from '@/components/layouts/EnhancedLayout';
-import PageHeader from '@/components/navigation/PageHeader';
-import ErrorBoundary from '@/components/ui/ErrorBoundary';
+import React from "react";
+import { Metadata } from "next";
+import { getAllBlogPosts, getAllCategories, getAllTags } from "@/lib/blog";
+import BlogGrid from "@/components/blog/BlogGrid";
+// EnhancedLayout removed - using app/layout.tsx structure
+import PageHeader from "@/components/navigation/PageHeader";
+import { ErrorBoundary } from "@/lib/error/ErrorBoundary";
 
 export const metadata: Metadata = {
-  title: 'Technical Blog | Mikhail Ajaj - Full-Stack Development Insights',
-  description: 'Technical articles, tutorials, and insights on full-stack development, cloud architecture, data engineering, and modern web technologies.',
-  keywords: ['Technical Blog', 'Full-Stack Development', 'Cloud Architecture', 'React', 'Next.js', 'TypeScript', 'AWS', 'Data Engineering'],
+  title: "Technical Blog | Mikhail Ajaj - Full-Stack Development Insights",
+  description:
+    "Technical articles, tutorials, and insights on full-stack development, cloud architecture, data engineering, and modern web technologies.",
+  keywords: [
+    "Technical Blog",
+    "Full-Stack Development",
+    "Cloud Architecture",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "AWS",
+    "Data Engineering",
+  ],
 };
 
 export default async function BlogPage() {
@@ -18,7 +28,7 @@ export default async function BlogPage() {
   const tags = getAllTags();
 
   return (
-    <EnhancedLayout>
+    <div className="pt-10"> {/* Account for fixed navigation */}
       <PageHeader
         title="Technical Blog"
         subtitle="Latest Insights"
@@ -26,19 +36,19 @@ export default async function BlogPage() {
         stats={[
           { label: "Articles", value: posts.length },
           { label: "Categories", value: categories.length },
-          { label: "Topics", value: tags.length }
+          { label: "Topics", value: tags.length },
         ]}
         actions={[
           {
             label: "Subscribe to Updates",
             href: "/contact",
-            variant: "primary"
+            variant: "primary",
           },
           {
             label: "View All Categories",
             href: "#categories",
-            variant: "secondary"
-          }
+            variant: "secondary",
+          },
         ]}
       />
 
@@ -46,6 +56,6 @@ export default async function BlogPage() {
       <ErrorBoundary>
         <BlogGrid posts={posts} categories={categories} tags={tags} />
       </ErrorBoundary>
-    </EnhancedLayout>
+    </div>
   );
 }

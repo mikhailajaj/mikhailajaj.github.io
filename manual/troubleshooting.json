@@ -1,0 +1,346 @@
+{
+  "troubleshooting": {
+    "manualVersion": "2.1.0", 
+    "lastUpdated": "2024-12-19",
+    "commonIssues": {
+      "buildErrors": {
+        "title": "Build and Compilation Errors",
+        "issues": [
+          {
+            "error": "Module not found: Can't resolve '@/components/ui/Enhanced*'",
+            "cause": "Component was renamed during Enhanced namespace removal",
+            "solution": "Update import to use new component name",
+            "example": {
+              "old": "import { EnhancedButton } from '@/components/ui/interactive/EnhancedButton'",
+              "new": "import { AnimatedButton } from '@/components/ui/interactive/AnimatedButton'"
+            },
+            "status": "resolved",
+            "affectedFiles": ["app/ui-showcase/page.tsx", "components/ui/engagement/NewsletterSignup.tsx"]
+          },
+          {
+            "error": "Expected '</', got 'jsx text'",
+            "cause": "Mismatched component opening and closing tags",
+            "solution": "Ensure component tags match exactly",
+            "example": {
+              "incorrect": "<EnhancedButton>Text</AnimatedButton>",
+              "correct": "<AnimatedButton>Text</AnimatedButton>"
+            },
+            "status": "in-progress",
+            "affectedFiles": ["app/ui-showcase/page.tsx", "components/ui/engagement/NewsletterSignup.tsx"],
+            "currentProgress": "Fixed InteractiveHero component, remaining issues in ui-showcase and NewsletterSignup"
+          },
+          {
+            "error": "Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks",
+            "cause": "Conditional hook calls or hooks inside other hooks",
+            "solution": "Move hooks to top level of component",
+            "example": {
+              "incorrect": "useEffect(() => { const [state] = useState(); }, [])",
+              "correct": "const [state] = useState(); useEffect(() => { ... }, [])"
+            },
+            "status": "resolved",
+            "affectedFiles": ["lib/fonts/progressiveFontLoader.ts"]
+          }
+        ]
+      },
+      "runtimeErrors": {
+        "title": "Runtime and Component Errors",
+        "issues": [
+          {
+            "error": "ReferenceError: EnhancedMagicButton is not defined",
+            "cause": "Component reference not updated after renaming",
+            "solution": "Update all component references in JSX",
+            "status": "resolved",
+            "affectedFiles": ["components/InteractiveHero.tsx", "components/CleanCodeHero.tsx"]
+          },
+          {
+            "error": "Hydration mismatch",
+            "cause": "Server and client rendering differences",
+            "solution": "Use dynamic imports or useEffect for client-only code",
+            "prevention": "Test with SSR disabled to identify client-only dependencies"
+          }
+        ]
+      },
+      "importErrors": {
+        "title": "Import and Module Resolution",
+        "issues": [
+          {
+            "error": "Cannot resolve './projects-enhanced'",
+            "cause": "Data file was renamed during refactoring",
+            "solution": "Update import path to new filename",
+            "example": {
+              "old": "import { enhancedProjects } from './projects-enhanced'",
+              "new": "import { projectCaseStudies } from './project-case-studies'"
+            },
+            "status": "resolved",
+            "affectedFiles": ["data/index.ts", "app/projects/[id]/page.tsx"]
+          }
+        ]
+      }
+    },
+    "quickFixes": {
+      "componentReferences": {
+        "description": "Fix component reference errors after renaming",
+        "steps": [
+          "1. Identify the old component name in error message",
+          "2. Find the new name in manual/components.json",
+          "3. Update import statement",
+          "4. Update JSX usage",
+          "5. Check for TypeScript interface updates"
+        ]
+      },
+      "buildFailures": {
+        "description": "Resolve build compilation errors",
+        "steps": [
+          "1. Run npm run build to see all errors",
+          "2. Fix syntax errors first (mismatched tags)",
+          "3. Update import statements",
+          "4. Fix TypeScript type errors",
+          "5. Test with npm run dev"
+        ]
+      },
+      "hydrationMismatches": {
+        "description": "Fix server/client hydration mismatches",
+        "steps": [
+          "1. Import useIsHydrated from @/lib/utils/hydration",
+          "2. Add const isHydrated = useIsHydrated() to component",
+          "3. Use conditional className: isHydrated ? 'full-classes' : 'ssr-safe-classes'",
+          "4. Remove dark: variants from SSR fallback classes",
+          "5. Test both server and client rendering"
+        ],
+        "commonCauses": [
+          "Theme-aware CSS classes with dark: variants",
+          "Client-only CSS variable computations",
+          "Dynamic color calculations",
+          "Browser-specific styling"
+        ]
+      },
+      "duplicateReactKeys": {
+        "description": "Fix duplicate React key warnings",
+        "steps": [
+          "1. Identify components using same key values",
+          "2. Add unique prefixes to keys (e.g., 'desktop-', 'mobile-')",
+          "3. Ensure keys are unique across all render contexts",
+          "4. Test navigation and component updates"
+        ]
+      },
+      "hookOrderViolations": {
+        "description": "Fix React Hook order violations",
+        "steps": [
+          "1. Always call hooks at component top level",
+          "2. Never call hooks conditionally",
+          "3. Use computed values conditionally, not hooks",
+          "4. Move conditional logic inside hook returns"
+        ]
+      }
+    },
+    "errorTracking": {
+      "title": "Error Tracking and Analytics System",
+      "description": "Advanced error tracking with real-time analytics and insights",
+      "features": [
+        "Real-time error monitoring and tracking",
+        "Error trend analysis and pattern detection",
+        "Performance impact assessment",
+        "Business impact calculation",
+        "Automated insight generation",
+        "Domain-aware error categorization"
+      ],
+      "usage": {
+        "initialization": {
+          "description": "Initialize error tracking service",
+          "code": "import { errorTracking } from '@/lib/monitoring/ErrorTracking'; errorTracking.initialize();"
+        },
+        "getAnalytics": {
+          "description": "Get current error analytics",
+          "code": "const analytics = errorTracking.getAnalytics();"
+        },
+        "getTrends": {
+          "description": "Get error trends for time range",
+          "code": "const trends = errorTracking.getTrends({ start: new Date(), end: new Date() });"
+        },
+        "getInsights": {
+          "description": "Get automated insights",
+          "code": "const insights = errorTracking.getInsights();"
+        },
+        "resolveError": {
+          "description": "Mark error as resolved",
+          "code": "errorTracking.resolveError(fingerprint);"
+        }
+      },
+      "integration": {
+        "errorReporting": "Automatically integrates with error reporting service",
+        "performanceMonitoring": "Tracks performance impact of errors",
+        "domainAwareness": "Categorizes errors by portfolio domain",
+        "realTimeAlerts": "Generates alerts for critical issues"
+      },
+      "configuration": {
+        "retentionDays": "Number of days to retain error data (default: 30)",
+        "analyticsInterval": "Minutes between analytics updates (default: 5)",
+        "insightGeneration": "Enable automated insight generation (default: true)",
+        "alertThresholds": {
+          "errorRate": "Error rate threshold for alerts (default: 0.05)",
+          "criticalErrors": "Critical errors per hour threshold (default: 10)",
+          "performanceImpact": "Performance impact threshold (default: 0.2)"
+        }
+      }
+    },
+    "activeIssues": {
+      "title": "Recently Resolved Issues (2024-12-19)",
+      "resolvedIssues": [
+        {
+          "error": "Duplicate React keys in navigation",
+          "location": "components/ui/navigation/DomainAwareNavigation.tsx",
+          "cause": "Same href values used as keys in multiple navigation contexts",
+          "solution": "Added unique key prefixes: ssr-, desktop-, mobile-",
+          "status": "resolved",
+          "resolvedDate": "2024-12-19"
+        },
+        {
+          "error": "Hydration mismatch in ContactForm",
+          "location": "components/ContactForm.tsx",
+          "cause": "Theme-aware classes causing server/client attribute differences",
+          "solution": "Added useIsHydrated hook with conditional className rendering",
+          "status": "resolved",
+          "resolvedDate": "2024-12-19"
+        },
+        {
+          "error": "HMR module factory not available for DomainThemeContext",
+          "location": "lib/contexts/DomainThemeContext.tsx",
+          "cause": "Circular dependencies in re-export chain",
+          "solution": "Inlined migration adapter code to eliminate re-exports",
+          "status": "resolved",
+          "resolvedDate": "2024-12-19"
+        },
+        {
+          "error": "Hook order violations in MobileBottomNav",
+          "location": "components/ui/navigation/MobileBottomNav.tsx",
+          "cause": "Conditional hook calls based on isHydrated state",
+          "solution": "Always call hooks, use computed values conditionally",
+          "status": "resolved",
+          "resolvedDate": "2024-12-19"
+        }
+      ],
+      "currentIssues": []
+    },
+    "preventiveMeasures": {
+      "codeQuality": [
+        "Use TypeScript strict mode",
+        "Run ESLint before commits",
+        "Test builds before deployment",
+        "Use consistent naming conventions"
+      ],
+      "refactoring": [
+        "Update imports systematically",
+        "Test after each file rename",
+        "Use find-and-replace carefully",
+        "Maintain manual documentation"
+      ],
+      "errorPrevention": [
+        "Initialize error tracking on app startup",
+        "Use error boundaries for component isolation",
+        "Implement proper loading states",
+        "Add input validation and sanitization",
+        "Use defensive programming patterns",
+        "Monitor performance thresholds",
+        "Test error scenarios regularly"
+      ],
+      "monitoring": [
+        "Set up real-time error alerts",
+        "Review error analytics weekly",
+        "Track error resolution times",
+        "Monitor business impact metrics",
+        "Analyze error patterns and trends",
+        "Update alert thresholds based on data"
+      ]
+    },
+    "implementation": {
+      "title": "Error Tracking Implementation Guide",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Initialize Services",
+          "description": "Add error tracking initialization to app layout",
+          "code": "errorReporting.initialize(); errorTracking.initialize();"
+        },
+        {
+          "step": 2,
+          "title": "Access Admin Dashboard",
+          "description": "Navigate to /admin/error-analytics for monitoring",
+          "url": "/admin/error-analytics"
+        },
+        {
+          "step": 3,
+          "title": "Configure Thresholds",
+          "description": "Adjust alert thresholds based on your needs",
+          "config": {
+            "errorRate": "5% default, adjust based on traffic",
+            "criticalErrors": "10 per hour default",
+            "performanceImpact": "20% default threshold"
+          }
+        },
+        {
+          "step": 4,
+          "title": "Monitor and Respond",
+          "description": "Regular monitoring and proactive error resolution",
+          "actions": [
+            "Check dashboard daily",
+            "Respond to critical alerts immediately",
+            "Review weekly error trends",
+            "Update documentation with solutions"
+          ]
+        }
+      ],
+      "adminAccess": {
+        "title": "Admin Dashboard Access Guide",
+        "description": "How to access and use the admin dashboard",
+        "access": {
+          "url": "http://localhost:3000/admin/",
+          "note": "Use trailing slash for direct access",
+          "redirect": "/admin redirects to /admin/ automatically"
+        },
+        "navigation": {
+          "sidebar": "Use sidebar navigation to access different admin tools",
+          "quickAccess": "Admin home provides quick access cards to all tools"
+        },
+        "troubleshooting": [
+          {
+            "issue": "Admin page redirects to homepage",
+            "cause": "Missing trailing slash or ServiceWorker interference",
+            "solution": "Use /admin/ with trailing slash, check console for ServiceWorker errors"
+          },
+          {
+            "issue": "Error analytics not loading",
+            "cause": "Error tracking service not initialized",
+            "solution": "Ensure errorTracking.initialize() is called in app layout"
+          },
+          {
+            "issue": "Console ServiceWorker errors",
+            "cause": "ServiceWorker script loading issues",
+            "solution": "Non-blocking error, admin functionality works without ServiceWorker"
+          }
+        ]
+      },
+      "serviceWorker": {
+        "title": "ServiceWorker Issues",
+        "description": "Common ServiceWorker-related problems and solutions",
+        "commonErrors": [
+          {
+            "error": "Failed to update ServiceWorker: An unknown error occurred when fetching the script",
+            "impact": "Non-blocking - does not affect core functionality",
+            "solution": "ServiceWorker provides caching optimization but is not required for operation",
+            "workaround": "Can be temporarily disabled in layout.tsx if causing issues"
+          }
+        ],
+        "debugging": [
+          "Check browser DevTools > Application > Service Workers",
+          "Verify sw.js file exists in public/ directory",
+          "Check console for detailed ServiceWorker errors",
+          "Test functionality without ServiceWorker enabled"
+        ]
+      },
+      "documentation": {
+        "implementationReport": "docs/ERROR_TRACKING_IMPLEMENTATION_REPORT.md",
+        "description": "Complete implementation details and technical documentation"
+      }
+    }
+  }
+}

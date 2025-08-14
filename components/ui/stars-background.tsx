@@ -1,7 +1,12 @@
 "use client";
 import { cn } from "@/lib/utils";
-import React, { useState, useEffect, useRef, RefObject, useCallback } from "react";
-
+import React, {
+  useState,
+  useEffect,
+  useRef,
+  RefObject,
+  useCallback,
+} from "react";
 
 interface StarProps {
   x: number;
@@ -9,7 +14,7 @@ interface StarProps {
   radius: number;
   opacity: number;
   twinkleSpeed: number | null;
-  color: { r: number; g: number; b: number; }; 
+  color: { r: number; g: number; b: number };
 }
 
 interface StarBackgroundProps {
@@ -33,47 +38,109 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
   const canvasRef: RefObject<HTMLCanvasElement> =
     useRef<HTMLCanvasElement>(null);
 
-    // Function to generate a random star color
-    const getRandomStarColor = () => {
-      // Array of possible star colors (you can adjust these)
-      const starColors = [
-        { r: 116, g: 64, b: 207 },    // White
-        { r: 230, g: 9, b: 9 },    // Warm white
-        { r: 9, g: 9, b: 230 },    // Cool white
-        { r: 226, g: 230, b: 9 },    // Peach
-        { r: 162, g: 216, b: 255 },    // Light blue
-        { r: 255, g: 202, b: 202 },    // Light red
-        { r: 99, g: 102, b: 241 },     // Indigo
-        { r: 230, g: 131, b: 9 },     // Cyan
-        { r: 0, g: 0, b: 0 },     // Orange
-        { r: 255, g: 255, b: 255 },     // Lime
+  // Function to generate theme-adaptive galaxy star colors
+  const getRandomStarColor = () => {
+    // Check if we're in light or dark mode for adaptive colors
+    const isDarkMode = document.documentElement.classList.contains('dark');
+    
+    if (isDarkMode) {
+      // Dark mode: Full spectrum realistic stellar colors
+      const darkStarColors = [
+        { r: 255, g: 255, b: 255 }, // White dwarf
+        { r: 255, g: 248, b: 220 }, // Yellow star
+        { r: 173, g: 216, b: 255 }, // Blue giant
+        { r: 255, g: 204, b: 111 }, // Orange star
+        { r: 255, g: 180, b: 107 }, // Red giant
+        { r: 135, g: 206, b: 255 }, // Hot blue star
+        { r: 255, g: 228, b: 181 }, // Warm white
+        { r: 186, g: 185, b: 255 }, // Blue-white
+        { r: 255, g: 167, b: 95 },  // Cool orange
       ];
+      return darkStarColors[Math.floor(Math.random() * darkStarColors.length)];
+    } else {
+      // Light mode: Enhanced contrast cosmic colors for visibility
+      const lightStarColors = [
+        { r: 138, g: 43, b: 226 },  // Purple (primary cosmic)
+        { r: 75, g: 0, b: 130 },   // Indigo (deep cosmic)
+        { r: 147, g: 112, b: 219 }, // Medium purple
+        { r: 123, g: 104, b: 238 }, // Slate blue
+        { r: 72, g: 61, b: 139 },  // Dark slate blue
+        { r: 106, g: 90, b: 205 }, // Slate blue
+        { r: 255, g: 20, b: 147 }, // Deep pink (accent)
+        { r: 0, g: 191, b: 255 },  // Deep sky blue
+        { r: 138, g: 43, b: 226 }, // Purple (duplicate for higher probability)
+      ];
+      return lightStarColors[Math.floor(Math.random() * lightStarColors.length)];
+    }
+  };
+
+  const generateStars = useCallback(
+    (width: number, height: number): StarProps[] => {
+      const area = width * height;
+      const numStars = Math.floor(area * starDensity);
       
-      const color = starColors[Math.floor(Math.random() * starColors.length)];
-      return color;
-    };
-  
-    const generateStars = useCallback(
-      (width: number, height: number): StarProps[] => {
-        const area = width * height;
-        const numStars = Math.floor(area * starDensity);
-        return Array.from({ length: numStars }, () => {
-          const shouldTwinkle = allStarsTwinkle || Math.random() < twinkleProbability;
-          const color = getRandomStarColor();
-          return {
-            x: Math.random() * width,
-            y: Math.random() * height,
-            radius: Math.random() * 0.05 + 1,
-            opacity: Math.random() * 0.5 + 0.5,
-            twinkleSpeed: shouldTwinkle
-              ? minTwinkleSpeed + Math.random() * (maxTwinkleSpeed - minTwinkleSpeed)
-              : null,
-            color: color,
-          };
-        });
-      },
-      [starDensity, allStarsTwinkle, twinkleProbability, minTwinkleSpeed, maxTwinkleSpeed]
-    );
+      // Create galaxy spiral pattern
+      const centerX = width / 2;
+      const centerY = height / 2;
+      const maxRadius = Math.min(width, height) * 0.6;
+      
+      return Array.from({ length: numStars }, () => {
+        const shouldTwinkle =
+          allStarsTwinkle || Math.random() < twinkleProbability;
+        const color = getRandomStarColor();
+        
+        // Create spiral galaxy distribution
+        let x, y;
+        if (Math.random() < 0.7) { // 70% of stars in spiral arms
+          const spiralArm = Math.floor(Math.random() * 3); // 3 spiral arms
+          const armAngle = (spiralArm * 120 + Math.random() * 60) * Math.PI / 180;
+          const distance = Math.random() * maxRadius;
+          const spiralTightness = 0.3;
+          const angle = armAngle + distance * spiralTightness;
+          
+          x = centerX + Math.cos(angle) * distance + (Math.random() - 0.5) * 50;
+          y = centerY + Math.sin(angle) * distance + (Math.random() - 0.5) * 50;
+        } else { // 30% scattered throughout
+          x = Math.random() * width;
+          y = Math.random() * height;
+        }
+        
+        // Ensure stars stay within bounds
+        x = Math.max(0, Math.min(width, x));
+        y = Math.max(0, Math.min(height, y));
+        
+        // Vary star sizes based on type
+        const starType = Math.random();
+        let radius;
+        if (starType < 0.1) { // 10% large stars
+          radius = Math.random() * 2 + 2;
+        } else if (starType < 0.3) { // 20% medium stars
+          radius = Math.random() * 1 + 1.5;
+        } else { // 70% small stars
+          radius = Math.random() * 0.5 + 0.8;
+        }
+        
+        return {
+          x,
+          y,
+          radius,
+          opacity: Math.random() * 0.6 + 0.4,
+          twinkleSpeed: shouldTwinkle
+            ? minTwinkleSpeed +
+              Math.random() * (maxTwinkleSpeed - minTwinkleSpeed)
+            : null,
+          color: color,
+        };
+      });
+    },
+    [
+      starDensity,
+      allStarsTwinkle,
+      twinkleProbability,
+      minTwinkleSpeed,
+      maxTwinkleSpeed,
+    ],
+  );
 
   useEffect(() => {
     const updateStars = () => {
@@ -123,19 +190,20 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
       stars.forEach((star) => {
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-        
+
         // Use the star's color with its opacity
         ctx.fillStyle = `rgba(${star.color.r}, ${star.color.g}, ${star.color.b}, ${star.opacity})`;
-        
+
         // Optional: Add glow effect
         ctx.shadowBlur = star.radius * 2;
         ctx.shadowColor = `rgba(${star.color.r}, ${star.color.g}, ${star.color.b}, ${star.opacity * 0.5})`;
-        
+
         ctx.fill();
 
         if (star.twinkleSpeed !== null) {
           star.opacity =
-            0.5 + Math.abs(Math.sin((Date.now() * 0.001) / star.twinkleSpeed) * 0.5);
+            0.5 +
+            Math.abs(Math.sin((Date.now() * 0.001) / star.twinkleSpeed) * 0.5);
         }
       });
 

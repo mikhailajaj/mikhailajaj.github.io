@@ -1,8 +1,8 @@
-import React from 'react'
-import { BentoGrid, BentoGridItem } from './ui/bento-grid';
-import { gridItems } from '@/data/gridItems';
-import  Image from 'next/image';
-import { cn } from '@/lib/utils';
+import React from "react";
+import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
+import { gridItems } from "@/data/gridItems";
+import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 // Define types for grid items
 // Updated types to handle multiple icons
@@ -12,37 +12,37 @@ interface GridItem {
   description: React.ReactNode;
   className?: string;
   header?: React.ReactNode;
-  icons?: (string | React.ComponentType)[];  // Can be either image paths or React components
+  icons?: (string | React.ComponentType)[]; // Can be either image paths or React components
   image?: {
     src: string;
     alt: string;
   };
 }
-const IconRenderer: React.FC<{ icon: string | React.ComponentType }> = ({ icon }) => {
-
-  
-    // Render component icon
-    const IconComponent = icon;
-    return <IconComponent className="w-5 h-5" />;
-  
+const IconRenderer: React.FC<{ icon: string | React.ComponentType }> = ({
+  icon,
+}) => {
+  // Render component icon
+  const IconComponent = icon;
+  return <IconComponent className="w-5 h-5" />;
 };
-const DescriptionRenderer: React.FC<{ description: string | React.ComponentType }> = ({ description }) => {
-
-  if (typeof description === 'string') {
+const DescriptionRenderer: React.FC<{
+  description: string | React.ComponentType;
+}> = ({ description }) => {
+  if (typeof description === "string") {
     // Render image icon
-    return (
-      <>{description}</>
-    );
+    return <>{description}</>;
   } else {
     // Render component icon
     const DescriptionComponent = description;
-    return <DescriptionComponent className="w-fit flex align-center justify-center" />;
+    return (
+      <DescriptionComponent className="w-fit flex align-center justify-center" />
+    );
   }
 };
 
-const GridItemHeader: React.FC<{ 
-  image?: GridItem['image'],
-  icons?: GridItem['icons']
+const GridItemHeader: React.FC<{
+  image?: GridItem["image"];
+  icons?: GridItem["icons"];
 }> = ({ image, icons }) => {
   if (!image) {
     return (
@@ -64,9 +64,8 @@ const GridItemHeader: React.FC<{
   );
 };
 
-
-const GridIcons: React.FC<{ 
-  icons?: GridItem['icons']
+const GridIcons: React.FC<{
+  icons?: GridItem["icons"];
 }> = ({ icons }) => {
   if (!icons || icons.length === 0) return null;
 
@@ -82,7 +81,6 @@ const GridIcons: React.FC<{
 };
 
 const Grid: React.FC = () => {
-
   return (
     <section id="about" className="w-full">
       <BentoGrid>
@@ -91,15 +89,13 @@ const Grid: React.FC = () => {
             key={item.id}
             title={item.title}
             description={<DescriptionRenderer description={item.description} />}
-            className={cn (item.className)} 
-            icon={<GridIcons icons = {item.icons}/>}
+            className={cn(item.className)}
+            icon={<GridIcons icons={item.icons} />}
             header={<GridItemHeader image={item.image} />}
-
           />
         ))}
       </BentoGrid>
     </section>
   );
 };
-export default Grid
-
+export default Grid;

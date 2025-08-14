@@ -1,10 +1,18 @@
 "use client";
-import React from 'react';
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import Link from 'next/link';
-import { FaArrowLeft, FaExternalLinkAlt, FaGithub, FaCheckCircle, FaClock, FaUsers, FaTag } from 'react-icons/fa';
-import { ProjectCaseStudy } from '@/data/projects-enhanced';
+import React from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import {
+  FaArrowLeft,
+  FaExternalLinkAlt,
+  FaGithub,
+  FaCheckCircle,
+  FaClock,
+  FaUsers,
+  FaTag,
+} from "react-icons/fa";
+import { ProjectCaseStudy } from "@/data/projects-enhanced";
 
 interface ProjectDetailPageProps {
   project: ProjectCaseStudy;
@@ -19,21 +27,21 @@ const ProjectHero: React.FC<{ project: ProjectCaseStudy }> = ({ project }) => (
         transition={{ duration: 0.5 }}
         className="text-center mb-12"
       >
-        <Link 
+        <Link
           href="/#projects"
           className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 mb-6 transition-colors"
         >
           <FaArrowLeft className="mr-2" />
           Back to Projects
         </Link>
-        
+
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
           {project.title}
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
           {project.subtitle}
         </p>
-        
+
         {/* Project Meta */}
         <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600 dark:text-gray-400">
           <div className="flex items-center">
@@ -50,7 +58,7 @@ const ProjectHero: React.FC<{ project: ProjectCaseStudy }> = ({ project }) => (
           </div>
         </div>
       </motion.div>
-      
+
       {/* Hero Image */}
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
@@ -70,7 +78,9 @@ const ProjectHero: React.FC<{ project: ProjectCaseStudy }> = ({ project }) => (
   </section>
 );
 
-const ProjectOverview: React.FC<{ project: ProjectCaseStudy }> = ({ project }) => (
+const ProjectOverview: React.FC<{ project: ProjectCaseStudy }> = ({
+  project,
+}) => (
   <section className="py-20 bg-white dark:bg-gray-900">
     <div className="max-w-4xl mx-auto px-4">
       <motion.div
@@ -79,11 +89,13 @@ const ProjectOverview: React.FC<{ project: ProjectCaseStudy }> = ({ project }) =
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">Project Overview</h2>
+        <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">
+          Project Overview
+        </h2>
         <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
           {project.overview}
         </p>
-        
+
         {/* Quick Links */}
         <div className="flex flex-wrap gap-4">
           {project.links.live && (
@@ -112,7 +124,9 @@ const ProjectOverview: React.FC<{ project: ProjectCaseStudy }> = ({ project }) =
   </section>
 );
 
-const ProjectChallenge: React.FC<{ project: ProjectCaseStudy }> = ({ project }) => (
+const ProjectChallenge: React.FC<{ project: ProjectCaseStudy }> = ({
+  project,
+}) => (
   <section className="py-20 bg-gray-50 dark:bg-gray-800">
     <div className="max-w-4xl mx-auto px-4">
       <motion.div
@@ -121,7 +135,9 @@ const ProjectChallenge: React.FC<{ project: ProjectCaseStudy }> = ({ project }) 
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">The Challenge</h2>
+        <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">
+          The Challenge
+        </h2>
         <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
           {project.challenge}
         </p>
@@ -130,7 +146,9 @@ const ProjectChallenge: React.FC<{ project: ProjectCaseStudy }> = ({ project }) 
   </section>
 );
 
-const ProjectSolution: React.FC<{ project: ProjectCaseStudy }> = ({ project }) => (
+const ProjectSolution: React.FC<{ project: ProjectCaseStudy }> = ({
+  project,
+}) => (
   <section className="py-20 bg-white dark:bg-gray-900">
     <div className="max-w-4xl mx-auto px-4">
       <motion.div
@@ -139,23 +157,33 @@ const ProjectSolution: React.FC<{ project: ProjectCaseStudy }> = ({ project }) =
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">The Solution</h2>
+        <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">
+          The Solution
+        </h2>
         <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
           {project.solution}
         </p>
-        
+
         {/* Technologies Used */}
         <div className="mt-12">
-          <h3 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">Technologies Used</h3>
+          <h3 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">
+            Technologies Used
+          </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {Object.entries(project.technologies).map(([category, icons]) => (
-              <div key={category} className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+              <div
+                key={category}
+                className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg"
+              >
                 <h4 className="font-semibold mb-3 text-gray-900 dark:text-white capitalize">
-                  {category.replace(/([A-Z])/g, ' $1').trim()}
+                  {category.replace(/([A-Z])/g, " $1").trim()}
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {icons?.map((tech, index) => (
-                    <span key={index} className="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-sm">
+                    <span
+                      key={index}
+                      className="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-sm"
+                    >
                       {tech}
                     </span>
                   ))}
@@ -169,7 +197,9 @@ const ProjectSolution: React.FC<{ project: ProjectCaseStudy }> = ({ project }) =
   </section>
 );
 
-const ProjectImpact: React.FC<{ project: ProjectCaseStudy }> = ({ project }) => (
+const ProjectImpact: React.FC<{ project: ProjectCaseStudy }> = ({
+  project,
+}) => (
   <section className="py-20 bg-gradient-to-br from-green-50 to-blue-50 dark:from-gray-800 dark:to-gray-900">
     <div className="max-w-4xl mx-auto px-4">
       <motion.div
@@ -178,8 +208,10 @@ const ProjectImpact: React.FC<{ project: ProjectCaseStudy }> = ({ project }) => 
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">Impact & Results</h2>
-        
+        <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">
+          Impact & Results
+        </h2>
+
         {/* Metrics */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           {project.impact.metrics.map((metric, index) => (
@@ -196,15 +228,17 @@ const ProjectImpact: React.FC<{ project: ProjectCaseStudy }> = ({ project }) => 
             </motion.div>
           ))}
         </div>
-        
+
         {/* Business Value */}
         <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm mb-8">
-          <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Business Value</h3>
+          <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
+            Business Value
+          </h3>
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
             {project.impact.businessValue}
           </p>
         </div>
-        
+
         {/* Testimonial */}
         {project.impact.testimonial && (
           <motion.div
@@ -222,7 +256,8 @@ const ProjectImpact: React.FC<{ project: ProjectCaseStudy }> = ({ project }) => 
                 {project.impact.testimonial.author}
               </div>
               <div className="text-gray-600 dark:text-gray-400">
-                {project.impact.testimonial.role}, {project.impact.testimonial.company}
+                {project.impact.testimonial.role},{" "}
+                {project.impact.testimonial.company}
               </div>
             </div>
           </motion.div>
@@ -232,7 +267,9 @@ const ProjectImpact: React.FC<{ project: ProjectCaseStudy }> = ({ project }) => 
   </section>
 );
 
-const ProjectGallery: React.FC<{ project: ProjectCaseStudy }> = ({ project }) => (
+const ProjectGallery: React.FC<{ project: ProjectCaseStudy }> = ({
+  project,
+}) => (
   <section className="py-20 bg-white dark:bg-gray-900">
     <div className="max-w-6xl mx-auto px-4">
       <motion.div
@@ -241,8 +278,10 @@ const ProjectGallery: React.FC<{ project: ProjectCaseStudy }> = ({ project }) =>
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-3xl font-bold mb-12 text-center text-gray-900 dark:text-white">Project Gallery</h2>
-        
+        <h2 className="text-3xl font-bold mb-12 text-center text-gray-900 dark:text-white">
+          Project Gallery
+        </h2>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {project.images.gallery.map((image, index) => (
             <motion.div
@@ -262,7 +301,7 @@ const ProjectGallery: React.FC<{ project: ProjectCaseStudy }> = ({ project }) =>
             </motion.div>
           ))}
         </div>
-        
+
         {/* Architecture Diagram */}
         {project.images.architecture && (
           <motion.div

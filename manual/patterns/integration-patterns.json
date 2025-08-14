@@ -1,0 +1,262 @@
+{
+  "integrationPatterns": {
+    "lastUpdated": "2024-12-19",
+    "version": "1.0.0",
+    "overview": "Integration patterns and cross-system communication in the portfolio application",
+    "thirdPartyIntegrations": {
+      "framerMotion": {
+        "library": "Framer Motion 11.x",
+        "purpose": "Animation and micro-interactions",
+        "integrationPattern": "Provider-based with performance optimization",
+        "implementation": {
+          "provider": "MotionConfig in root layout",
+          "components": "Motion components with reduced motion support",
+          "optimization": "Lazy loading and conditional rendering",
+          "accessibility": "Respects prefers-reduced-motion"
+        },
+        "patterns": {
+          "scrollAnimations": {
+            "hook": "useScrollAnimation",
+            "implementation": "IntersectionObserver with Framer Motion",
+            "optimization": "Passive event listeners and RAF"
+          },
+          "pageTransitions": {
+            "implementation": "Layout animations with Next.js routing",
+            "optimization": "Shared layout animations"
+          },
+          "microInteractions": {
+            "implementation": "Hover and focus animations",
+            "optimization": "Hardware acceleration and will-change"
+          }
+        }
+      },
+      "threejs": {
+        "library": "Three.js with React Three Fiber",
+        "purpose": "3D visualizations and interactive graphics",
+        "integrationPattern": "Lazy-loaded components with fallbacks",
+        "implementation": {
+          "lazyLoading": "React.lazy for 3D components",
+          "fallbacks": "2D alternatives and loading states",
+          "errorBoundaries": "3D-specific error handling",
+          "performance": "LOD and frustum culling"
+        },
+        "components": {
+          "ThreeDBlackPearl": "3D ship visualization",
+          "CloudArchitecture": "3D cloud infrastructure visualization",
+          "DataFlowViz": "3D data pipeline visualization"
+        }
+      },
+      "nextThemes": {
+        "library": "next-themes 0.3.x",
+        "purpose": "Theme management with system preference detection",
+        "integrationPattern": "Context provider with domain-specific theming",
+        "implementation": {
+          "provider": "ThemeProvider with custom configuration",
+          "domainIntegration": "Domain-specific theme computation",
+          "persistence": "localStorage with SSR hydration",
+          "optimization": "Memoized theme calculations"
+        }
+      },
+      "analytics": {
+        "service": "Google Analytics 4",
+        "purpose": "User behavior tracking and performance monitoring",
+        "integrationPattern": "Event-driven with privacy compliance",
+        "implementation": {
+          "initialization": "Conditional loading based on consent",
+          "eventTracking": "Custom events for user interactions",
+          "performanceTracking": "Core Web Vitals and custom metrics",
+          "privacy": "GDPR compliance and opt-out support"
+        }
+      }
+    },
+    "internalIntegrations": {
+      "themeNavigationIntegration": {
+        "description": "Deep integration between theme system and navigation",
+        "implementation": {
+          "domainDetection": "URL-based domain detection with theme switching",
+          "colorAdaptation": "Navigation colors adapt to domain theme",
+          "transitionEffects": "Smooth theme transitions during navigation",
+          "stateSync": "Bidirectional sync between theme and navigation state"
+        },
+        "components": {
+          "DomainAwareNavigation": "Navigation with theme integration",
+          "DomainThemeButton": "Theme switching with domain awareness",
+          "DomainThemeContext": "Centralized theme state management"
+        }
+      },
+      "accessibilityIntegration": {
+        "description": "Comprehensive accessibility integration across all systems",
+        "implementation": {
+          "screenReaderSupport": "ARIA labels and live regions throughout",
+          "keyboardNavigation": "Full keyboard accessibility with focus management",
+          "colorContrast": "WCAG AA compliant color combinations",
+          "motionReduction": "Respect for user motion preferences"
+        },
+        "utilities": {
+          "announceUtils": "Screen reader announcements",
+          "focusUtils": "Focus management and trapping",
+          "keyboardUtils": "Keyboard navigation helpers"
+        },
+        "testing": {
+          "automated": "axe-core integration for automated testing",
+          "manual": "Screen reader testing procedures",
+          "compliance": "WCAG 2.1 AA compliance validation"
+        }
+      },
+      "performanceIntegration": {
+        "description": "Performance monitoring and optimization integration",
+        "implementation": {
+          "monitoring": "Real-time performance tracking",
+          "optimization": "Automatic performance optimizations",
+          "reporting": "Performance analytics and alerts",
+          "budgets": "Performance budget enforcement"
+        },
+        "services": {
+          "PerformanceMonitor": "Core performance tracking service",
+          "WebVitalsReporter": "Core Web Vitals monitoring",
+          "BundleAnalyzer": "Bundle size tracking and optimization"
+        }
+      }
+    },
+    "dataIntegrations": {
+      "staticDataIntegration": {
+        "description": "Integration of static data with dynamic components",
+        "implementation": {
+          "buildTime": "Data processing during build for optimal performance",
+          "typeGeneration": "Automatic TypeScript type generation from data",
+          "validation": "Runtime validation with Zod schemas",
+          "caching": "Multi-level caching strategy"
+        },
+        "sources": {
+          "projectData": "Static project information with case studies",
+          "testimonials": "Client testimonials with rich media support",
+          "blogContent": "MDX content with frontmatter processing",
+          "domainConfigs": "Domain configuration and theming data"
+        }
+      },
+      "apiIntegration": {
+        "description": "API integration patterns for dynamic data",
+        "implementation": {
+          "routes": "Next.js API routes with type safety",
+          "validation": "Request/response validation with Zod",
+          "errorHandling": "Comprehensive error handling and recovery",
+          "caching": "Intelligent caching with revalidation"
+        },
+        "endpoints": {
+          "contact": "Contact form submission with validation",
+          "projects": "Project data with filtering and search",
+          "testimonials": "Testimonial management and display"
+        }
+      }
+    },
+    "buildSystemIntegration": {
+      "nextjsIntegration": {
+        "description": "Deep integration with Next.js 15 features",
+        "features": {
+          "appRouter": "App router with nested layouts and loading states",
+          "serverComponents": "Server components for performance optimization",
+          "staticGeneration": "Static generation with ISR for dynamic content",
+          "imageOptimization": "Next.js Image component with optimization",
+          "fontOptimization": "Font optimization with preloading and fallbacks"
+        },
+        "optimization": {
+          "bundleSplitting": "Automatic code splitting and optimization",
+          "treeshaking": "Dead code elimination",
+          "compression": "Gzip and Brotli compression",
+          "caching": "Aggressive caching with proper invalidation"
+        }
+      },
+      "typescriptIntegration": {
+        "description": "TypeScript integration for type safety and developer experience",
+        "features": {
+          "strictMode": "Strict TypeScript configuration",
+          "pathMapping": "Path aliases for clean imports",
+          "typeGeneration": "Automatic type generation from schemas",
+          "validation": "Runtime type validation with Zod"
+        },
+        "patterns": {
+          "discriminatedUnions": "Type-safe state management",
+          "generics": "Reusable type-safe components",
+          "utilityTypes": "Advanced TypeScript utility types",
+          "moduleAugmentation": "Type augmentation for third-party libraries"
+        }
+      },
+      "testingIntegration": {
+        "description": "Comprehensive testing integration",
+        "frameworks": {
+          "jest": "Unit and integration testing with Jest",
+          "testingLibrary": "React Testing Library for component testing",
+          "axeCore": "Accessibility testing with axe-core",
+          "playwright": "End-to-end testing (future implementation)"
+        },
+        "patterns": {
+          "mockingStrategy": "Comprehensive mocking for external dependencies",
+          "testUtilities": "Reusable test utilities and helpers",
+          "coverageTargets": "70% coverage threshold with meaningful tests",
+          "ciIntegration": "Automated testing in CI/CD pipeline"
+        }
+      }
+    },
+    "deploymentIntegration": {
+      "vercelIntegration": {
+        "description": "Optimized deployment on Vercel platform",
+        "features": {
+          "edgeRuntime": "Edge runtime for optimal performance",
+          "analytics": "Vercel Analytics integration",
+          "speedInsights": "Performance monitoring and optimization",
+          "previewDeployments": "Automatic preview deployments for PRs"
+        },
+        "optimization": {
+          "edgeLocations": "Global edge deployment",
+          "caching": "Intelligent caching at edge locations",
+          "compression": "Automatic compression and optimization",
+          "monitoring": "Real-time performance monitoring"
+        }
+      },
+      "githubPagesIntegration": {
+        "description": "Static deployment on GitHub Pages",
+        "features": {
+          "staticExport": "Next.js static export for GitHub Pages",
+          "githubActions": "Automated deployment with GitHub Actions",
+          "customDomain": "Custom domain support with SSL",
+          "caching": "Browser caching optimization"
+        },
+        "workflow": {
+          "buildProcess": "Automated build and deployment",
+          "optimization": "Static asset optimization",
+          "fallbacks": "404 handling and error pages",
+          "seo": "SEO optimization for static deployment"
+        }
+      }
+    },
+    "crossCuttingConcerns": {
+      "errorHandling": {
+        "description": "Comprehensive error handling across all systems",
+        "strategies": {
+          "errorBoundaries": "React error boundaries at multiple levels",
+          "globalErrorHandler": "Global error handling and reporting",
+          "gracefulDegradation": "Fallback UI for error conditions",
+          "userFeedback": "Clear error messages and recovery options"
+        }
+      },
+      "logging": {
+        "description": "Centralized logging and monitoring",
+        "implementation": {
+          "clientLogging": "Client-side error and event logging",
+          "serverLogging": "Server-side request and error logging",
+          "performanceLogging": "Performance metrics and monitoring",
+          "analyticsLogging": "User behavior and interaction logging"
+        }
+      },
+      "security": {
+        "description": "Security considerations and implementations",
+        "measures": {
+          "csp": "Content Security Policy implementation",
+          "sanitization": "Input sanitization and validation",
+          "authentication": "Secure authentication patterns (future)",
+          "dataProtection": "Privacy-compliant data handling"
+        }
+      }
+    }
+  }
+}

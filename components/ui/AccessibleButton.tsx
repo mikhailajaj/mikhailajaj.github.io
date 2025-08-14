@@ -1,7 +1,7 @@
 "use client";
-import React from 'react';
-import { cva, type VariantProps } from 'class-variance-authority';
-import { cn } from '@/lib/utils';
+import React from "react";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/utils";
 
 // Define button variants using class-variance-authority
 const buttonVariants = cva(
@@ -10,13 +10,19 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary: "bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-500",
-        secondary: "bg-gray-200 text-gray-900 hover:bg-gray-300 focus-visible:ring-gray-500 dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600",
-        outline: "border border-gray-300 bg-transparent hover:bg-gray-100 focus-visible:ring-gray-500 dark:border-gray-600 dark:hover:bg-gray-800 dark:focus-visible:ring-gray-500",
-        ghost: "bg-transparent hover:bg-gray-100 focus-visible:ring-gray-500 dark:hover:bg-gray-800 dark:focus-visible:ring-gray-500",
+        primary:
+          "bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-500",
+        secondary:
+          "bg-muted/50 text-foreground hover:bg-muted focus-visible:ring-gray-500 dark:bg-card dark:text-muted-foreground dark:hover:bg-card",
+        outline:
+          "border border-border bg-transparent hover:bg-muted/30 focus-visible:ring-gray-500 dark:border-border dark:hover:bg-card dark:focus-visible:ring-gray-500",
+        ghost:
+          "bg-transparent hover:bg-muted/30 focus-visible:ring-gray-500 dark:hover:bg-card dark:focus-visible:ring-gray-500",
         link: "text-blue-600 underline-offset-4 hover:underline focus-visible:ring-blue-500 dark:text-blue-400",
-        danger: "bg-red-600 text-white hover:bg-red-700 focus-visible:ring-red-500",
-        success: "bg-green-600 text-white hover:bg-green-700 focus-visible:ring-green-500",
+        danger:
+          "bg-red-600 text-white hover:bg-red-700 focus-visible:ring-red-500",
+        success:
+          "bg-green-600 text-white hover:bg-green-700 focus-visible:ring-green-500",
       },
       size: {
         xs: "h-7 px-2 text-xs",
@@ -35,10 +41,10 @@ const buttonVariants = cva(
       size: "md",
       fullWidth: false,
     },
-  }
+  },
 );
 
-export interface AccessibleButtonProps 
+export interface AccessibleButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   ariaLabel?: string;
@@ -50,7 +56,7 @@ export interface AccessibleButtonProps
 
 /**
  * AccessibleButton component with WCAG 2.1 AA compliance
- * 
+ *
  * Features:
  * - Proper ARIA attributes
  * - Keyboard navigation support
@@ -73,14 +79,15 @@ export function AccessibleButton({
   ...props
 }: AccessibleButtonProps) {
   // Use aria-label if provided, otherwise use the button text content
-  const accessibilityLabel = ariaLabel || (typeof children === 'string' ? children : undefined);
-  
+  const accessibilityLabel =
+    ariaLabel || (typeof children === "string" ? children : undefined);
+
   return (
     <button
       className={cn(
         buttonVariants({ variant, size, fullWidth }),
         loading && "relative !text-transparent",
-        className
+        className,
       )}
       disabled={disabled || loading}
       aria-label={accessibilityLabel}
@@ -115,15 +122,19 @@ export function AccessibleButton({
           <span className="sr-only">Loading</span>
         </div>
       )}
-      
+
       {/* Start Icon */}
-      {startIcon && <span className={cn("mr-2", loading && "opacity-0")}>{startIcon}</span>}
-      
+      {startIcon && (
+        <span className={cn("mr-2", loading && "opacity-0")}>{startIcon}</span>
+      )}
+
       {/* Button Content */}
       <span className={loading ? "opacity-0" : ""}>{children}</span>
-      
+
       {/* End Icon */}
-      {endIcon && <span className={cn("ml-2", loading && "opacity-0")}>{endIcon}</span>}
+      {endIcon && (
+        <span className={cn("ml-2", loading && "opacity-0")}>{endIcon}</span>
+      )}
     </button>
   );
 }

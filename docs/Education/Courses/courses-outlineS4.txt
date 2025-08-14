@@ -1,0 +1,630 @@
+PROG20261
+Mobile Web Application Development	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 42.0
+Credit Value: 3.0
+Credit Value Notes: N/A
+Effective: Winter 2024
+Prerequisites: INFO16206
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: N/A
+Program(s): Hon Bach CompSci - Mobile Comp
+Program Coordinator(s): Magdin Stoica
+Course Leader or Contact: Alex Babanski
+Version: 20240108_00
+Status: Approved (APPR)
+
+Section I Notes: N/A
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+Students gain a comprehensive understanding of the architecture of the mobile ecosystem and acquire practical skills and knowledge to develop and maintain mobile-friendly web applications. Students learn how to use mobile device APIs such as camera, geolocation, orientation, storage, etc. to create cross-platform mobile web applications. Students learn best techniques and practices used to develop, package and publish secure hybrid mobile application.
+
+Students learn through a combination of interactive lectures and demonstrations, hands-on exercises and assignments.
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+This required second year course provides an end-to-end exploration of the development, testing and deployment of rich mobile-friendly applications. This course builds on the students skills and knowledge in web technologies.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of this course, students will have demonstrated the ability to create mobile-friendly websites that uses server-side and client-side technologies to deliver appropriate content to multiple mobile form factors based on server side device detection of client device.
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Apply knowledge of the Document Object Model to manipulate browser content so that it is appropriate for the mobile device display.
+Apply knowledge of Object Oriented Programming techniques and the necessary Javascript syntax to develop robust and maintainable Object-Oriented client scripts in support of a rich mobile-friendly website.
+Apply knowledge of Relational or Object-Oriented Database Design to design and implement a backing database in support of a rich mobile-friendly website.
+Design, implement, test and deploy a full mobile-friendly website using web technologies such as Javascript and HTML, currently popular libraries, and database access.
+Assess the constraints and strengths of different mobile device User Interface capabilities and implement web pages appropriate for that UI.
+Implement an application that effectively utilizes the location-aware capabilities of a mobile device.
+Implement an application that effectively utilizes the graphical and multimedia features of a mobile device.
+Evaluate appropriate target devices for a given scenario and implement a solution that uses device detection to provide appropriate content for more than one form-factor.
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	Quizzes (2 @ 5%) - approximately weeks 6, 12	10.0%
+ 	Labs/In-class Exercises (2 @ 5%) - approximately weeks 5, 11	10.0%
+ 	Assignments (2 @ 10%) - approximately weeks 7, 13	20.0%
+ 	Midterm Exam - approximately week 8	30.0%
+ 	Final Exam - approximately week 14	30.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+To pass the course, students must achieve a 50% weighted average across the tests and the exams and at least 50% overall in the course.
+
+Students must submit/complete all assignments, in-class activities and projects by the scheduled due date and write all tests on the specified date/time. Exceptions will only be made under extraordinary circumstances. 
+
+Refer to the School of Applied Computing's Academic Procedures for Evaluations for more details regarding missed work: Procedures for Evaluations
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Challenge Exam
+Notes:  
+Portfolio
+Notes:  
+Other
+Notes:  Challenge exam, portfolio, and project are required for PLAR.
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s):
+Course material costs can be found through the Sheridan Bookstore
+ 	Type	Description
+Optional	Other	Materials will be provided by the professor.
+
+Applicable student group(s): Honours Bachelor of Computer Science - Mobile Computing
+Course Details:
+Module 1: Technologies and Best Practices for Mobile-Friendly Websites
+Fundamentals of Mobile-Friendly Web-Design. Best Practices in Page Layout, Site Architecture and Navigation for Mobile Devices.
+Responsive Design
+Mobile-Friendly Application Development with Bootstrap, jQuery, jQuery Mobile, ReactJS and Other Frameworks
+Module 2: Document Object Model
+Elements of the Document Object Model
+Navigating the Document Object Model using Javascript
+Manipulating the Document Object Model using Javascript
+Module 3: Asynchronous Content Negotiation
+Asynchronous Methods for Updating Client Content with Data in Text, JSON, or XML Files on a Remote Server
+AJAX
+WebSockets
+Parsing XML
+JSON
+Module 4: Web Application Architecture and Programming Interfaces
+Working with Web APIs: Storage, Web Workers, and Web Notifications
+Coding and Design Patterns
+SPA (Single Page Application) Architecture
+Module 5: Hybrid Mobile Application Development
+Hybrid Mobile Application Development with Cordova and React Native
+Working with Mobile Device APIs such as Device, Geolocation, Camera, Dialogs, etc.
+Device Interaction and Usability
+Packaging and Publishing
+Module 6: Server-Side Technologies
+Retrieving Information from Remote Databases
+Using Dynamic Pages to Optimize Content for Mobile Devices
+Module 7: Future Trends
+Trend Analysis for Web Application Development
+Comparative Analysis (Pros and Cons of Native, Web, and Hybrid), and Future Direction
+Note: The topics within each module are grouped semantically and are not meant to suggest a time sequence. A course plan must be provided by the professor identifying the class-by-class arrangement of topics.
+
+PROG23672
+Data Structures and Algorithms	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 84.0
+Credit Value: 4.0
+Credit Value Notes: N/A
+Effective: Winter 2023
+Prerequisites: PROG24310
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: N/A
+Program(s): Hon Bach CompSci - Mobile Comp, Hons Bach of Computer Science
+Program Coordinator(s): Magdin Stoica, El Sayed Mahmoud
+Course Leader or Contact: El Sayed Mahmoud
+Version: 20230109_01
+Status: Approved (APPR)
+
+Section I Notes: N/A
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+Students focus on the design, analysis, and implementation of computer data structures and algorithms. Exposed to a variety of standard data structures and algorithms, students learn how to analyze algorithms and apply this knowledge to efficiently solve problems. Lectures, hands-on exercises and assignment experiences systematically teach the student about (a) data structures (e.g., stacks, queues, lists, trees, hashes, etc.), (b) algorithms (e.g., sorting, fundamental techniques, etc.), (c) how to analyze algorithms (e.g., first principles, Big O, etc.), and (d) how to select and implement appropriate algorithms to solve problems.
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+This required third year course provides a comprehensive foundation to the design, analysis, and implementation of computer data structures and algorithms. This course builds on the students skills and knowledge in software development. It provides a foundation of theoretical and practical application of data structures and algorithms so that students will be prepared to understand more advanced concepts in Computer Science and have the necessary skills to solve problems presented in later courses in the Bachelor of Applied Computer Science Program.
+
+Hons Bach of Computer Science	Program Coordinator(s): El Sayed Mahmoud
+This required course aims to equip students with the theoretical and practical skills to design, analyze, and implement computer data structures and algorithms. The course strengthens students' analytical skills that enables them designing data structures and algorithms. These skills are the backbone of computer science, which shows the significant impact of this course on the following courses and the progress in the computer science career after graduation.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of this course, students will have demonstrated the ability to design, analyze, and implement computer data structures and algorithms.
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Evaluate the complexity of a program and the underlying algorithms in various implementations.
+Design and implement computer programs using the algorithmic design patterns, including greedy method, divide-and-conquer, dynamic programming, backtracking and branch-and-bound.
+Implement a variety of data structures, including lists, vectors, trees, priority queues, AVL trees, 2-4 trees, red-black trees, splay trees, B-trees, hash tables, skip-lists, union-find trees.
+Select appropriate sorting algorithms including heap-sort, quick-sort, merge-sort, selection, parallel list ranking, parallel sorting to solve problems efficiently.
+Analyze data structures and related algorithms in order to design solutions to standard and non-standard problems.
+Design solutions to standard and non-standard problems based on the analysis of data structures and related algorithms.
+Apply knowledge of algorithms and data structures to implement solutions to problems.
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	Assignments (4@7.5%) approx. weeks 3,6,9,12	30.0%
+ 	Quizzes (5@2%) approx. weeks 2,4,6,9,11	10.0%
+ 	Midterm Exam approx. week 7	25.0%
+ 	Final Exam approx. week 13	35.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+To pass the course, students must achieve a 50% weighted average across the exams and at least 50% overall in the course.
+
+Students must submit/complete all assignments, in-class activities and projects by the scheduled due date and write all tests on the specified date/time. Exceptions will only be made under extraordinary circumstances. 
+
+Refer to the School of Applied Computing's Academic Procedures for Evaluations for more details regarding missed work: Procedures for Evaluations
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Challenge Exam
+Notes:  
+Portfolio
+Notes:  
+Other
+Notes:  Challenge exam, portfolio, and project are required for PLAR
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s):
+Course material costs can be found through the Sheridan Bookstore
+ 	Type	Description
+Required	Textbook	Algorithm Design: Foundations, Analysis, and Internet Examples, Goodrich, M., Tamassia, R., Goodrich, M., Tamassia, R., ISBN 9780471383659, 2002
+Optional	Other	A selection of other recommended reading including on-line resources and articles will be announced by the professor.
+
+Applicable student group(s): PBACS - Honours Bachelor of Applied Computer Science - Mobile Computing; PBCPS - Honours Bachelor of Computer Science (all specializations)
+Course Details:
+Learning Modules and Topics
+
+1. Algorithms - Fundamental Principles and Tools
+         - Algorithms - Fundamental Principles and Tools
+         - Algorithm Analysis
+         - Asymptotic Notation
+
+2. Fundamental Data Structures
+         Basic Data Structures:
+         - Stacks and Queues
+         - Vectors, Lists, and Sequences
+         - Trees
+         - Priority Queues and Heaps
+         - Dictionaries and Hash Tables
+         - Search Trees and Skip Lists
+         - Ordered Dictionaries and Binary Search Trees
+         - AVL Trees
+         - Splay Trees
+         - Skip Lists
+
+3. Sorting Algorithms and Sets
+         - Merge-Sort
+         - The Set Abstract Data Type
+         - Quick-Sort
+         - Bucket-Sort and Radix-Sort
+         - Comparison of Sorting Algorithms
+
+4. Fundamental Techniques
+         - The Greedy Method
+         - Divide-and-Conquer
+         - Dynamic Programming
+
+5. Graphs
+         - Graph Abstract Data Type
+         - Data Structures for Graphs
+         - Graph Traversals
+         - Directed Graphs
+         - Weighted Graphs
+         - Single-Source Shortest Paths
+         - All-Pairs Shortest Paths
+         - Minimum Spanning Trees
+
+6. Advanced Algorithms
+         - Network Flow and Matching
+         - Text Processing
+         - Collaborative Filtering
+         - Techniques for Big Data
+
+7. Computational Complexity Theory
+         NP-Completeness
+         - P and NP
+         - NP-Completeness
+         Algorithmic Frameworks:
+         - Parallel Programming Frameworks and Algorithms (MPI,
+           OpenMP)
+
+Note: The suggested number of weeks allocated to each module may vary
+depending on the professors and/or class requirements. The topics
+within each module are grouped semantically and are not meant to
+suggest a time sequence. A course plan must be provided by the
+professor identifying the class-by-class arrangement of topics.
+
+
+PROG27545
+Web Application Design & Implementation	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 56.0
+Credit Value: 3.0
+Credit Value Notes: N/A
+Effective: Winter 2025
+Prerequisites: (INFO16206 AND DBAS20146 AND PROG10065)
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: N/A
+Program(s): Hon Bach CompSci - Mobile Comp, Hons Bach of Computer Science
+Program Coordinator(s): Magdin Stoica, El Sayed Mahmoud
+Course Leader or Contact: Alexander Tetervak
+Version: 20250106_01
+Status: Approved (APPR)
+
+Section I Notes: N/A
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+In this course, students learn the principles of full-stack web application development using current industry standard software platforms and a professional integrated development environment. Students gain fundamental knowledge and hands-on server-side web programming skills necessary to develop dynamic, data-driven web applications using Java programming language and Spring Boot framework. Students learn design patterns and implementation details of browser-side programming using one of the modern popular JavaScript/TypeScript-based frameworks, leveraging object-oriented principles and problem-solving skills developed in earlier courses. Through interactive lectures, hands-on labs and group work, students continue practicing professional software development techniques to establish foundations essential for professional software development.
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+Having learned the fundamentals of web development, scripting and web languages as well as database modeling in previous courses, in this required course students tackle medium-scale object-oriented web applications. Though a combination of lecture, exercises and assignments, students focus on designing Java based data-driven dynamic web applications. In subsequent courses students will learn to develop secure, scalable, enterprise-grade web information systems using advanced web architectures.
+
+Hons Bach of Computer Science	Program Coordinator(s): El Sayed Mahmoud
+The goal of this required course is to prepare students to develop medium-tier object-oriented web applications. The course covers the design, implementation, and study of data-driven dynamic web applications based on Java. The skills gained in this course will help students to create secure, scalable, enterprise-grade web information systems for the upper core and specialization courses.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of this course, students will have demonstrated the ability to develop object-oriented data-driven web applications using the Java programming language and the Java Enterprise platform based on the analysis of specifications describing real-world problems to be solved.
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Analyze the major components and the software design of web applications, leading to an in-depth understanding of how web applications operate and communicate with clients.
+Develop server-side code using Java programming language.
+Build data-driven, object-oriented, dynamic web applications using best practices in web application design and industry-proven design patterns and frameworks.
+Design sophisticated, easy-to-use web front-ends using a current industry standard JavaScript/Typescript-based framework, following user interface guidelines.
+Design multi-tier, data-driven web applications using Web Services and Databases focusing on separation of concerns, maintainability, and scalability.
+Distinguish business logic components from user interface and data access components in web applications.
+Anticipate security requirements while implementing secure web applications.
+Build increasingly complex web applications using industry-standard web development frameworks.
+Describe modern web application design and implementation: outline applicable software architectures, software design patterns and principles using detailed visual modeling techniques.
+Verify the correctness and completeness of web applications using testing and debugging techniques facilitated by integrated development environments.
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	Assignments (4 @ 10%) approx. weeks 4, 6, 11, 13	40.0%
+ 	Quizzes (2 @ 5%) approx. weeks 5, 12	10.0%
+ 	Midterm Exam (Theoretical 50%/Practical 50%) approx. week 7	25.0%
+ 	Final Exam (Theoretical 50%/Practical 50%) approx. week 14	25.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+To pass the course, students must achieve a 50% weighted average across the exams and at least 50% overall in the course.
+
+Students must submit/complete all assignments, in-class activities and projects by the scheduled due date and write all tests on the specified date/time. Exceptions will only be made under extraordinary circumstances. 
+
+Refer to the School of Applied Computing's Academic Procedures for Evaluations for more details regarding missed work: Procedures for Evaluations
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Challenge Exam
+Notes:  
+Portfolio
+Notes:  
+Other
+Notes:  Challenge exam, portfolio, and project are required for PLAR
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s):
+Course material costs can be found through the Sheridan Bookstore
+ 	Type	Description
+Required	Textbook	Spring Boot and Angular: Hands-on Full Stack Web Development with Java, Spring, and Angular, Duldulao, D., Villafranca. S., Packt Publishing, 1st Edition, ISBN 9781803243214, 2022, Text available online
+Optional	Textbook	Learning Spring Boot 3.0: Simplify the Development of Production-Grade Applications Using Java..., Turnquist, G., Packt Publishing, 3rd Edition, 2022, Text available online
+Optional	Textbook	Learning Angular - Fifth Edition, Bampakos, A., Deeleman, P., Packt Publishing, 5th Edition, 2024, Text available online
+Optional	Textbook	Microservices with Spring Boot 3.0 and Spring Cloud, Larsson, M., Packt Publishing, 3rd Edition, 2023, Text available online
+
+Applicable student group(s): Honours Bachelor of Computer Science (Mobile Computing) (PBACS); Honours Bachelor of Computer Science (All Specializations) (PBCPS)
+Course Details:
+Module 1: Introduction to Using Java in Web Application Development
+
+Object-Oriented Programming in Java
+Using an IDE with Git Version Control and JUnit Testing
+Thread Safety of Java Code in Web Programming
+Introduction to HTTP Protocol: Request, Response, Headers, Cookies
+WebSocket Protocol Versus HTTP Protocol
+Secure Communication and SSL
+Introduction to Servlet Containers
+Introduction to Servlets, Request and Response Objects, and Filters
+Introduction to Using Spring Boot and Spring Frameworks
+Concepts of Model, View, and Controller (MVC)
+Applying the MVC Design Pattern to Generate HTML
+Jakarta Server Pages (JSP) Versus Templates
+Dependency Injection in Spring Boot, Spring Services and Repositories
+Module 2: Development of Data-Driven Web Services
+
+Overview of Spring Data Framework
+Object-Relational Mapping with Jakarta Persistence API (JPA)
+Implementation of Object Relations in JPA
+Eager Versus Lazy Object Loading
+Options to Cascade Inserts, Deletes, and Updates
+Query Method Naming Convention in JPA
+Using Jakarta Persistence Query Language (JPQL)
+Introduction to Using NoSQL Databases with Spring Data
+Unit Testing Spring Data Repositories
+Designing and Implementing RESTful Web Services
+Testing RESTful Services
+Introduction to Microservice Architecture
+Options to Secure RESTful Services
+Module 3: Dynamic Front-End Development
+
+Object-Oriented Programming in TypeScript
+TypeScript Versus JavaScript, and TypeScript Versus Java
+Introduction to Using Angular Framework
+Using Git Version Control for Angular Projects
+Designing UI with Angular Material or Bootstrap
+Components, Events, and Data Flow
+Angular Modules, Pipes, and Directives
+Dependency Injection in Angular, Using Angular Services
+Navigation with Routing in Angular Applications
+Using Forms to Collect and Validate User Inputs
+Introduction to RxJS: Observables and Subjects
+Managing States with NgRx
+Consuming RESTful Web Services
+Unit Testing for Angular Projects
+Module 4: Web Application Deployment and Integration
+
+Options to Deploy Web Applications
+Containerization of Modern Web Applications
+Authentication and Authorization in Web Applications
+Using Cloud-Based Authentication and Notification Servers
+Deploying Containerized Web Applications to Clouds (e.g. GCP or AWS)
+Introduction to Serverless Cloud-Native Architecture (e.g. AWS or Firebase)
+Note: The suggested number of weeks allocated to each module may vary depending on the professors and/or class requirements. The topics within each module are grouped semantically and are not meant to suggest a time sequence. A course plan must be provided by the professor identifying the class-by-class arrangement of topics.
+
+
+
+INFO23431
+Introduction to Information Systems Security	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 42.0
+Credit Value: 3.0
+Credit Value Notes: N/A
+Effective: Winter 2025
+Prerequisites: (MATH10025) OR (PROG24310 AND INFO16206)
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: The pre-requisites of INFO16206 and PROG24310 apply to students registered in the PBACS - Honours Bachelor of Computer Science - Mobile Computing program. The pre-requisite of MATH10025 applies to students registered in the PBCPS - Honours Bachelor of Computer Science program.
+Program(s): Hon Bach CompSci - Mobile Comp, Hons Bach of Computer Science
+Program Coordinator(s): Magdin Stoica, El Sayed Mahmoud
+Course Leader or Contact: Abdul Mustafa
+Version: 20250106_00
+Status: Approved (APPR)
+
+Section I Notes: N/A
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+Students are introduced to the field of information security, and are presented with a spectrum of information systems security activities, tools, and methodologies. Students learn about the foundation for understanding the key issues associated with protecting information assets, determining the levels of protection, and designing a consistent information security system with appropriate intrusion detection and reporting features. Students learn through interactive lectures and assignment exercises about basic cryptography, hacker techniques and motivation, risks to information security systems and security solutions. 
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+This required second year course provides the foundation for understanding the key issues associated with protecting information assets, threat assessment and risks to information systems.
+
+Hons Bach of Computer Science	Program Coordinator(s): El Sayed Mahmoud
+This required course helps students better understand information assets security, threat assessment, and risks associated with information systems. This course?s knowledge and skills enable students to develop secure applications.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of this course, students will have demonstrated the ability to apply information security methodologies to protect information assets and address common security threats and vulnerabilities.  
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Identify risks to information systems. 
+Analyze security properties of software systems. 
+Classify common web security vulnerabilities. 
+Define security solutions that address specific vulnerabilities in an information system. 
+Analyze the hardware, software and personnel components of an information security system. 
+Employ access control techniques to information systems. 
+Apply encryption techniques to protect sensitive information and validate data integrity. 
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	Quizzes (4 @ 4% approx. weeks 4,7,10,12)	16.0%
+ 	Labs/Inclass Exercises (2 @ 7% approx. weeks 5,11)	14.0%
+ 	Assignments (2 @ 10% approx. weeks 6,13)	20.0%
+ 	Mid Term Exam (approx. week 8)	25.0%
+ 	Final Exam (approx. week 14)	25.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+To pass the course, students must achieve a 50% weighted average across the tests and the exams and at least 50% overall in the course.
+
+Students must submit/complete all assignments, in-class activities and projects by the scheduled due date and write all tests on the specified date/time. Exceptions will only be made under extraordinary circumstances. 
+
+Refer to the School of Applied Computing's Academic Procedures for Evaluations for more details regarding missed work: Procedures for Evaluations
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Challenge Exam
+Notes:  
+Portfolio
+Notes:  
+Other
+Notes:  Challenge exam, portfolio, and project are required for PLA.
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s):
+Course material costs can be found through the Sheridan Bookstore
+ 	Type	Description
+Required	Other	Materials will be provided by the Professor.
+
+Applicable student group(s): Honours Bachelor of Computer Science - Mobile Computing; Honours Bachelor of Computer Science
+Course Details:
+Module 1: Fundamentals of Information Security.
+
+Critical characteristics of information and information systems.
+Approaches to information security implementation.
+Methods of defense.
+Threats to information assets.
+Types of attacks on information assets.
+Secure software development.
+Module 2: Cryptology
+
+Cipher methods and Cryptographic algorithms.
+Cryptographic hash functions.
+Steganography.
+Cryptographic tools.
+Public Key Cryptography.
+Module 3: Web Application Security
+
+Web Security Challenges.
+OWASP Risk Rating Methodology.
+Classification and Prioritization.
+OWASP Top 10.
+Browser Security.
+Primary Defense Approaches.
+Module 4: Network Security.
+
+Internet Protocols and security issues.
+Message Authentication Codes (MAC/HMAC).
+Digital Signatures and Digital Certificates.
+Network Attacks and Defense.
+Protecting remote connections.
+Module 5: Security Technology, OS and Application Security
+
+Linux and Windows Security Model.
+Mobile Device and Platform Security.
+Access control.
+Intrusion Detection and Prevention Systems.
+Control Hijacking and Security Testing.
+Note: The suggested number of weeks allocated to each module may vary depending on the professor's and/or class requirements. The topics within each module are grouped semantically and are not meant to suggest a time sequence. A course plan must be provided by the professor identifying the class-by-class arrangement of topics.
+
+ 
+ 

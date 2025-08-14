@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Card } from '@/components/ui/base/Card';
+import React from "react";
+import { motion } from "framer-motion";
+import { Card } from "@/components/ui/card";
 
 export function FeaturedProjects() {
   return (
@@ -18,7 +18,8 @@ export function FeaturedProjects() {
             Featured Projects
           </h2>
           <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-            Showcasing the best work from each technical domain with measurable business impact.
+            Showcasing the best work from each technical domain with measurable
+            business impact.
           </p>
         </motion.div>
 
@@ -26,7 +27,8 @@ export function FeaturedProjects() {
           <div className="text-center text-gray-300">
             <p>Featured projects component - Coming soon in Phase 2</p>
             <p className="text-sm text-gray-500 mt-2">
-              Will display 1-2 top projects from each domain with case study links
+              Will display 1-2 top projects from each domain with case study
+              links
             </p>
           </div>
         </Card>

@@ -1,8 +1,8 @@
 "use client";
-import React from 'react';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { FaArrowRight, FaEnvelope, FaPhone, FaCalendar } from 'react-icons/fa';
+import React from "react";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { FaArrowRight, FaEnvelope, FaPhone, FaCalendar } from "react-icons/fa";
 
 interface CallToActionProps {
   title: string;
@@ -17,7 +17,7 @@ interface CallToActionProps {
     href: string;
     icon?: React.ReactNode;
   };
-  variant?: 'default' | 'gradient' | 'minimal';
+  variant?: "default" | "gradient" | "minimal";
   className?: string;
 }
 
@@ -26,35 +26,35 @@ const CallToAction: React.FC<CallToActionProps> = ({
   description,
   primaryAction,
   secondaryAction,
-  variant = 'default',
-  className = ''
+  variant = "default",
+  className = "",
 }) => {
   const getVariantClasses = () => {
     switch (variant) {
-      case 'gradient':
-        return 'bg-gradient-to-r from-blue-600 to-purple-600 text-white';
-      case 'minimal':
-        return 'bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700';
+      case "gradient":
+        return "bg-gradient-to-r from-blue-600 to-purple-600 text-white";
+      case "minimal":
+        return "bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700";
       default:
-        return 'bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700';
+        return "bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700";
     }
   };
 
   const getTextClasses = () => {
     switch (variant) {
-      case 'gradient':
-        return 'text-white';
+      case "gradient":
+        return "text-white";
       default:
-        return 'text-gray-900 dark:text-white';
+        return "text-gray-900 dark:text-white";
     }
   };
 
   const getDescriptionClasses = () => {
     switch (variant) {
-      case 'gradient':
-        return 'text-white/90';
+      case "gradient":
+        return "text-white/90";
       default:
-        return 'text-gray-600 dark:text-gray-300';
+        return "text-gray-600 dark:text-gray-300";
     }
   };
 
@@ -67,7 +67,9 @@ const CallToAction: React.FC<CallToActionProps> = ({
       className={`py-16 ${className}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`rounded-2xl p-8 md:p-12 text-center ${getVariantClasses()}`}>
+        <div
+          className={`rounded-2xl p-8 md:p-12 text-center ${getVariantClasses()}`}
+        >
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -77,7 +79,7 @@ const CallToAction: React.FC<CallToActionProps> = ({
           >
             {title}
           </motion.h2>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -99,12 +101,14 @@ const CallToAction: React.FC<CallToActionProps> = ({
             <Link
               href={primaryAction.href}
               className={`inline-flex items-center px-8 py-4 rounded-lg font-semibold transition-all duration-300 ${
-                variant === 'gradient'
-                  ? 'bg-white text-blue-600 hover:bg-gray-100 shadow-lg hover:shadow-xl'
-                  : 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl'
+                variant === "gradient"
+                  ? "bg-white text-blue-600 hover:bg-gray-100 shadow-lg hover:shadow-xl"
+                  : "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl"
               }`}
             >
-              {primaryAction.icon && <span className="mr-2">{primaryAction.icon}</span>}
+              {primaryAction.icon && (
+                <span className="mr-2">{primaryAction.icon}</span>
+              )}
               {primaryAction.label}
               <FaArrowRight className="ml-2 w-4 h-4" />
             </Link>
@@ -114,12 +118,14 @@ const CallToAction: React.FC<CallToActionProps> = ({
               <Link
                 href={secondaryAction.href}
                 className={`inline-flex items-center px-8 py-4 rounded-lg font-semibold transition-all duration-300 ${
-                  variant === 'gradient'
-                    ? 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
-                    : 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 border border-gray-300 dark:border-gray-600'
+                  variant === "gradient"
+                    ? "bg-white/10 text-white hover:bg-white/20 border border-white/20"
+                    : "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 border border-gray-300 dark:border-gray-600"
                 }`}
               >
-                {secondaryAction.icon && <span className="mr-2">{secondaryAction.icon}</span>}
+                {secondaryAction.icon && (
+                  <span className="mr-2">{secondaryAction.icon}</span>
+                )}
                 {secondaryAction.label}
               </Link>
             )}

@@ -123,28 +123,28 @@ Optimize API routes for better performance:
 
 ```typescript
 // pages/api/users/[id].ts
-import { NextApiRequest, NextApiResponse } from 'next'
-import { getUser } from '../../../lib/database'
+import { NextApiRequest, NextApiResponse } from "next";
+import { getUser } from "../../../lib/database";
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse,
 ) {
   // Set cache headers
-  res.setHeader('Cache-Control', 's-maxage=60, stale-while-revalidate')
-  
-  const { id } = req.query
-  
+  res.setHeader("Cache-Control", "s-maxage=60, stale-while-revalidate");
+
+  const { id } = req.query;
+
   try {
-    const user = await getUser(id as string)
-    
+    const user = await getUser(id as string);
+
     if (!user) {
-      return res.status(404).json({ error: 'User not found' })
+      return res.status(404).json({ error: "User not found" });
     }
-    
-    res.status(200).json(user)
+
+    res.status(200).json(user);
   } catch (error) {
-    res.status(500).json({ error: 'Internal server error' })
+    res.status(500).json({ error: "Internal server error" });
   }
 }
 ```
@@ -165,7 +165,7 @@ interface AppState {
   notifications: Notification[]
 }
 
-type AppAction = 
+type AppAction =
   | { type: 'SET_USER'; payload: User }
   | { type: 'TOGGLE_THEME' }
   | { type: 'ADD_NOTIFICATION'; payload: Notification }
@@ -190,7 +190,7 @@ const AppContext = createContext<{
 
 export function AppProvider({ children }: { children: React.ReactNode }) {
   const [state, dispatch] = useReducer(appReducer, initialState)
-  
+
   return (
     <AppContext.Provider value={{ state, dispatch }}>
       {children}
@@ -213,46 +213,46 @@ Extract business logic into custom hooks:
 
 ```typescript
 // hooks/useAuth.ts
-import { useState, useEffect } from 'react'
-import { useAppContext } from '../contexts/AppContext'
+import { useState, useEffect } from "react";
+import { useAppContext } from "../contexts/AppContext";
 
 export function useAuth() {
-  const { state, dispatch } = useAppContext()
-  const [loading, setLoading] = useState(true)
+  const { state, dispatch } = useAppContext();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    checkAuthStatus()
-  }, [])
+    checkAuthStatus();
+  }, []);
 
   const checkAuthStatus = async () => {
     try {
-      const user = await fetchCurrentUser()
-      dispatch({ type: 'SET_USER', payload: user })
+      const user = await fetchCurrentUser();
+      dispatch({ type: "SET_USER", payload: user });
     } catch (error) {
       // Handle auth error
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   const login = async (credentials: LoginCredentials) => {
-    const user = await authenticateUser(credentials)
-    dispatch({ type: 'SET_USER', payload: user })
-    return user
-  }
+    const user = await authenticateUser(credentials);
+    dispatch({ type: "SET_USER", payload: user });
+    return user;
+  };
 
   const logout = async () => {
-    await signOut()
-    dispatch({ type: 'SET_USER', payload: null })
-  }
+    await signOut();
+    dispatch({ type: "SET_USER", payload: null });
+  };
 
   return {
     user: state.user,
     loading,
     login,
     logout,
-    isAuthenticated: !!state.user
-  }
+    isAuthenticated: !!state.user,
+  };
 }
 ```
 
@@ -265,34 +265,34 @@ Implement efficient data fetching patterns:
 ```typescript
 // lib/api.ts
 export async function getPostsWithPagination(page = 1, limit = 10) {
-  const offset = (page - 1) * limit
-  
+  const offset = (page - 1) * limit;
+
   const [posts, total] = await Promise.all([
     db.post.findMany({
       skip: offset,
       take: limit,
       include: {
         author: {
-          select: { id: true, name: true, avatar: true }
+          select: { id: true, name: true, avatar: true },
         },
         _count: {
-          select: { comments: true, likes: true }
-        }
+          select: { comments: true, likes: true },
+        },
       },
-      orderBy: { createdAt: 'desc' }
+      orderBy: { createdAt: "desc" },
     }),
-    db.post.count()
-  ])
-  
+    db.post.count(),
+  ]);
+
   return {
     posts,
     pagination: {
       page,
       limit,
       total,
-      pages: Math.ceil(total / limit)
-    }
-  }
+      pages: Math.ceil(total / limit),
+    },
+  };
 }
 ```
 
@@ -302,39 +302,42 @@ Implement multiple layers of caching:
 
 ```typescript
 // lib/cache.ts
-import Redis from 'ioredis'
+import Redis from "ioredis";
 
-const redis = new Redis(process.env.REDIS_URL)
+const redis = new Redis(process.env.REDIS_URL);
 
 export async function getCachedData<T>(
   key: string,
   fetcher: () => Promise<T>,
-  ttl = 3600
+  ttl = 3600,
 ): Promise<T> {
   // Try cache first
-  const cached = await redis.get(key)
+  const cached = await redis.get(key);
   if (cached) {
-    return JSON.parse(cached)
+    return JSON.parse(cached);
   }
-  
+
   // Fetch fresh data
-  const data = await fetcher()
-  
+  const data = await fetcher();
+
   // Cache the result
-  await redis.setex(key, ttl, JSON.stringify(data))
-  
-  return data
+  await redis.setex(key, ttl, JSON.stringify(data));
+
+  return data;
 }
 
 // Usage in API route
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {
   const posts = await getCachedData(
     `posts:page:${req.query.page}`,
     () => getPostsWithPagination(Number(req.query.page)),
-    300 // 5 minutes
-  )
-  
-  res.json(posts)
+    300, // 5 minutes
+  );
+
+  res.json(posts);
 }
 ```
 
@@ -348,18 +351,18 @@ Properly configure environments:
 // lib/config.ts
 const config = {
   development: {
-    apiUrl: 'http://localhost:3000/api',
+    apiUrl: "http://localhost:3000/api",
     dbUrl: process.env.DATABASE_URL,
-    logLevel: 'debug'
+    logLevel: "debug",
   },
   production: {
     apiUrl: process.env.API_URL,
     dbUrl: process.env.DATABASE_URL,
-    logLevel: 'error'
-  }
-}
+    logLevel: "error",
+  },
+};
 
-export default config[process.env.NODE_ENV as keyof typeof config]
+export default config[process.env.NODE_ENV as keyof typeof config];
 ```
 
 ### 2. Performance Monitoring
@@ -370,18 +373,18 @@ Implement comprehensive monitoring:
 // lib/monitoring.ts
 export function trackWebVitals(metric: any) {
   // Send to analytics service
-  if (process.env.NODE_ENV === 'production') {
-    analytics.track('Web Vitals', {
+  if (process.env.NODE_ENV === "production") {
+    analytics.track("Web Vitals", {
       name: metric.name,
       value: metric.value,
-      id: metric.id
-    })
+      id: metric.id,
+    });
   }
 }
 
 // pages/_app.tsx
 export function reportWebVitals(metric: any) {
-  trackWebVitals(metric)
+  trackWebVitals(metric);
 }
 ```
 
@@ -390,6 +393,7 @@ export function reportWebVitals(metric: any) {
 Building scalable Next.js applications requires thoughtful architecture, performance optimization, and proper deployment strategies. By following these patterns and practices, you can create applications that perform well at any scale.
 
 Key takeaways:
+
 - Organize code by features, not file types
 - Implement strategic code splitting and lazy loading
 - Use proper state management patterns

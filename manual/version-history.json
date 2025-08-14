@@ -1,0 +1,99 @@
+{
+  "manualVersioning": {
+    "currentVersion": "2.1.0",
+    "versioningScheme": "semantic",
+    "description": "Manual documentation versioning system",
+    "versionFormat": "MAJOR.MINOR.PATCH",
+    "versionRules": {
+      "major": "Breaking changes or complete restructuring",
+      "minor": "New features, components, or significant updates", 
+      "patch": "Bug fixes, corrections, or small improvements"
+    }
+  },
+  "versionHistory": [
+    {
+      "version": "2.1.0",
+      "date": "2024-12-19",
+      "type": "minor",
+      "title": "Navigation System Overhaul & Theme Integration",
+      "changes": [
+        "Implemented centralized navigation data separation",
+        "Fixed all navigation redirect issues",
+        "Added comprehensive theme adaptation for light/dark modes",
+        "Resolved hydration mismatches in ContactForm and navigation",
+        "Fixed React Hook order violations",
+        "Eliminated duplicate React keys in navigation",
+        "Updated troubleshooting patterns for common issues",
+        "Added hydration-safe rendering utilities documentation"
+      ],
+      "affectedFiles": [
+        "data/navigation.tsx (new)",
+        "components/ui/navigation/DomainAwareNavigation.tsx",
+        "components/ui/navigation/MobileBottomNav.tsx", 
+        "components/ContactForm.tsx",
+        "components/ui/layout/Footer.tsx",
+        "manual/troubleshooting.json",
+        "manual/utilities.json",
+        "manual/components.json"
+      ],
+      "breakingChanges": [],
+      "deprecations": [
+        "Hardcoded navigation arrays in UI components"
+      ]
+    },
+    {
+      "version": "2.0.0", 
+      "date": "2024-12-19",
+      "type": "major",
+      "title": "Enhanced Namespace Removal & Component Restructuring",
+      "changes": [
+        "Renamed 13 components from Enhanced* to meaningful names",
+        "Updated EnhancedBentoGrid to AnimatedBentoGrid",
+        "Updated EnhancedMagicButton to InteractiveMagicButton",
+        "Refactored projects-enhanced.ts to project-case-studies.ts",
+        "Fixed 15+ import statements across codebase",
+        "Implemented comprehensive manual documentation system"
+      ],
+      "affectedFiles": [
+        "Multiple component files",
+        "Data structure files",
+        "Import statements across codebase"
+      ],
+      "breakingChanges": [
+        "Component name changes require import updates",
+        "Data file restructuring"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "date": "2024-12-18", 
+      "type": "major",
+      "title": "Initial Manual Documentation System",
+      "changes": [
+        "Created comprehensive manual documentation structure",
+        "Established JSON-based documentation system",
+        "Implemented framework documentation",
+        "Added troubleshooting guides",
+        "Created component API reference"
+      ],
+      "affectedFiles": [
+        "manual/*.json files",
+        "manual/framework/*.json files"
+      ],
+      "breakingChanges": []
+    }
+  ],
+  "upcomingVersions": [
+    {
+      "version": "2.2.0",
+      "plannedDate": "TBD",
+      "title": "Performance Optimization & Testing",
+      "plannedChanges": [
+        "Enhanced performance monitoring",
+        "Improved test coverage",
+        "Bundle size optimization",
+        "Accessibility improvements"
+      ]
+    }
+  ]
+}

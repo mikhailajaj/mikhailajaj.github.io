@@ -1,15 +1,18 @@
-import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { FaArrowRight, FaCheckCircle } from 'react-icons/fa';
-import { ProjectCaseStudy } from '@/data/projects-enhanced';
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { FaArrowRight, FaCheckCircle } from "react-icons/fa";
+import { ProjectCaseStudy } from "@/data/projects-enhanced";
 
 interface ServiceProjectsProps {
   projects: ProjectCaseStudy[];
   title: string;
 }
 
-const ServiceProjects: React.FC<ServiceProjectsProps> = ({ projects, title }) => {
+const ServiceProjects: React.FC<ServiceProjectsProps> = ({
+  projects,
+  title,
+}) => {
   if (!projects || projects.length === 0) {
     return null;
   }
@@ -50,7 +53,9 @@ const ServiceProjects: React.FC<ServiceProjectsProps> = ({ projects, title }) =>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center text-green-600">
                     <FaCheckCircle className="mr-2" />
-                    <span className="text-sm font-medium">{project.impact.metrics[0]}</span>
+                    <span className="text-sm font-medium">
+                      {project.impact.metrics[0]}
+                    </span>
                   </div>
                   <Link
                     href={`/projects/${project.slug}`}

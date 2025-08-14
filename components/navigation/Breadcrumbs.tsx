@@ -1,9 +1,9 @@
 "use client";
-import React from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { FaHome, FaChevronRight } from 'react-icons/fa';
-import { motion } from 'framer-motion';
+import React from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { FaHome, FaChevronRight } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 interface BreadcrumbItem {
   label: string;
@@ -21,35 +21,37 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, className = "" }) => {
 
   // Generate breadcrumbs from pathname if items not provided
   const generateBreadcrumbs = (): BreadcrumbItem[] => {
-    const pathSegments = pathname.split('/').filter(segment => segment !== '');
-    
+    const pathSegments = pathname
+      .split("/")
+      .filter((segment) => segment !== "");
+
     const breadcrumbs: BreadcrumbItem[] = [
-      { label: 'Home', href: '/', icon: <FaHome className="w-4 h-4" /> }
+      { label: "Home", href: "/", icon: <FaHome className="w-4 h-4" /> },
     ];
 
-    let currentPath = '';
-    
+    let currentPath = "";
+
     pathSegments.forEach((segment, index) => {
       currentPath += `/${segment}`;
-      
+
       // Format segment for display
       let label = segment
-        .split('-')
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(' ');
+        .split("-")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
 
       // Special cases for better labels
       const labelMap: Record<string, string> = {
-        'full-stack': 'Full-Stack Development',
-        'ux-ui': 'UX/UI Design',
-        'blog': 'Technical Blog',
-        'services': 'Services',
-        'projects': 'Projects',
-        'about': 'About',
-        'contact': 'Contact',
-        'cloud': 'Cloud Architecture',
-        'data': 'Data Analytics',
-        'consulting': 'Technical Consulting'
+        "full-stack": "Full-Stack Development",
+        "ux-ui": "UX/UI Design",
+        blog: "Technical Blog",
+        services: "Services",
+        projects: "Projects",
+        about: "About",
+        contact: "Contact",
+        cloud: "Cloud Architecture",
+        data: "Data Analytics",
+        consulting: "Technical Consulting",
       };
 
       if (labelMap[segment]) {
@@ -58,7 +60,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, className = "" }) => {
 
       breadcrumbs.push({
         label,
-        href: currentPath
+        href: currentPath,
       });
     });
 
@@ -68,7 +70,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, className = "" }) => {
   const breadcrumbItems = items || generateBreadcrumbs();
 
   // Don't show breadcrumbs on home page
-  if (pathname === '/' || breadcrumbItems.length <= 1) {
+  if (pathname === "/" || breadcrumbItems.length <= 1) {
     return null;
   }
 
@@ -77,7 +79,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, className = "" }) => {
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
-      className={`bg-gray-50 dark:bg-gray-800/50 border-b border-gray-200 dark:border-gray-700 ${className}`}
+      className={`bg-muted/20 dark:bg-card/50 border-b border-border dark:border-border ${className}`}
       aria-label="Breadcrumb"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -85,12 +87,12 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, className = "" }) => {
           {breadcrumbItems.map((item, index) => (
             <li key={item.href} className="flex items-center">
               {index > 0 && (
-                <FaChevronRight className="w-3 h-3 text-gray-400 dark:text-gray-500 mx-2" />
+                <FaChevronRight className="w-3 h-3 text-muted-foreground dark:text-foreground/80 mx-2" />
               )}
-              
+
               {index === breadcrumbItems.length - 1 ? (
                 // Current page (not clickable)
-                <span className="flex items-center space-x-2 text-gray-900 dark:text-white font-medium">
+                <span className="flex items-center space-x-2 text-foreground dark:text-white font-medium">
                   {item.icon}
                   <span>{item.label}</span>
                 </span>
@@ -98,7 +100,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, className = "" }) => {
                 // Clickable breadcrumb
                 <Link
                   href={item.href}
-                  className="flex items-center space-x-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  className="flex items-center space-x-2 text-foreground/80 dark:text-muted-foreground hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >
                   {item.icon}
                   <span>{item.label}</span>

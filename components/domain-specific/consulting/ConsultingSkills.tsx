@@ -1,138 +1,138 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Card, CardContent } from '@/components/ui/base/Card';
-import { getTechnicalConsultingTechnologies } from '@/data/projects/technical-consulting';
-import { 
-  FaChartLine, 
-  FaCogs, 
-  FaUsers, 
+import React from "react";
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/base/Card";
+import { getTechnicalConsultingTechnologies } from "@/data/projects/technical-consulting";
+import {
+  FaChartLine,
+  FaCogs,
+  FaUsers,
   FaTools,
   FaAward,
   FaCertificate,
-  FaGraduationCap
-} from 'react-icons/fa';
+  FaGraduationCap,
+} from "react-icons/fa";
 
 const technologies = getTechnicalConsultingTechnologies();
 
 const skillCategories = [
   {
-    name: 'Methodologies',
+    name: "Methodologies",
     icon: <FaCogs />,
-    color: 'from-indigo-600 to-indigo-800',
-    skills: technologies.filter(tech => tech.category === 'methodology')
+    color: "from-indigo-600 to-indigo-800",
+    skills: technologies.filter((tech) => tech.category === "methodology"),
   },
   {
-    name: 'Tools & Platforms',
+    name: "Tools & Platforms",
     icon: <FaTools />,
-    color: 'from-blue-600 to-blue-800',
-    skills: technologies.filter(tech => tech.category === 'tools')
+    color: "from-blue-600 to-blue-800",
+    skills: technologies.filter((tech) => tech.category === "tools"),
   },
   {
-    name: 'Architecture & Strategy',
+    name: "Architecture & Strategy",
     icon: <FaChartLine />,
-    color: 'from-purple-600 to-purple-800',
-    skills: technologies.filter(tech => tech.category === 'architecture')
+    color: "from-purple-600 to-purple-800",
+    skills: technologies.filter((tech) => tech.category === "architecture"),
   },
   {
-    name: 'Leadership & Training',
+    name: "Leadership & Training",
     icon: <FaUsers />,
-    color: 'from-green-600 to-green-800',
-    skills: technologies.filter(tech => tech.category === 'leadership')
-  }
+    color: "from-green-600 to-green-800",
+    skills: technologies.filter((tech) => tech.category === "leadership"),
+  },
 ];
 
 const consultingFrameworks = [
   {
-    name: 'Digital Transformation',
-    description: 'End-to-end modernization strategy and execution',
-    proficiency: 'expert'
+    name: "Digital Transformation",
+    description: "End-to-end modernization strategy and execution",
+    proficiency: "expert",
   },
   {
-    name: 'Change Management',
-    description: 'Organizational change and adoption strategies',
-    proficiency: 'expert'
+    name: "Change Management",
+    description: "Organizational change and adoption strategies",
+    proficiency: "expert",
   },
   {
-    name: 'Process Optimization',
-    description: 'Lean and Six Sigma process improvement',
-    proficiency: 'advanced'
+    name: "Process Optimization",
+    description: "Lean and Six Sigma process improvement",
+    proficiency: "advanced",
   },
   {
-    name: 'Risk Management',
-    description: 'Technical and business risk assessment',
-    proficiency: 'advanced'
+    name: "Risk Management",
+    description: "Technical and business risk assessment",
+    proficiency: "advanced",
   },
   {
-    name: 'Vendor Management',
-    description: 'Technology vendor selection and management',
-    proficiency: 'intermediate'
-  }
+    name: "Vendor Management",
+    description: "Technology vendor selection and management",
+    proficiency: "intermediate",
+  },
 ];
 
 const certifications = [
   {
-    name: 'Certified Scrum Master (CSM)',
-    issuer: 'Scrum Alliance',
-    year: '2023',
-    level: 'Professional'
+    name: "Certified Scrum Master (CSM)",
+    issuer: "Scrum Alliance",
+    year: "2023",
+    level: "Professional",
   },
   {
-    name: 'Project Management Professional (PMP)',
-    issuer: 'Project Management Institute',
-    year: '2022',
-    level: 'Professional'
+    name: "Project Management Professional (PMP)",
+    issuer: "Project Management Institute",
+    year: "2022",
+    level: "Professional",
   },
   {
-    name: 'AWS Solutions Architect Professional',
-    issuer: 'Amazon Web Services',
-    year: '2024',
-    level: 'Professional'
-  }
+    name: "AWS Solutions Architect Professional",
+    issuer: "Amazon Web Services",
+    year: "2024",
+    level: "Professional",
+  },
 ];
 
 const achievements = [
   {
-    title: 'Digital Transformation Leader',
-    description: 'Led 5+ enterprise transformation initiatives',
-    year: '2024'
+    title: "Digital Transformation Leader",
+    description: "Led 5+ enterprise transformation initiatives",
+    year: "2024",
   },
   {
-    title: 'Agile Coach Certification',
-    description: 'Certified to train and coach agile teams',
-    year: '2023'
+    title: "Agile Coach Certification",
+    description: "Certified to train and coach agile teams",
+    year: "2023",
   },
   {
-    title: 'Technical Strategy Expert',
-    description: 'Recognized for startup technical guidance',
-    year: '2023'
-  }
+    title: "Technical Strategy Expert",
+    description: "Recognized for startup technical guidance",
+    year: "2023",
+  },
 ];
 
 const getProficiencyColor = (proficiency: string) => {
   switch (proficiency) {
-    case 'expert':
-      return 'bg-indigo-500';
-    case 'advanced':
-      return 'bg-blue-500';
-    case 'intermediate':
-      return 'bg-purple-500';
+    case "expert":
+      return "bg-indigo-500";
+    case "advanced":
+      return "bg-blue-500";
+    case "intermediate":
+      return "bg-purple-500";
     default:
-      return 'bg-gray-500';
+      return "bg-gray-500";
   }
 };
 
 const getProficiencyWidth = (proficiency: string) => {
   switch (proficiency) {
-    case 'expert':
-      return 'w-full';
-    case 'advanced':
-      return 'w-4/5';
-    case 'intermediate':
-      return 'w-3/5';
+    case "expert":
+      return "w-full";
+    case "advanced":
+      return "w-4/5";
+    case "intermediate":
+      return "w-3/5";
     default:
-      return 'w-2/5';
+      return "w-2/5";
   }
 };
 
@@ -154,17 +154,18 @@ export function ConsultingSkills() {
             </div>
             <span className="text-indigo-400 font-medium">Expertise</span>
           </div>
-          
+
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Consulting
             <span className="block bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent">
               Skills
             </span>
           </h2>
-          
+
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Comprehensive technical consulting expertise spanning methodologies, tools, 
-            architecture, and leadership skills for successful organizational transformation.
+            Comprehensive technical consulting expertise spanning methodologies,
+            tools, architecture, and leadership skills for successful
+            organizational transformation.
           </p>
         </motion.div>
 
@@ -181,33 +182,44 @@ export function ConsultingSkills() {
               <Card variant="glass" className="h-full">
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-3 mb-6">
-                    <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center`}>
+                    <div
+                      className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center`}
+                    >
                       <span className="text-white text-xl">
                         {category.icon}
                       </span>
                     </div>
-                    <h3 className="text-xl font-bold text-white">{category.name}</h3>
+                    <h3 className="text-xl font-bold text-white">
+                      {category.name}
+                    </h3>
                   </div>
-                  
+
                   <div className="space-y-4">
                     {category.skills.map((skill, skillIndex) => (
                       <motion.div
                         key={skill.name}
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5, delay: (categoryIndex * 0.1) + (skillIndex * 0.05) }}
+                        transition={{
+                          duration: 0.5,
+                          delay: categoryIndex * 0.1 + skillIndex * 0.05,
+                        }}
                         viewport={{ once: true }}
                         className="space-y-2"
                       >
                         <div className="flex items-center justify-between">
                           <div className="flex items-center space-x-2">
                             <span className="text-lg">{skill.icon}</span>
-                            <span className="text-white font-medium">{skill.name}</span>
+                            <span className="text-white font-medium">
+                              {skill.name}
+                            </span>
                           </div>
-                          <span className="text-sm text-gray-400 capitalize">{skill.proficiency}</span>
+                          <span className="text-sm text-gray-400 capitalize">
+                            {skill.proficiency}
+                          </span>
                         </div>
                         <div className="w-full bg-gray-700 rounded-full h-2">
-                          <div 
+                          <div
                             className={`h-2 rounded-full ${getProficiencyColor(skill.proficiency)} ${getProficiencyWidth(skill.proficiency)} transition-all duration-1000 ease-out`}
                           ></div>
                         </div>
@@ -234,9 +246,11 @@ export function ConsultingSkills() {
                 <div className="w-12 h-12 bg-gradient-to-r from-orange-600 to-orange-800 rounded-lg flex items-center justify-center">
                   <FaGraduationCap className="text-white text-xl" />
                 </div>
-                <h3 className="text-xl font-bold text-white">Consulting Frameworks</h3>
+                <h3 className="text-xl font-bold text-white">
+                  Consulting Frameworks
+                </h3>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {consultingFrameworks.map((framework, index) => (
                   <motion.div
@@ -248,12 +262,18 @@ export function ConsultingSkills() {
                     className="space-y-2"
                   >
                     <div className="flex items-center justify-between">
-                      <span className="text-white font-medium">{framework.name}</span>
-                      <span className="text-sm text-gray-400 capitalize">{framework.proficiency}</span>
+                      <span className="text-white font-medium">
+                        {framework.name}
+                      </span>
+                      <span className="text-sm text-gray-400 capitalize">
+                        {framework.proficiency}
+                      </span>
                     </div>
-                    <p className="text-gray-400 text-sm">{framework.description}</p>
+                    <p className="text-gray-400 text-sm">
+                      {framework.description}
+                    </p>
                     <div className="w-full bg-gray-700 rounded-full h-2">
-                      <div 
+                      <div
                         className={`h-2 rounded-full ${getProficiencyColor(framework.proficiency)} ${getProficiencyWidth(framework.proficiency)} transition-all duration-1000 ease-out`}
                       ></div>
                     </div>
@@ -279,9 +299,11 @@ export function ConsultingSkills() {
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
                     <FaCertificate className="text-white text-xl" />
                   </div>
-                  <h3 className="text-xl font-bold text-white">Certifications</h3>
+                  <h3 className="text-xl font-bold text-white">
+                    Certifications
+                  </h3>
                 </div>
-                
+
                 <div className="space-y-4">
                   {certifications.map((cert, index) => (
                     <motion.div
@@ -294,11 +316,17 @@ export function ConsultingSkills() {
                     >
                       <FaCertificate className="text-indigo-400 mt-1" />
                       <div className="flex-1">
-                        <h4 className="text-white font-medium text-sm">{cert.name}</h4>
+                        <h4 className="text-white font-medium text-sm">
+                          {cert.name}
+                        </h4>
                         <p className="text-gray-400 text-xs">{cert.issuer}</p>
                         <div className="flex items-center justify-between mt-1">
-                          <span className="text-indigo-400 text-xs font-medium">{cert.level}</span>
-                          <span className="text-gray-500 text-xs">{cert.year}</span>
+                          <span className="text-indigo-400 text-xs font-medium">
+                            {cert.level}
+                          </span>
+                          <span className="text-gray-500 text-xs">
+                            {cert.year}
+                          </span>
                         </div>
                       </div>
                     </motion.div>
@@ -323,7 +351,7 @@ export function ConsultingSkills() {
                   </div>
                   <h3 className="text-xl font-bold text-white">Achievements</h3>
                 </div>
-                
+
                 <div className="space-y-4">
                   {achievements.map((achievement, index) => (
                     <motion.div
@@ -336,9 +364,15 @@ export function ConsultingSkills() {
                     >
                       <FaAward className="text-yellow-400 mt-1" />
                       <div className="flex-1">
-                        <h4 className="text-white font-medium text-sm">{achievement.title}</h4>
-                        <p className="text-gray-400 text-xs">{achievement.description}</p>
-                        <span className="text-indigo-400 text-xs font-medium">{achievement.year}</span>
+                        <h4 className="text-white font-medium text-sm">
+                          {achievement.title}
+                        </h4>
+                        <p className="text-gray-400 text-xs">
+                          {achievement.description}
+                        </p>
+                        <span className="text-indigo-400 text-xs font-medium">
+                          {achievement.year}
+                        </span>
                       </div>
                     </motion.div>
                   ))}

@@ -1,0 +1,622 @@
+PROG20082
+Mobile Device Application Principles	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 84.0
+Credit Value: 4.0
+Credit Value Notes: N/A
+Effective: Spring/Summer 2024
+Prerequisites: (INFO10229 AND PROG10065)
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: N/A
+Program(s): Hon Bach CompSci - Mobile Comp
+Program Coordinator(s): Magdin Stoica
+Course Leader or Contact: Alexander Tetervak
+Version: 20240506_00
+Status: Approved (APPR)
+
+Section I Notes: N/A
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+Students learn the principle concepts of native application development for mobile devices. Through interactive lectures, hands-on activities and assignments, the course provides students with a balance of theory and practical experience in developing and deploying real-world mobile applications. Applications developed use Kotlin and JVM frameworks for devices that run on Android environment. Students learn best practices for user interface design, handling events, storage and retrieval of data on the device, concurrency and networking processes, device integration, packaging and publishing, and security issues.
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+This required course is a foundational course in the mobile application development stream of courses. This is the first native application development course the student will take in the program. This course prepares the student with the principles and fundamental knowledge to design an effective native application on a mobile device. The course will prepare students for more advanced topics in the area of mobile application development.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of this course, students will have demonstrated the ability to develop well-designed robust, reliable, native Kotlin applications for mobile devices.
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Create Android applications using current Kotlin frameworks and technologies.
+Analyse advantages and disadvantages of native and multi-platform application architectures for mobile devices.
+Design and develop user interfaces for mobile devices.
+Use concurrency and background processing for wireless applications.
+Create mobile applications that use persistence storage mechanisms.
+Create mobile applications that use network communications.
+Evaluate the life cycle of a mobile app from initial design to testing, debugging and deployment.
+Solve security issues while developing mobile applications.
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	Assignments (4 @ 10%) approx. weeks 4, 6, 11, 13	40.0%
+ 	Quizzes (2 @ 5%) approx. weeks 5, 12	10.0%
+ 	Midterm Exam approx. week 7	25.0%
+ 	Final Exam approx. week 14	25.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+To pass the course, students must achieve a 50% weighted average across the tests and the exams and at least 50% overall in the course.
+
+Students must submit/complete all assignments, in-class activities and projects by the scheduled due date and write all tests on the specified date/time. Exceptions will only be made under extraordinary circumstances. 
+
+Refer to the School of Applied Computing's Academic Procedures for Evaluations for more details regarding missed work: Procedures for Evaluations
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Challenge Exam
+Notes:  
+Portfolio
+Notes:  
+Other
+Notes:  A Challenge Exam, Portfolio, and Project are Required for PLAR
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s):
+Course material costs can be found through the Sheridan Bookstore
+ 	Type	Description
+Optional	Textbook	Jetpack Compose 1.5 Essentials, Smyth, N., Payload Media, 1st Edition, 2024
+Optional	Textbook	Pro Android with Kotlin: Developing Modern Mobile Apps with Kotlin and Jetpack., Spath, P., Apress, 2nd Edition, 2022
+Optional	Textbook	Clean Android Architecture: Take a Layered Approach to Writing Clean, Testable and..., Dumbravan, A., Packt Publishing, 2022
+Optional	Textbook	Simplifying Android Development with Coroutines and Flows, Jomar, T., Packt Publishing, 2022
+Optional	Textbook	Modern Android 13 Development Cookbook..., Wambua, M., Packt Publishing, 1st Edition, 2023
+Optional	Textbook	Kickstart Modern Android Development with Jetpack and Kotlin?: Enhance Your Android Development..., Ghita, C., Packt Publishing, 2022
+Optional	Textbook	Android UI Development with Jetpack Compose?: Bring Declarative and Native UI to Life Quickly..., Kuunneth, T., Packt Publishing, 2nd Edition, 2023
+Optional	Textbook	Mastering Kotlin for Android 14, Wangereka, H., Packt Publishing, 1st Edition, 2024
+Optional	Website	https://developer.android.com/ Training Courses, Tutorials/Labs, Developer Guides, and Code Samples.
+
+Applicable student group(s): PBACS ? Honours Bachelor of Computer Science - Mobile Computing
+Course Details:
+Module 1: Introduction to Android Application Development in Kotlin
+
+Overview of the Architecture of the Android System
+Basic Building Blocks of an Android Application
+Introduction to Using Kotlin Language
+Variables and Types, Type Inference, Null Safety
+Conditionals and Loops
+Functions, Anonymous Functions, Higher-order Functions
+Classes and Objects, Properties and Methods, Companion Objects
+Inheritance, Abstract Classes, Interfaces, Extension Functions
+Delegation Versus Inheritance: Method and Property Delegation
+Special Classes, Generics, Functional Manipulations
+Using an IntelliJ IDEA with Git Version Control and JUnit Testing
+Common Software Architecture Principles in Android Apps
+Module 2: Fundamentals of Jetpack Compose for UI Development
+
+Using Android Studio with Git Version Control and JUnit
+Compose Functions, State, Composing and Recomposing
+Using Predefined Layouts with Common UI Elements
+Handling Events from User Interaction
+Concurrency within Jetpack Compose
+Hoisting State and Passing Events
+Using ViewModels as State Holders
+StateFlow and Unidirectional Data Flow (UDF) Design Pattern 
+Navigation and App Architecture
+Material Design and Themes
+Testing and Debugging Compose UI
+Compose Functions Versus Views and Fragments
+Module 3: Implementations of Data and Domain Layers
+
+Structural Concurrency in Android
+Coroutines Versus Threads
+Coroutine Context and Dispatchers
+Kotlin Flows on Android
+Creating, Modifying and Collecting Flows
+Retrieving Remote Data from a Server
+Data Sources and Repository Design Pattern
+Dependency Injection Pattern: Manual and with Hilt Library
+Injecting Use Cases and Repositories
+Single Source of Truth (SSOT) Principle
+Using Local Databases with Room Library
+Saving User Preferences in DataStore
+Testing and Debugging Data and Domain Layers
+Module 4: Advanced Topics in Application Development
+
+Using WorkManager to Start and Schedule Background Tasks
+Developing Apps for Different Screen Sizes: Phones, Tablets, Foldables
+Privacy and Security in Android Applications
+Implementing User Authentication
+Sending and Receiving Notifications and Data
+Progressive Loading, Displaying Infinite Lists
+Introduction to Using Location Services and Maps in Apps
+Packaging and Publishing Android Applications
+Note: The topics within each module are grouped semantically and are not meant to suggest a time sequence. A course plan must be provided by the professor identifying the class-by-class arrangement of topics.
+
+
+PROG24310
+Programming Languages	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 56.0
+Credit Value: 3.0
+Credit Value Notes: N/A
+Effective: Fall 2025
+Prerequisites: PROG10065
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: N/A
+Program(s): Hon Bach CompSci - Mobile Comp, Hons Bach of Computer Science
+Program Coordinator(s): Magdin Stoica, El Sayed Mahmoud
+Course Leader or Contact: Alex Babanski
+Version: 20250902_00
+Status: Approved (APPR)
+
+Section I Notes: N/A
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+Students focus on various concepts and principles underlying the design and use of modern programming languages. Students learn about programming languages in the context of procedural, object-oriented, functional and hybrid programming languages. Topics include data and control structuring constructs, facilities for modularity and data abstraction, polymorphism, syntax, and formal semantics. Students learn about these programming language paradigms through lectures, hands-on exercises and assignments
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+This required second year course provides a comprehensive foundation to the principles and paradigms of modern programming languages. This course builds on the students skills and knowledge developed in the mathematics and software development courses. The course provides a foundation of programming language principles and paradigms (i.e., procedural, object-oriented, functional and hybrid programming languages). This course is fundamental to future application development courses in computer science.
+
+Hons Bach of Computer Science	Program Coordinator(s): El Sayed Mahmoud
+This required core course strengthens programming skills that will be used by future software development core courses and specialization courses related to programming. The course aims to provide a comprehensive overview of the principles and paradigms of modern programming languages. It covers programming principles. The course allows students to identify various programming paradigms such as procedural, object-oriented, functional, and hybrid programming paradigms. It advances software development skills students have developed to prepare them for the software development practices required in the future core and specialization courses.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of this course, students will have demonstrated the ability to evaluate the principles and paradigms of modern programming languages in terms of syntax, semantics, compile-time vs. runtime behaviour, facilities for modularity and data abstraction, and type system, inheritance, and polymorphism characteristics.
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Evaluate the syntax, semantics, facilities for modularity and data abstraction, type system of functional programming languages.
+Evaluate the syntax, semantics, facilities for modularity and data abstraction, type system of imperative programming languages.
+Evaluate the syntax, semantics, facilities for modularity and data abstraction, type system, inheritance, and polymorphism of object-oriented programming languages.
+Analyze the principles of imperative programming languages using the C programming language.
+Design and implement object-oriented programs in C++.
+Explore functional programming paradigms in a modern functional programming language (e.g., F#, Haskell, Swift).
+Apply knowledge of principles and paradigms of programming languages to implement solutions to problems in an appropriate programming language.
+Assess memory management paradigms associated with different program languages.
+Describe the design of programming languages in terms of syntax, semantics, compile-time vs. runtime behaviour, facilities for modularity and data abstraction, type system, inheritance, and polymorphism.
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	Assignments (3 @ 10%)	30.0%
+ 	Quizzes (2 @ 10%)	20.0%
+ 	Midterm Exam	25.0%
+ 	Final Exam	25.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+To pass the course, students must achieve a 50% weighted average across the exams and at least 50% overall in the course.
+
+Students must submit/complete all assignments, in-class activities and projects by the scheduled due date and write all tests on the specified date/time. Exceptions will only be made under extraordinary circumstances. 
+
+Refer to the School of Applied Computing's Academic Procedures for Evaluations for more details regarding missed work: Procedures for Evaluations
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Challenge Exam
+Notes:  
+Portfolio
+Notes:  
+Other
+Notes:  Challenge exam, portfolio, and project are required for PLAR.
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s): N/A
+Applicable student group(s): PBACS - Honours Bachelor of Applied Computer Science - Mobile Computing; PBCPS - Honours Bachelor of Computer Science (all specializations)
+Course Details:
+    1.     Principles and Paradigms
+
+Principles
+Paradigms
+Language design
+Compilers and Virtual Machines 
+Syntax, Lexical and Syntactic Analysis
+Grammars
+Compilers and Interpreters
+Lexical Analysis
+Syntactic Analysis 
+Names, Types, and Type Systems
+Variables, symbol tables
+Static and dynamic typing
+Recursive data types
+Functions as types 
+Semantics, Semantic Interpretation
+Expression semantics
+Program state
+Assignment, control flow, input/output and exception semantics 
+Functions, and Function implementation
+Basic Terminology
+Parameter Passing Mechanism
+Function Declaration and Call
+Semantics of Function Call and Return 
+Memory Management
+The Heap
+Garbage Collection Mechanisms
+Memory management with C and C++ 
+Imperative Programming Language Principles and Paradigms
+Overview of the characteristics of imperative languages
+Procedural abstraction
+Expressions and assignment
+Programming in C 
+Object-Oriented Programming Language Principles and Paradigms
+Overview of properties of object-oriented languages
+The Object Model (Classes, encapsulation, inheritance, polymorphism, templates, abstract classes, interfaces) and its use in C++
+Programming in C++ 
+Functional Programming Language Principles and Paradigms
+Overview of the characteristics of functional languages
+Expressions, Lists, Elementary Types and Values, Control flow, Defining and using functions
+
+
+
+INFO16206
+Scripting & Web Languages	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 42.0
+Credit Value: 3.0
+Credit Value Notes: N/A
+Effective: Fall 2025
+Prerequisites: PROG10004
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: The PROG10004 pre-requisite only applies to students registered in PBACS - Honours Bachelor of Computer Science - Mobile Computing.
+Program(s): Hon Bach CompSci - Mobile Comp, Hons Bach of Computer Science
+Program Coordinator(s): Magdin Stoica, El Sayed Mahmoud
+Course Leader or Contact: Alex Babanski
+Version: 20250902_00
+Status: Approved (APPR)
+
+Section I Notes: N/A
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+Students gain a comprehensive understanding of the architecture of the web and acquire practical skills and knowledge to create interactive websites. In this course students learn how to build and publish web applications using fundamental web languages and industry tools. Students participate in interactive lectures, and demonstrations as well as numerous hands-on labs and group work exploring the web technologies.
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+This required course will provide the building blocks for later courses required in Web Application Development.
+
+Hons Bach of Computer Science	Program Coordinator(s): El Sayed Mahmoud
+This required course provides the building blocks for later courses related to Web Application Development. Web application development is a significant component of core courses such as Enterprise Software Systems. Specializations such as Data Analytics, Game Engineering and Cloud Computing require web application development.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of this course, students will have demonstrated the ability to design, build and publish interactive web applications.
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Describe HTTP/HTTPS protocols and explain their relation to web application development.
+Differentiate client-side and server-side roles and responsibilities in designing and implementing a web application.
+Create properly structured web pages using HTML5.
+Design web pages using Cascading Style Sheets (CSS).
+Develop web applications using HTML5 and CSS.
+Create interactive web applications using JavaScript.
+Enhance web applications with server-side scripting using Node.js.
+Build and publish on the Internet data-driven client-server web applications with AJAX, XML and JSON.
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	Quizzes (2 @ 5%)	10.0%
+ 	Labs/In-class Exercises (2 @ 10%)	20.0%
+ 	Midterm Exam	20.0%
+ 	Assignments (2 @ 10%)	20.0%
+ 	Final Exam	30.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+To pass the course, students must achieve a 50% weighted average across the exams and at least 50% overall in the course.
+
+Students must submit/complete all assignments, in-class activities and projects by the scheduled due date and write all tests on the specified date/time. Exceptions will only be made under extraordinary circumstances. 
+
+Refer to the School of Applied Computing's Academic Procedures for Evaluations for more details regarding missed work: Procedures for Evaluations
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Challenge Exam
+Notes:  
+Portfolio
+Notes:  
+Other
+Notes:  PLAR requires a Challenge Exam, Portfolio and Project.
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s):
+Course material costs can be found through the Sheridan Bookstore
+ 	Type	Description
+Optional	Other	Materials will be provided by the professor.
+
+Applicable student group(s): Honours Bachelor of Computer Science (Mobile Computing) (PBACS); Honours Bachelor of Computer Science (All Specializations) (PBCPS)
+Course Details:
+Module 1: HTML5 and CSS
+
+Web Client-Server Model
+HTTP Protocol and Web Standards
+Development Environment
+HTML5 Document Structure and Tags
+Styling Elements with Cascading Style Sheets (CSS)
+Introduction to Responsive Web Design
+Module 2: Javascript
+
+Programming with Javascript: Variables, Operators, Control Flow, Functions, Etc.
+Introduction to Object-Oriented Javascript
+Functional Programming in Javascript: Arrow Functions, Function Delegates, Etc. 
+Javascript Design Patterns
+Module 3: Document Object Model (DOM)
+
+HTML Document Object Model (DOM)
+Elements and Attributes
+Traversing the DOM With Javascript
+DOM Manipulations Using Javascript 
+Module 4: Interactive Front-End Web Development
+
+DOM Interfaces and Events 
+Validating Form Data with Javascript
+Introduction to Jquery Framework 
+Debugging and Deploying Web Applications
+Module 5: Server-Side Programming 
+
+Data Serialization: JSON And XML
+Introduction To Application Programming Interfaces (Apis)
+Asynchronous Javascript and XML (AJAX)
+Server-Side Programming with Node.Js
+Note: The suggested number of weeks allocated to each module may vary depending on the professor?s and/or class requirements. The topics within each module are grouped thematically and are not meant to suggest a time sequence. A course plan must be provided by the professor identifying the class-by-class arrangement of topics.
+
+SYST19207
+Computer Systems Architecture	Sheridan
+ 
+  I: Administrative Information   II: Course Details   III: Topical Outline(s)  Printable Version
+ 
+
+Land Acknowledgement
+Sheridan College resides on land that has been, and still is, the traditional territory of several Indigenous nations, including the Anishinaabe, the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. We recognize this territory is covered by the Dish with One Spoon treaty and the Two Row Wampum treaty, which emphasize the importance of joint stewardship, peace, and respectful relationships.
+
+As an institution of higher learning Sheridan embraces the critical role that education must play in facilitating real transformational change. We continue our collective efforts to recognize Canada's colonial history and to take steps to meaningful Truth and Reconciliation.
+
+
+Section I: Administrative Information
+ 	Total hours: 42.0
+Credit Value: 3.0
+Credit Value Notes: N/A
+Effective: Fall 2022
+Prerequisites: SYST10082
+Corequisites: N/A
+Equivalents: N/A
+Pre/Co/Equiv Notes: The pre-requisite only applies to students registered in the PBACS - Honours Bachelor of Computer Science - Mobile Computing program.
+Program(s): Hon Bach CompSci - Mobile Comp, Hons Bach of Computer Science
+Program Coordinator(s): Magdin Stoica, El Sayed Mahmoud
+Course Leader or Contact: Yuchong Rachel Jiang
+Version: 20220906_01
+Status: Approved (APPR)
+
+Section I Notes: N/A
+
+ 
+ 
+Section II: Course Details
+Detailed Description
+
+Students investigate the structure and behaviour of the various functional modules of the computer and how they interact to provide the processing needs of the user. Students learn about instruction set architecture , the internal implementation of a computer at the register and functional unit level and system architecture. Students analyze the tradeoffs among the CPU clock speed, cache size, bus organization, and multiple processing cores within the computer system. Finally, students write systems programming structures and constructs using assembly language.
+
+Program Context
+
+ 	
+Hon Bach CompSci - Mobile Comp	Program Coordinator(s): Magdin Stoica
+This required course builds on Operating Systems Fundamentals and is the second in a sequence of three courses focused on the operating systems and hardware layers of a computer system. This course is the second of this sequence of courses: Operating Systems Fundamentals, Computer Architecture and Operating Systems.
+
+Hons Bach of Computer Science	Program Coordinator(s): El Sayed Mahmoud
+This required course is crucial for obtaining the necessary hardware and operating system knowledge needed for computer science specializations such as software engineering, cloud computing, data analytics and game engineering. It enables students to identify the structure and behaviour of the various computer modules. It also helps students evaluate the trade-offs between conflicting hardware and software factors. Core and specialization future courses will benefit from the skills gained from this course.
+
+
+Course Critical Performance and Learning Outcomes
+
+ 	Critical Performance:
+By the end of this course, students will have demonstrated the ability to analyze and compare different computer architectures, design strategies and implementation techniques; and create assembly language programs.
+ 	
+Learning Outcomes:
+
+To achieve the critical performance, students will have demonstrated the ability to:
+
+Describe how data (numbers, text, images and sound) can be represented in digital form and the limitations of such representation.
+Design a simple circuit using fundamental building blocks.
+Discuss the significance of different buses and interrupts and their uses.
+Explain the difference in programming languages (in particular machine and assembler).
+Create assembler language programs.
+Characterize the development of computer architecture from early Von Neumman architecture to EPIC architecture.
+Discuss the impact of Flynns taxonomy on computer architectures.
+Evaluate the architectures employed in mobile devices.
+
+Evaluation Plan
+Students demonstrate their learning in the following ways:
+
+ 	Evaluation Plan: IN-CLASS
+ 	Assignments (3@10%) approx. weeks 5,9,11	30.0%
+ 	Labs (2@5%) approx. weeks 3,4	10.0%
+ 	Midterm Exam approx. week 7	25.0%
+ 	Final Exam approx. week 13 or 14	35.0%
+Total	100.0%
+
+Evaluation Notes and Academic Missed Work Procedure:
+To pass the course, students must achieve a 50% weighted average across the exams and at least 50% overall in the course.
+
+Students must submit/complete all assignments, in-class activities and projects by the scheduled due date and write all tests on the specified date/time. Exceptions will only be made under extraordinary circumstances. 
+
+Refer to the School of Applied Computing's Academic Procedures for Evaluations for more details regarding missed work: Procedures for Evaluations
+
+Provincial Context
+The course meets the following Ministry of Colleges and Universities requirements:
+
+ 	
+Prior Learning Assessment and Recognition
+PLAR Contact (if course is PLAR-eligible) - Office of the Registrar
+Students may apply to receive credit by demonstrating achievement of the course learning outcomes through previous relevant work/life experience, service, self-study and training on the job. This course is eligible for challenge through the following method(s):
+
+Challenge Exam
+Notes:  
+Interview
+Notes:  PLAR consists of both a Challenge Exam AND Interview.
+ 
+ 
+Section III: Topical Outline
+Some details of this outline may change as a result of circumstances such as weather cancellations, College and student activities, and class timetabling.
+Instruction Mode: In-Class
+Professor: Multiple Professors
+Resource(s):
+Course material costs can be found through the Sheridan Bookstore
+ 	Type	Description
+Required	Textbook	Computer Architecture: A Quantitative Approach, Hennessy, J. L., & Patterson, D., A., Morgan Kaufmann, 6th. ed., ISBN 9780128119051, 2017, eBook ISBN: 9780128119068
+
+Applicable student group(s): PBACS - Honours Bachelor of Computer Science (Mobile Computing); PBCPS - Honours Bachelor of Computer Science (all specializations)
+Course Details:
+Learning Modules and Topics:
+Module 1.  Describe how data (numbers, text, images and sound) can be
+           represented in digital form and the limitations of such
+           representation.
+           - Signed and unsigned integer data
+           - Character data (ASCII and UNICOD)
+           - Floating point data IEEE754 (range precision and
+              error)
+           - SIMD data
+           - Representation of audio and images
+           - Data compression
+           - Binary Coded Decimal representation
+Module 2.  Design a simple circuit using fundamental building blocks.
+           - AND, OR, NOT and EOR circuit diagrams
+           - Half adder
+           - Full adder
+Module 3.  Discuss the significance of different buses and interrupts
+           and their uses.
+           - I/O fundamentals and buffering
+           - Interrupt mechanisms (hardware vs. software)
+           - Buses: protocols DMA
+           - Examples of modern busses: e.g., PCI, USB
+Module 4.  Explain the difference in programming languages. In
+           particular machine and assembler.
+           - Hierarchy of programming
+           - Micro code, machine code, assembler code
+Module 5.  Design and implement a program in assembler language.
+           - Use of registers
+           - Classes of instruction: data movement, arithmetic,
+              logical and flow control
+           - Conditional operations in assembler
+           - Passing parameters to subroutines
+Module 6.  Trace the development from early Von Neumman architecture
+           to EPIC architecture.
+           - Moores law
+           - Von Neumann architecture
+           - Scalar processing (pipelining)
+           - Superscalar processing (parallel processing)
+           - CISC, RISC, EPIC, VLW, ILP
+Module 7.  State Flynns taxonomy and discuss the impact on computer
+           architectures.
+           - Amdahls low
+           - Multiprocessing architecture
+           - Multi-core and multi-threading architectures
+Module 8.  Identify the architecture employed on most mobile devices
+           and explain why.
+           - The ARM family of processors
+           - Jazelle and Thumb
+           - Instruction set
+           - Register set
+Note: The topics within each module are grouped semantically and are
+not meant to suggest a time sequence. At the beginning of the course,
+the professor will identify the class-by-class arrangement of topics
+and the timing of evaluation components via a course plan.
+
