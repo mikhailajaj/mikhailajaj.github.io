@@ -37,3 +37,12 @@ next-env.d.ts
 
 # Ignore .ai folder
 .ai/
+
+# Ignore disabled API routes (causes build issues with static export)
+/app/api-disabled/
+
+# Ignore standalone API directory
+/api/
+
+# Ignore docs directory (not needed for production build)
+/docs/
