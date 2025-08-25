@@ -178,7 +178,7 @@ export default function RootLayout({
         >
           <ProductionDataProviders>
             <ErrorProvider
-              reportingEndpoint="/api/error-report"
+              reportingEndpoint=""
               announceErrors
               persistErrors
             >

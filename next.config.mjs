@@ -4,6 +4,8 @@ import rehypeHighlight from "rehype-highlight";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
+const isProd = process.env.NODE_ENV === "production";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Turbopack configuration (stable)
@@ -73,13 +75,14 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
 
-  // Static export configuration
+  // Static export configuration for GitHub Pages
   output: 'export',
   trailingSlash: true,
   distDir: "out",
-
-  // Optional: Change the output directory from 'out' to 'dist'
-  // distDir: 'dist',
+  
+  // GitHub Pages configuration (username.github.io deploys to root)
+  basePath: "",
+  assetPrefix: "",
 
   // Security headers (disabled for static export)
   // Note: These headers should be configured at the hosting level for static sites
@@ -232,24 +235,32 @@ const nextConfig = {
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
 };
 
-// MDX configuration
-const withMDX = createMDX({
-  options: {
-    remarkPlugins: [remarkGfm],
-    rehypePlugins: [
-      rehypeHighlight,
-      rehypeSlug,
-      [
-        rehypeAutolinkHeadings,
-        {
-          behavior: "wrap",
-          properties: {
-            className: ["heading-link"],
+// MDX configuration with error handling
+let finalConfig;
+try {
+  const withMDX = createMDX({
+    options: {
+      remarkPlugins: [remarkGfm],
+      rehypePlugins: [
+        rehypeHighlight,
+        rehypeSlug,
+        [
+          rehypeAutolinkHeadings,
+          {
+            behavior: "wrap",
+            properties: {
+              className: ["heading-link"],
+            },
           },
-        },
+        ],
       ],
-    ],
-  },
-});
+    },
+  });
+  
+  finalConfig = withMDX(nextConfig);
+} catch (e) {
+  console.error("MDX configuration error:", e);
+  throw new Error(e instanceof Error ? e.message : String(e));
+}
 
-export default withMDX(nextConfig);
+export default finalConfig;
