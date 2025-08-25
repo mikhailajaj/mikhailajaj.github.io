@@ -29,8 +29,8 @@ export {
   useTestimonialError,
   useTestimonialById,
   useHighRatedTestimonials,
-  useTestimonialPerformance,
-  testimonialFetcher,
+  //useTestimonialPerformance,
+  //testimonialFetcher,
 } from "./TestimonialContext";
 
 // ✅ Education Context - Academic history and credentials
