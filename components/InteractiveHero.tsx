@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import { FaLocationArrow, FaCode, FaCloud, FaDatabase } from "react-icons/fa";
@@ -7,18 +7,13 @@ import InteractiveMagicButton from "./ui/InteractiveMagicButton";
 import TypewriterEffect from "./ui/TypewriterEffect";
 import ParticleBackground from "./ui/ParticleBackground";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import {
-  fadeAnimations,
-  staggerConfig,
-  createViewportAnimation,
-  presetAnimations,
-} from "@/lib/animations";
+import { staggerConfig } from "@/lib/animations";
 
 const InteractiveHero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [mounted, setMounted] = useState(false);
   const { scrollY } = useScroll();
-  const { ref: heroRef, isVisible } = useScrollAnimation();
+  const { ref: heroRef } = useScrollAnimation();
 
   // Parallax effects
   const backgroundY = useTransform(scrollY, [0, 500], [0, 150]);
@@ -51,18 +46,24 @@ const InteractiveHero = () => {
       color: "blue",
       label: "Full-Stack",
       gradient: "from-blue-500 to-cyan-500",
+      iconColor: "text-blue-100 dark:text-blue-200",
+      bgColor: "bg-blue-600/80 dark:bg-blue-500/70",
     },
     {
       icon: FaCloud,
-      color: "teal",
+      color: "purple",
       label: "Cloud",
-      gradient: "from-teal-500 to-green-500",
+      gradient: "from-purple-500 to-pink-500",
+      iconColor: "text-purple-100 dark:text-purple-200",
+      bgColor: "bg-purple-600/80 dark:bg-purple-500/70",
     },
     {
       icon: FaDatabase,
-      color: "purple",
+      color: "green",
       label: "Data",
-      gradient: "from-purple-500 to-pink-500",
+      gradient: "from-green-500 to-emerald-500",
+      iconColor: "text-green-100 dark:text-green-200",
+      bgColor: "bg-green-600/80 dark:bg-green-600/70",
     },
   ];
 
@@ -111,11 +112,11 @@ const InteractiveHero = () => {
             {specializations.map((spec, index) => (
               <motion.div
                 key={spec.label}
-                className={`relative p-4 rounded-2xl bg-gradient-to-br ${spec.gradient} bg-opacity-20 backdrop-blur-sm border border-white/20`}
+                className={`relative p-5 rounded-2xl ${spec.bgColor} backdrop-blur-md border-2 border-white/30 dark:border-white/20 shadow-lg`}
                 whileHover={{
                   scale: 1.1,
                   rotate: 5,
-                  boxShadow: `0 20px 40px rgba(59, 130, 246, 0.3)`,
+                  boxShadow: `0 25px 50px rgba(59, 130, 246, 0.4)`,
                 }}
                 animate={{
                   y: [0, -10, 0],
@@ -134,14 +135,17 @@ const InteractiveHero = () => {
                   },
                 }}
               >
-                <spec.icon className={`text-2xl text-${spec.color}-500`} />
+                <spec.icon className={`text-3xl ${spec.iconColor} drop-shadow-lg`} />
 
-                {/* Glow effect */}
+                {/* Enhanced glow effect */}
                 <motion.div
                   className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${spec.gradient} opacity-0 blur-xl`}
-                  whileHover={{ opacity: 0.4 }}
+                  whileHover={{ opacity: 0.6 }}
                   transition={{ duration: 0.3 }}
                 />
+
+                {/* Inner shadow for depth */}
+                <div className="absolute inset-0 rounded-2xl shadow-inner opacity-30" />
               </motion.div>
             ))}
           </motion.div>
@@ -151,15 +155,15 @@ const InteractiveHero = () => {
             variants={staggerConfig.item}
             className="uppercase tracking-widest text-center mb-6 text-sm md:text-lg font-medium"
           >
-            <span className="text-blue-400 dark:text-blue-300 font-semibold">
+            <span className="text-blue-600 dark:text-blue-300 font-semibold">
               Full-Stack
             </span>
-            <span className="text-muted-foreground dark:text-muted-foreground mx-2">|</span>
-            <span className="text-purple-400 dark:text-purple-300 font-semibold">
+            <span className="text-foreground/60 mx-2">|</span>
+            <span className="text-purple-600 dark:text-purple-300 font-semibold">
               Cloud
             </span>
-            <span className="text-muted-foreground dark:text-muted-foreground mx-2">|</span>
-            <span className="text-green-400 dark:text-green-300 font-semibold">
+            <span className="text-foreground/60 mx-2">|</span>
+            <span className="text-green-600 dark:text-green-300 font-semibold">
               Data
             </span>
           </motion.h2>
@@ -193,7 +197,7 @@ const InteractiveHero = () => {
           {/* Enhanced description with typewriter */}
           <motion.div
             variants={staggerConfig.item}
-            className="text-center text-muted-foreground dark:text-muted-foreground mb-10 text-xl md:text-2xl lg:text-3xl max-w-4xl mx-auto font-medium leading-relaxed"
+            className="text-center text-foreground/80 mb-6 text-xl md:text-2xl lg:text-3xl max-w-4xl mx-auto font-medium leading-relaxed"
           >
             <span className="font-light">I craft </span>
             <TypewriterEffect
@@ -204,9 +208,11 @@ const InteractiveHero = () => {
                 "seamless mobile experiences",
                 "innovative digital solutions",
               ]}
-              className="font-semibold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
+              className="font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
             />
           </motion.div>
+
+
 
           {/* Enhanced action buttons */}
           <motion.div
@@ -233,37 +239,7 @@ const InteractiveHero = () => {
             </Link>
           </motion.div>
 
-          {/* Enhanced scroll indicator */}
-          <motion.div
-            variants={staggerConfig.item}
-            className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-          >
-            <motion.div
-              className="flex flex-col items-center gap-2 cursor-pointer group"
-              animate={{ y: [0, 10, 0] }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              whileHover={{ scale: 1.1 }}
-            >
-              <div className="w-6 h-10 border-2 border-neutral-400 dark:border-neutral-500 rounded-full flex justify-center relative overflow-hidden group-hover:border-primary-500 transition-colors duration-300">
-                <motion.div
-                  className="w-1 h-3 bg-neutral-400 dark:bg-neutral-500 rounded-full mt-2 group-hover:bg-primary-500 transition-colors duration-300"
-                  animate={{ y: [0, 12, 0] }}
-                  transition={{
-                    duration: 1.5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                />
-              </div>
-              <span className="text-xs text-muted-foreground dark:text-muted-foreground font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                Scroll to explore
-              </span>
-            </motion.div>
-          </motion.div>
+
         </motion.div>
       </motion.div>
 

@@ -1,0 +1,44 @@
+{
+  "id": "sample-review-2",
+  "status": "approved",
+  "reviewer": {
+    "name": "Alex Chen",
+    "email": "alex.chen@techcorp.com",
+    "title": "Senior Software Engineer",
+    "organization": "TechCorp Solutions",
+    "relationship": "colleague",
+    "linkedinUrl": "https://linkedin.com/in/alexchen",
+    "verified": true
+  },
+  "content": {
+    "rating": 5,
+    "testimonial": "Working with Mikhail on the e-commerce platform was an incredible experience. His expertise in React and Node.js, combined with his attention to detail and collaborative approach, made our project a huge success. He consistently delivered high-quality code and was always willing to help team members.",
+    "projectAssociation": "E-commerce Platform Development",
+    "skills": ["React", "Node.js", "Team Collaboration", "Code Quality"],
+    "recommendation": true,
+    "highlights": ["Technical Expertise", "Team Player", "Quality Focus"],
+    "workPeriod": {
+      "start": "2023-06-01",
+      "end": "2023-11-30"
+    }
+  },
+  "metadata": {
+    "submittedAt": "2024-01-20T14:45:00Z",
+    "verifiedAt": "2024-01-20T15:00:00Z",
+    "approvedAt": "2024-01-21T10:30:00Z",
+    "ipAddress": "10.0.0.50",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+    "source": "linkedin",
+    "language": "en",
+    "timezone": "America/Los_Angeles"
+  },
+  "admin": {
+    "notes": "Strong technical testimonial",
+    "featured": false,
+    "displayOrder": 2,
+    "moderatedBy": "admin",
+    "moderatedAt": "2024-01-21T10:30:00Z",
+    "tags": ["technical", "collaboration"],
+    "internalRating": 5
+  }
+}

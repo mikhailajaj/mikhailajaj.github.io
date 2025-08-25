@@ -8,28 +8,17 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  FaCode,
-  FaCloud,
-  FaChartBar,
-  FaPalette,
-  FaLightbulb,
   FaBars,
   FaTimes,
-  FaHome,
-  FaUser,
-  FaGraduationCap,
-  FaTrophy,
-  FaBlog,
-  FaEnvelope,
 } from "react-icons/fa";
 
 // 3. Internal Absolute Imports (@/) - Portfolio Structure
 import { cn } from "@/lib/utils/cn";
 import { useSafePathname } from "@/lib/utils/hydration";
-import { useOptimizedDomainTheme, useCurrentDomain, useDomainOperations } from "@/lib/contexts/DomainThemeContext";
+import { useOptimizedDomainTheme } from "@/lib/contexts/DomainThemeContext";
 // import { useNavigationThemeMigration } from "@/lib/theme/migration/MenuMigrationBridge"; // Removed during cleanup
-import { DOMAINS, DOMAIN_CONFIGS, getDomainConfig, type Domain } from "@/lib/constants/domains";
-import { focusUtils, announceUtils, keyboardUtils } from "@/lib/utils/accessibility";
+import { DOMAINS, getDomainConfig, type Domain } from "@/lib/constants/domains";
+import { announceUtils, keyboardUtils } from "@/lib/utils/accessibility";
 import { Button } from "@/components/ui/base/Button";
 import ThemeSwitcher from '@/components/ThemeSwitcher';
 import { mainNavigationItems, domainIcons, type NavigationItem } from "@/data/navigation";
@@ -96,13 +85,7 @@ export function DomainAwareNavigation({
   const activeDomain = currentDomain || domainContext?.state?.currentDomain;
   const currentDomainColor = domainContext?.getCurrentDomainColor?.() || '#3B82F6'; // Fallback color
   const setCurrentDomain = domainContext?.setCurrentDomain || (() => {});
-  const isDomainActive = domainContext?.isDomainActive || (() => false);
-  const currentDomainConfig = activeDomain ? getDomainConfig(activeDomain) : null;
-  
-  // Get navigation styles from migration bridge
-  // Use domain context for navigation styles
-  const navBarStyles = {}; // Fallback to default styles
-  const isUsingUnifiedTheme = false; // Default to context-based theme
+
 
   // Refs for keyboard navigation
   const navRef = React.useRef<HTMLElement>(null);
@@ -132,7 +115,7 @@ export function DomainAwareNavigation({
 
   // Keyboard navigation for main nav
   const handleMainNavKeyDown = React.useCallback((e: React.KeyboardEvent) => {
-    const navItems = navRef.current?.querySelectorAll('[role="menuitem"]') as NodeListOf<HTMLElement>;
+    const navItems = navRef.current?.querySelectorAll('[data-nav-item="true"]') as NodeListOf<HTMLElement>;
     if (!navItems) return;
 
     const newIndex = keyboardUtils.handleArrowNavigation(
@@ -150,7 +133,7 @@ export function DomainAwareNavigation({
     if (e.key === 'Escape') {
       setDropdownOpen(false);
       // Focus back to trigger
-      const trigger = navRef.current?.querySelector('[aria-haspopup="menu"]') as HTMLElement;
+      const trigger = navRef.current?.querySelector('#domain-dropdown-trigger') as HTMLElement;
       trigger?.focus();
     }
   }, []);
@@ -186,28 +169,41 @@ export function DomainAwareNavigation({
         role="navigation"
         aria-label={ariaLabel}
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent",
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/30 backdrop-blur-md border-b border-transparent",
           className,
         )}
       >
         <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
           <div className="flex items-center justify-between h-10">
-            <div className="flex items-center space-x-4">
-              <Link href="/" className="flex items-center space-x-2">
-                <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-xs">MA</span>
+            <div className="flex items-center">
+              <Link href="/" className="flex items-center">
+                <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">MA</span>
                 </div>
-                <span className="text-white font-semibold text-base">
-                  Mikhail Ajaj
-                </span>
               </Link>
             </div>
             <div className="hidden md:flex items-center space-x-1">
-              {mainNavItems.map((item) => (
+              <div className="w-8 h-8" /> {/* ThemeSwitcher placeholder */}
+              {mainNavItems.slice(0, 4).map((item) => (
                 <Link
                   key={`ssr-${item.href}`}
                   href={item.href}
-                  className="px-2 py-1 rounded-md text-sm font-medium text-muted-foreground hover:text-white min-h-[32px] flex items-center"
+                  className="px-2 py-1 rounded-md text-sm font-medium text-muted-foreground hover:text-white hover:bg-white/10 min-h-[32px] flex items-center"
+                >
+                  <span className="flex items-center space-x-2">
+                    <span aria-hidden="true">{item.icon}</span>
+                    <span>{item.name}</span>
+                  </span>
+                </Link>
+              ))}
+              <button className="px-2 py-1 rounded-md text-sm font-medium text-muted-foreground hover:text-white hover:bg-white/10 min-h-[32px] flex items-center">
+                Services ▼
+              </button>
+              {mainNavItems.slice(4).map((item) => (
+                <Link
+                  key={`ssr-${item.href}`}
+                  href={item.href}
+                  className="px-2 py-1 rounded-md text-sm font-medium text-muted-foreground hover:text-white hover:bg-white/10 min-h-[32px] flex items-center"
                 >
                   <span className="flex items-center space-x-2">
                     <span aria-hidden="true">{item.icon}</span>
@@ -218,7 +214,7 @@ export function DomainAwareNavigation({
             </div>
             
             <div className="md:hidden">
-              <div className="text-white min-h-[44px] min-w-[44px] flex items-center justify-center">
+              <div className="text-foreground hover:text-foreground/80 min-h-[44px] min-w-[44px] flex items-center justify-center">
                 <FaBars />
               </div>
             </div>
@@ -239,8 +235,8 @@ export function DomainAwareNavigation({
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-black/90 backdrop-blur-md border-b border-white/10"
-          : "bg-transparent",
+          ? "bg-background/60 backdrop-blur-md border-b border-white/10 shadow-lg"
+          : "bg-background/30 backdrop-blur-md border-b border-transparent", 
         className,
       )}
       style={{
@@ -249,45 +245,25 @@ export function DomainAwareNavigation({
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
         <div className="flex items-center justify-between h-10">
-          {/* Logo and Current Domain */}
-          <div className="flex items-center space-x-4">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xs">MA</span>
+          {/* Logo Only */}
+          <div className="flex items-center">
+            <Link href="/" className="flex items-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">MA</span>
               </div>
-              <span className="text-white font-semibold text-base">
-                Mikhail Ajaj
-              </span>
             </Link>
-
-            {currentDomainConfig && (
-              <div 
-                className="hidden md:flex items-center space-x-2 px-2 py-0.5 rounded-full bg-white/10 backdrop-blur-sm"
-                role="status"
-                aria-label={`Current domain: ${currentDomainConfig.name}`}
-              >
-                <span
-                  className="w-1.5 h-1.5 rounded-full"
-                  style={{ backgroundColor: currentDomainConfig.color }}
-                  aria-hidden="true"
-                />
-                <span className="text-white text-xs font-medium">
-                  {currentDomainConfig.name}
-                </span>
-              </div>
-            )}
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1" role="menubar">
+          <div className="hidden md:flex items-center space-x-1">
             {/* Theme Button */}
             <ThemeSwitcher />
             {/* Main Navigation */}
-            {mainNavItems.map((item, index) => (
+            {mainNavItems.slice(0, 4).map((item, index) => (
               <Link
                 key={`desktop-${item.href}`}
                 href={item.href}
-                role="menuitem"
+                data-nav-item="true"
                 tabIndex={focusedIndex === index ? 0 : -1}
                 aria-current={isActiveLink(item.href) ? 'page' : undefined}
                 className={cn(
@@ -300,7 +276,6 @@ export function DomainAwareNavigation({
                 )}
                 style={{
                   backgroundColor: isActiveLink(item.href) ? `${currentDomainColor}40` : undefined,
-                  focusRingColor: currentDomainColor,
                 }}
                 onFocus={() => setFocusedIndex(index)}
               >
@@ -311,26 +286,27 @@ export function DomainAwareNavigation({
               </Link>
             ))}
 
-            {/* Domain Dropdown */}
+            {/* Services Dropdown (replacing Expertise) */}
             {showDomainSwitcher && (
               <div className="relative">
                 <button
-                  role="menuitem"
-                  aria-haspopup="menu"
+                  id="services-dropdown-trigger"
+                  data-nav-item="true"
+                  aria-haspopup="listbox"
                   aria-expanded={dropdownOpen}
-                  aria-controls="domain-dropdown"
-                  tabIndex={focusedIndex === mainNavItems.length ? 0 : -1}
+                  aria-controls="services-dropdown"
+                  tabIndex={focusedIndex === 4 ? 0 : -1}
                   onClick={() => setDropdownOpen(!dropdownOpen)}
-                  onFocus={() => setFocusedIndex(mainNavItems.length)}
+                  onFocus={() => setFocusedIndex(4)}
                   className={cn(
                     "px-2 py-1 rounded-md text-sm font-medium transition-colors",
                     "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
                     "min-h-[32px] flex items-center",
                     "text-muted-foreground hover:text-white hover:bg-white/10",
                   )}
-                  style={{ focusRingColor: currentDomainColor }}
+                  style={{}}
                 >
-                  Expertise
+                  Services
                   <motion.span
                     className="ml-1"
                     animate={{ rotate: dropdownOpen ? 180 : 0 }}
@@ -345,15 +321,15 @@ export function DomainAwareNavigation({
                   {dropdownOpen && (
                     <motion.div
                       ref={dropdownRef}
-                      id="domain-dropdown"
-                      role="menu"
-                      aria-labelledby="domain-dropdown-trigger"
+                      id="services-dropdown"
+                      role="listbox"
+                      aria-labelledby="services-dropdown-trigger"
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.2 }}
                       onKeyDown={handleDropdownKeyDown}
-                      className="absolute top-full left-0 mt-1 w-64 bg-black/90 backdrop-blur-md border border-white/10 rounded-lg shadow-xl z-50"
+                      className="absolute top-full left-0 mt-1 w-64 bg-background/70 backdrop-blur-md border border-white/10 rounded-lg shadow-xl z-50"
                       style={{ borderColor: `${currentDomainColor}30` }}
                     >
                       <div className="p-2">
@@ -361,7 +337,7 @@ export function DomainAwareNavigation({
                           <Link
                             key={item.href}
                             href={item.href}
-                            role="menuitem"
+                            role="option"
                             onClick={() => {
                               setDropdownOpen(false);
                               if (item.domain) {
@@ -380,7 +356,6 @@ export function DomainAwareNavigation({
                               backgroundColor: isActiveLink(item.href) 
                                 ? `${item.domain ? getDomainConfig(item.domain).color : currentDomainColor}40` 
                                 : undefined,
-                              focusRingColor: item.domain ? getDomainConfig(item.domain).color : currentDomainColor,
                             }}
                           >
                             <span
@@ -408,6 +383,34 @@ export function DomainAwareNavigation({
                 </AnimatePresence>
               </div>
             )}
+
+            {/* Remaining Navigation Items */}
+            {mainNavItems.slice(4).map((item, index) => (
+              <Link
+                key={`desktop-${item.href}`}
+                href={item.href}
+                data-nav-item="true"
+                tabIndex={focusedIndex === index + 5 ? 0 : -1}
+                aria-current={isActiveLink(item.href) ? 'page' : undefined}
+                className={cn(
+                  "px-2 py-1 rounded-md text-sm font-medium transition-colors",
+                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
+                  "min-h-[32px] flex items-center", // Touch target size
+                  isActiveLink(item.href)
+                    ? "text-white"
+                    : "text-muted-foreground hover:text-white hover:bg-white/10",
+                )}
+                style={{
+                  backgroundColor: isActiveLink(item.href) ? `${currentDomainColor}40` : undefined,
+                }}
+                onFocus={() => setFocusedIndex(index + 5)}
+              >
+                <span className="flex items-center space-x-2">
+                  <span aria-hidden="true">{item.icon}</span>
+                  <span>{item.name}</span>
+                </span>
+              </Link>
+            ))}
            
           </div>
 
@@ -420,8 +423,7 @@ export function DomainAwareNavigation({
               aria-expanded={isOpen}
               aria-controls="mobile-menu"
               aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
-              className="text-white min-h-[44px] min-w-[44px]"
-              style={{ focusRingColor: currentDomainColor }}
+              className="text-foreground hover:text-foreground/80 min-h-[44px] min-w-[44px]"
             >
               {isOpen ? <FaTimes /> : <FaBars />}
             </Button>
@@ -434,12 +436,12 @@ export function DomainAwareNavigation({
         {isOpen && (
           <motion.div
             id="mobile-menu"
-            role="menu"
+            role="list"
             aria-labelledby="mobile-menu-button"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-black/95 backdrop-blur-md border-t"
+            className="md:hidden bg-background/80 backdrop-blur-md border-t shadow-lg"
             style={{ borderTopColor: `${currentDomainColor}30` }}
           >
             <div className="px-4 py-2 space-y-2">
@@ -453,7 +455,7 @@ export function DomainAwareNavigation({
                 <Link
                   key={`mobile-${item.href}`}
                   href={item.href}
-                  role="menuitem"
+                  role="listitem"
                   onClick={() => {
                     setIsOpen(false);
                     announceUtils.announce(`Navigated to ${item.name}`, 'polite');
@@ -469,7 +471,6 @@ export function DomainAwareNavigation({
                   )}
                   style={{
                     backgroundColor: isActiveLink(item.href) ? `${currentDomainColor}40` : undefined,
-                    focusRingColor: currentDomainColor,
                   }}
                 >
                   <span aria-hidden="true">{item.icon}</span>
@@ -477,20 +478,20 @@ export function DomainAwareNavigation({
                 </Link>
               ))}
 
-              {/* Domain Navigation */}
+              {/* Services Navigation */}
               {showDomainSwitcher && (
                 <div className="pt-2 border-t" style={{ borderTopColor: `${currentDomainColor}30` }}>
                   <div 
                     className="text-muted-foreground text-xs font-medium uppercase tracking-wider px-3 py-2"
                     role="presentation"
                   >
-                    Expertise Areas
+                    Services
                   </div>
                   {domainNavItems.map((item) => (
                     <Link
                       key={item.href}
                       href={item.href}
-                      role="menuitem"
+                      role="listitem"
                       onClick={() => {
                         setIsOpen(false);
                         if (item.domain) {
@@ -511,7 +512,6 @@ export function DomainAwareNavigation({
                         backgroundColor: isActiveLink(item.href) 
                           ? `${item.domain ? getDomainConfig(item.domain).color : currentDomainColor}40` 
                           : undefined,
-                        focusRingColor: item.domain ? getDomainConfig(item.domain).color : currentDomainColor,
                       }}
                     >
                       <span

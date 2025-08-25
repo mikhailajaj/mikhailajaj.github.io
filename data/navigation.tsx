@@ -18,7 +18,8 @@ import {
   FaCloud,
   FaChartBar,
   FaPalette,
-  FaLightbulb
+  FaLightbulb,
+  FaQuoteLeft
 } from "react-icons/fa";
 import type { Domain } from "@/lib/constants/domains";
 
@@ -44,13 +45,6 @@ export const mainNavigationItems: NavigationItem[] = [
     description: "Portfolio homepage"
   },
   { 
-    name: "About", 
-    href: "/about", 
-    icon: <FaUser />,
-    isActive: true,
-    description: "About Mikhail Ajaj"
-  },
-  { 
     name: "Experience", 
     href: "/experience", 
     icon: <FaUser />,
@@ -65,25 +59,11 @@ export const mainNavigationItems: NavigationItem[] = [
     description: "Educational background and certifications"
   },
   { 
-    name: "Achievements", 
-    href: "/achievements", 
-    icon: <FaTrophy />,
-    isActive: true,
-    description: "Awards, recognitions, and milestones"
-  },
-  { 
     name: "Projects", 
     href: "/projects", 
     icon: <FaTrophy />,
     isActive: true,
     description: "Project showcase and case studies"
-  },
-  { 
-    name: "Services", 
-    href: "/services", 
-    icon: <FaCode />,
-    isActive: true,
-    description: "Professional services offered"
   },
   { 
     name: "Blog", 
@@ -105,7 +85,20 @@ export const mainNavigationItems: NavigationItem[] = [
  * Secondary navigation items (future pages or alternative navigation)
  */
 export const secondaryNavigationItems: NavigationItem[] = [
-  // Currently empty - all main pages are active
+  { 
+    name: "Submit Review", 
+    href: "/reviews/submit", 
+    icon: <FaQuoteLeft />,
+    isActive: true,
+    description: "Submit a testimonial or review"
+  },
+  { 
+    name: "Review Demo", 
+    href: "/reviews/demo", 
+    icon: <FaQuoteLeft />,
+    isActive: true,
+    description: "Try the review submission form"
+  }
 ];
 
 /**
@@ -119,21 +112,9 @@ export const mobileNavigationItems: NavigationItem[] = [
     isActive: true
   },
   { 
-    name: "About", 
-    href: "/about", 
-    icon: <FaUser />,
-    isActive: true
-  },
-  { 
     name: "Projects", 
     href: "/projects", 
     icon: <FaTrophy />,
-    isActive: true
-  },
-  { 
-    name: "Services", 
-    href: "/services", 
-    icon: <FaCode />,
     isActive: true
   },
   { 
@@ -155,10 +136,10 @@ export const mobileNavigationItems: NavigationItem[] = [
  */
 export const domainIcons: Record<Domain, React.ReactNode> = {
   'full-stack': <FaCode />,
-  'cloud-engineering': <FaCloud />,
-  'data-analytics': <FaChartBar />,
-  'ux-ui-design': <FaPalette />,
-  'technical-consulting': <FaLightbulb />,
+  'cloud': <FaCloud />,
+  'data': <FaChartBar />,
+  'ux-ui': <FaPalette />,
+  'consulting': <FaLightbulb />,
 };
 
 /**

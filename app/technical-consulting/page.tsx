@@ -3,7 +3,7 @@ import { MainLayout } from "@/components/layouts/MainLayout";
 import { DomainHero } from "@/components/ui/DomainHero";
 import { DOMAIN_CONFIGS } from "@/lib/constants/domains";
 import { domainAchievements, domainTechnologies } from "@/lib/data/domainData";
-import { ServiceGrid } from "@/components/ui/ServiceGrid";
+// ServiceGrid component removed as requested
 import { domainServices } from "@/lib/data/serviceData";
 import { ConsultingProjects } from "@/components/domain-specific/consulting/ConsultingProjects";
 import { ConsultingSkills } from "@/components/domain-specific/consulting/ConsultingSkills";
@@ -25,7 +25,7 @@ export default function TechnicalConsultingPage() {
         />
         <ConsultingSkills />
         <ConsultingProjects />
-        <ServiceGrid domain={DOMAIN_CONFIGS['consulting']} services={domainServices['consulting']} />
+        {/* ServiceGrid component removed as requested */}
       </div>
     </MainLayout>
   );

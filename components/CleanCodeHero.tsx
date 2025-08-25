@@ -112,7 +112,7 @@ const CleanCodeHero = () => {
           {renderHeroTitle()}
           {renderHeroDescription()}
           {renderCallToActionButtons()}
-          {renderScrollIndicator()}
+
         </div>
       </motion.div>
 
@@ -294,39 +294,14 @@ function renderCallToActionButtons(): JSX.Element {
         <InteractiveMagicButton
           title="View My Work"
           position="right"
-          className="border border-white/20 bg-white/10 hover:bg-white/20"
+          variant="gradient"
         />
       </Link>
     </motion.div>
   );
 }
 
-/**
- * ✅ Focused function: Render scroll indicator
- */
-function renderScrollIndicator(): JSX.Element {
-  return (
-    <motion.div
-      variants={staggerConfig.item}
-      className="group cursor-pointer flex flex-col items-center gap-2"
-    >
-      <div className="w-6 h-10 border-2 border-neutral-400 dark:border-neutral-500 rounded-full flex justify-center relative overflow-hidden group-hover:border-primary-500 transition-colors duration-300">
-        <motion.div
-          className="w-1 h-3 bg-neutral-400 dark:bg-neutral-500 rounded-full mt-2 group-hover:bg-primary-500 transition-colors duration-300"
-          animate={{ y: [0, 12, 0] }}
-          transition={{
-            duration: 1.5,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-      </div>
-      <span className="text-xs text-muted-foreground dark:text-muted-foreground font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        Scroll to explore
-      </span>
-    </motion.div>
-  );
-}
+
 
 /**
  * ✅ Focused function: Render floating shapes

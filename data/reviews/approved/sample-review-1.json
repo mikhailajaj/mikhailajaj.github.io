@@ -1,0 +1,43 @@
+{
+  "id": "sample-review-1",
+  "status": "approved",
+  "reviewer": {
+    "name": "Dr. Sarah Johnson",
+    "email": "sarah.johnson@university.edu",
+    "title": "Professor of Computer Science",
+    "organization": "Tech University",
+    "relationship": "professor",
+    "verified": true
+  },
+  "content": {
+    "rating": 5,
+    "testimonial": "Mikhail demonstrated exceptional technical skills and leadership during our collaborative research project on distributed systems. His ability to translate complex theoretical concepts into practical implementations was remarkable. I highly recommend him for any senior development role.",
+    "projectAssociation": "Distributed Systems Research Project",
+    "skills": ["Distributed Systems", "Leadership", "Research", "Problem Solving"],
+    "recommendation": true,
+    "highlights": ["Technical Excellence", "Leadership Skills", "Research Ability"],
+    "workPeriod": {
+      "start": "2023-01-01",
+      "end": "2023-12-31"
+    }
+  },
+  "metadata": {
+    "submittedAt": "2024-01-15T10:30:00Z",
+    "verifiedAt": "2024-01-15T11:00:00Z",
+    "approvedAt": "2024-01-16T09:15:00Z",
+    "ipAddress": "192.168.1.100",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)",
+    "source": "direct",
+    "language": "en",
+    "timezone": "America/New_York"
+  },
+  "admin": {
+    "notes": "Excellent testimonial from respected academic",
+    "featured": true,
+    "displayOrder": 1,
+    "moderatedBy": "admin",
+    "moderatedAt": "2024-01-16T09:15:00Z",
+    "tags": ["academic", "research", "leadership"],
+    "internalRating": 5
+  }
+}

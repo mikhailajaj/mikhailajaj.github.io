@@ -5,6 +5,7 @@ import BlogGrid from "@/components/blog/BlogGrid";
 // EnhancedLayout removed - using app/layout.tsx structure
 import PageHeader from "@/components/navigation/PageHeader";
 import { ErrorBoundary } from "@/lib/error/ErrorBoundary";
+import { DevelopmentBanner } from "@/components/ui/DevelopmentBanner";
 
 export const metadata: Metadata = {
   title: "Technical Blog | Mikhail Ajaj - Full-Stack Development Insights",
@@ -29,6 +30,13 @@ export default async function BlogPage() {
 
   return (
     <div className="pt-10"> {/* Account for fixed navigation */}
+      <div className="px-4 py-4">
+        <DevelopmentBanner
+          variant="template"
+          message="Blog articles and technical content are being written and published"
+        />
+      </div>
+
       <PageHeader
         title="Technical Blog"
         subtitle="Latest Insights"

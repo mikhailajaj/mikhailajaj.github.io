@@ -1,0 +1,50 @@
+{
+  "id": "review-002",
+  "status": "approved",
+  "reviewer": {
+    "name": "Michael Chen",
+    "email": "michael.chen@innovate-tech.com",
+    "title": "CTO",
+    "organization": "InnovateTech",
+    "relationship": "supervisor",
+    "linkedinUrl": "https://www.linkedin.com/in/michael-chen-cto",
+    "website": "https://innovate-tech.com",
+    "verified": true,
+    "avatar": ""
+  },
+  "content": {
+    "rating": 5,
+    "testimonial": "Mikhail led the cloud automation initiative that reduced our deployment times from hours to minutes and improved reliability across our services. His approach to infrastructure as code, observability, and performance monitoring was professional and thorough.",
+    "projectAssociation": "cloud-infrastructure-automation",
+    "skills": ["AWS", "IaC", "CI/CD", "Monitoring"],
+    "recommendation": true,
+    "highlights": [
+      "Delivered blue/green deployment strategy",
+      "Established robust monitoring with alerting",
+      "Optimized cloud cost by 25%"
+    ],
+    "workPeriod": {
+      "start": "2023-09-01",
+      "end": "2024-02-28"
+    }
+  },
+  "metadata": {
+    "submittedAt": "2024-03-01T12:00:00.000Z",
+    "verifiedAt": "2024-03-01T12:30:00.000Z",
+    "approvedAt": "2024-03-02T08:30:00.000Z",
+    "ipAddress": "127.0.0.1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+    "source": "referral",
+    "language": "en-US",
+    "timezone": "America/Los_Angeles"
+  },
+  "admin": {
+    "notes": "Confirmed employment via company domain and direct call.",
+    "featured": true,
+    "displayOrder": 2,
+    "moderatedBy": "admin@example.com",
+    "moderatedAt": "2024-03-02T08:30:00.000Z",
+    "tags": ["cloud", "automation", "reliability"],
+    "internalRating": 5
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "review-001",
+  "status": "approved",
+  "reviewer": {
+    "name": "Dr. Sarah Johnson",
+    "email": "sarah.johnson@university.edu",
+    "title": "Professor of Computer Science",
+    "organization": "State University",
+    "relationship": "professor",
+    "linkedinUrl": "https://www.linkedin.com/in/sarah-johnson",
+    "website": "https://cs.stateu.edu/~sjohnson",
+    "verified": true,
+    "avatar": ""
+  },
+  "content": {
+    "rating": 5,
+    "testimonial": "Mikhail consistently demonstrated outstanding technical proficiency and leadership in my graduate software engineering course. His ability to translate complex requirements into clean, maintainable architectures was exceptional, and his collaborative approach elevated team performance.",
+    "projectAssociation": "graduate-capstone-platform",
+    "skills": ["TypeScript", "Next.js", "Cloud Architecture", "Testing"],
+    "recommendation": true,
+    "highlights": [
+      "Architected a modular Next.js application",
+      "Implemented CI with comprehensive test coverage",
+      "Led code reviews and enforced best practices"
+    ],
+    "workPeriod": {
+      "start": "2024-01-10",
+      "end": "2024-05-05"
+    }
+  },
+  "metadata": {
+    "submittedAt": "2024-05-08T10:20:00.000Z",
+    "verifiedAt": "2024-05-08T10:45:00.000Z",
+    "approvedAt": "2024-05-09T09:00:00.000Z",
+    "ipAddress": "127.0.0.1",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)",
+    "source": "email",
+    "language": "en-US",
+    "timezone": "America/New_York"
+  },
+  "admin": {
+    "notes": "Verified via university email domain.",
+    "featured": true,
+    "displayOrder": 1,
+    "moderatedBy": "admin@example.com",
+    "moderatedAt": "2024-05-09T09:00:00.000Z",
+    "tags": ["academic", "leadership", "architecture"],
+    "internalRating": 5
+  }
+}

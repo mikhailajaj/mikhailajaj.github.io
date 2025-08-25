@@ -1,0 +1,43 @@
+{
+  "id": "sample-review-3",
+  "status": "approved",
+  "reviewer": {
+    "name": "Maria Rodriguez",
+    "email": "maria@consulting.com",
+    "title": "Project Manager",
+    "organization": "Digital Consulting Group",
+    "relationship": "client",
+    "verified": true
+  },
+  "content": {
+    "rating": 4,
+    "testimonial": "Mikhail delivered our web application project on time and within budget. His communication skills and ability to understand business requirements were excellent. The final product exceeded our expectations in terms of both functionality and user experience.",
+    "projectAssociation": "Corporate Web Application",
+    "skills": ["Project Management", "Business Analysis", "UX Design", "Communication"],
+    "recommendation": true,
+    "highlights": ["On-time Delivery", "Business Understanding", "UX Excellence"],
+    "workPeriod": {
+      "start": "2023-03-01",
+      "end": "2023-08-31"
+    }
+  },
+  "metadata": {
+    "submittedAt": "2024-01-25T16:20:00Z",
+    "verifiedAt": "2024-01-25T16:45:00Z",
+    "approvedAt": "2024-01-26T11:00:00Z",
+    "ipAddress": "172.16.0.25",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)",
+    "source": "email",
+    "language": "en",
+    "timezone": "Europe/Madrid"
+  },
+  "admin": {
+    "notes": "Good client testimonial",
+    "featured": false,
+    "displayOrder": 3,
+    "moderatedBy": "admin",
+    "moderatedAt": "2024-01-26T11:00:00Z",
+    "tags": ["client", "project-management"],
+    "internalRating": 4
+  }
+}

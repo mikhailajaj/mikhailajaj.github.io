@@ -3,13 +3,13 @@
 import React from "react";
 import { MainLayout } from "@/components/layouts/MainLayout";
 import { AnimatedButton } from "@/components/ui/interactive/AnimatedButton";
-import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
+// BentoGrid components removed as requested
 import {
   ExpandableContent,
   Accordion,
 } from "@/components/ui/interactive/ExpandableContent";
 import { NewsletterSignup } from "@/components/ui/engagement/NewsletterSignup";
-import { MegaMenu } from "@/components/ui/navigation/MegaMenu";
+// import { MegaMenu } from "@/components/ui/navigation/MegaMenu";
 import {
   FaCode,
   FaCloud,
@@ -182,10 +182,10 @@ export default function UIShowcase() {
                 >
                   {showMegaMenu ? "Hide" : "Show"} Mega Menu
                 </AnimatedButton>
-                <MegaMenu
+                {/* <MegaMenu
                   isOpen={showMegaMenu}
-                  onClose={() => setShowMegaMenu(false)}
-                />
+                  onClose={() => setShowMegaMenu(false)} 
+                */}
               </div>
             </div>
           </section>
@@ -323,19 +323,24 @@ export default function UIShowcase() {
                    "Experience the thrill of bringing ideas to life.",
                },
              ];
-             // using imported BentoGrid
+             // BentoGrid components removed as requested
 
              return (
-               <BentoGrid>
+               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                  {items.map((item, idx) => (
-                   <BentoGridItem
+                   <div
                      key={idx}
-                     title={item.title}
-                     description={item.description}
-                     className={idx === 0 ? "md:col-span-2" : ""}
-                   />
+                     className={`p-6 bg-card rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow ${idx === 0 ? "md:col-span-2" : ""}`}
+                   >
+                     <h3 className="text-lg font-semibold text-card-foreground mb-2">
+                       {item.title}
+                     </h3>
+                     <p className="text-muted-foreground">
+                       {item.description}
+                     </p>
+                   </div>
                  ))}
-               </BentoGrid>
+               </div>
              );
            })()}
          </div>

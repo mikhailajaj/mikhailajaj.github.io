@@ -10,6 +10,7 @@ import { Metadata } from 'next';
 import { MainLayout } from '@/components/core/Layout/MainLayout';
 import { ProjectsClient } from '@/components/features/projects/ProjectsClient';
 import { getProjects } from '@/lib/api/projects';
+import { DevelopmentBanner } from '@/components/ui/DevelopmentBanner';
 
 // Static metadata for SEO
 export const metadata: Metadata = {
@@ -52,6 +53,12 @@ export default async function ProjectsPage() {
     >
       <div className="min-h-screen py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-8">
+            <DevelopmentBanner 
+              variant="template" 
+              message="Project portfolio is being updated with detailed case studies and live demos"
+            />
+          </div>
           <Suspense fallback={<ProjectsLoading />}>
             {/* Pass server-fetched data to client component */}
             <ProjectsClient projects={projects} />

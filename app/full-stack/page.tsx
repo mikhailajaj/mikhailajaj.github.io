@@ -3,7 +3,7 @@ import { MainLayout } from "@/components/layouts/MainLayout";
 import { DomainHero } from "@/components/ui/DomainHero";
 import { DOMAIN_CONFIGS } from "@/lib/constants/domains";
 import { domainAchievements, domainTechnologies } from "@/lib/data/domainData";
-import { ServiceGrid } from "@/components/ui/ServiceGrid";
+// ServiceGrid component removed as requested
 import { domainServices } from "@/lib/data/serviceData";import { FullStackProjects } from "@/components/domain-specific/full-stack/FullStackProjects";
 import { FullStackSkills } from "@/components/domain-specific/full-stack/FullStackSkills";
 import { FullStackServices } from "@/components/domain-specific/full-stack/FullStackServices";
@@ -24,7 +24,7 @@ export default function FullStackPage() {
         />
         <FullStackSkills />
         <FullStackProjects />
-        <ServiceGrid domain={DOMAIN_CONFIGS['full-stack']} services={domainServices['full-stack']} />
+        {/* ServiceGrid component removed as requested */}
       </div>
     </MainLayout>
   );

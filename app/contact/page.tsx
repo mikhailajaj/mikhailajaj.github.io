@@ -1,6 +1,7 @@
 import React from "react";
 import MultiStepContactForm from "@/components/interactive/MultiStepContactForm";
 import NewsletterSignup from "@/components/interactive/NewsletterSignup";
+import { DevelopmentBanner } from "@/components/ui/DevelopmentBanner";
 
 const ContactPage = () => {
   return (

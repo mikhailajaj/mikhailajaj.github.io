@@ -22,7 +22,7 @@ const staticMainNavItems: NavigationItem[] = [
   { name: "Home", href: "/", icon: <FaHome /> },
   { name: "Experience", href: "/experience", icon: <FaUser /> },
   { name: "Education", href: "/education", icon: <FaGraduationCap /> },
-  { name: "Achievements", href: "/achievements", icon: <FaTrophy /> },
+  { name: "Projects", href: "/projects", icon: <FaTrophy /> },
   { name: "Blog", href: "/blog", icon: <FaBlog /> },
   { name: "Contact", href: "/contact", icon: <FaEnvelope /> },
   { name: "Tools", href: "/tools", icon: <FaLightbulb /> },

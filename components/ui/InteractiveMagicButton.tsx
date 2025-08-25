@@ -57,17 +57,17 @@ const InteractiveMagicButton: React.FC<InteractiveMagicButtonProps> = ({
       glow: "shadow-lg shadow-primary-500/10",
     },
     glass: {
-      background: "bg-white/10 dark:bg-neutral-950/10 backdrop-blur-md",
-      text: "text-neutral-900 dark:text-white",
-      border: "border border-white/20 dark:border-neutral-700/50",
-      glow: "shadow-lg shadow-neutral-500/10",
+      background: "bg-white/15 dark:bg-neutral-950/15 backdrop-blur-md",
+      text: "text-gray-900 dark:text-white",
+      border: "border border-white/30 dark:border-neutral-700/50",
+      glow: "shadow-lg shadow-white/20",
     },
     gradient: {
       background:
-        "bg-gradient-to-r from-primary-500 via-secondary-500 to-accent-500",
+        "bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600",
       text: "text-white",
       border: "border-transparent",
-      glow: "shadow-lg shadow-secondary-500/25",
+      glow: "shadow-lg shadow-blue-500/30",
     },
   };
 

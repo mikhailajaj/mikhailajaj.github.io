@@ -1,0 +1,12 @@
+{
+  "name": "review-submission-api",
+  "version": "1.0.0",
+  "description": "Simple serverless function for handling review submissions",
+  "main": "submit-review.js",
+  "dependencies": {
+    "resend": "^3.2.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

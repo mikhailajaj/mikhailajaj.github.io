@@ -6,6 +6,9 @@
  * @fileoverview Error reporting API route
  */
 
+// Configure route for dynamic behavior
+// Dynamic flags disabled for static export compatibility
+
 import { NextRequest, NextResponse } from 'next/server';
 import { ApiError, ApiErrorCode, createSuccessResponse } from '@/lib/error/api-error';
 

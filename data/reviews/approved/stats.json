@@ -1,0 +1,10 @@
+{
+  "total": 2,
+  "approved": 2,
+  "pending": 0,
+  "verified": 0,
+  "rejected": 0,
+  "averageRating": 5,
+  "ratingDistribution": {"1":0, "2":0, "3":0, "4":0, "5":2},
+  "lastUpdated": "2025-01-20T12:00:00.000Z"
+}

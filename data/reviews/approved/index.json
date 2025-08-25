@@ -1,0 +1,15 @@
+{
+  "reviews": [
+    {
+      "id": "review-001",
+      "approvedAt": "2024-05-09T09:00:00.000Z",
+      "featured": true
+    },
+    {
+      "id": "review-002",
+      "approvedAt": "2024-03-02T08:30:00.000Z",
+      "featured": true
+    }
+  ],
+  "generatedAt": "2025-01-20T12:00:00.000Z"
+}

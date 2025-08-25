@@ -16,8 +16,27 @@ export const balloonMessages: BalloonMessage[] = [
     description:
       "While knowledge is limited, imagination reaches beyond limits with a sense of creativity.",
   },
-  // Add more like:
-  // { id: 2, category: "motivation", title: "Stay curious", description: "Curiosity is a compass for discovery." },
+  {
+    id: 2,
+    category: "philosophy",
+    title: "Beyond Space or Time",
+    description:
+      "Absolute freedom is where infinity lives where time has no chance of changing the outcome.",
+  },
+  {
+    id: 3,
+    category: "philosophy",
+    title: "The Joker's Wisdom",
+    description:
+      "Joker is my favorite card as it could substitute any cards in a card game, but can only used once until you find a substitution to substitutional (Joker).",
+  },
+  {
+    id: 4,
+    category: "philosophy",
+    title: "Ace of Diamonds ♦️",
+    description:
+      "Ace of diamonds ♦️ is my second favorite card, not just because it Ace, but even if its own world flips up side down, won't change.",
+  },
 ];
 
 export default balloonMessages;

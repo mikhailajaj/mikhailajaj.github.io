@@ -12,6 +12,7 @@ import {
 import ServiceLayout from "@/components/layouts/ServiceLayout";
 import PageHeader from "@/components/navigation/PageHeader";
 import CallToAction from "@/components/ui/CallToAction";
+import { DevelopmentBanner } from "@/components/ui/DevelopmentBanner";
 
 export const metadata: Metadata = {
   title: "Services | Mikhail Ajaj - Full-Stack, Cloud & Data Solutions",
@@ -118,6 +119,14 @@ const services = [
 export default function ServicesPage() {
   return (
     <ServiceLayout>
+      {/* Development Banner */}
+      <div className="px-4 py-4">
+        <DevelopmentBanner 
+          variant="template" 
+          message="Service offerings and pricing details are being finalized"
+        />
+      </div>
+      
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
         <div className="max-w-7xl mx-auto px-4 text-center">

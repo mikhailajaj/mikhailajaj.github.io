@@ -22,30 +22,22 @@ import React from "react";
 // 3. Internal Absolute Imports (@/) - Portfolio Structure
 // MainLayout removed - using app/layout.tsx navigation structure
 import { PerformanceMonitor } from "@/components/performance/PerformanceMonitor";
-import AdaptiveGalaxyBackground from "@/components/ui/AdaptiveGalaxyBackground";
 import LocationAwareMoonBackground from "@/components/ui/LocationAwareMoonBackground";
-import { NewsletterSignup } from "@/components/ui/engagement/NewsletterSignup";
-import {
-  SallyCognitiveProvider,
-  SallyAdaptiveHero,
-  SallyProgressiveDisclosure,
-  SallyLazySection,
-} from "@/components/accessibility";
-import { SallyAdvancedHCIProvider } from "@/components/ui/sally-advanced-hci";
+
 import { CallToAction } from "@/components/features/homepage/CallToAction";
-import { FeaturedProjects } from "@/components/features/homepage/FeaturedProjects";
-import { ProfessionalHighlights } from "@/components/features/homepage/ProfessionalHighlights";
-import { SkillsOverview } from "@/components/features/homepage/SkillsOverview";
+
 import ContactForm from "@/components/ContactForm";
 import AboutMeGrid from "@/components/AboutMeGrid";
 import InteractiveHero from "@/components/InteractiveHero";
 import RecentProjects from "@/components/RecentProjects";
 import SpecializedSkills from "@/components/SpecializedSkills";
-import TestimonialsSection from "@/components/TestimonialsSection";
+import { HomepageTestimonialsSection } from "@/components/reviews";
 
 // 4. Internal Relative Imports
 // (None in this component)
+import BalloonGame from "@/components/balloon-game/BalloonGame";
 
+import ResumeDownloads from "@/components/ResumeDownloads";
 // 5. Type Imports
 // (None in this component)
 
@@ -109,11 +101,12 @@ export default function Home() {
 
           {/* Simplified sections without Sally framework */}
           <div className="max-w-7xl mx-auto px-4 space-y-16">
-            <SkillsOverview />
-            <FeaturedProjects />
-            <ProfessionalHighlights />
             <AboutMeGrid />
-            <TestimonialsSection />
+            <SpecializedSkills />
+            <ResumeDownloads />
+            <HomepageTestimonialsSection />
+            
+            <BalloonGame />
             <ContactForm />
           </div>
 

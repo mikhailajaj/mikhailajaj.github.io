@@ -4,10 +4,8 @@ import React from "react";
 import type { Metadata } from "next";
 
 import AboutMeGrid from "@/components/AboutMeGrid";
-import SpecializedSkills from "@/components/SpecializedSkills";
-import ResumeDownloads from "@/components/ResumeDownloads";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import BalloonGame from "@/components/balloon-game/BalloonGame";
+
+import { FeaturedReviews } from "@/components/reviews/FeaturedReviews";
 
 export const metadata: Metadata = {
   title: "About | Mikhail Ajaj",
@@ -42,16 +40,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Balloon Game launcher - between intro and Bento grid */}
-      <section className="mx-auto max-w-5xl px-4 -mt-6">
-        <div className="rounded-xl border bg-card/60 p-6 backdrop-blur">
-          <h2 className="text-xl font-semibold mb-2">Playful Knowledge</h2>
-          <p className="text-sm text-muted-foreground mb-4">
-            Pop color-coded balloons to reveal short thoughts and quotes. More categories and messages coming over time.
-          </p>
-          <BalloonGame />
-        </div>
-      </section>
+      
 
       {/* About content grid */}
       <div className="max-w-7xl mx-auto px-4 space-y-16">
@@ -62,8 +51,7 @@ export default function AboutPage() {
           <h2 id="skills-heading" className="sr-only">
             Specialized skills and resumes
           </h2>
-          <SpecializedSkills />
-          <ResumeDownloads />
+          
         </section>
 
         {/* Social proof */}
@@ -71,7 +59,7 @@ export default function AboutPage() {
           <h2 id="testimonials-heading" className="sr-only">
             Testimonials
           </h2>
-          <TestimonialsSection />
+          <FeaturedReviews maxReviews={4} autoRotate={true} showControls={true} showViewAllLink={true} />
         </section>
       </div>
     </div>

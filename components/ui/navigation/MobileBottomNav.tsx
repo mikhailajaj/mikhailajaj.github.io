@@ -110,13 +110,18 @@ export function MobileBottomNav({
   return (
     <div
       className={cn(
+        // Hydration-safe: keep SSR/static classes stable, apply glass extras after hydration
         "md:hidden fixed bottom-0 left-0 right-0 z-50",
         "backdrop-blur-md",
         "border-t",
+        isHydrated && "bg-background/70 border-white/10 shadow-lg",
         "safe-area-pb", // For devices with home indicator
         className,
       )}
-      style={getContainerStyles()}
+      style={{
+        ...getContainerStyles(),
+        ...(isHydrated && accentColor ? { borderTopColor: `${accentColor}20` } : {}),
+      }}
     >
       <nav 
         className="grid grid-cols-5 h-16"

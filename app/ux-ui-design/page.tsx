@@ -3,7 +3,7 @@ import { MainLayout } from "@/components/layouts/MainLayout";
 import { DomainHero } from "@/components/ui/DomainHero";
 import { DOMAIN_CONFIGS } from "@/lib/constants/domains";
 import { domainAchievements, domainTechnologies } from "@/lib/data/domainData";
-import { ServiceGrid } from "@/components/ui/ServiceGrid";
+// ServiceGrid component removed as requested
 import { domainServices } from "@/lib/data/serviceData";
 import { UXUIProjects } from "@/components/domain-specific/ux-ui/UXUIProjects";
 import { UXUISkills } from "@/components/domain-specific/ux-ui/UXUISkills";
@@ -25,7 +25,7 @@ export default function UXUIDesignPage() {
         />
         <UXUISkills />
         <UXUIProjects />
-        <ServiceGrid domain={DOMAIN_CONFIGS['ux-ui']} services={domainServices['ux-ui']} />
+        {/* ServiceGrid component removed as requested */}
       </div>
     </MainLayout>
   );

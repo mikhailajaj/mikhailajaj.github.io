@@ -48,7 +48,7 @@ const quickLinks = [
   { name: "About", href: "/about" },
   { name: "Experience", href: "/experience" },
   { name: "Education", href: "/education" },
-  { name: "Achievements", href: "/achievements" },
+  { name: "Projects", href: "/projects" },
   { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
 ];

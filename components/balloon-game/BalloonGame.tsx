@@ -86,6 +86,14 @@ export default function BalloonGame() {
   }, []);
 
   return (
+    <section className="mx-auto max-w-5xl px-4 -mt-6">
+    <div className="rounded-xl border bg-card/60 p-6 backdrop-blur">
+      <h2 className="text-xl font-semibold mb-2">Playful Knowledge</h2>
+      <p className="text-sm text-muted-foreground mb-4">
+        Pop color-coded balloons to reveal short thoughts and quotes. More categories and messages coming over time.
+      </p>
+      
+    
     <div className="relative w-full">
       {!started ? (
         <div className="flex justify-center">
@@ -137,6 +145,8 @@ export default function BalloonGame() {
         </div>
       )}
     </div>
+    </div>
+  </section>
   );
 }
 

@@ -192,8 +192,10 @@ export default function RootLayout({
                     {/* Main Navigation - Access DomainThemeContext via useContext */}
                     <DomainAwareNavigation />
 
+
+
                     {/* Main Content */}
-                    <main className="min-h-screen pt-10">
+                    <main className="min-h-screen pt-2">
                       {children}
                     </main>
 

@@ -26,7 +26,7 @@ export default function EducationHero() {
         style={{ y, opacity }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-background to-background" />
-        <div className="absolute inset-x-0 top-0 h-48 bg-[radial-gradient(ellipse_at_top,theme(colors.primary/10),transparent_60%)]" />
+        <div className="absolute inset-x-0 top-0 h-48 bg-[radial-gradient(ellipse_at_top,hsl(var(--primary)/0.1),transparent_60%)]" />
       </motion.div>
       <div className="max-w-7xl mx-auto">
         <Card className="p-6 sm:p-8 bg-card/80 backdrop-blur-md border-border">

@@ -17,18 +17,20 @@ import {
 interface TestimonialCardProps {
   testimonial: (typeof testimonials)[0];
   index: number;
+  inCarousel?: boolean;
 }
 
-const TestimonialCard: React.FC<TestimonialCardProps> = ({
+const TestimonialCard: React.FC<TestimonialCardProps & { inCarousel?: boolean }> = ({
   testimonial,
   index,
+  inCarousel = false,
 }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={inCarousel ? { opacity: 1 } : { opacity: 0, y: 50 }}
+      whileInView={inCarousel ? { opacity: 1 } : { opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
+      transition={inCarousel ? { duration: 0 } : { duration: 0.5, delay: index * 0.1 }}
       className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
     >
       {/* Quote Icon */}
@@ -86,21 +88,48 @@ const TestimonialCarousel: React.FC<{ testimonials: typeof testimonials }> = ({
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
+  const [containerHeight, setContainerHeight] = useState<number | null>(null);
+  const contentRef = React.useRef<HTMLDivElement>(null);
+
+  // Measure slide height to prevent layout jumps on transition
+  React.useLayoutEffect(() => {
+    const el = contentRef.current;
+    if (el) {
+      // Use scrollHeight to capture full content height
+      setContainerHeight(el.scrollHeight);
+    }
+  }, [currentIndex]);
+
+  // Keep height in sync on viewport changes
+  React.useEffect(() => {
+    const syncHeight = () => {
+      const el = contentRef.current;
+      if (el) setContainerHeight(el.scrollHeight);
+    };
+    window.addEventListener("resize", syncHeight);
+    return () => window.removeEventListener("resize", syncHeight);
+  }, []);
 
   const slideVariants = {
     enter: (direction: number) => ({
       x: direction > 0 ? 1000 : -1000,
       opacity: 0,
+      position: "absolute" as const,
+      inset: 0,
     }),
     center: {
       zIndex: 1,
       x: 0,
       opacity: 1,
+      position: "absolute" as const,
+      inset: 0,
     },
     exit: (direction: number) => ({
       zIndex: 0,
       x: direction < 0 ? 1000 : -1000,
       opacity: 0,
+      position: "absolute" as const,
+      inset: 0,
     }),
   };
 
@@ -122,8 +151,13 @@ const TestimonialCarousel: React.FC<{ testimonials: typeof testimonials }> = ({
 
   return (
     <div className="relative max-w-4xl mx-auto">
-      <div className="overflow-hidden rounded-xl">
-        <AnimatePresence initial={false} custom={direction}>
+      <motion.div
+        className="overflow-hidden rounded-xl relative"
+        initial={false}
+        animate={{ height: containerHeight ?? "auto" }}
+        transition={{ duration: 0.25, ease: "easeInOut" }}
+      >
+        <AnimatePresence initial={false} custom={direction} mode="popLayout">
           <motion.div
             key={currentIndex}
             custom={direction}
@@ -132,7 +166,7 @@ const TestimonialCarousel: React.FC<{ testimonials: typeof testimonials }> = ({
             animate="center"
             exit="exit"
             transition={{
-              x: { type: "spring", stiffness: 300, damping: 30 },
+              x: { type: "spring", stiffness: 400, damping: 40 },
               opacity: { duration: 0.2 },
             }}
             drag="x"
@@ -149,13 +183,16 @@ const TestimonialCarousel: React.FC<{ testimonials: typeof testimonials }> = ({
             }}
             className="w-full"
           >
-            <TestimonialCard
-              testimonial={testimonials[currentIndex]}
-              index={0}
-            />
+            <div ref={contentRef} className="relative">
+              <TestimonialCard
+                testimonial={testimonials[currentIndex]}
+                index={0}
+                inCarousel={true}
+              />
+            </div>
           </motion.div>
         </AnimatePresence>
-      </div>
+      </motion.div>
 
       {/* Navigation Buttons */}
       <button
@@ -180,11 +217,10 @@ const TestimonialCarousel: React.FC<{ testimonials: typeof testimonials }> = ({
               setDirection(index > currentIndex ? 1 : -1);
               setCurrentIndex(index);
             }}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentIndex
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex
                 ? "bg-blue-500"
                 : "bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500"
-            }`}
+              }`}
           />
         ))}
       </div>
@@ -246,11 +282,10 @@ const TestimonialsSection: React.FC = () => {
             <button
               key={button.key}
               onClick={() => setActiveFilter(button.key)}
-              className={`px-6 py-2 rounded-full text-sm transition-all duration-300 ${
-                activeFilter === button.key
+              className={`px-6 py-2 rounded-full text-sm transition-all duration-300 ${activeFilter === button.key
                   ? "bg-gradient-to-r from-blue-600 to-blue-400 text-white shadow-md"
                   : "bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700"
-              }`}
+                }`}
             >
               {button.label}
             </button>

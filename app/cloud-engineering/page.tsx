@@ -3,7 +3,7 @@ import { MainLayout } from "@/components/layouts/MainLayout";
 import { DomainHero } from "@/components/ui/DomainHero";
 import { DOMAIN_CONFIGS } from "@/lib/constants/domains";
 import { domainAchievements, domainTechnologies } from "@/lib/data/domainData";
-import { ServiceGrid } from "@/components/ui/ServiceGrid";
+// ServiceGrid component removed as requested
 import { domainServices } from "@/lib/data/serviceData";
 import { CloudProjects } from "@/components/domain-specific/cloud/CloudProjects";
 import { CloudSkills } from "@/components/domain-specific/cloud/CloudSkills";
@@ -25,7 +25,7 @@ export default function CloudEngineeringPage() {
         />
         <CloudSkills />
         <CloudProjects />
-        <ServiceGrid domain={DOMAIN_CONFIGS['cloud']} services={domainServices['cloud']} />
+        {/* ServiceGrid component removed as requested */}
       </div>
     </MainLayout>
   );

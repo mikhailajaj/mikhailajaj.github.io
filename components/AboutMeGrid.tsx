@@ -1,9 +1,6 @@
 "use client";
 import React from "react";
-import {
-  AnimatedBentoGrid,
-  AnimatedBentoGridItem,
-} from "./ui/AnimatedBentoGrid";
+// AnimatedBentoGrid components removed as requested
 import { gridItems } from "@/data/gridItems";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
@@ -118,23 +115,45 @@ const AboutMeGrid: React.FC = () => {
         </p>
       </motion.div>
 
-      <AnimatedBentoGrid>
+      {/* Simple grid layout replacing AnimatedBentoGrid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
         {gridItems.map((item: any, index: number) => (
-          <AnimatedBentoGridItem
+          <motion.div
             key={item.id}
-            id={item.id}
-            title={item.title}
-            description={<DescriptionRenderer description={item.description} />}
-            className={cn(item.className)}
-            icon={<GridIcons icons={item.icons} />}
-            header={<GridItemHeader image={item.image} />}
-            img={item.image?.src}
-            imgClassName={item.imgClassName}
-            titleClassName={item.titleClassName}
-            spareImg={item.spareImg}
-          />
+            className={cn(
+              "p-6 bg-card rounded-lg border border-border shadow-sm hover:shadow-md transition-all duration-300",
+              item.className
+            )}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+            viewport={{ once: true }}
+            whileHover={{ y: -5, scale: 1.02 }}
+          >
+            {/* Header with image */}
+            <div className="mb-4">
+              <GridItemHeader image={item.image} />
+            </div>
+            
+            {/* Content */}
+            <div className="space-y-3">
+              <h3 className="text-lg font-semibold text-card-foreground">
+                {item.title}
+              </h3>
+              <div className="text-muted-foreground text-sm">
+                <DescriptionRenderer description={item.description} />
+              </div>
+              
+              {/* Icons */}
+              {item.icons && (
+                <div className="pt-2">
+                  <GridIcons icons={item.icons} />
+                </div>
+              )}
+            </div>
+          </motion.div>
         ))}
-      </AnimatedBentoGrid>
+      </div>
     </section>
   );
 };

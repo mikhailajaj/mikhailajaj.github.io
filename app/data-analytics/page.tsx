@@ -3,7 +3,7 @@ import { MainLayout } from "@/components/layouts/MainLayout";
 import { DomainHero } from "@/components/ui/DomainHero";
 import { DOMAIN_CONFIGS } from "@/lib/constants/domains";
 import { domainAchievements, domainTechnologies } from "@/lib/data/domainData";
-import { ServiceGrid } from "@/components/ui/ServiceGrid";
+// ServiceGrid component removed as requested
 import { domainServices } from "@/lib/data/serviceData";
 import { DataProjects } from "@/components/domain-specific/data/DataProjects";
 import { DataSkills } from "@/components/domain-specific/data/DataSkills";
@@ -25,7 +25,7 @@ export default function DataAnalyticsPage() {
         />
         <DataSkills />
         <DataProjects />
-        <ServiceGrid domain={DOMAIN_CONFIGS['data']} services={domainServices['data']} />
+        {/* ServiceGrid component removed as requested */}
       </div>
     </MainLayout>
   );
