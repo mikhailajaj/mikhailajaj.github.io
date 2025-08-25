@@ -75,12 +75,11 @@ const nextConfig = {
 
   // Static export configuration
   output: 'export',
+  trailingSlash: true,
+  distDir: "out",
 
   // Optional: Change the output directory from 'out' to 'dist'
   // distDir: 'dist',
-
-  // Optional: Add trailing slashes to URLs
-  trailingSlash: true,
 
   // Security headers (disabled for static export)
   // Note: These headers should be configured at the hosting level for static sites
@@ -231,11 +230,6 @@ const nextConfig = {
 
   // Enable MDX support
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
-
-  // Output configuration for static export
-  output: "export",
-  trailingSlash: true,
-  distDir: "out",
 };
 
 // MDX configuration
