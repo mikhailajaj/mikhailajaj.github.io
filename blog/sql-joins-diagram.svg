@@ -1,0 +1,484 @@
+<svg width="1000" height="700" viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    
+    <linearGradient id="titleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    
+    <!-- Drop shadow filter -->
+    <filter id="dropShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#00000020"/>
+    </filter>
+    
+    <!-- Clip paths for overlaps -->
+    <!-- INNER JOIN clips -->
+    <clipPath id="innerJoinClipA">
+      <circle cx="60" cy="60" r="30"/>
+    </clipPath>
+    <clipPath id="innerJoinClipB">
+      <circle cx="100" cy="60" r="30"/>
+    </clipPath>
+    
+    <!-- LEFT JOIN clips -->
+    <clipPath id="leftJoinClipA">
+      <circle cx="60" cy="60" r="30"/>
+    </clipPath>
+    <clipPath id="leftJoinClipB">
+      <circle cx="100" cy="60" r="30"/>
+    </clipPath>
+    
+    <!-- RIGHT JOIN clips -->
+    <clipPath id="rightJoinClipA">
+      <circle cx="60" cy="60" r="30"/>
+    </clipPath>
+    <clipPath id="rightJoinClipB">
+      <circle cx="100" cy="60" r="30"/>
+    </clipPath>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1000" height="700" fill="url(#bgGradient)"/>
+  
+  <!-- Main Title -->
+  <text x="500" y="50" text-anchor="middle" font-family="Arial, sans-serif" 
+        font-size="32" font-weight="bold" fill="url(#titleGradient)">
+    SQL Joins: Interactive Set Operations
+    <animate attributeName="opacity" values="0;1" dur="1s" fill="freeze"/>
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="500" y="80" text-anchor="middle" font-family="Arial, sans-serif" 
+        font-size="16" fill="#64748b">
+    Understanding Data Relationships Through Visual Set Theory
+    <animate attributeName="opacity" values="0;1" dur="1s" begin="0.5s" fill="freeze"/>
+  </text>
+  
+  <!-- INNER JOIN Section -->
+  <g transform="translate(80, 120)">
+    <!-- Card Background -->
+    <rect x="0" y="0" width="200" height="180" rx="15" fill="#ffffff" 
+          stroke="#e2e8f0" stroke-width="2" filter="url(#dropShadow)">
+      <animate attributeName="opacity" values="0;1" dur="0.8s" begin="1s" fill="freeze"/>
+      <animateTransform attributeName="transform" type="scale" 
+                        values="0.8;1" dur="0.8s" begin="1s" fill="freeze"/>
+    </rect>
+    
+    <!-- Title -->
+    <text x="100" y="25" text-anchor="middle" font-family="Arial, sans-serif" 
+          font-size="18" font-weight="bold" fill="#1e293b">
+      INNER JOIN
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.3s" fill="freeze"/>
+    </text>
+    
+    <!-- Venn Diagram -->
+    <g transform="translate(20, 40)">
+      <!-- Left circle outline -->
+      <circle cx="60" cy="60" r="30" fill="none" stroke="#3b82f6" stroke-width="3">
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.5s" fill="freeze"/>
+        <animate attributeName="r" values="0;30" dur="0.8s" begin="1.5s" fill="freeze"/>
+      </circle>
+      
+      <!-- Right circle outline -->
+      <circle cx="100" cy="60" r="30" fill="none" stroke="#ef4444" stroke-width="3">
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.8s" fill="freeze"/>
+        <animate attributeName="r" values="0;30" dur="0.8s" begin="1.8s" fill="freeze"/>
+      </circle>
+      
+      <!-- Intersection (only overlapping area) -->
+      <circle cx="100" cy="60" r="30" fill="#8b5cf6" fill-opacity="0.8" 
+              clip-path="url(#innerJoinClipA)">
+        <animate attributeName="fill-opacity" values="0;0.8" dur="1s" begin="2.2s" fill="freeze"/>
+        <animateTransform attributeName="transform" type="scale" 
+                          values="0;1" dur="0.8s" begin="2.2s" fill="freeze"/>
+      </circle>
+      
+      <!-- Labels -->
+      <text x="45" y="100" font-family="Arial, sans-serif" font-size="12" fill="#64748b" text-anchor="middle">
+        Table A
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="2.5s" fill="freeze"/>
+      </text>
+      <text x="115" y="100" font-family="Arial, sans-serif" font-size="12" fill="#64748b" text-anchor="middle">
+        Table B
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="2.5s" fill="freeze"/>
+      </text>
+    </g>
+    
+    <!-- Description -->
+    <text x="100" y="150" text-anchor="middle" font-family="Arial, sans-serif" 
+          font-size="11" fill="#7c3aed">
+      Only matching records
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="2.8s" fill="freeze"/>
+    </text>
+    
+    <!-- SQL Example -->
+    <text x="100" y="170" text-anchor="middle" font-family="Monaco, monospace" 
+          font-size="9" fill="#64748b">
+      A ∩ B
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="3s" fill="freeze"/>
+    </text>
+  </g>
+  
+  <!-- LEFT JOIN Section -->
+  <g transform="translate(320, 120)">
+    <!-- Card Background -->
+    <rect x="0" y="0" width="200" height="180" rx="15" fill="#ffffff" 
+          stroke="#e2e8f0" stroke-width="2" filter="url(#dropShadow)">
+      <animate attributeName="opacity" values="0;1" dur="0.8s" begin="1.2s" fill="freeze"/>
+      <animateTransform attributeName="transform" type="scale" 
+                        values="0.8;1" dur="0.8s" begin="1.2s" fill="freeze"/>
+    </rect>
+    
+    <!-- Title -->
+    <text x="100" y="25" text-anchor="middle" font-family="Arial, sans-serif" 
+          font-size="18" font-weight="bold" fill="#1e293b">
+      LEFT JOIN
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.5s" fill="freeze"/>
+    </text>
+    
+    <!-- Venn Diagram -->
+    <g transform="translate(20, 40)">
+      <!-- Left circle filled completely -->
+      <circle cx="60" cy="60" r="30" fill="#3b82f6" fill-opacity="0.7" 
+              stroke="#3b82f6" stroke-width="3">
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.7s" fill="freeze"/>
+        <animate attributeName="r" values="0;30" dur="0.8s" begin="1.7s" fill="freeze"/>
+        <animate attributeName="fill-opacity" values="0;0.7" dur="1s" begin="2.4s" fill="freeze"/>
+      </circle>
+      
+      <!-- Right circle outline only -->
+      <circle cx="100" cy="60" r="30" fill="none" stroke="#ef4444" stroke-width="3">
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="2s" fill="freeze"/>
+        <animate attributeName="r" values="0;30" dur="0.8s" begin="2s" fill="freeze"/>
+      </circle>
+      
+      <!-- Intersection gets darker blue -->
+      <circle cx="60" cy="60" r="30" fill="#1d4ed8" fill-opacity="0.9" 
+              clip-path="url(#leftJoinClipB)">
+        <animate attributeName="fill-opacity" values="0;0.9" dur="1s" begin="2.6s" fill="freeze"/>
+      </circle>
+      
+      <!-- Labels -->
+      <text x="45" y="100" font-family="Arial, sans-serif" font-size="12" fill="#64748b" text-anchor="middle">
+        Table A
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="2.8s" fill="freeze"/>
+      </text>
+      <text x="115" y="100" font-family="Arial, sans-serif" font-size="12" fill="#64748b" text-anchor="middle">
+        Table B
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="2.8s" fill="freeze"/>
+      </text>
+    </g>
+    
+    <!-- Description -->
+    <text x="100" y="150" text-anchor="middle" font-family="Arial, sans-serif" 
+          font-size="11" fill="#1d4ed8">
+      All A + matches from B
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="3s" fill="freeze"/>
+    </text>
+    
+    <!-- SQL Example -->
+    <text x="100" y="170" text-anchor="middle" font-family="Monaco, monospace" 
+          font-size="9" fill="#64748b">
+      A ∪ (A ∩ B)
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="3.2s" fill="freeze"/>
+    </text>
+  </g>
+  
+  <!-- RIGHT JOIN Section -->
+  <g transform="translate(560, 120)">
+    <!-- Card Background -->
+    <rect x="0" y="0" width="200" height="180" rx="15" fill="#ffffff" 
+          stroke="#e2e8f0" stroke-width="2" filter="url(#dropShadow)">
+      <animate attributeName="opacity" values="0;1" dur="0.8s" begin="1.4s" fill="freeze"/>
+      <animateTransform attributeName="transform" type="scale" 
+                        values="0.8;1" dur="0.8s" begin="1.4s" fill="freeze"/>
+    </rect>
+    
+    <!-- Title -->
+    <text x="100" y="25" text-anchor="middle" font-family="Arial, sans-serif" 
+          font-size="18" font-weight="bold" fill="#1e293b">
+      RIGHT JOIN
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.7s" fill="freeze"/>
+    </text>
+    
+    <!-- Venn Diagram -->
+    <g transform="translate(20, 40)">
+      <!-- Left circle outline only -->
+      <circle cx="60" cy="60" r="30" fill="none" stroke="#3b82f6" stroke-width="3">
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.9s" fill="freeze"/>
+        <animate attributeName="r" values="0;30" dur="0.8s" begin="1.9s" fill="freeze"/>
+      </circle>
+      
+      <!-- Right circle filled completely -->
+      <circle cx="100" cy="60" r="30" fill="#ef4444" fill-opacity="0.7" 
+              stroke="#ef4444" stroke-width="3">
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="2.2s" fill="freeze"/>
+        <animate attributeName="r" values="0;30" dur="0.8s" begin="2.2s" fill="freeze"/>
+        <animate attributeName="fill-opacity" values="0;0.7" dur="1s" begin="2.8s" fill="freeze"/>
+      </circle>
+      
+      <!-- Intersection gets darker red -->
+      <circle cx="100" cy="60" r="30" fill="#dc2626" fill-opacity="0.9" 
+              clip-path="url(#rightJoinClipA)">
+        <animate attributeName="fill-opacity" values="0;0.9" dur="1s" begin="3s" fill="freeze"/>
+      </circle>
+      
+      <!-- Labels -->
+      <text x="45" y="100" font-family="Arial, sans-serif" font-size="12" fill="#64748b" text-anchor="middle">
+        Table A
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="3.2s" fill="freeze"/>
+      </text>
+      <text x="115" y="100" font-family="Arial, sans-serif" font-size="12" fill="#64748b" text-anchor="middle">
+        Table B
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="3.2s" fill="freeze"/>
+      </text>
+    </g>
+    
+    <!-- Description -->
+    <text x="100" y="150" text-anchor="middle" font-family="Arial, sans-serif" 
+          font-size="11" fill="#dc2626">
+      All B + matches from A
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="3.4s" fill="freeze"/>
+    </text>
+    
+    <!-- SQL Example -->
+    <text x="100" y="170" text-anchor="middle" font-family="Monaco, monospace" 
+          font-size="9" fill="#64748b">
+      (A ∩ B) ∪ B
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="3.6s" fill="freeze"/>
+    </text>
+  </g>
+  
+  <!-- FULL OUTER JOIN Section -->
+  <g transform="translate(800, 120)">
+    <!-- Card Background -->
+    <rect x="0" y="0" width="200" height="180" rx="15" fill="#ffffff" 
+          stroke="#e2e8f0" stroke-width="2" filter="url(#dropShadow)">
+      <animate attributeName="opacity" values="0;1" dur="0.8s" begin="1.6s" fill="freeze"/>
+      <animateTransform attributeName="transform" type="scale" 
+                        values="0.8;1" dur="0.8s" begin="1.6s" fill="freeze"/>
+    </rect>
+    
+    <!-- Title -->
+    <text x="100" y="25" text-anchor="middle" font-family="Arial, sans-serif" 
+          font-size="18" font-weight="bold" fill="#1e293b">
+      FULL OUTER
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.9s" fill="freeze"/>
+    </text>
+    
+    <!-- Venn Diagram -->
+    <g transform="translate(20, 40)">
+      <!-- Left circle fully filled -->
+      <circle cx="60" cy="60" r="30" fill="#3b82f6" fill-opacity="0.6" 
+              stroke="#3b82f6" stroke-width="3">
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="2.1s" fill="freeze"/>
+        <animate attributeName="r" values="0;30" dur="0.8s" begin="2.1s" fill="freeze"/>
+        <animate attributeName="fill-opacity" values="0;0.6" dur="1s" begin="3.2s" fill="freeze"/>
+      </circle>
+      
+      <!-- Right circle fully filled -->
+      <circle cx="100" cy="60" r="30" fill="#ef4444" fill-opacity="0.6" 
+              stroke="#ef4444" stroke-width="3">
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="2.4s" fill="freeze"/>
+        <animate attributeName="r" values="0;30" dur="0.8s" begin="2.4s" fill="freeze"/>
+        <animate attributeName="fill-opacity" values="0;0.6" dur="1s" begin="3.4s" fill="freeze"/>
+      </circle>
+      
+      <!-- Labels -->
+      <text x="45" y="100" font-family="Arial, sans-serif" font-size="12" fill="#64748b" text-anchor="middle">
+        Table A
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="3.6s" fill="freeze"/>
+      </text>
+      <text x="115" y="100" font-family="Arial, sans-serif" font-size="12" fill="#64748b" text-anchor="middle">
+        Table B
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="3.6s" fill="freeze"/>
+      </text>
+    </g>
+    
+    <!-- Description -->
+    <text x="100" y="150" text-anchor="middle" font-family="Arial, sans-serif" 
+          font-size="11" fill="#059669">
+      All records from both
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="3.8s" fill="freeze"/>
+    </text>
+    
+    <!-- SQL Example -->
+    <text x="100" y="170" text-anchor="middle" font-family="Monaco, monospace" 
+          font-size="9" fill="#64748b">
+      A ∪ B
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="4s" fill="freeze"/>
+    </text>
+  </g>
+  
+  <!-- Explanation Section -->
+  <g transform="translate(80, 340)">
+    <rect x="0" y="0" width="840" height="140" rx="15" fill="#f1f5f9" 
+          stroke="#cbd5e1" stroke-width="2" filter="url(#dropShadow)">
+      <animate attributeName="opacity" values="0;1" dur="0.8s" begin="4.2s" fill="freeze"/>
+    </rect>
+    
+    <text x="420" y="30" text-anchor="middle" font-family="Arial, sans-serif" 
+          font-size="20" font-weight="bold" fill="#1e293b">
+      Understanding the Overlap Technique
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="4.5s" fill="freeze"/>
+    </text>
+    
+    <!-- Explanation Venn Diagram -->
+    <g transform="translate(300, 50)">
+      <!-- Base circles -->
+      <circle cx="60" cy="35" r="30" fill="#3b82f6" fill-opacity="0.3" 
+              stroke="#3b82f6" stroke-width="2">
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="4.8s" fill="freeze"/>
+      </circle>
+      <circle cx="90" cy="35" r="30" fill="#ef4444" fill-opacity="0.3" 
+              stroke="#ef4444" stroke-width="2">
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="5s" fill="freeze"/>
+      </circle>
+      
+      <!-- Region labels -->
+      <text x="45" y="40" text-anchor="middle" font-family="Arial, sans-serif" 
+            font-size="10" fill="#1e293b" font-weight="bold">
+        A only
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="5.2s" fill="freeze"/>
+      </text>
+      <text x="75" y="40" text-anchor="middle" font-family="Arial, sans-serif" 
+            font-size="10" fill="#1e293b" font-weight="bold">
+        A∩B
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="5.4s" fill="freeze"/>
+      </text>
+      <text x="105" y="40" text-anchor="middle" font-family="Arial, sans-serif" 
+            font-size="10" fill="#1e293b" font-weight="bold">
+        B only
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="5.6s" fill="freeze"/>
+      </text>
+      
+      <text x="75" y="75" text-anchor="middle" font-family="Arial, sans-serif" 
+            font-size="12" fill="#64748b">
+        Three distinct regions created by clipPath
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="5.8s" fill="freeze"/>
+      </text>
+    </g>
+  </g>
+  
+  <!-- Set Operations Section -->
+  <g transform="translate(80, 490)">
+    <rect x="0" y="0" width="840" height="160" rx="15" fill="#ffffff" 
+          stroke="#e2e8f0" stroke-width="2" filter="url(#dropShadow)">
+      <animate attributeName="opacity" values="0;1" dur="0.8s" begin="6s" fill="freeze"/>
+    </rect>
+    
+    <text x="420" y="30" text-anchor="middle" font-family="Arial, sans-serif" 
+          font-size="20" font-weight="bold" fill="url(#titleGradient)">
+      Set Operations in SQL
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="6.3s" fill="freeze"/>
+    </text>
+    
+    <!-- UNION -->
+    <g transform="translate(60, 60)">
+      <text x="75" y="15" text-anchor="middle" font-family="Arial, sans-serif" 
+            font-size="14" font-weight="bold" fill="#334155">
+        UNION
+        <animate attributeName="opacity" values="0;1" dur="0.3s" begin="6.5s" fill="freeze"/>
+      </text>
+      <rect x="30" y="25" width="25" height="20" fill="#3b82f6" fill-opacity="0.8" 
+            stroke="#3b82f6" rx="3">
+        <animate attributeName="width" values="0;25" dur="0.5s" begin="6.8s" fill="freeze"/>
+      </rect>
+      <rect x="70" y="25" width="25" height="20" fill="#ef4444" fill-opacity="0.8" 
+            stroke="#ef4444" rx="3">
+        <animate attributeName="width" values="0;25" dur="0.5s" begin="7s" fill="freeze"/>
+      </rect>
+      <text x="75" y="65" text-anchor="middle" font-family="Arial, sans-serif" 
+            font-size="11" fill="#64748b">
+        All unique records
+        <animate attributeName="opacity" values="0;1" dur="0.3s" begin="7.2s" fill="freeze"/>
+      </text>
+    </g>
+    
+    <!-- INTERSECT -->
+    <g transform="translate(250, 60)">
+      <text x="75" y="15" text-anchor="middle" font-family="Arial, sans-serif" 
+            font-size="14" font-weight="bold" fill="#334155">
+        INTERSECT
+        <animate attributeName="opacity" values="0;1" dur="0.3s" begin="6.7s" fill="freeze"/>
+      </text>
+      <rect x="50" y="25" width="25" height="20" fill="#8b5cf6" fill-opacity="0.9" 
+            stroke="#8b5cf6" rx="3">
+        <animate attributeName="width" values="0;25" dur="0.5s" begin="7.4s" fill="freeze"/>
+      </rect>
+      <text x="75" y="65" text-anchor="middle" font-family="Arial, sans-serif" 
+            font-size="11" fill="#64748b">
+        Common records only
+        <animate attributeName="opacity" values="0;1" dur="0.3s" begin="7.6s" fill="freeze"/>
+      </text>
+    </g>
+    
+    <!-- EXCEPT -->
+    <g transform="translate(440, 60)">
+      <text x="75" y="15" text-anchor="middle" font-family="Arial, sans-serif" 
+            font-size="14" font-weight="bold" fill="#334155">
+        EXCEPT
+        <animate attributeName="opacity" values="0;1" dur="0.3s" begin="6.9s" fill="freeze"/>
+      </text>
+      <rect x="40" y="25" width="35" height="20" fill="#3b82f6" fill-opacity="0.8" 
+            stroke="#3b82f6" rx="3">
+        <animate attributeName="width" values="0;35" dur="0.5s" begin="7.8s" fill="freeze"/>
+      </rect>
+      <rect x="55" y="30" width="15" height="10" fill="#ffffff" 
+            stroke="#ef4444" stroke-width="2" rx="2">
+        <animate attributeName="opacity" values="0;1" dur="0.3s" begin="8.2s" fill="freeze"/>
+      </rect>
+      <text x="75" y="65" text-anchor="middle" font-family="Arial, sans-serif" 
+            font-size="11" fill="#64748b">
+        A minus B
+        <animate attributeName="opacity" values="0;1" dur="0.3s" begin="8.4s" fill="freeze"/>
+      </text>
+    </g>
+    
+    <!-- CROSS JOIN -->
+    <g transform="translate(630, 60)">
+      <text x="75" y="15" text-anchor="middle" font-family="Arial, sans-serif" 
+            font-size="14" font-weight="bold" fill="#334155">
+        CROSS JOIN
+        <animate attributeName="opacity" values="0;1" dur="0.3s" begin="7.1s" fill="freeze"/>
+      </text>
+      <rect x="35" y="25" width="12" height="12" fill="#10b981" fill-opacity="0.8" 
+            stroke="#10b981" rx="2">
+        <animateTransform attributeName="transform" type="scale" 
+                          values="0;1" dur="0.3s" begin="8.6s" fill="freeze"/>
+      </rect>
+      <rect x="52" y="25" width="12" height="12" fill="#10b981" fill-opacity="0.8" 
+            stroke="#10b981" rx="2">
+        <animateTransform attributeName="transform" type="scale" 
+                          values="0;1" dur="0.3s" begin="8.8s" fill="freeze"/>
+      </rect>
+      <rect x="69" y="25" width="12" height="12" fill="#10b981" fill-opacity="0.8" 
+            stroke="#10b981" rx="2">
+        <animateTransform attributeName="transform" type="scale" 
+                          values="0;1" dur="0.3s" begin="9s" fill="freeze"/>
+      </rect>
+      <rect x="86" y="25" width="12" height="12" fill="#10b981" fill-opacity="0.8" 
+            stroke="#10b981" rx="2">
+        <animateTransform attributeName="transform" type="scale" 
+                          values="0;1" dur="0.3s" begin="9.2s" fill="freeze"/>
+      </rect>
+      <text x="75" y="65" text-anchor="middle" font-family="Arial, sans-serif" 
+            font-size="11" fill="#64748b">
+        Cartesian Product
+        <animate attributeName="opacity" values="0;1" dur="0.3s" begin="9.4s" fill="freeze"/>
+      </text>
+    </g>
+  </g>
+  
+  <!-- Footer -->
+  <text x="500" y="680" text-anchor="middle" font-family="Arial, sans-serif" 
+        font-size="14" fill="#64748b">
+    Understanding SQL Joins Through Visual Set Theory • clipPath creates precise overlaps
+    <animate attributeName="opacity" values="0;1" dur="1s" begin="9.6s" fill="freeze"/>
+  </text>
+</svg>

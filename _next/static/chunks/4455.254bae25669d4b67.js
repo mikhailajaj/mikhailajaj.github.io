@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[4455],{44455:(e,s,a)=>{a.r(s),a.d(s,{default:()=>l});var h=a(95155);a(12115);let l=()=>(0,h.jsx)("div",{children:(0,h.jsx)("h2",{children:"Analytics Dashboard"})})}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[9164],{39164:(e,c,h)=>{h.r(c),h.d(c,{default:()=>s});var l=h(95155);h(12115);let s=()=>(0,l.jsx)("div",{children:(0,l.jsx)("h2",{children:"Tech Stack Builder"})})}}]);

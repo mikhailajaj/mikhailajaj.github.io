@@ -1,0 +1,74 @@
+MIKHAIL
+ AJAJ
+SOFTWARE DEVELOPER	Phone
++1 (416) 474-5749	 	Email
+ajaj@sheridancollege.ca
+	Address
+Burlington, ON	 	Website
+https://mikhailajaj.github.io/
+ 
+ SUMMARY
+ 
+A curious dreamer in the realm of code, weaving solutions that bridge imagination and reality. As a Senior Computer Science student at Sheridan College, I bring a deep understanding of software engineering and architecture. With a passion for React, React Native, and Node.js, I craft elegant mobile and web experiences. Driven to learn, collaborate, and solve, I seek to leave an impact through meaningful projects, blending innovation and practicality in every line of code.
+ 
+EDUCATION
+ 
+Honours Bachelor of Computer Science (Mobile Computing)	Expected: Apr 2026
+Sheridan College | Oakville, ON
+  
+Related Courses:
+ 
+•	Business Intelligence and Data Mining (In Progress)
+•	Software Engineering (Completed: Apr 2024, Grade: A)
+•	Distributed Mobility (Completed: Jan 2024, Grade: A)
+•	Artificial Intelligence (Completed: Jan 2024, Grade: C)
+•	Database Modelling (Completed: Jan 2018, Grade: B+)
+•	Human Computer Interaction (Completed: Jan 2024, Grade: A)
+•	Mobile Application Principles (Completed: Apr 2018, Grade: A-)
+•	Mobile Web App Development (Completed: Apr 2019, Grade: B+)
+•	Scripting & Web Languages (Completed: Jan 2018, Grade: A-)
+•	Programming Principles (Completed: Dec 2017, Grade: A)
+•	Cognitive Computing (completed: Dec 2024, Grade: A+)
+ 
+Supportive Courses:
+ 
+•	Software Design (Completed: Jan 2021)
+•	Data Structures and Algorithms (Completed: Jan 2019) 
+  
+TECHNICAL SKILLS 
+Languages & Frameworks:
+JavaScript / TypeScript (advanced) • Python • SQL • Kotlin • Swift • Java • C# • React / React Native • Next.js • Node.js • .NET
+
+
+Methods & Collaboration:
+Agile (Scrum) • Test-Driven Development • Project Management
+
+Cloud & DevOps:
+Microsoft Azure • AWS • Git • Azure DevOps • Jira • CI/CD • REST APIs
+Data & Automation:
+Excel (advanced) • Power Platform • Data Warehousing • Business Intelligence • Report Automation • Process Automation
+ 
+ CORE COMPETENCIES
+ 
+ 
+•	Full-Stack Development & Problem-Solving
+•	Mobile Development & Quality Assurance
+•	Customer-Focused Solution Design
+•	Agile Team Collaboration
+•	Technical Documentation & Communication
+•	Continuous Learning & Adaptability
+ 
+ 
+ EXPERIENCE
+ 
+Project owner/software architect	Jan 2024 - Apr 2024
+Secret Santa (invitation system) | Group Project
+ https://github.com/mikhailajaj/SecretSanta
+  
+Secret Santa group project, potential project to develop the basic skills required for more advanced project (all links including demo and Figam in the readme file -github)
+•	Optimized project management with Jira, significantly increasing development speed and team efficiency.
+•	Created a Visual Paradigm repository, ensuring accuracy and reducing clarification time, which enhanced team collaboration.
+•	Formulated business rules and stakeholder relations, boosting governance and reducing compliance risks.
+•	Designed a Figma prototype to refine UI/UX, receiving early feedback that reduced design revisions.
+•	Standardized development using Git integration, which optimized code sharing and streamlined continuous integration.
+•	Implemented AWS for secure authentication and efficient data management, improving overall system performance.

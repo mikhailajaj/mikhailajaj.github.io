@@ -1,0 +1,12 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /private/
+Disallow: *.json
+Disallow: /data/reviews/pending/
+Disallow: /data/reviews/verified/
+Disallow: /data/reviews/rejected/
+
+Sitemap: https://mikhailajaj.github.io/sitemap.xml

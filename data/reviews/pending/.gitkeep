@@ -1,0 +1,9 @@
+# Pending Reviews Directory
+
+This directory stores reviews awaiting email verification.
+
+Files in this directory:
+- {token}.json - Individual review submissions
+- metadata.json - Submission tracking and statistics
+
+Note: Files in this directory are temporary and will be moved to verified/ after email confirmation.

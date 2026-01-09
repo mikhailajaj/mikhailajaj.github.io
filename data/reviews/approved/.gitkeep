@@ -1,0 +1,11 @@
+# Approved Reviews Directory
+
+This directory stores approved and published reviews.
+
+Files in this directory:
+- {id}.json - Individual approved reviews
+- featured.json - List of featured review IDs
+- stats.json - Aggregate statistics and metrics
+- index.json - Public display index
+
+Note: Reviews in this directory are publicly visible on the website.

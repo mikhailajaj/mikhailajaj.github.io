@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[8816],{88816:(e,s,t)=>{t.r(s),t.d(s,{default:()=>l});var h=t(95155);t(12115);let l=()=>(0,h.jsx)("div",{children:(0,h.jsx)("h2",{children:"Cost Estimator"})})}}]);

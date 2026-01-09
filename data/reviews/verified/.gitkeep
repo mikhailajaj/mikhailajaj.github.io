@@ -1,0 +1,9 @@
+# Verified Reviews Directory
+
+This directory stores reviews that have been email verified but await admin approval.
+
+Files in this directory:
+- {id}.json - Individual verified reviews
+- index.json - Quick lookup index for admin interface
+
+Note: Reviews in this directory are ready for human moderation.

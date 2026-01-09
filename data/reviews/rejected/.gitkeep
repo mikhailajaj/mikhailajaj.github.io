@@ -1,0 +1,8 @@
+# Rejected Reviews Directory
+
+This directory stores rejected reviews for audit purposes.
+
+Files in this directory:
+- {id}.json - Individual rejected reviews with rejection reasons
+
+Note: Reviews in this directory are kept for audit trail and learning purposes.

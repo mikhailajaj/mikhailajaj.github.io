@@ -1,0 +1,9 @@
+# Archived Reviews Directory
+
+This directory stores old or expired reviews.
+
+Files in this directory:
+- {year}/ - Yearly archive folders
+- cleanup.log - Archive operation log
+
+Note: Reviews are archived after a configurable period to maintain performance.
