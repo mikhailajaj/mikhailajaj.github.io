@@ -9,4 +9,4 @@ Disallow: /data/reviews/pending/
 Disallow: /data/reviews/verified/
 Disallow: /data/reviews/rejected/
 
-Sitemap: https://mikhailajaj.github.io/sitemap.xml
+Sitemap: http://localhost:3000/sitemap.xml
