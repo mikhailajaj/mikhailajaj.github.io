@@ -1,0 +1,410 @@
+
+════════════════════════════════════════════════════════════════════════════════
+                              OFFICIAL TRANSCRIPT                               
+════════════════════════════════════════════════════════════════════════════════
+                                by Mikhail Ajaj                                 
+════════════════════════════════════════════════════════════════════════════════
+
+Extracted using Multi-Strategy PDF Extractor
+Best extraction method: PYMUPDF
+Optimized for academic reading and analysis
+
+════════════════════════════════════════════════════════════════════════════════
+
+Page 1 of 3
+Issued By
+Office of the Registrar
+Sheridan College Institute of Technology
+and Advanced Learning
+1430 Trafalgar Road
+Oakville, ON L6H 1L1 Canada
+(905) 845-9430
+GRADE REPORT
+Grading system details can be found at
+https://myotr.sheridancollege.ca/grading_systems.html
+If you have a query regarding any grade – contact
+your professor or the coordinator for your program
+Unofficial - Transcript
+Name: Mikhail Ajaj
+Student ID: 991464762
+Student Address:
+3051 driftwood Dr
+Burlington ON L7M 1X8
+Print Date:
+17/12/2025
+Academic Program History
+Program:
+Bach Appl Comp Sci - Mobile Comp
+17/07/2017:
+Active in Program
+17/07/2017:
+Honours Bachelor of Computer Science (Mobile
+Computing) Plan
+Beginning of Academic Record
+
+Fall 2017
+Subject Course
+Course Name
+Grade
+Credits
+ENGL
+17889GD
+Composition & Rhetoric
+3.000
+ENGL
+17889GD
+Composition & Rhetoric
+
+0.000
+MATH
+Mathematics for Computing
+3.000
+PROG
+Programming Principles
+6.000
+SYST
+Operating Systems Fundamentals
+3.000
+TELE
+Network Foundations
+3.000
+
+Winter 2018
+Subject Course
+Course Name
+Grade
+Credits
+DBAS
+Database Modelling
+3.000
+INFO
+Mobile Computing
+3.000
+INFO
+Scripting & Web Languages
+3.000
+MATH
+Linear Algebra
+3.000
+PHYS
+13796GD
+Creativity in Physics
+3.000
+PROG
+Interactive Appl'n Development
+6.000
+
+Fall 2018
+Subject Course
+Course Name
+Grade
+Credits
+CULT
+25288GD
+The Power of Voice
+3.000
+INFO
+Intro to Info Sys Security
+3.000
+PROG
+Mobile Application Principles
+6.000
+PROG
+Programming Languages
+3.000
+SYST
+Computer Systems Architecture
+3.000
+TELE
+Wireless Network Principles
+3.000
+
+Winter 2019
+Subject Course
+Course Name
+Grade
+Credits
+MATH
+17028GD
+Creativity in Mathematics
+W
+3.000
+MATH
+Calculus
+3.000
+PROG
+Mobile Web App Development
+3.000
+PROG
+Data Structures and Algorithms
+6.000
+PROG
+Web Application Design & Impl.
+3.000
+PSYC
+16571GD
+Principles of Psychology
+3.000
+Issued By
+Office of the Registrar
+Sheridan College Institute of Technology
+and Advanced Learning
+1430 Trafalgar Road
+Oakville, ON L6H 1L1 Canada
+(905) 845-9430
+GRADE REPORT
+Grading system details can be found at
+https://myotr.sheridancollege.ca/grading_systems.html
+If you have a query regarding any grade – contact
+your professor or the coordinator for your program
+Unofficial - Transcript
+Name: Mikhail Ajaj
+Student ID: 991464762
+Fall 2019
+Subject Course
+Course Name
+Grade
+Credits
+COWT
+Co-Operative Education Forum
+W
+1.000
+MATH
+Statistics for Data Science
+W
+3.000
+PHIL
+28877GD
+Philosophy of the Environment
+W
+3.000
+PROG
+Enterprise Software Systems
+W
+3.000
+PROG
+Advanced Mobile App Developmen
+W
+6.000
+SYST
+Software Design
+W
+3.000
+SYST
+OS Analysis and Design
+W
+3.000
+Withdrawal Date: 08/10/2019
+
+Fall 2020
+Subject Course
+Course Name
+Grade
+Credits
+COWT
+Co-Operative Education Forum
+S
+1.000
+MATH
+Statistics for Data Science
+F
+3.000
+Repeated:
+Repeat course excluded from GPA calculation
+PROG
+Enterprise Software Systems
+3.000
+PROG
+Advanced Mobile App Developmen
+4.000
+SYST
+Software Design
+3.000
+SYST
+OS Analysis and Design
+3.000
+
+Winter 2021
+Subject Course
+Course Name
+Grade
+Credits
+INFO
+Human Computer Interaction
+W
+3.000
+INFO
+Theory of Computation
+W
+3.000
+PROG
+Distributed Mobility
+W
+3.000
+SYST
+Software Engineering
+F
+4.000
+Repeated:
+Repeat course excluded from GPA calculation
+
+Fall 2022
+Subject Course
+Course Name
+Grade
+Credits
+CULT
+20859GD
+Collective Memory
+F
+3.000
+MATH
+Statistics for Data Science
+3.000
+TELE
+Network Engineering
+W
+3.000
+
+Fall 2023
+Subject Course
+Course Name
+Grade
+Credits
+INFO
+Artificial Intelligence
+3.000
+TELE
+Network Engineering
+3.000
+
+Winter 2024
+Subject Course
+Course Name
+Grade
+Credits
+INFO
+Human Computer Interaction
+3.000
+INFO
+Theory of Computation
+3.000
+PROG
+Distributed Mobility
+3.000
+SYST
+Software Engineering
+4.000
+Issued By
+Office of the Registrar
+Sheridan College Institute of Technology
+and Advanced Learning
+1430 Trafalgar Road
+Oakville, ON L6H 1L1 Canada
+(905) 845-9430
+GRADE REPORT
+Grading system details can be found at
+https://myotr.sheridancollege.ca/grading_systems.html
+If you have a query regarding any grade – contact
+your professor or the coordinator for your program
+Unofficial - Transcript
+Name: Mikhail Ajaj
+Student ID: 991464762
+
+Spring/Summer 2024
+Subject Course
+Course Name
+Grade
+Credits
+COWT
+Degree Internship Work-Term 1
+W
+1.000
+
+Fall 2024
+Subject Course
+Course Name
+Grade
+Credits
+DBAS
+Bus Intell and Data Mining
+3.000
+INFO
+CS Capstone Proj. (Inception)
+4.000
+PROG
+Cognitive Computing
+3.000
+
+Winter 2025
+Subject Course
+Course Name
+Grade
+Credits
+HIST
+11228GD
+Creating Public History
+3.000
+SCIE
+10009GD
+Intro to Environmental Science
+3.000
+
+Spring/Summer 2025
+Subject Course
+Course Name
+Grade
+Credits
+LITT
+14895GD
+Intro to the Short Story
+3.000
+LITT
+25892GD
+The 21st Century Novel
+3.000
+
+Fall 2025
+Subject Course
+Course Name
+Grade
+Credits
+INFO
+CS Capstone Proj (Elaboration)
+4.000
+INFO
+Cloud Economics
+3.000
+PROG
+Ubiquitous Computing
+3.000
+SYST
+QA & Software Testing
+3.000
+End of Unofficial - Transcript
+
+────────────────────────────────────────────────────────────────────────────────
+DOCUMENT STATISTICS & INFORMATION
+────────────────────────────────────────────────────────────────────────────────
+Title: Official Transcript
+Author: Mikhail Ajaj
+Extraction Method: pymupdf
+Extraction Date: December 30, 2025 at 09:50 PM
+
+Content Statistics:
+• Word Count: 713 words
+• Character Count: 4,886 characters
+• Estimated Paragraphs: 16
+• Estimated Reading Time: 2 minutes
+• Average Words per Paragraph: 44.0
+
+Quality Indicators:
+• Text extracted using multiple strategies for optimal readability
+• Advanced cleaning applied for academic use
+• Paragraph structure optimized for comprehension
+• Ready for literary analysis and research
+
+────────────────────────────────────────────────────────────────────────────────
+Generated by Multi-Strategy PDF Extractor
+Combining PyPDF2, pdfplumber, PyMuPDF, pdftotext, and OCR technologies
+────────────────────────────────────────────────────────────────────────────────

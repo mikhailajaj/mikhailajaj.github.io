@@ -1,0 +1,220 @@
+
+════════════════════════════════════════════════════════════════════════════════
+                              OFFICIAL TRANSCRIPT                               
+════════════════════════════════════════════════════════════════════════════════
+                                by Mikhail Ajaj                                 
+════════════════════════════════════════════════════════════════════════════════
+
+Extracted using Multi-Strategy PDF Extractor
+Best extraction method: PDFTOTEXT
+Optimized for academic reading and analysis
+
+════════════════════════════════════════════════════════════════════════════════
+
+                                                                                                                                  Page 1 of 3
+                      Issued By
+               Office of the Registrar                                                          Grading system details can be found at
+                                                          GRADE REPORT                 https://myotr.sheridancollege.ca/grading_systems.html
+       Sheridan College Institute of Technology
+               and Advanced Learning                                                      If you have a query regarding any grade – contact
+                1430 Trafalgar Road                                                      your professor or the coordinator for your program
+           Oakville, ON L6H 1L1 Canada
+                   (905) 845-9430
+
+
+                                                          Unofficial - Transcript
+Name:       Mikhail Ajaj
+Student ID: 991464762
+
+Student Address:               3051 driftwood Dr
+                               Burlington ON L7M 1X8
+Print Date:                    17/12/2025
+
+                                                        Academic Program History
+
+
+Program:                      Bach ApplCompSci - Mobile Comp
+17/07/2017:                   Active in Program
+                              17/07/2017:      Honours Bachelor of Computer Science (Mobile
+                                               Computing) Plan
+
+                                                       Beginning of Academic Record
+
+                                                                  Fall 2017
+Subject        Course           Course Name                                               Grade                       Credits
+ENGL           17889GD          Composition & Rhetoric                                       65                        3.000
+ENGL           17889GD          Composition & Rhetoric                                                                 0.000
+MATH           10025            Mathematics for Computing                                     83                       3.000
+PROG           10004            Programming Principles                                        88                       6.000
+SYST           10082            Operating Systems Fundamentals                                89                       3.000
+TELE           10025            Network Foundations                                           80                       3.000
+
+
+                                                                 Winter 2018
+Subject        Course           Course Name                                               Grade                       Credits
+DBAS           20146            Database Modelling                                           75                        3.000
+INFO           10229            Mobile Computing                                           100                         3.000
+INFO           16206            Scripting & Web Languages                                    82                        3.000
+MATH           11044            Linear Algebra                                               95                        3.000
+PHYS           13796GD          Creativity in Physics                                        71                        3.000
+PROG           10065            Interactive Appl'n Development                               96                        6.000
+
+
+                                                                  Fall 2018
+Subject        Course           Course Name                                               Grade                       Credits
+CULT           25288GD          The Power of Voice                                           72                        3.000
+INFO           23431            Intro to Info Sys Security                                   80                        3.000
+PROG           20082            Mobile Application Principles                                83                        6.000
+PROG           24310            Programming Languages                                        89                        3.000
+SYST           19207            Computer Systems Architecture                                84                        3.000
+TELE           25892            Wireless Network Principles                                  78                        3.000
+
+
+                                                                 Winter 2019
+Subject        Course           Course Name                                               Grade                       Credits
+MATH           17028GD          Creativity in Mathematics                                    W                         3.000
+MATH           29599            Calculus                                                     78                        3.000
+PROG           20261            Mobile Web App Development                                   78                        3.000
+PROG           23672            Data Structures and Algorithms                               73                        6.000
+PROG           27545            Web Application Design & Impl.                               93                        3.000
+PSYC           16571GD          Principles of Psychology                                     50                        3.000
+                     Issued By
+              Office of the Registrar                                                           Grading system details can be found at
+                                                             GRADE REPORT              https://myotr.sheridancollege.ca/grading_systems.html
+      Sheridan College Institute of Technology
+              and Advanced Learning                                                       If you have a query regarding any grade – contact
+               1430 Trafalgar Road                                                       your professor or the coordinator for your program
+          Oakville, ON L6H 1L1 Canada
+                  (905) 845-9430
+
+
+                                                             Unofficial - Transcript
+Name:       Mikhail Ajaj
+Student ID: 991464762
+
+                                                                    Fall 2019
+Subject       Course           Course Name                                                Grade                       Credits
+COWT          10023            Co-Operative Education Forum                                  W                         1.000
+MATH          37198            Statistics for Data Science                                   W                         3.000
+PHIL          28877GD          Philosophy of the Environment                                 W                         3.000
+PROG          30000            Enterprise Software Systems                                   W                         3.000
+PROG          31975            Advanced Mobile App Developmen                                W                         6.000
+SYST          30049            Software Design                                               W                         3.000
+SYST          30102            OS Analysis and Design                                        W                         3.000
+
+Withdrawal Date: 08/10/2019
+
+
+                                                               Fall 2020
+Subject       Course           Course Name                                                Grade                       Credits
+COWT          10023            Co-Operative Education Forum                                  S                         1.000
+MATH          37198            Statistics for Data Science                                   F                         3.000
+Repeated:                      Repeat course excluded from GPA calculation
+PROG           30000           Enterprise Software Systems                                   53                        3.000
+PROG           31975           Advanced Mobile App Developmen                                67                        4.000
+SYST           30049           Software Design                                               68                        3.000
+SYST           30102           OS Analysis and Design                                        53                        3.000
+
+
+                                                              Winter 2021
+Subject       Course           Course Name                                                Grade                       Credits
+INFO          31179            Human Computer Interaction                                    W                         3.000
+INFO          47546            Theory of Computation                                         W                         3.000
+PROG          34104            Distributed Mobility                                          W                         3.000
+SYST          30025            Software Engineering                                          F                         4.000
+Repeated:                      Repeat course excluded from GPA calculation
+
+
+                                                                    Fall 2022
+Subject       Course           Course Name                                                Grade                       Credits
+CULT          20859GD          Collective Memory                                              F                        3.000
+MATH          37198            Statistics for Data Science                                   53                        3.000
+TELE          21895            Network Engineering                                           W                         3.000
+
+
+                                                                    Fall 2023
+Subject       Course           Course Name                                                Grade                       Credits
+INFO          40975            Artificial Intelligence                                       64                        3.000
+TELE          21895            Network Engineering                                           90                        3.000
+
+
+                                                                   Winter 2024
+Subject       Course           Course Name                                                Grade                       Credits
+INFO          31179            Human Computer Interaction                                    89                        3.000
+INFO          47546            Theory of Computation                                         84                        3.000
+PROG          34104            Distributed Mobility                                          86                        3.000
+SYST          30025            Software Engineering                                          88                        4.000
+                     Issued By
+              Office of the Registrar                                                               Grading system details can be found at
+                                                           GRADE REPORT                    https://myotr.sheridancollege.ca/grading_systems.html
+      Sheridan College Institute of Technology
+              and Advanced Learning                                                           If you have a query regarding any grade – contact
+               1430 Trafalgar Road                                                           your professor or the coordinator for your program
+          Oakville, ON L6H 1L1 Canada
+                  (905) 845-9430
+
+
+                                                           Unofficial - Transcript
+Name:       Mikhail Ajaj
+Student ID: 991464762
+
+
+                                                          Spring/Summer 2024
+Subject       Course           Course Name                                                    Grade                       Credits
+COWT          18888            Degree Internship Work-Term 1                                     W                         1.000
+
+
+                                                                    Fall 2024
+Subject       Course           Course Name                                                    Grade                       Credits
+DBAS          40551            Bus Intell and Data Mining                                        89                        3.000
+INFO          49635            CS Capstone Proj. (Inception)                                     77                        4.000
+PROG          48031            Cognitive Computing                                               96                        3.000
+
+
+                                                                  Winter 2025
+Subject       Course           Course Name                                                    Grade                       Credits
+HIST          11228GD          Creating Public History                                           76                        3.000
+SCIE          10009GD          Intro to Environmental Science                                    67                        3.000
+
+
+                                                             Spring/Summer 2025
+Subject       Course           Course Name                                                    Grade                       Credits
+LITT          14895GD          Intro to the Short Story                                          84                        3.000
+LITT          25892GD          The 21st Century Novel                                            85                        3.000
+
+
+                                                                    Fall 2025
+Subject       Course           Course Name                                                    Grade                       Credits
+INFO          45828            CS Capstone Proj (Elaboration)                                    81                        4.000
+INFO          49971            Cloud Economics                                                   87                        3.000
+PROG          49332            Ubiquitous Computing                                              88                        3.000
+SYST          48557            QA & Software Testing                                             80                        3.000
+
+
+                                                          End of Unofficial - Transcript
+
+────────────────────────────────────────────────────────────────────────────────
+DOCUMENT STATISTICS & INFORMATION
+────────────────────────────────────────────────────────────────────────────────
+Title: Official Transcript
+Author: Mikhail Ajaj
+Extraction Method: pdftotext
+Extraction Date: December 30, 2025 at 09:53 PM
+
+Content Statistics:
+• Word Count: 805 words
+• Character Count: 14,414 characters
+• Estimated Paragraphs: 25
+• Estimated Reading Time: 3 minutes
+• Average Words per Paragraph: 32.0
+
+Quality Indicators:
+• Text extracted using multiple strategies for optimal readability
+• Advanced cleaning applied for academic use
+• Paragraph structure optimized for comprehension
+• Ready for literary analysis and research
+
+────────────────────────────────────────────────────────────────────────────────
+Generated by Multi-Strategy PDF Extractor
+Combining PyPDF2, pdfplumber, PyMuPDF, pdftotext, and OCR technologies
+────────────────────────────────────────────────────────────────────────────────
