@@ -1,0 +1,14 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="ma-mono-title">
+  <title id="ma-mono-title">Mikhail Ajaj</title>
+  <!-- Single-colour lockup, same geometry as logo.svg. Inline it and set CSS
+       `color` on an ancestor to theme it; via <img> it renders in the default
+       ink (black), so inline it wherever it sits on a dark ground. -->
+  <g fill="currentColor">
+    <rect x="270" y="284" width="80" height="24"/>
+    <path d="M162 122h27l1 66-50 202H96z"/>
+    <path d="M188 122h25l35 185-1 83H228l-38-202z"/>
+    <path d="M293 122h23l-4 68-48 200h-18l2-83z"/>
+    <path d="M315 122h22l77 268h-44l-58-200z"/>
+  </g>
+</svg>

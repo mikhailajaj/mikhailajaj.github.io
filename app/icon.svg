@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Mikhail Ajaj">
+  <rect width="64" height="64" rx="14" fill="#0f172a"/>
+  <g fill="#f97316" transform="translate(3.132 3.019) scale(0.11321)">
+    <rect x="270" y="284" width="80" height="24"/>
+    <path d="M162 122h27l1 66-50 202H96z"/>
+    <path d="M188 122h25l35 185-1 83H228l-38-202z"/>
+    <path d="M293 122h23l-4 68-48 200h-18l2-83z"/>
+    <path d="M315 122h22l77 268h-44l-58-200z"/>
+  </g>
+</svg>

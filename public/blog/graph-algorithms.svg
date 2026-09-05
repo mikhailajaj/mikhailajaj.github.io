@@ -1,0 +1,22 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gGA" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#14b8a6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f766e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#gGA)"/>
+  <line x1="160" y1="140" x2="330" y2="290" stroke="#ffffff" stroke-opacity="0.35" stroke-width="3"/>
+  <line x1="330" y1="290" x2="500" y2="170" stroke="#ffffff" stroke-opacity="0.35" stroke-width="3"/>
+  <line x1="500" y1="170" x2="620" y2="300" stroke="#ffffff" stroke-opacity="0.35" stroke-width="3"/>
+  <line x1="330" y1="290" x2="620" y2="300" stroke="#ffffff" stroke-opacity="0.35" stroke-width="3"/>
+  <line x1="160" y1="140" x2="330" y2="90" stroke="#ffffff" stroke-opacity="0.95" stroke-width="6"/>
+  <line x1="330" y1="90" x2="500" y2="170" stroke="#ffffff" stroke-opacity="0.95" stroke-width="6"/>
+  <line x1="500" y1="170" x2="650" y2="110" stroke="#ffffff" stroke-opacity="0.95" stroke-width="6"/>
+  <circle cx="160" cy="140" r="26" fill="#ffffff" fill-opacity="0.95"/>
+  <circle cx="330" cy="90" r="26" fill="#ffffff" fill-opacity="0.95"/>
+  <circle cx="330" cy="290" r="22" fill="#ffffff" fill-opacity="0.5"/>
+  <circle cx="500" cy="170" r="26" fill="#ffffff" fill-opacity="0.95"/>
+  <circle cx="650" cy="110" r="26" fill="#ffffff" fill-opacity="0.95"/>
+  <circle cx="620" cy="300" r="22" fill="#ffffff" fill-opacity="0.5"/>
+</svg>

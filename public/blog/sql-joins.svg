@@ -1,0 +1,17 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gSQL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6d28d9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2e1065;stop-opacity:1" />
+    </linearGradient>
+    <clipPath id="lens">
+      <circle cx="330" cy="200" r="120"/>
+    </clipPath>
+  </defs>
+  <rect width="800" height="400" fill="url(#gSQL)"/>
+  <circle cx="330" cy="200" r="120" fill="#ffffff" fill-opacity="0.28"/>
+  <circle cx="470" cy="200" r="120" fill="#ffffff" fill-opacity="0.28"/>
+  <circle cx="470" cy="200" r="120" fill="#ffffff" fill-opacity="0.75" clip-path="url(#lens)"/>
+  <circle cx="330" cy="200" r="120" stroke="#ffffff" stroke-opacity="0.9" stroke-width="5"/>
+  <circle cx="470" cy="200" r="120" stroke="#ffffff" stroke-opacity="0.9" stroke-width="5"/>
+</svg>

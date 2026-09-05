@@ -1,0 +1,45 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="ma-logo-title">
+  <title id="ma-logo-title">Mikhail Ajaj</title>
+  <defs>
+    <linearGradient id="ma-leg-left" x1="118" y1="392" x2="184" y2="126" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F97316"/>
+      <stop offset="1" stop-color="#FACC15"/>
+    </linearGradient>
+    <linearGradient id="ma-inner-left" x1="198" y1="138" x2="246" y2="390" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFE08A"/>
+      <stop offset="1" stop-color="#FDBA74"/>
+    </linearGradient>
+    <!-- The shared stroke is the M's and the A's common leg: a mid slate so it
+         survives on a white ground as well as on the site's #0f172a. -->
+    <linearGradient id="ma-shared" x1="246" y1="390" x2="308" y2="136" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#64748B"/>
+      <stop offset="1" stop-color="#CBD5E1"/>
+    </linearGradient>
+    <linearGradient id="ma-leg-right" x1="320" y1="138" x2="392" y2="390" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#93C5FD"/>
+      <stop offset="1" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="ma-bar" x1="270" y1="296" x2="350" y2="296" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FACC15"/>
+      <stop offset="1" stop-color="#FDE68A"/>
+    </linearGradient>
+    <!-- Region covers the artwork (96..414 x 122..390) plus the offset blur. -->
+    <filter id="ma-shadow" x="40" y="104" width="432" height="352"
+            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feOffset dy="10"/>
+      <feGaussianBlur stdDeviation="14"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.0196 0 0 0 0 0.0314 0 0 0 0 0.0706 0 0 0 0.18 0"/>
+      <feBlend in="SourceGraphic"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#ma-shadow)">
+    <!-- Crossbar first: the legs paint over its ends, so it meets them flush. -->
+    <rect x="270" y="284" width="80" height="24" fill="url(#ma-bar)"/>
+    <path fill="url(#ma-leg-left)"   d="M162 122h27l1 66-50 202H96z"/>
+    <path fill="url(#ma-inner-left)" d="M188 122h25l35 185-1 83H228l-38-202z"/>
+    <path fill="url(#ma-shared)"     d="M293 122h23l-4 68-48 200h-18l2-83z"/>
+    <path fill="url(#ma-leg-right)"  d="M315 122h22l77 268h-44l-58-200z"/>
+  </g>
+</svg>
